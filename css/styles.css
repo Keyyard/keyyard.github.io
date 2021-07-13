@@ -40,7 +40,9 @@
   box-sizing: border-box; }
   .videof, .videot {
     width: 100% i !important;
-    height: 100% !important;    
+    height: 100% !important;
+    align-items: center;
+    justify-items: center;    
  }
 /* _embed.scss:3 */
 
