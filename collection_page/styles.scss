@@ -1,0 +1,26 @@
+$main-green: #4CAF50;
+$secondary-green: #8BC34A;
+$white: #FFFFFF;
+$dark-gray: #333333;
+$accent-blue: #2196F3;
+$accent-yellow: #FFC107;
+
+/* Example usage */
+.button {
+    background-color: $main-green;
+    color: $white;
+}
+
+.header {
+    background-color: $secondary-green;
+    color: $white;
+}
+
+.link {
+    color: $accent-blue;
+}
+
+.call-to-action {
+    background-color: $accent-yellow;
+    color: $dark-gray;
+}

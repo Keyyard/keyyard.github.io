@@ -1,0 +1,138 @@
+/* Color Palette */
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --gray: #e3e3e3;
+    --dark-gray: #706e6e;
+    --darker-gray: #686767;
+    --accent-blue: #008cff;
+    --accent-yellow: #FFC107;
+}
+/* ... Your existing CSS code ... */
+
+@media (max-width: 768px) {
+    /* Styles for screens smaller than 768px wide (including iPhone) */
+    .navbar-nav {
+        flex-direction: column;
+    }
+    .navbar-toggler {
+        display: block;
+    }
+    .navbar-collapse {
+        background-color: var(--white);
+    }
+    .float-left {
+        float: none; /* Clear the float */
+        padding: 1rem;
+        display: block;
+        max-height: 250px;
+        width: auto;
+        margin: 0 auto; /* Center the image horizontally */
+    }
+    .details {
+        padding-left: 20px;
+        display: block;
+        margin-top: 20px;
+    }
+    .name,
+    .author,
+    .description {
+        padding-left: 0; /* Remove left padding to align text with the image */
+        margin: 0;
+    }
+}
+
+
+
+
+.item:hover {
+    background-color: var(--dark-gray);
+}
+.details {
+    padding-left: 20px;
+    display: inline;   
+}
+.name {
+    font-weight: bold;
+    padding-left: 20px;
+    display: block;
+    margin: 0;
+}
+.author {
+    font-weight: light;
+    size: 50%;
+    display: block;
+    padding-left: 20px;
+    margin: 0;
+}
+.description {
+    display: block;
+    margin: 0;
+    padding-left: 20px;
+
+}
+body {
+    background-color: var(--gray);
+}
+.gray-dark {
+    background-color: var(--dark-gray);
+}
+.float-left {
+    float: left;
+    padding: 1rem;
+    display: block;
+    max-height: 250px;
+    width: auto; /* Allow the image's height to scale proportionally */
+}
+ul {
+    display: block;
+    list-style-type: none;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+ul li {
+    list-style-type: none;
+}
+.divider {
+    height: 1px;
+    background-color: var(--dark-gray);
+}
+
+.navbar-color {
+    background-color: var(--white);
+    color: var(--black);
+}
+.navbar-brand {
+    font-weight: bold;
+}
+.navbar-color .navbar-brand,
+.navbar-color .nav-link {
+    color: var(--black);
+}
+.navbar-current .nav-link {
+    font-weight: bold;
+}
+.nav-link:hover {
+    color: var(--accent-blue);
+}
+.button {
+    background-color: var(--main-green);
+    color: var(--black);
+}
+
+.header {
+    background-color: var(--secondary-green);
+    color: var(--black);
+}
+
+.link {
+    color: var(--accent-blue);
+}
+
+.call-to-action {
+    background-color: var(--accent-yellow);
+    color: var(--dark-gray);
+}
