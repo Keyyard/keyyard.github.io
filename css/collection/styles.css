@@ -8,7 +8,6 @@
     --accent-blue: #008cff;
     --accent-yellow: #FFC107;
 }
-/* ... Your existing CSS code ... */
 
 @media (max-width: 768px) {
     /* Styles for screens smaller than 768px wide (including iPhone) */
@@ -42,9 +41,10 @@
     }
 }
 
-
-
-
+a {
+    text-decoration: none;
+    color: #000;
+}
 .item:hover {
     background-color: var(--dark-gray);
 }
