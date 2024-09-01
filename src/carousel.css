@@ -1,0 +1,26 @@
+.carousel .slide {
+    background: none;
+    border: none;
+}
+
+.carousel .control-arrow,
+.carousel.carousel-slider .control-arrow {
+    opacity: 0.5;
+}
+
+.carousel .control-arrow:hover,
+.carousel.carousel-slider .control-arrow:hover {
+    opacity: 1;
+}
+
+.carousel .control-dots .dot {
+    display: none;
+}
+
+.carousel .control-dots .dot.selected {
+    display: none;
+}
+
+.carousel .thumb {
+    border-color: #171717;
+}
