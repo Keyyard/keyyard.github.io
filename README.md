@@ -12,6 +12,8 @@ Welcome to the Keyyard Portfolio project! This is my personal portfolio website 
 
 ## Live Website
 
+![Keyyard Portfolio](image.png)
+
 You can view the live portfolio at [https://keyyard.github.io](https://keyyard.github.io).
 
 ## Features
