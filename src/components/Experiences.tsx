@@ -18,7 +18,7 @@ const Experiences = () => {
 
   const { ref: sectionRef, inView: sectionInView } = useInView({
     triggerOnce: true,
-    threshold: 0.1,
+    threshold: 0.01,
   });
 
   return (
@@ -59,7 +59,7 @@ const Experiences = () => {
                 whileTap={{ scale: 0.98 }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: sectionInView ? 1 : 0, y: sectionInView ? 0 : 20 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.25, delay: index * 0.1 }}
                 ref={sectionRef}
               >
                 <h3 className={`${resolution <= 1024 ? "text-sm font-bold" : "text-xl font-bold"}`}>{exp.title}</h3>
@@ -75,8 +75,9 @@ const Experiences = () => {
               key={selectedExperience.title + selectedExperience.company_name}
               className="mx-auto p-4 bg-black bg-opacity-20 rounded-xl shadow shadow-stone-900 drop-shadow"
               initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
+              animate={{ opacity: sectionInView ? 1 : 0, scale: sectionInView ? 1 : 0.5 }}
               transition={{ duration: 0.25 }}
+              ref = {sectionRef}
             >
               <h3 className="text-xl font-bold">{selectedExperience.title}</h3>
               <h4 className="text-md text-gray-300 leading-5">

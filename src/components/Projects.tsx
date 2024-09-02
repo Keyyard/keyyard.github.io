@@ -50,7 +50,7 @@ const Projects = () => {
                 <h4 className="text-md text-gray-200 text-ellipsis overflow-hidden mt-2 leading-5">
                   {proj.description}
                 </h4>
-                <Carousel className="mt-4">
+                <Carousel className="mt-4" infiniteLoop={true} >
                   {proj.imgs &&
                     proj.imgs.map((img, imgIndex) => (
                       <div key={imgIndex}>

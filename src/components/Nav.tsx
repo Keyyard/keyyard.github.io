@@ -31,7 +31,7 @@ const Nav = () => {
             setActiveSection(entry.target.id);
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.01 }
     );
 
     sections.forEach((section) => {

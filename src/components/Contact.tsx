@@ -176,7 +176,7 @@ const Contact = () => {
           </div>
         </a>
         <a>
-          <div className="relative w-8 h-12 flex items-center justify-center rounded-full transition-colors duration-300 group">
+          <div className="relative w-8 h-14 flex items-center justify-center rounded-full transition-colors duration-300 group">
             <svg
               aria-hidden="true"
               focusable="false"

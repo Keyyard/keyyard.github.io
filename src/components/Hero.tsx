@@ -47,8 +47,8 @@ export function Hero() {
       <div className="pt-4 flex w-[50vw] h-[50vh]" id="head"></div>
       <div className="flex flex-col items-center justify-items-center py-4 text-[15px]">
         <div className="text-start mt-32 md:mt-20">
-          <p className="text-lg">Hi, i'm Keyyard.</p>
-          <p className="text-lg">Over the last years, i have been an Official Minecraft Marketplace
+          <p className="text-lg">Hi, I'm Keyyard.</p>
+          <p className="text-lg">Over the last years, I have been an Official Minecraft Marketplace
             developer.
           </p>
           <p className="text-lg">I'm fancy of turning my fantasies into reality, and yours too!</p>
