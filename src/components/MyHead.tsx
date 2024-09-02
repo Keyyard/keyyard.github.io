@@ -6,7 +6,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { AnimationMixer } from "three";
 
 function Model() {
-  const { scene, animations } = useGLTF("../src/assets/myHead.gltf");
+  const { scene, animations } = useGLTF("/assets/myHead.gltf");
   const head = useRef(scene);
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
   // State to store the x and y coordinates of the mouse cursor
@@ -16,8 +16,6 @@ function Model() {
   // Our model will look at this dummy object
   const mixer = useRef<THREE.AnimationMixer | null>(null);
   useEffect(() => {
-    console.log(scene);
-    console.log(animations);
     const handleMouseMove = (event: MouseEvent) => {
       setCursor({
         x: (event.clientX / window.innerWidth) * 2 - 1,
@@ -30,7 +28,6 @@ function Model() {
       action.setLoop(THREE.LoopOnce, 1); // Set the loop mode to play once
       action.clampWhenFinished = true; // Stop at the last frame
       action.play();
-      console.log("Head clicked");
     };
     window.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("click", handleClick);

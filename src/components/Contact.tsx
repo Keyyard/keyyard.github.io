@@ -46,7 +46,7 @@ const Contact = () => {
       <Toaster />
       <h4 className="text-center text-lg mt-4">Get in touch with me!</h4>
       <span className="text-xs text-gray-400 text-right block">
-        Click on the bubbles or send me an email via the form!
+        Click on the icons or contact me via the form!
       </span>
       <div className="flex justify-center">
         <div className="p-4 lg:w-[40%] w-[90%] bg-white bg-opacity-10 rounded-lg">
