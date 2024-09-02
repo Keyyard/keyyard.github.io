@@ -18,7 +18,17 @@ h6 {
 .accent {
   font-family: 'Lora', serif;
 }
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@supports (-ms-ime-align: auto) {
+  /* Edge-specific styles */
+  .icon-class {
+    font-size: 1rem; /* Adjust as needed */
+  }
+}
 :root {
   font-family: 'Lora', serif;
   line-height: 1.5;

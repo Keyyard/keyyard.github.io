@@ -58,7 +58,7 @@ const Contact = () => {
               placeholder="Your Name / Company"
               value={formData.from_name}
               onChange={handleChange}
-              className="p-2 rounded my-4"
+              className="p-2 rounded my-4 bg-[#121212]"
               required
             />
             <input
@@ -67,7 +67,7 @@ const Contact = () => {
               placeholder="Your Email"
               value={formData.from_email}
               onChange={handleChange}
-              className="p-2 rounded my-4"
+              className="p-2 rounded my-4 bg-[#121212]"
               required
             />
             <textarea
@@ -75,7 +75,7 @@ const Contact = () => {
               placeholder="Your Message"
               value={formData.message}
               onChange={handleChange}
-              className="p-2 rounded my-4"
+              className="p-2 rounded my-4 bg-[#121212]"
               required
             />
             <button
@@ -89,11 +89,11 @@ const Contact = () => {
       </div>
       <div className="flex justify-center mt-2">
         <a className="mx-1" href="mailto:keyyard8888@gmail.com" target="_blank">
-          <div className="relative w-12 h-12 flex items-center justify-center rounded-full transition-colors duration-300 group">
+          <div className="relative w-8 h-12 flex items-center justify-center rounded-full transition-colors duration-300 group">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
+              width="42"
+              height="32"
               fill="currentColor"
               className="bi bi-envelope-at-fill"
               viewBox="0 0 16 16"
@@ -111,9 +111,8 @@ const Contact = () => {
           href="https://youtube.com/c/keyyard"
           target="_blank"
         >
-          <div className="relative w-12 h-12 flex items-center justify-center rounded-full transition-colors duration-300 group">
+          <div className="relative w-8 h-12 flex items-center justify-center rounded-full transition-colors duration-300 group">
             <svg
-              className="svg-inline--fa fa-youtube fa-w-18 fa-fw"
               aria-hidden="true"
               focusable="false"
               data-prefix="fab"
@@ -121,7 +120,6 @@ const Contact = () => {
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 576 512"
-              data-fa-i2svg=""
             >
               <path
                 fill="currentColor"
@@ -134,9 +132,8 @@ const Contact = () => {
           </div>
         </a>
         <a className="mx-1" href="https://twitter.com/keyyard" target="_blank">
-          <div className="relative w-12 h-12 flex items-center justify-center rounded-full transition-colors duration-300 group">
+          <div className="relative w-8 h-12 flex items-center justify-center rounded-full transition-colors duration-300 group">
             <svg
-              className="svg-inline--fa fa-twitter fa-w-16 fa-fw"
               aria-hidden="true"
               focusable="false"
               data-prefix="fab"
@@ -157,9 +154,8 @@ const Contact = () => {
           </div>
         </a>
         <a className="mx-1" href="https://github.com/keyyard" target="_blank">
-          <div className="relative w-12 h-12 flex items-center justify-center rounded-full transition-colors duration-300 group">
+          <div className="relative w-8 h-12 flex items-center justify-center rounded-full transition-colors duration-300 group">
             <svg
-              className="svg-inline--fa fa-github fa-w-16 fa-fw"
               aria-hidden="true"
               focusable="false"
               data-prefix="fab"
@@ -180,9 +176,8 @@ const Contact = () => {
           </div>
         </a>
         <a>
-          <div className="relative w-12 h-12 flex items-center justify-center rounded-full transition-colors duration-300 group">
+          <div className="relative w-8 h-12 flex items-center justify-center rounded-full transition-colors duration-300 group">
             <svg
-              className="svg-inline--fa fa-discord fa-w-14 fa-fw"
               aria-hidden="true"
               focusable="false"
               data-prefix="fab"
@@ -203,7 +198,9 @@ const Contact = () => {
           </div>
         </a>
       </div>
-      <div className="flex justify-center mt-8 pb-20">Copyright (c) 2023 Keyyard</div>
+      <div className="flex justify-center mt-8 pb-20">
+        Copyright © 2024 Keyyard
+      </div>
     </section>
   );
 };
