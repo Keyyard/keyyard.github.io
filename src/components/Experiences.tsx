@@ -5,15 +5,19 @@ import { experiences } from "../data";
 
 const Experiences = () => {
   const [selectedExperience, setSelectedExperience] = useState(experiences[0]);
-  const [resolution, setResolution] = useState(window.innerWidth);
+  const [resolution, setResolution] = useState(0);
+
   useEffect(() => {
-    const handleResize = () => {
+    if (typeof window !== "undefined") {
       setResolution(window.innerWidth);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+      const handleResize = () => {
+        setResolution(window.innerWidth);
+      };
+      window.addEventListener("resize", handleResize);
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
   }, []);
 
   const { ref: sectionRef, inView: sectionInView } = useInView({
@@ -49,24 +53,36 @@ const Experiences = () => {
             </motion.div>
           )}
           {experiences.map((exp, index) => (
-              <motion.div
-                key={index}
-                className={`mx-auto p-3 cursor-pointer border rounded-lg ${
-                  selectedExperience === exp ? "bg-neutral-700" : ""
+            <motion.div
+              key={index}
+              className={`mx-auto p-3 cursor-pointer border rounded-lg ${
+                selectedExperience === exp ? "bg-neutral-700" : ""
+              }`}
+              onClick={() => setSelectedExperience(exp)}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: sectionInView ? 1 : 0, y: sectionInView ? 0 : 20 }}
+              transition={{ duration: 0.25, delay: index * 0.1 }}
+              ref={sectionRef}
+            >
+              <h3
+                className={`${
+                  resolution <= 1024 ? "text-sm font-bold" : "text-xl font-bold"
                 }`}
-                onClick={() => setSelectedExperience(exp)}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: sectionInView ? 1 : 0, y: sectionInView ? 0 : 20 }}
-                transition={{ duration: 0.25, delay: index * 0.1 }}
-                ref={sectionRef}
               >
-                <h3 className={`${resolution <= 1024 ? "text-sm font-bold" : "text-xl font-bold"}`}>{exp.title}</h3>
-                <h4 className={`${resolution <= 1024 ? "text-sm text-gray-200 leading-5" : "text-lg text-gray-200 leading-7"}`}>
-                  {exp.company_name}
-                </h4>
-              </motion.div>
+                {exp.title}
+              </h3>
+              <h4
+                className={`${
+                  resolution <= 1024
+                    ? "text-sm text-gray-200 leading-5"
+                    : "text-lg text-gray-200 leading-7"
+                }`}
+              >
+                {exp.company_name}
+              </h4>
+            </motion.div>
           ))}
         </div>
         <div>
@@ -75,9 +91,12 @@ const Experiences = () => {
               key={selectedExperience.title + selectedExperience.company_name}
               className="mx-auto p-4 bg-black bg-opacity-20 rounded-xl shadow shadow-stone-900 drop-shadow"
               initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: sectionInView ? 1 : 0, scale: sectionInView ? 1 : 0.5 }}
+              animate={{
+                opacity: sectionInView ? 1 : 0,
+                scale: sectionInView ? 1 : 0.5,
+              }}
               transition={{ duration: 0.25 }}
-              ref = {sectionRef}
+              ref={sectionRef}
             >
               <h3 className="text-xl font-bold">{selectedExperience.title}</h3>
               <h4 className="text-md text-gray-300 leading-5">

@@ -1,8 +1,8 @@
 import { useGLTF } from "@react-three/drei";
-import { useRef, useState, useEffect } from "react";
-import { easing } from "maath";
-import * as THREE from "three";
 import { Canvas, useFrame } from "@react-three/fiber";
+import { easing } from "maath";
+import { useEffect, useRef, useState } from "react";
+import * as THREE from "three";
 import { AnimationMixer } from "three";
 
 function Model() {

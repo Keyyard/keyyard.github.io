@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST='{"..\\\\node_modules\\\\@react-three\\\\drei\\\\core\\\\VideoTexture.js -> hls.js":{"id":null,"files":[]},"..\\\\node_modules\\\\@react-three\\\\drei\\\\web\\\\FaceLandmarker.js -> @mediapipe/tasks-vision":{"id":null,"files":[]}}';

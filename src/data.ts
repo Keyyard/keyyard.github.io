@@ -97,7 +97,7 @@ const projects = [
     ],
     downloads: "2.0M+",
     imgs: [
-      "https://camo.githubusercontent.com/04836bb02b3ea833006ef23a012da3701dd5a719d70bcfeedde91759352da6f6/68747470733a2f2f6170692e6d637065646c2e636f6d2f73746f726167652f7375626d697373696f6e732f3137373532322f696d616765732f747265652d636170697461746f722d2d7665696e2d6d696e65722d6164646f6e5f322e706e67",
+      "/assets/projs/tc.png",
       "https://i.ytimg.com/vi/lze7XP_hMio/maxresdefault.jpg",
       "https://github.com/Keyyard/Minecraft-Tree-Capitator-and-Vein-Miner-Addon/raw/main/imgs/img5.png",
       "https://github.com/Keyyard/Minecraft-Tree-Capitator-and-Vein-Miner-Addon/raw/main/imgs/img4.png",
@@ -163,22 +163,19 @@ const projects = [
     ],
   },
   {
-    title: "One Block Trend",
+    title: "Scary Myth Mobs",
     date: "Official Minecraft Marketplace Project",
     description:
-      "One by one, mine blocks, search, & grow your zone! Open up the Marketplace on your Minecrafting device and download.",
+      "Mobs from PrestonPlay Scary Myth have invaded your world! Seek out the legends and perform dark rituals to summon them into existence. Arm yourself with the evil gear they will drop. Most important of all watch your back…",
     links: [
       {
         name: "Minecraft Marketplace",
-        link: "https://www.minecraft.net/en-us/marketplace/pdp?id=e5ed6112-e5f3-42e7-8154-989ba0790915",
+        link: "https://www.minecraft.net/en-us/marketplace/pdp?id=aa1a855c-628e-48f2-bfdb-174bb25c45ab",
       },
     ],
     imgs: [
-      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/56a8ed46-f133-4549-83ad-6fa3d4eeee44/Thumbnail_0.jpg",
-      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/6e1cb075-356d-4889-afe8-d78a75da8150/Screenshot_3.jpg",
-"https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/3bac0212-a096-4557-8e87-5160beb8396a/Screenshot_0.jpg",
-"https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/28c112c8-f3b9-4fdf-bcb2-362dbb849391/Screenshot_2.jpg"
-    ],
+      "/assets/projs/smm.png",
+"https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/bfd7a1b4-b207-4846-9ed3-d34724e65176/fg_screenshot_0.jpg"    ],
   },
   {
     title: "TNT Experiments",

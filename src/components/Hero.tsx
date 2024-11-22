@@ -24,10 +24,10 @@ export function Hero() {
       <Bg />
       <div className="flex flex-col justify-center">
         <span className="absolute pt-4 flex border w-fit bg-white blur-xl bg-clip-text text-4xl box-content font-extrabold text-transparent text-center select-none">
-          I'm Hieu
+          I&#39;m Hieu
         </span>
         <h1 className="relative top-0 w-fit h-auto pt-4 flex bg-white bg-clip-text text-4xl font-extrabold text-transparent text-center select-auto">
-          I'm Hieu
+          I&#39;m Hieu
         </h1>
         <h2 className="text-center leading-3">Also known as Keyyard</h2>
       </div>
@@ -47,11 +47,11 @@ export function Hero() {
       <div className="pt-4 flex w-[50vw] h-[50vh]" id="head"></div>
       <div className="flex flex-col items-center justify-items-center py-4 text-[15px]">
         <div className="text-start mt-32 md:mt-20">
-          <p className="text-lg">Hi, I'm Keyyard.</p>
+          <p className="text-lg">Hi, I&#39;m Keyyard.</p>
           <p className="text-lg">Over the last years, I have been an Official Minecraft Marketplace
             developer.
           </p>
-          <p className="text-lg">I'm fancy of turning my fantasies into reality, and yours too!</p>
+          <p className="text-lg">I&#39;m fancy of turning my fantasies into reality, and yours too!</p>
         </div>
       </div>
     </section>

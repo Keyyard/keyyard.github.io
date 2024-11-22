@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import emailjs from "emailjs-com";
 import { Toaster, toast } from "react-hot-toast";
 
 const Contact = () => {
@@ -19,38 +18,34 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    emailjs
-      .send(
-        "service_uvala3e",
-        "template_k0slif9",
-        formData,
-        "FKkNNZcm0oVGEhYyb"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          toast.success("Email sent successfully!");
-        },
-        (error) => {
-          console.log(error.text);
-          toast.error("Failed to send email.");
-        }
-      );
+    const response = await fetch('/api/sendEmail', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+  
+    if (response.ok) {
+      toast.success("Email sent successfully!");
+    } else {
+      toast.error("Failed to send email.");
+    }
   };
 
   return (
     <section id="contact" className="min-h-[100vh]">
       <h2 className="text-4xl pt-4 text-center border-t-2">Contact</h2>
       <Toaster />
-      <h4 className="text-center text-lg mt-4">Get in touch with me!</h4>
+      <h3 className="text-center text-lg mt-4">Get in touch with me!</h3>
       <span className="text-xs text-gray-400 text-right block">
         Click on the icons or contact me via the form!
       </span>
       <div className="flex justify-center">
         <div className="p-4 lg:w-[40%] w-[90%] bg-white bg-opacity-10 rounded-lg">
-          <h5 className="font-bold text-center text-lg mt-4">Contact Form</h5>
+          <h4 className="font-bold text-center text-lg mt-4">Contact Form</h4>
           <form onSubmit={handleSubmit} className="flex flex-col">
             <input
               type="text"
@@ -175,7 +170,7 @@ const Contact = () => {
             </div>
           </div>
         </a>
-        <a>
+        <a className="mx-1" href="https://discord.com/users/keyyard" target="_blank">
           <div className="relative w-8 h-14 flex items-center justify-center rounded-full transition-colors duration-300 group">
             <svg
               aria-hidden="true"
@@ -193,7 +188,7 @@ const Contact = () => {
               ></path>
             </svg>
             <div className="absolute p-2 rounded-lg bg-gray-400 bg-opacity-10 text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform whitespace-nowrap translate-y-full">
-              Discord Username: keyyard
+              Discord: Keyyard (click to visit)
             </div>
           </div>
         </a>
