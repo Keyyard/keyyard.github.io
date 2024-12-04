@@ -52,6 +52,12 @@ export function Hero() {
             developer.
           </p>
           <p className="text-lg">I&#39;m fancy of turning my fantasies into reality, and yours too!</p>
+            <p className="text-sm italic">
+            Sometimes I write blogs, check out!{" "}
+            <a href="https://blogs.keyyard.xyz" className="text-blue-500 underline">
+              here
+            </a>
+            </p>
         </div>
       </div>
     </section>
