@@ -48,16 +48,18 @@ export function Hero() {
       <div className="flex flex-col items-center justify-items-center py-4 text-[15px]">
         <div className="text-start mt-32 md:mt-20">
           <p className="text-lg">Hi, I&#39;m Keyyard.</p>
-          <p className="text-lg">Over the last years, I have been an Official Minecraft Marketplace
+          <p className="text-lg">
+            Over the last years, I have been an Official Minecraft Marketplace
             developer.
           </p>
-          <p className="text-lg">I&#39;m fancy of turning my fantasies into reality, and yours too!</p>
-            <p className="text-sm italic">
-            Sometimes I write blogs, check out!{" "}
-            <a href="https://blogs.keyyard.xyz" className="text-blue-500 underline">
-              here
+          <p className="text-lg">
+            I&#39;m fancy of turning my fantasies into reality, and yours too!
+          </p>
+          <p className="text-sm italic">
+            <a href="https://blogs.keyyard.xyz">
+              Sometimes I write blogs, check it out
             </a>
-            </p>
+          </p>
         </div>
       </div>
     </section>
