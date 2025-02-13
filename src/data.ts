@@ -174,8 +174,7 @@ const projects = [
       },
     ],
     imgs: [
-      "/assets/projs/smm.png",
-"https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/bfd7a1b4-b207-4846-9ed3-d34724e65176/fg_screenshot_0.jpg"    ],
+      "/assets/projs/smm.png"   ],
   },
   {
     title: "TNT Experiments",
