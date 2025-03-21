@@ -111,6 +111,8 @@ const projects = [
       },
     ],
     imgs: [
+      "https://github.com/Keyyard/dynamic-torchlight/raw/main/medias/torch.gif",
+      "https://github.com/Keyyard/dynamic-torchlight/raw/main/medias/torch2.gif",
       "https://github.com/Keyyard/dynamic-torchlight/raw/main/medias/image1.png",
       "https://github.com/Keyyard/dynamic-torchlight/raw/main/medias/image2.png",
       "https://github.com/Keyyard/dynamic-torchlight/raw/main/medias/image3.png",
@@ -129,6 +131,7 @@ const projects = [
     ],
     imgs: [
       "https://github.com/Keyyard/PortalGunsAddon-ScriptingAPI/raw/main/medias/portal-appears.gif",
+      "https://github.com/Keyyard/PortalGunsAddon-ScriptingAPI/raw/main/medias/portals.gif"
     ],
   },
   {
