@@ -70,6 +70,9 @@ const Projects = () => {
             </motion.div>
           </div>
         ))}
+        <span className="text-xs text-gray-400 text-right block">
+          <p>This list only includes some of my projects.</p>
+        </span>
       </div>
     </section>
   );
