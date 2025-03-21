@@ -19,25 +19,6 @@ const navs = [
 
 const experiences = [
   {
-    title: "Creator",
-    company_name:
-      "Tree Capitator and Vein Miner Addon | Minecraft Bedrock Community Top Popular Of All Time",
-    date: "May 2019 - Present",
-    details: [
-      "This addon mod for Minecraft making resource gathering more efficient and convenient.",
-    ],
-  },
-  {
-    title: "Former Founder",
-    company_name:
-      "Actual Guns MCBE | Minecraft Bedrock Community Top Popular Of All Time",
-    date: "Jul 2019 - Feb 2020",
-    details: [
-      "'Actual Guns' is the first add-on to introduce guns into Minecraft Bedrock Edition, hence the name!",
-      "Founded by Keyyard, EnderFace & Azoz. Continously developed by Azoz and Jun.",
-    ],
-  },
-  {
     title: "Entrepreneur",
     company_name:
       "Keyyard Studio - G2crafted Partnership | Official Minecraft Marketplace",
@@ -82,9 +63,9 @@ const experiences = [
 const projects = [
   {
     title: "Tree Capitator and Vein Miner Addon",
-    date: "Community Project",
+    date: "Scripting API Project",
     description:
-      "This addon mod for Minecraft making resource gathering more efficient and convenient.",
+      "Gathering resources more efficiently and conveniently, optimized and allowing enchantments, durability, and more.",
     links: [
       {
         name: "Github",
@@ -106,10 +87,71 @@ const projects = [
     ],
   },
   {
+    title: "Scary Myth Mobs",
+    date: "Official Minecraft Marketplace Project",
+    description:
+      "Custom weapons (boomerang-like weapon,..), custom mechanic on entities via scripting (Jumpscare..).",
+    links: [
+      {
+        name: "Minecraft Marketplace",
+        link: "https://www.minecraft.net/en-us/marketplace/pdp?id=aa1a855c-628e-48f2-bfdb-174bb25c45ab",
+      },
+    ],
+    imgs: ["/assets/projs/smm.png"],
+  },
+  {
+    title: "Dynamic Torchlighting",
+    date: "Community Project",
+    description:
+      "Lighting up the area around while holding torches, and allowing off-hand torches.",
+    links: [
+      {
+        name: "Github",
+        link: "https://github.com/Keyyard/dynamic-torchlight",
+      },
+    ],
+    imgs: [
+      "https://github.com/Keyyard/dynamic-torchlight/raw/main/medias/image1.png",
+      "https://github.com/Keyyard/dynamic-torchlight/raw/main/medias/image2.png",
+      "https://github.com/Keyyard/dynamic-torchlight/raw/main/medias/image3.png",
+    ],
+  },
+  {
+    title: "Portal Guns",
+    date: "Community Project",
+    description:
+      "Adds the Portal Gun, which shoot portals allowing instant travel between two places.",
+    links: [
+      {
+        name: "Github",
+        link: "https://github.com/Keyyard/PortalGunsAddon-ScriptingAPI",
+      },
+    ],
+    imgs: [
+      "https://github.com/Keyyard/PortalGunsAddon-ScriptingAPI/raw/main/medias/portal-appears.gif",
+    ],
+  },
+  {
+    title: "Weapon Combiner",
+    date: "Community Project",
+    description:
+      "Allows players to infuse weapons with powerful abilities using a custom crafting block. Create new enchantments and randomized abilities for weapons.",
+    links: [
+      {
+        name: "MCPEDL",
+        link: "https://mcpedl.com/weapon-combiner/",
+      },
+    ],
+    imgs: [
+      "https://r2.mcpedl.com/submissions/244479/images/weapon-combiner_2.png",
+      "https://r2.mcpedl.com/submissions/244479/images/weapon-combiner_3.png",
+    ],
+  },
+  {
     title: "Actual Guns MCBE",
     date: "Community Project",
     description:
-      "'Actual Guns' is the first add-on to introduce custom guns into Minecraft Bedrock Edition, hence the name!",
+      "Help creating the add-on in early stages with UI & Gun Shooting mechanic via Animation Controller & Snowball run identifer, and later on, the project was taken over by Azoz and Jun.",
     links: [
       {
         name: "MCPEDL",
@@ -129,7 +171,7 @@ const projects = [
     title: "Trains (CRAFTABLE)",
     date: "Official Minecraft Marketplace Project",
     description:
-      "Drive and craft 40+ trains included in this map! Be a railroad operator and bring passengers to their destination in the city or transport cargo. Build your own train tracks and explore!",
+      "Deeply made Entities and Animation Controllers for attachable trains.",
     links: [
       {
         name: "Minecraft Marketplace",
@@ -148,7 +190,7 @@ const projects = [
     title: "One Block Extra",
     date: "Official Minecraft Marketplace Project",
     description:
-      "One block boredom? Our one block has extra fun!! Weapons, bosses, & lucky block all in one block extra.",
+      "Full gameplay development with custom entities, weapons, boss fighting, and more.",
     links: [
       {
         name: "Minecraft Marketplace",
@@ -163,24 +205,9 @@ const projects = [
     ],
   },
   {
-    title: "Scary Myth Mobs",
-    date: "Official Minecraft Marketplace Project",
-    description:
-      "Mobs from PrestonPlay Scary Myth have invaded your world! Seek out the legends and perform dark rituals to summon them into existence. Arm yourself with the evil gear they will drop. Most important of all watch your back…",
-    links: [
-      {
-        name: "Minecraft Marketplace",
-        link: "https://www.minecraft.net/en-us/marketplace/pdp?id=aa1a855c-628e-48f2-bfdb-174bb25c45ab",
-      },
-    ],
-    imgs: [
-      "/assets/projs/smm.png"   ],
-  },
-  {
     title: "TNT Experiments",
     date: "Official Minecraft Marketplace Project",
-    description:
-      "Ready to blow your world into pieces? Explore the biggest and baddest TNT explosions in TNT EXPERIMENTS. Try and pass all the levels and create your own TNT experiment. It's all you could ever want to fulfill your TNT needs! WARNING: TNT IS LAGGY",
+    description: "Deeply command block mechanics.",
     links: [
       {
         name: "Minecraft Marketplace",
@@ -194,7 +221,7 @@ const projects = [
       "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/1969fb00-d0b5-450c-96c0-2d4cb2e3fc00/Screenshot_3.jpg",
       "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/91c62a91-84b3-4fb2-be44-d7b913e6a45b/Screenshot_4.jpg",
     ],
-  }
+  },
 ];
 
 export { experiences, projects, navs };
