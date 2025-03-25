@@ -31,11 +31,10 @@ const Projects = () => {
                   />
                 )}
               </h3>
-
-              <h4 className="text-md text-gray-200 leading-3">{proj.date}</h4>
-              <h4 className="text-md text-gray-200 text-ellipsis overflow-hidden mt-2 leading-5">
+              <h4 className="text-md text-gray-200 leading-3">{proj.short_info}</h4>
+                <h4 className="text-md text-gray-200 text-ellipsis overflow-hidden mt-2 leading-5 group-hover:overflow-visible group-hover:whitespace-normal">
                 {proj.description}
-              </h4>
+                </h4>
               <Carousel className="mt-4" infiniteLoop={true}>
                 {proj.imgs &&
                   proj.imgs.map((img, imgIndex) => (
@@ -60,7 +59,7 @@ const Projects = () => {
                           ? "bg-[#5a4378] text-white hover:bg-[#5a4378]"
                           : linkObj.name === "MCPEDL"
                           ? "bg-[#4a8a4a] text-white hover:bg-[#4a8a4a]"
-                          : ""
+                          : linkObj.name === "CurseForge" ? "bg-[#f16436] text-white hover:bg-[#f16436]" : "bg-[#333] text-white hover:bg-[#333]"
                       }`}
                     >
                       {linkObj.name}

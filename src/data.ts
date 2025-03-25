@@ -22,7 +22,7 @@ const experiences = [
     title: "Entrepreneur",
     company_name:
       "Keyyard Studio - G2crafted Partnership | Official Minecraft Marketplace",
-    date: "Aug 2021 - 2023",
+    short_info: "Aug 2021 - 2023",
     details: [
       "Developed and delivered Minecraft Creations for Official Minecraft Marketplace and the community.",
       "Designed and developed innovative Minecraft Marketplace content to enhance the player experience.",
@@ -32,7 +32,7 @@ const experiences = [
   {
     title: "Contract Developer",
     company_name: "Giggle Block Studios Ltd | Official Minecraft Marketplace",
-    date: "Apr 2022 - Jan 2023",
+    short_info: "Apr 2022 - Jan 2023",
     details: [
       "Developed entities, behaviors and gameplays.",
       "Maintain animations, renders and animation controllers.",
@@ -41,7 +41,7 @@ const experiences = [
   {
     title: "Contract Developer",
     company_name: "MELONBP | Official Minecraft Marketplace",
-    date: "Mar 2023 - Jul 2024",
+    short_info: "Mar 2023 - Jul 2024",
     details: [
       "Developed mob ai-behaviors, and enhance player gameplays.",
       "Maintain and improve existing models, animations, controllers and renders.",
@@ -51,7 +51,7 @@ const experiences = [
   {
     title: "Contract Developer",
     company_name: "Fire Games | Official Minecraft Marketplace",
-    date: "Jul 2024 - Present",
+    short_info: "Jul 2024 - Present",
     details: [
       "Develop javascript, typescript scripting, mob ai-behaviors, and enhance player gameplays.",
       "Maintain and improve existing models, animations, controllers and renders.",
@@ -63,7 +63,7 @@ const experiences = [
 const projects = [
   {
     title: "Tree Capitator and Vein Miner Addon",
-    date: "Scripting API Project",
+    short_info: "Scripting API Project",
     description:
       "Gathering resources more efficiently and conveniently, optimized and allowing enchantments, durability, and more.",
     links: [
@@ -88,7 +88,7 @@ const projects = [
   },
   {
     title: "Scary Myth Mobs",
-    date: "Official Minecraft Marketplace Project",
+    short_info: "Official Minecraft Marketplace Project",
     description:
       "Custom weapons (boomerang-like weapon,..), custom mechanic on entities via scripting (Jumpscare..).",
     links: [
@@ -97,17 +97,29 @@ const projects = [
         link: "https://www.minecraft.net/en-us/marketplace/pdp?id=aa1a855c-628e-48f2-bfdb-174bb25c45ab",
       },
     ],
-    imgs: ["/assets/projs/smm.png"],
+    imgs: [
+      "/assets/projs/smm.png",
+      "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/1510cab7-b0b3-4896-8c71-86b5e44ea6af/fg_screenshot_1.jpg",
+      "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/76faee75-a4a2-43ff-9efc-f2fa97b2f5ce/fg_screenshot_2.jpg",
+    ],
   },
   {
     title: "Dynamic Torchlighting",
-    date: "Community Project",
+    short_info: "Community Project",
     description:
       "Lighting up the area around while holding torches, and allowing off-hand torches.",
     links: [
       {
         name: "Github",
         link: "https://github.com/Keyyard/dynamic-torchlight",
+      },
+      {
+        name: "MCPEDL",
+        link: "https://mcpedl.com/dynamic-torchlight-addon/",
+      },
+      {
+        name: "CurseForge",
+        link: "https://www.curseforge.com/minecraft-bedrock/addons/dynamic-torch-by-keyyard",
       },
     ],
     imgs: [
@@ -120,7 +132,7 @@ const projects = [
   },
   {
     title: "Portal Guns",
-    date: "Community Project",
+    short_info: "Community Project",
     description:
       "Adds the Portal Gun, which shoot portals allowing instant travel between two places.",
     links: [
@@ -131,18 +143,22 @@ const projects = [
     ],
     imgs: [
       "https://github.com/Keyyard/PortalGunsAddon-ScriptingAPI/raw/main/medias/portal-appears.gif",
-      "https://github.com/Keyyard/PortalGunsAddon-ScriptingAPI/raw/main/medias/portals.gif"
+      "https://github.com/Keyyard/PortalGunsAddon-ScriptingAPI/raw/main/medias/portals.gif",
     ],
   },
   {
     title: "Weapon Combiner",
-    date: "Community Project",
+    short_info: "Community Project",
     description:
       "Allows players to infuse weapons with powerful abilities using a custom crafting block. Create new enchantments and randomized abilities for weapons.",
     links: [
       {
         name: "MCPEDL",
         link: "https://mcpedl.com/weapon-combiner/",
+      },
+      {
+        name: "CurseForge",
+        link: "https://www.curseforge.com/minecraft-bedrock/addons/weapon-combiner",
       },
     ],
     imgs: [
@@ -152,7 +168,7 @@ const projects = [
   },
   {
     title: "Actual Guns MCBE",
-    date: "Community Project",
+    short_info: "Community Project",
     description:
       "Help creating the add-on in early stages with UI & Gun Shooting mechanic via Animation Controller & Snowball run identifer, and later on, the project was taken over by Azoz and Jun.",
     links: [
@@ -172,7 +188,7 @@ const projects = [
   },
   {
     title: "Trains (CRAFTABLE)",
-    date: "Official Minecraft Marketplace Project",
+    short_info: "Official Minecraft Marketplace Project",
     description:
       "Deeply made Entities and Animation Controllers for attachable trains.",
     links: [
@@ -188,10 +204,9 @@ const projects = [
       "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/d7e0d146-9f83-4f3f-9e25-9d4a64780221/Trains_MarketingScreenshot_1.jpg",
     ],
   },
-
   {
     title: "One Block Extra",
-    date: "Official Minecraft Marketplace Project",
+    short_info: "Official Minecraft Marketplace Project",
     description:
       "Full gameplay development with custom entities, weapons, boss fighting, and more.",
     links: [
@@ -205,24 +220,6 @@ const projects = [
       "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/adc467e8-813c-4c53-98d1-93ce2df6382e/One_Block_Screenshot_3.jpg",
       "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/c5019b04-27f0-483a-950a-0f90deafad2a/One_Block_Screenshot_0.jpg",
       "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/db0defc4-dc8b-4173-92fb-5b93111fa8c8/One_Block_Screenshot_2.jpg",
-    ],
-  },
-  {
-    title: "TNT Experiments",
-    date: "Official Minecraft Marketplace Project",
-    description: "Deeply command block mechanics.",
-    links: [
-      {
-        name: "Minecraft Marketplace",
-        link: "https://www.minecraft.net/en-us/marketplace/pdp?id=YOUR_TNT_EXPERIMENTS_ID",
-      },
-    ],
-    imgs: [
-      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/596d31ac-c845-4a65-9fde-021af4fa675f/Thumbnail_0.jpg",
-      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/e22f04d7-4397-4f1d-b949-d7a6c33c6b2c/Screenshot_2.jpg",
-      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/c1a9b4d7-b347-429d-b52c-a6c079eaabb9/Screenshot_1.jpg",
-      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/1969fb00-d0b5-450c-96c0-2d4cb2e3fc00/Screenshot_3.jpg",
-      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/91c62a91-84b3-4fb2-be44-d7b913e6a45b/Screenshot_4.jpg",
     ],
   },
 ];
