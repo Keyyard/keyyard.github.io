@@ -1,2 +1,2 @@
-export const reactStrictMode = true;
+export const reactStrictMode = false;
 export const productionBrowserSourceMaps = true;

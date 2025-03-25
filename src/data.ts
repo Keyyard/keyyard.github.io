@@ -43,9 +43,8 @@ const experiences = [
     company_name: "MELONBP | Official Minecraft Marketplace",
     short_info: "Mar 2023 - Jul 2024",
     details: [
-      "Developed mob ai-behaviors, and enhance player gameplays.",
-      "Maintain and improve existing models, animations, controllers and renders.",
-      "Design concepts and implement new features for the game.",
+      "Engineered complex mob behaviors, allowing dynamic and responsive gameplay interactions.",
+      "Designed and implemented new features, including custom mechanics and interactive objects.",
     ],
   },
   {
@@ -53,9 +52,9 @@ const experiences = [
     company_name: "Fire Games | Official Minecraft Marketplace",
     short_info: "Jul 2024 - Present",
     details: [
-      "Develop javascript, typescript scripting, mob ai-behaviors, and enhance player gameplays.",
-      "Maintain and improve existing models, animations, controllers and renders.",
-      "Design concepts and implement new features for the game.",
+      "Developing advanced JavaScript and TypeScript scripting for dynamic behavior and custom mechanics.",
+      "Enhancing player interaction and immersion by integrating new gameplay features and animation improvements.",
+      "Refactoring game logic to improve performance, maintainability, and scalability.",
     ],
   },
 ];
@@ -63,9 +62,9 @@ const experiences = [
 const projects = [
   {
     title: "Tree Capitator and Vein Miner Addon",
-    short_info: "Scripting API Project",
+    short_info: "Community Project",
     description:
-      "Gathering resources more efficiently and conveniently, optimized and allowing enchantments, durability, and more.",
+      "Designed an optimized scripting system that accelerates resource gathering. Features dynamic block breaking, enchantment support, and durability tracking, improving vanilla gameplay with minified performance loss.",
     links: [
       {
         name: "Github",
@@ -90,7 +89,7 @@ const projects = [
     title: "Scary Myth Mobs",
     short_info: "Official Minecraft Marketplace Project",
     description:
-      "Custom weapons (boomerang-like weapon,..), custom mechanic on entities via scripting (Jumpscare..).",
+      "Created unique gameplay elements, including custom weapons and deep-driven horror mechanics. Developed scripting for jump scares and advanced weapons with math formulas.",
     links: [
       {
         name: "Minecraft Marketplace",
@@ -107,7 +106,7 @@ const projects = [
     title: "Dynamic Torchlighting",
     short_info: "Community Project",
     description:
-      "Lighting up the area around while holding torches, and allowing off-hand torches.",
+      "Implemented real-time dynamic lighting for torches, allowing off-hand illumination. Optimized for performance while maintaining a seamless experience.",
     links: [
       {
         name: "Github",
@@ -134,7 +133,7 @@ const projects = [
     title: "Portal Guns",
     short_info: "Community Project",
     description:
-      "Adds the Portal Gun, which shoot portals allowing instant travel between two places.",
+      "Developed a custom teleportation system inspired by Portal, allowing instant travel between two points using interactive gun mechanics.",
     links: [
       {
         name: "Github",
@@ -150,7 +149,7 @@ const projects = [
     title: "Weapon Combiner",
     short_info: "Community Project",
     description:
-      "Allows players to infuse weapons with powerful abilities using a custom crafting block. Create new enchantments and randomized abilities for weapons.",
+    "Developed a custom crafting block that allows players to fuse weapons with unique abilities. Introduced new enchanting table with randomized enchantments and skill-based upgrades, enhancing weapon customization.",
     links: [
       {
         name: "MCPEDL",
@@ -190,7 +189,7 @@ const projects = [
     title: "Trains (CRAFTABLE)",
     short_info: "Official Minecraft Marketplace Project",
     description:
-      "Deeply made Entities and Animation Controllers for attachable trains.",
+    "Designed a fully functional train system with attachable carts. Developed animation controllers and entity mechanics to ensure seamless movement and interaction.",
     links: [
       {
         name: "Minecraft Marketplace",
@@ -208,7 +207,7 @@ const projects = [
     title: "One Block Extra",
     short_info: "Official Minecraft Marketplace Project",
     description:
-      "Full gameplay development with custom entities, weapons, boss fighting, and more.",
+    "Led the development of custom entities, weapons, and boss fights in an engaging One Block survival experience. Engineered mechanics and scripted immersive player interactions.",
     links: [
       {
         name: "Minecraft Marketplace",

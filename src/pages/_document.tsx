@@ -6,8 +6,6 @@ class WebDocument extends Document {
       <Html lang="en">
         <Head>
           <meta charSet="UTF-8" />
-          <link rel="icon" type="image/png" href="/keyyard.png" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
           {/* SEO Enhancements */}
           <meta
@@ -53,18 +51,12 @@ class WebDocument extends Document {
             href="/apple-touch-icon.png"
           />
           <link rel="mask-icon" color="#05ac31" href="/safari-pinned-tab.svg" />
-          
-          {/* For mobile devices */}
-          <meta name="apple-mobile-web-app-capable" content="yes" />
-          <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-          <meta name="apple-mobile-web-app-title" content="Keyyard Portfolio" />
 
+          {/* Fonts */}
           <link
             href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
             rel="stylesheet"
           />
-
-          <title>Keyyard Portfolio - Unleash Minecraft Creativity</title>
 
           {/* Google Tag Manager */}
           <script
