@@ -22,7 +22,7 @@ const experiences = [
     title: "Entrepreneur",
     company_name:
       "Keyyard Studio - G2crafted Partnership | Official Minecraft Marketplace",
-    short_info: "Aug 2021 - 2023",
+    date: "Aug 2021 - 2023",
     details: [
       "Developed and delivered Minecraft Creations for Official Minecraft Marketplace and the community.",
       "Designed and developed innovative Minecraft Marketplace content to enhance the player experience.",
@@ -32,7 +32,7 @@ const experiences = [
   {
     title: "Contract Developer",
     company_name: "Giggle Block Studios Ltd | Official Minecraft Marketplace",
-    short_info: "Apr 2022 - Jan 2023",
+    date: "Apr 2022 - Jan 2023",
     details: [
       "Developed entities, behaviors and gameplays.",
       "Maintain animations, renders and animation controllers.",
@@ -41,7 +41,7 @@ const experiences = [
   {
     title: "Contract Developer",
     company_name: "MELONBP | Official Minecraft Marketplace",
-    short_info: "Mar 2023 - Jul 2024",
+    date: "Mar 2023 - Jul 2024",
     details: [
       "Engineered complex mob behaviors, allowing dynamic and responsive gameplay interactions.",
       "Designed and implemented new features, including custom mechanics and interactive objects.",
@@ -50,7 +50,7 @@ const experiences = [
   {
     title: "Contract Developer",
     company_name: "Fire Games | Official Minecraft Marketplace",
-    short_info: "Jul 2024 - Present",
+    date: "Jul 2024 - Present",
     details: [
       "Developing advanced JavaScript and TypeScript scripting for dynamic behavior and custom mechanics.",
       "Enhancing player interaction and immersion by integrating new gameplay features and animation improvements.",
