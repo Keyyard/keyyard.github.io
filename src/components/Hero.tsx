@@ -2,7 +2,9 @@ import { motion } from "framer-motion";
 import { useEffect } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import HeadRender from "./MyHead";
-import Bg from "./bg";
+import Bg from "./Background";
+import { introductionText } from "../data";
+
 export function Hero() {
   useEffect(() => {
     toast((t) => (
@@ -19,7 +21,7 @@ export function Hero() {
     ));
   }, []);
   return (
-    <section id="hero" className="flex flex-col items-center min-h-[100vh]">
+    <section id="hero" className="flex flex-col items-center min-h-[95vh]">
       <Toaster />
       <Bg />
       <div className="flex flex-col justify-center">
@@ -44,22 +46,12 @@ export function Hero() {
       >
         <HeadRender />
       </motion.div>
-      <div className="pt-4 flex w-[50vw] h-[50vh]" id="head"></div>
-      <div className="flex flex-col items-center justify-items-center py-4 text-[15px]">
+      <div className="pt-4 flex w-[50vw] h-[55vh]" id="head"></div>
+      <div className="flex flex-col items-center justify-items-center p-4 text-[15px]">
         <div className="text-start mt-32 md:mt-20">
-          <p className="text-lg">Hi, I&#39;m Keyyard.</p>
-          <p className="text-lg">
-            Over the last years, I have been an Official Minecraft Marketplace
-            developer.
-          </p>
-          <p className="text-lg">
-            I&#39;m fancy of turning my fantasies into reality, and yours too!
-          </p>
-          <p className="text-sm italic">
-            <a href="https://blogs.keyyard.xyz">
-              Sometimes I write blogs, check it out
-            </a>
-          </p>
+          { introductionText.map((text, index) => (
+            <p key={index} className="text-lg">{text}</p>
+          )) }
         </div>
       </div>
     </section>

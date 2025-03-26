@@ -4,6 +4,10 @@ const navs = [
     link: "/",
   },
   {
+    name: "About Me",
+    link: "/#about",
+  },
+  {
     name: "Experiences",
     link: "/#experiences",
   },
@@ -100,6 +104,9 @@ const projects = [
       "/assets/projs/smm.png",
       "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/1510cab7-b0b3-4896-8c71-86b5e44ea6af/fg_screenshot_1.jpg",
       "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/76faee75-a4a2-43ff-9efc-f2fa97b2f5ce/fg_screenshot_2.jpg",
+      "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/369417ac-b8ba-435d-99c5-7c08f593c2a3/fg_screenshot_0.jpg",
+      "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/7b3b3b3b-3b3b-3b3b-3b3b-3b3b3b3b3b3b/fg_screenshot_3.jpg",
+      "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/3b3b3b3b-3b3b-3b3b-3b3b-3b3b3b3b3b3b/fg_screenshot_4.jpg",
     ],
   },
   {
@@ -223,4 +230,62 @@ const projects = [
   },
 ];
 
-export { experiences, projects, navs };
+const aboutMeData = [
+  { icon: "🔨", text: "Developer specializing in Web, Native, and Minecraft Add-on Development." },
+  { icon: "🎮", text: "Minecraft Add-on Developer (Bedrock Engine) since 2019." },
+  { icon: "🚀", text: "Passionate about performance, optimizations, and scalable systems." },
+  { icon: "🤝", text: "Open to collaborations on challenging projects that push technical and creative limits." },
+];
+
+const techStackData = [
+  {
+    title: "Web Development",
+    items: [
+      { label: "Frontend", value: "Vanilla JavaScript, React" },
+      { label: "Backend", value: "FastAPI, Flask, Next.js, Prisma ORM" },
+      { label: "Databases", value: "PostgreSQL, SQLite, JSON" },
+    ],
+  },
+  {
+    title: "Styling",
+    items: [
+      { value: "TailwindCSS" },
+      { value: "Bootstrap" },
+    ],
+  },
+  {
+    title: "Native Development",
+    items: [
+      { value: "React Native" },
+      { value: "Expo" },
+      { value: "Lynx.JS" },
+    ],
+  },
+  {
+    title: "Programming Languages",
+    items: [
+      { value: "TypeScript" },
+      { value: "JavaScript" },
+      { value: "Python" },
+    ],
+  },
+  {
+    title: "Game Development",
+    items: [
+      { value: "Minecraft Add-on Development (Bedrock Engine)" },
+    ],
+  },
+];
+
+const startYear = 2019;
+const currentYear = new Date().getFullYear();
+const yearDifference = currentYear - startYear + 1;
+
+const introductionText = [
+  "Hi, I'm Keyyard. Nice to meet you!",
+  `Since beginning my journey as a Minecraft Add-on Developer ${yearDifference} years ago`,
+  "I've worked for agencies, start-ups, and talented KOLs like PrestonPlayz, ranging from community to Official Minecraft Marketplace projects.",
+  "I'm quietly confident, naturally curious, and perpetually working on improving my skills.",
+];
+
+export { experiences, projects, navs, aboutMeData, techStackData, introductionText };

@@ -4,8 +4,8 @@ import { projects } from "../data";
 
 const Projects = () => {
   return (
-    <section id="projects" className="min-h-[100vh]">
-      <h2 className="text-4xl pt-4 text-center border-t-2">Projects</h2>
+    <section id="projects" className="min-h-[95vh]">
+      <h2 className="text-4xl font-semibold pt-4 text-center border-t-2">Minecraft Projects</h2>
       <span className="text-xs text-gray-400 text-right block">
         Download counts are aggregated from multiple sources.
       </span>

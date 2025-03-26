@@ -26,8 +26,8 @@ const Experiences = () => {
   });
 
   return (
-    <section id="experiences" className="min-h-[100vh]">
-      <h2 className="text-4xl pt-4 text-center border-t-2 ">Experiences</h2>
+    <section id="experiences" className="min-h-[95vh]">
+      <h2 className="text-4xl font-semibold pt-4 text-center border-t-2 ">Experiences</h2>
       <div className="p-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div className="space-y-4">
           {resolution <= 1024 && selectedExperience && (
