@@ -23,6 +23,17 @@ const navs = [
 
 const experiences = [
   {
+    title: "Legendary Creator",
+    company_name: "MCPEDL",
+    date: "Feb 2018 - Present",
+    details: [
+      "Started creating community addons on 11 February, 2018.",
+      "Developed Tree Capitator and Vein Miner, one of the top popular addons of all time.",
+      "Created Redstone Mechanic Addon, which was the top popular addon in 2018 and 2019.",
+      "Co-founded Actual Guns, one of the first and largest gun addons in Minecraft Bedrock. Later on, the project was taken over by Azoz and Jun.",
+    ],
+  },
+  {
     title: "Entrepreneur",
     company_name:
       "Keyyard Studio - G2crafted Partnership | Official Minecraft Marketplace",
@@ -59,6 +70,7 @@ const experiences = [
       "Developing advanced JavaScript and TypeScript scripting for dynamic behavior and custom mechanics.",
       "Enhancing player interaction and immersion by integrating new gameplay features and animation improvements.",
       "Refactoring game logic to improve performance, maintainability, and scalability.",
+      "Worked for PrestonPlayz, one of the top Minecraft YouTubers. Some of the projects are still not presented to the public.",
     ],
   },
 ];
@@ -156,7 +168,7 @@ const projects = [
     title: "Weapon Combiner",
     short_info: "Community Project",
     description:
-    "Developed a custom crafting block that allows players to fuse weapons with unique abilities. Introduced new enchanting table with randomized enchantments and skill-based upgrades, enhancing weapon customization.",
+      "Developed a custom crafting block that allows players to fuse weapons with unique abilities. Introduced new enchanting table with randomized enchantments and skill-based upgrades, enhancing weapon customization.",
     links: [
       {
         name: "MCPEDL",
@@ -168,8 +180,9 @@ const projects = [
       },
     ],
     imgs: [
-      "https://r2.mcpedl.com/submissions/244479/images/weapon-combiner_2.png",
-      "https://r2.mcpedl.com/submissions/244479/images/weapon-combiner_3.png",
+      "/assets/projs/wc/keyart.png",
+      "/assets/projs/wc/wc1.jpg",
+      "/assets/projs/wc/wc2.jpg",
     ],
   },
   {
@@ -196,7 +209,7 @@ const projects = [
     title: "Trains (CRAFTABLE)",
     short_info: "Official Minecraft Marketplace Project",
     description:
-    "Designed a fully functional train system with attachable carts. Developed animation controllers and entity mechanics to ensure seamless movement and interaction.",
+      "Designed a fully functional train system with attachable carts. Developed animation controllers and entity mechanics to ensure seamless movement and interaction.",
     links: [
       {
         name: "Minecraft Marketplace",
@@ -214,7 +227,7 @@ const projects = [
     title: "One Block Extra",
     short_info: "Official Minecraft Marketplace Project",
     description:
-    "Led the development of custom entities, weapons, and boss fights in an engaging One Block survival experience. Engineered mechanics and scripted immersive player interactions.",
+      "Led the development of custom entities, weapons, and boss fights in an engaging One Block survival experience. Engineered mechanics and scripted immersive player interactions.",
     links: [
       {
         name: "Minecraft Marketplace",
@@ -231,10 +244,22 @@ const projects = [
 ];
 
 const aboutMeData = [
-  { icon: "🔨", text: "Developer specializing in Web, Native, and Minecraft Add-on Development." },
-  { icon: "🎮", text: "Minecraft Add-on Developer (Bedrock Engine) since 2019." },
-  { icon: "🚀", text: "Passionate about performance, optimizations, and scalable systems." },
-  { icon: "🤝", text: "Open to collaborations on challenging projects that push technical and creative limits." },
+  {
+    icon: "🔨",
+    text: "Developer specializing in Web, Native, and Minecraft Add-on Development.",
+  },
+  {
+    icon: "🎮",
+    text: "Minecraft Add-on Developer (Bedrock Engine) since 2019.",
+  },
+  {
+    icon: "🚀",
+    text: "Passionate about performance, optimizations, and scalable systems.",
+  },
+  {
+    icon: "🤝",
+    text: "Open to collaborations on challenging projects that push technical and creative limits.",
+  },
 ];
 
 const techStackData = [
@@ -248,18 +273,11 @@ const techStackData = [
   },
   {
     title: "Styling",
-    items: [
-      { value: "TailwindCSS" },
-      { value: "Bootstrap" },
-    ],
+    items: [{ value: "TailwindCSS" }, { value: "Bootstrap" }],
   },
   {
     title: "Native Development",
-    items: [
-      { value: "React Native" },
-      { value: "Expo" },
-      { value: "Lynx.JS" },
-    ],
+    items: [{ value: "React Native" }, { value: "Expo" }, { value: "Lynx.JS" }],
   },
   {
     title: "Programming Languages",
@@ -271,9 +289,7 @@ const techStackData = [
   },
   {
     title: "Game Development",
-    items: [
-      { value: "Minecraft Add-on Development (Bedrock Engine)" },
-    ],
+    items: [{ value: "Minecraft Add-on Development (Bedrock Engine)" }],
   },
 ];
 
@@ -288,4 +304,11 @@ const introductionText = [
   "I'm quietly confident, naturally curious, and perpetually working on improving my skills.",
 ];
 
-export { experiences, projects, navs, aboutMeData, techStackData, introductionText };
+export {
+  experiences,
+  projects,
+  navs,
+  aboutMeData,
+  techStackData,
+  introductionText,
+};

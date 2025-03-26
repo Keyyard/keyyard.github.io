@@ -23,7 +23,7 @@ const About = () => {
         </motion.div>
 
         <div className="mt-12 mb-4">
-          <h3 className="text-3xl font-semibold mb-6 text-center">Tech Stack</h3>
+          <h3 className="text-3xl font-semibold mb-2 text-center">Tech Stack</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {techStackData.map((stack, index) => (
               <motion.div

@@ -33,7 +33,7 @@ const Experiences = () => {
           {resolution <= 1024 && selectedExperience && (
             <motion.div
               key={selectedExperience.title + selectedExperience.company_name}
-              className="mx-auto p-4 bg-black bg-opacity-20 rounded-xl shadow shadow-stone-900 drop-shadow"
+              className="mx-auto p-6 bg-black bg-opacity-20 rounded-xl shadow shadow-stone-900 drop-shadow"
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.25 }}
@@ -55,7 +55,7 @@ const Experiences = () => {
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
-              className={`mx-auto p-3 cursor-pointer border rounded-lg ${
+              className={`mx-auto p-6 cursor-pointer border rounded-lg ${
                 selectedExperience === exp ? "bg-neutral-700" : ""
               }`}
               onClick={() => setSelectedExperience(exp)}

@@ -39,7 +39,7 @@ const Contact = () => {
     <section id="contact" className="min-h-[95vh]">
       <h2 className="text-4xl font-semibold pt-4 text-center border-t-2">Contact</h2>
       <Toaster />
-      <h3 className="text-center text-lg mt-4">Get in touch with me!</h3>
+      <h3 className="text-center text-lg mt-4">Let's Build Something Cool! Drop me a message.</h3>
       <span className="text-xs text-gray-400 text-right block">
         Click on the icons or contact me via the form!
       </span>
