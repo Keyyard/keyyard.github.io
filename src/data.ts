@@ -1,7 +1,7 @@
 const navs = [
   {
     name: "Hero",
-    link: "/",
+    link: "/#hero",
   },
   {
     name: "About Me",

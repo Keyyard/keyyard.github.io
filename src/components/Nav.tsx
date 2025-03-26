@@ -56,7 +56,7 @@ const Nav = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            <a href={`#${nav.name.toLowerCase()}`}>
+            <a href={`${nav.link.toLowerCase()}`}>
               {nav.name}
             </a>
           </motion.li>
