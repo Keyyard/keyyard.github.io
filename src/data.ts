@@ -2,22 +2,27 @@ const navs = [
   {
     name: "Hero",
     link: "/#hero",
+    sectionId: "hero",
   },
   {
     name: "About Me",
     link: "/#about",
+    sectionId: "about",
   },
   {
     name: "Experiences",
     link: "/#experiences",
+    sectionId: "experiences",
   },
   {
     name: "Projects",
     link: "/#projects",
+    sectionId: "projects",
   },
   {
     name: "Contact",
     link: "/#contact",
+    sectionId: "contact",
   },
 ];
 

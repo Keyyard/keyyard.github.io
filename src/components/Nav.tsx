@@ -51,7 +51,7 @@ const Nav = () => {
           <motion.li
             key={index}
             className={`mx-4 ${
-              activeSection === nav.name.toLowerCase() ? "underline underline-offset-8 text-gray-200" : "text-gray-500"
+              activeSection === nav.sectionId ? "underline underline-offset-8 text-gray-200" : "text-gray-500"
             }`}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
