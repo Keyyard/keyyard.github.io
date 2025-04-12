@@ -83,7 +83,7 @@ const Contact = () => {
         </div>
       </div>
       <div className="flex justify-center mt-2">
-        <a className="mx-1" href="mailto:keyyard8888@gmail.com" target="_blank">
+        <a className="mx-1" href="mailto:contact@keyyard.xyz" target="_blank">
           <div className="relative w-8 h-12 flex items-center justify-center rounded-full transition-colors duration-300 group">
             <svg
               xmlns="http://www.w3.org/2000/svg"

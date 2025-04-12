@@ -1,14 +1,10 @@
 {
   "..\\node_modules\\@react-three\\drei\\core\\VideoTexture.js -> hls.js": {
-    "id": "..\\node_modules\\@react-three\\drei\\core\\VideoTexture.js -> hls.js",
-    "files": [
-      "static/chunks/node_modules_hls_js_dist_hls_js.js"
-    ]
+    "id": null,
+    "files": []
   },
   "..\\node_modules\\@react-three\\drei\\web\\FaceLandmarker.js -> @mediapipe/tasks-vision": {
-    "id": "..\\node_modules\\@react-three\\drei\\web\\FaceLandmarker.js -> @mediapipe/tasks-vision",
-    "files": [
-      "static/chunks/node_modules_mediapipe_tasks-vision_vision_bundle_mjs.js"
-    ]
+    "id": null,
+    "files": []
   }
 }
