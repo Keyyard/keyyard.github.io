@@ -80,7 +80,7 @@ const experiences = [
   },
 ];
 
-const projects = [
+const mcProjects = [
   {
     title: "Tree Capitator and Vein Miner Addon",
     short_info: "Community Project",
@@ -98,7 +98,7 @@ const projects = [
     ],
     downloads: "2.0M+",
     imgs: [
-      "/assets/projs/tc.png",
+      "/assets/mcProjs/tc.png",
       "https://i.ytimg.com/vi/lze7XP_hMio/maxresdefault.jpg",
       "https://github.com/Keyyard/Minecraft-Tree-Capitator-and-Vein-Miner-Addon/raw/main/imgs/img5.png",
       "https://github.com/Keyyard/Minecraft-Tree-Capitator-and-Vein-Miner-Addon/raw/main/imgs/img4.png",
@@ -118,7 +118,7 @@ const projects = [
       },
     ],
     imgs: [
-      "/assets/projs/smm.png",
+      "/assets/mcProjs/smm.png",
       "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/1510cab7-b0b3-4896-8c71-86b5e44ea6af/fg_screenshot_1.jpg",
       "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/76faee75-a4a2-43ff-9efc-f2fa97b2f5ce/fg_screenshot_2.jpg",
       "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/369417ac-b8ba-435d-99c5-7c08f593c2a3/fg_screenshot_0.jpg",
@@ -185,9 +185,9 @@ const projects = [
       },
     ],
     imgs: [
-      "/assets/projs/wc/keyart.png",
-      "/assets/projs/wc/wc1.jpg",
-      "/assets/projs/wc/wc2.jpg",
+      "/assets/mcProjs/wc/keyart.png",
+      "/assets/mcProjs/wc/wc1.jpg",
+      "/assets/mcProjs/wc/wc2.jpg",
     ],
   },
   {
@@ -244,6 +244,88 @@ const projects = [
       "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/adc467e8-813c-4c53-98d1-93ce2df6382e/One_Block_Screenshot_3.jpg",
       "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/c5019b04-27f0-483a-950a-0f90deafad2a/One_Block_Screenshot_0.jpg",
       "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/db0defc4-dc8b-4173-92fb-5b93111fa8c8/One_Block_Screenshot_2.jpg",
+    ],
+  },
+];
+
+const Projects = [
+  {
+    title: "Today Notes",
+    short_info: "Progressive Web App Project",
+    description:
+      "Today Notes helps you manage your daily tasks effortlessly. Stay focused on what matters today, complete tasks efficiently, and boost your productivity.",
+    links: [
+      {
+        name: "Github",
+        link: "https://github.com/Keyyard/today-notes",
+      },
+      {
+        "name": "Product",
+        link: "https://today-notes.keyyard.xyz",
+      }
+    ],
+    imgs: [
+      "https://github.com/Keyyard/today-notes/blob/main/public/medias/1.png?raw=true",
+      "https://github.com/Keyyard/today-notes/blob/main/public/medias/4.png?raw=true",
+    ],
+  },
+  {
+    title: "Blockception's Minecraft Bedrock Development",
+    short_info: "Contributed to Vscode Plugin",
+    description:
+      "An extension that provides code completion, validations, formatters, diagnostics, cheat-sheets, code-actions, creation of files, and development tools to help develop Minecraft Bedrock content.",
+    links: [
+      {
+        name: "Github",
+        link: "https://github.com/Blockception/VSCode-Bedrock-Development-Extension",
+      },
+      {
+        name: "VSCode Marketplace",
+        link: "https://marketplace.visualstudio.com/items/?itemName=BlockceptionLtd.blockceptionvscodeminecraftbedrockdevelopmentextension",
+      }
+    ],
+    imgs: [
+      "https://github.com/Blockception/VSCode-Bedrock-Development-Extension/raw/HEAD/documentation/resources/overview.gif"
+    ],
+  },
+  {
+    title: "Bedrock Wiki",
+    short_info: "Contributed to Bedrock Wiki.",
+    description:
+      "a knowledge-sharing website for Minecraft Bedrock Add-Ons, containing documentation, tutorials, and general how-to information.",
+    links: [
+      {
+        name: "Github",
+        link: "https://github.com/Bedrock-OSS/bedrock-wiki",
+      },
+      {
+        name: "Wiki Website",
+        link: "https://wiki.bedrock.dev/",
+      }
+    ],
+    imgs: [
+      "assets/Projs/wiki.png"
+    ],
+  },
+  {
+    title: "Create Minecraft Bedrock CLI",
+    short_info: "Node Module Package ",
+    description:
+      "CLI tool to create Minecraft projects workspaces with structured folders and files. It includes Microsoft's Compiler",
+    links: [
+      {
+        name: "Github",
+        link: "https://github.com/Keyyard/create-mc-bedrock-cli",
+      },
+      {
+        name: "NPM Package",
+        link: "https://www.npmjs.com/package/create-mc-bedrock",
+      }
+    ],
+    imgs: [
+      "https://github.com/Keyyard/create-mc-bedrock-cli/raw/main/screenshots/gif.gif",
+      "https://github.com/Keyyard/create-mc-bedrock-cli/raw/main/screenshots/img2.png",
+      "https://github.com/Keyyard/create-mc-bedrock-cli/raw/main/screenshots/img1.png",
     ],
   },
 ];
@@ -311,7 +393,8 @@ const introductionText = [
 
 export {
   experiences,
-  projects,
+  mcProjects,
+  Projects,
   navs,
   aboutMeData,
   techStackData,

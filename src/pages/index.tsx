@@ -2,10 +2,11 @@ import { motion, useScroll, useSpring } from "framer-motion";
 import Experiences from "../components/Experiences";
 import { Hero } from "../components/Hero";
 import Navbar from "../components/Nav";
-import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 import { Analytics } from "@vercel/analytics/react";
 import About from "../components/About";
+import MinecraftProjects from "../components/MinecraftProjects";
+import OtherProjects from "../components/Projects";
 export default function Home() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress);
@@ -15,7 +16,8 @@ export default function Home() {
       <Hero />
       <About />
       <Experiences />
-      <Projects />
+      <OtherProjects />
+      <MinecraftProjects />
       <Contact />
       <motion.div
         style={{
