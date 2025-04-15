@@ -40,7 +40,14 @@ const Experiences = () => {
             >
               <h3 className="text-md font-bold">{selectedExperience.title}</h3>
               <h4 className="text-sm text-gray-300">
-                {selectedExperience.company_name}
+                <a
+                  href={selectedExperience.company_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline text-blue-400 hover:text-blue-600"
+                >
+                  {selectedExperience.company_name}
+                </a>
               </h4>
               <p className="text-sm text-gray-300">{selectedExperience.date}</p>
               <ul className="list-disc list-inside mt-2">
@@ -80,7 +87,14 @@ const Experiences = () => {
                     : "text-lg text-gray-200 leading-7"
                 }`}
               >
-                {exp.company_name}
+                <a
+                  href={exp.company_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline text-blue-400 hover:text-blue-600"
+                >
+                  {exp.company_name}
+                </a>
               </h4>
             </motion.div>
           ))}
@@ -100,7 +114,14 @@ const Experiences = () => {
             >
               <h3 className="text-xl font-bold">{selectedExperience.title}</h3>
               <h4 className="text-md text-gray-300 leading-5">
-                {selectedExperience.company_name}
+                <a
+                  href={selectedExperience.company_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline text-blue-400 hover:text-blue-600"
+                >
+                  {selectedExperience.company_name}
+                </a>
               </h4>
               <p className="text-sm text-gray-300">{selectedExperience.date}</p>
               <ul className="list-disc list-inside mt-2">

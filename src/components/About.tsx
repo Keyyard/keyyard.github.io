@@ -5,7 +5,7 @@ import { aboutMeData, techStackData } from "../data";
 const About = () => {
   return (
     <section id="about" className="min-h-[95vh]">
-      <h2 className="text-4xl font-semibold pt-4 mt-10 text-center border-t-2 mb-6">About Me</h2>
+      <h2 className="text-4xl font-semibold pt-4 mt-10 text-center border-t-2 mb-6">About</h2>
       <div className="container mx-auto px-6 lg:px-20 mt-8">
         <motion.div
           className="p-6 bg-neutral-800 rounded-xl shadow shadow-stone-900 drop-shadow"

@@ -5,7 +5,7 @@ const navs = [
     sectionId: "hero",
   },
   {
-    name: "About Me",
+    name: "About",
     link: "/#about",
     sectionId: "about",
   },
@@ -42,6 +42,7 @@ const experiences = [
     title: "Entrepreneur",
     company_name:
       "Keyyard Studio - G2crafted Partnership | Official Minecraft Marketplace",
+    company_url: "https://www.bedrockexplorer.com/@g2crafted",
     date: "Aug 2021 - 2023",
     details: [
       "Developed and delivered Minecraft Creations for Official Minecraft Marketplace and the community.",
@@ -52,6 +53,7 @@ const experiences = [
   {
     title: "Contract Developer",
     company_name: "Giggle Block Studios Ltd | Official Minecraft Marketplace",
+    company_url: "https://www.youtube.com/@GiggleBlockStudios",
     date: "Apr 2022 - Jan 2023",
     details: [
       "Developed entities, behaviors and gameplays.",
@@ -61,6 +63,7 @@ const experiences = [
   {
     title: "Contract Developer",
     company_name: "MELONBP | Official Minecraft Marketplace",
+    company_url: "https://www.melonbp.com/",
     date: "Mar 2023 - Jul 2024",
     details: [
       "Engineered complex mob behaviors, allowing dynamic and responsive gameplay interactions.",
@@ -70,12 +73,24 @@ const experiences = [
   {
     title: "Contract Developer",
     company_name: "Fire Games | Official Minecraft Marketplace",
-    date: "Jul 2024 - Present",
+    company_url: "https://www.bedrockexplorer.com/@firegames",
+    date: "Jul 2024 - Feburary 2025",
+    details: [
+      "Developing advanced JavaScript and TypeScript scripting for algorithms, dynamic behavior and custom mechanics.",
+      "Enhancing player interaction and immersion by integrating new gameplay features and animation improvements.",
+      "Developing performance, maintainability, and scalability projects.",
+      "Worked for PrestonPlayz, one of the top Minecraft YouTubers.",
+    ],
+  },
+  {
+    title: "Contract Developer",
+    company_name: "OASIS | Official Minecraft Marketplace",
+    company_url: "https://www.oasis-team.com/",
+    date: "April 2025 - Present",
     details: [
       "Developing advanced JavaScript and TypeScript scripting for dynamic behavior and custom mechanics.",
       "Enhancing player interaction and immersion by integrating new gameplay features and animation improvements.",
-      "Refactoring game logic to improve performance, maintainability, and scalability.",
-      "Worked for PrestonPlayz, one of the top Minecraft YouTubers. Some of the projects are still not presented to the public.",
+      "Create scalable and maintainable projects with complex game mechanics, algorithms.",
     ],
   },
 ];
