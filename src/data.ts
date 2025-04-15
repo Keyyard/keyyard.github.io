@@ -30,6 +30,7 @@ const experiences = [
   {
     title: "Legendary Creator",
     company_name: "MCPEDL",
+    company_url: "https://mcpedl.com/user/keyyard/",
     date: "Feb 2018 - Present",
     details: [
       "Started creating community addons on 11 February, 2018.",
@@ -74,7 +75,7 @@ const experiences = [
     title: "Contract Developer",
     company_name: "Fire Games | Official Minecraft Marketplace",
     company_url: "https://www.bedrockexplorer.com/@firegames",
-    date: "Jul 2024 - Feburary 2025",
+    date: "Jul 2024 - February 2025",
     details: [
       "Developing advanced JavaScript and TypeScript scripting for algorithms, dynamic behavior and custom mechanics.",
       "Enhancing player interaction and immersion by integrating new gameplay features and animation improvements.",
