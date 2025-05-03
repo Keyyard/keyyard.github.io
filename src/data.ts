@@ -40,15 +40,16 @@ const experiences = [
     ],
   },
   {
-    title: "Entrepreneur",
+    title: "Official Microsoft Partner",
     company_name:
-      "Keyyard Studio - G2crafted Partnership | Official Minecraft Marketplace",
+      "G2crafted | Official Minecraft Marketplace",
     company_url: "https://www.bedrockexplorer.com/@g2crafted",
     date: "Aug 2021 - 2023",
     details: [
-      "Developed and delivered Minecraft Creations for Official Minecraft Marketplace and the community.",
-      "Designed and developed innovative Minecraft Marketplace content to enhance the player experience.",
-      "Managed full project lifecycle from concept to deployment in successful and timely project completions.",
+    "Founded Keyyard Studio.",
+    "Developed and published Minecraft creations for the Official Minecraft Marketplace and the broader community.",
+    "Designed and delivered innovative content to enhance the player experience.",
+    "Managed the full project lifecycle, from concept to deployment, ensuring successful and timely completions.",
     ],
   },
   {
@@ -401,10 +402,10 @@ const currentYear = new Date().getFullYear();
 const yearDifference = currentYear - startYear + 1;
 
 const introductionText = [
-  "Hi, I'm Keyyard. Nice to meet you!",
-  `Since beginning my journey as a Minecraft Add-on Developer ${yearDifference} years ago`,
-  "I've worked for agencies, start-ups, and talented KOLs like PrestonPlayz, ranging from community to Official Minecraft Marketplace projects.",
-  "I'm quietly confident, naturally curious, and perpetually working on improving my skills.",
+  "Hey there, I'm Keyyard — welcome to my world!",
+  `I've been crafting Minecraft Add-ons and digital experiences for ${yearDifference} years, blending creativity with code.`,
+  "Earlier in my journey, I became an Official Microsoft Partner via G2Crafted, publishing marketplace projects. Later, I worked with agencies, start-ups, and top creators like PrestonPlayz, expanding my impact across the Minecraft ecosystem.",
+  "Driven by curiosity and a passion for innovation, I'm always leveling up my skills and ready to take on new challenges.",
 ];
 
 export {
