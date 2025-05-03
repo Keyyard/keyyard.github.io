@@ -404,8 +404,9 @@ const yearDifference = currentYear - startYear + 1;
 const introductionText = [
   "Hey there, I'm Keyyard — welcome to my world!",
   `I've been crafting Minecraft Add-ons and digital experiences for ${yearDifference} years, blending creativity with code.`,
-  "Earlier in my journey, I became an Official Microsoft Partner via G2Crafted, publishing marketplace projects. Later, I worked with agencies, start-ups, and top creators like PrestonPlayz, expanding my impact across the Minecraft ecosystem.",
-  "Driven by curiosity and a passion for innovation, I'm always leveling up my skills and ready to take on new challenges.",
+  "My journey began in 2018 with publishing community content on forums, and in 2019 I became an Official Microsoft Partner through G2Crafted, launching Marketplace projects.",
+  "Afterwards, I've worked with studios like FireGames, MelonBP, GiggleBlock Studio,.. and creators such as PrestonPlayz—gaining experience in content development, team collaboration, and gameplay systems.",
+  "I specialize in clean, modular architecture with deep knowledge of Bedrock scripting.",
 ];
 
 export {
