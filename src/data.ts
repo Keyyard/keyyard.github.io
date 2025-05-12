@@ -41,15 +41,14 @@ const experiences = [
   },
   {
     title: "Official Microsoft Partner",
-    company_name:
-      "G2crafted | Official Minecraft Marketplace",
+    company_name: "G2crafted | Official Minecraft Marketplace",
     company_url: "https://www.bedrockexplorer.com/@g2crafted",
     date: "Aug 2021 - 2023",
     details: [
-    "Founded Keyyard Studio.",
-    "Developed and published Minecraft creations for the Official Minecraft Marketplace and the broader community.",
-    "Designed and delivered innovative content to enhance the player experience.",
-    "Managed the full project lifecycle, from concept to deployment, ensuring successful and timely completions.",
+      "Founded Keyyard Studio.",
+      "Developed and published Minecraft creations for the Official Minecraft Marketplace and the broader community.",
+      "Designed and delivered innovative content to enhance the player experience.",
+      "Managed the full project lifecycle, from concept to deployment, ensuring successful and timely completions.",
     ],
   },
   {
@@ -277,9 +276,9 @@ const Projects = [
         link: "https://github.com/Keyyard/today-notes",
       },
       {
-        "name": "Product",
+        name: "Product",
         link: "https://today-notes.keyyard.xyz",
-      }
+      },
     ],
     imgs: [
       "https://github.com/Keyyard/today-notes/blob/main/public/medias/1.png?raw=true",
@@ -299,10 +298,10 @@ const Projects = [
       {
         name: "VSCode Marketplace",
         link: "https://marketplace.visualstudio.com/items/?itemName=BlockceptionLtd.blockceptionvscodeminecraftbedrockdevelopmentextension",
-      }
+      },
     ],
     imgs: [
-      "https://github.com/Blockception/VSCode-Bedrock-Development-Extension/raw/HEAD/documentation/resources/overview.gif"
+      "https://github.com/Blockception/VSCode-Bedrock-Development-Extension/raw/HEAD/documentation/resources/overview.gif",
     ],
   },
   {
@@ -318,11 +317,9 @@ const Projects = [
       {
         name: "Wiki Website",
         link: "https://wiki.bedrock.dev/",
-      }
+      },
     ],
-    imgs: [
-      "assets/Projs/wiki.png"
-    ],
+    imgs: ["assets/Projs/wiki.png"],
   },
   {
     title: "Create Minecraft Bedrock CLI",
@@ -337,7 +334,7 @@ const Projects = [
       {
         name: "NPM Package",
         link: "https://www.npmjs.com/package/create-mc-bedrock",
-      }
+      },
     ],
     imgs: [
       "https://github.com/Keyyard/create-mc-bedrock-cli/raw/main/screenshots/gif.gif",

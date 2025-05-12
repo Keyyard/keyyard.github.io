@@ -49,9 +49,11 @@ export function Hero() {
       <div className="pt-4 flex w-[50vw] h-[55vh]" id="head"></div>
       <div className="flex flex-col items-center justify-items-center p-4 text-[15px]">
         <div className="text-start mt-32 md:mt-20">
-          { introductionText.map((text, index) => (
-            <p key={index} className="text-lg">{text}</p>
-          )) }
+          {introductionText.map((text, index) => (
+            <p key={index} className="text-lg">
+              {text}
+            </p>
+          ))}
         </div>
       </div>
     </section>

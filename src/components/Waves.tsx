@@ -89,7 +89,7 @@ class Noise {
     return this.lerp(
       this.lerp(n00, n10, u),
       this.lerp(n01, n11, u),
-      this.fade(y)
+      this.fade(y),
     );
   }
 }
@@ -289,7 +289,7 @@ const Waves: React.FC<WavesProps> = ({
           const move =
             noise.perlin2(
               (p.x + time * waveSpeedX) * 0.002,
-              (p.y + time * waveSpeedY) * 0.0015
+              (p.y + time * waveSpeedY) * 0.0015,
             ) * 12;
           p.wave.x = Math.cos(move) * waveAmpX;
           p.wave.y = Math.sin(move) * waveAmpY;
@@ -313,11 +313,11 @@ const Waves: React.FC<WavesProps> = ({
           p.cursor.y += p.cursor.vy * 2;
           p.cursor.x = Math.min(
             maxCursorMove,
-            Math.max(-maxCursorMove, p.cursor.x)
+            Math.max(-maxCursorMove, p.cursor.x),
           );
           p.cursor.y = Math.min(
             maxCursorMove,
-            Math.max(-maxCursorMove, p.cursor.y)
+            Math.max(-maxCursorMove, p.cursor.y),
           );
         });
       });
@@ -344,7 +344,7 @@ const Waves: React.FC<WavesProps> = ({
           p1 = moved(p, !isLast);
           const p2 = moved(
             points[idx + 1] || points[points.length - 1],
-            !isLast
+            !isLast,
           );
           ctx.lineTo(p1.x, p1.y);
           if (isLast) ctx.moveTo(p2.x, p2.y);

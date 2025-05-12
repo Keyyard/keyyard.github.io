@@ -9,7 +9,7 @@ const Contact = () => {
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -20,14 +20,14 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const response = await fetch('/api/sendEmail', {
-      method: 'POST',
+    const response = await fetch("/api/sendEmail", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
     });
-  
+
     if (response.ok) {
       toast.success("Email sent successfully!");
     } else {
@@ -37,9 +37,13 @@ const Contact = () => {
 
   return (
     <section id="contact" className="min-h-[95vh]">
-      <h2 className="text-4xl font-semibold pt-4 text-center border-t-2">Contact</h2>
+      <h2 className="text-4xl font-semibold pt-4 text-center border-t-2">
+        Contact
+      </h2>
       <Toaster />
-      <h3 className="text-center text-lg mt-4">Let's Build Something Cool! Drop me a message.</h3>
+      <h3 className="text-center text-lg mt-4">
+        Let's Build Something Cool! Drop me a message.
+      </h3>
       <span className="text-xs text-gray-400 text-right block">
         Click on the icons or contact me via the form!
       </span>
@@ -170,7 +174,11 @@ const Contact = () => {
             </div>
           </div>
         </a>
-        <a className="mx-1" href="https://discord.com/users/keyyard" target="_blank">
+        <a
+          className="mx-1"
+          href="https://discord.com/users/keyyard"
+          target="_blank"
+        >
           <div className="relative w-8 h-14 flex items-center justify-center rounded-full transition-colors duration-300 group">
             <svg
               aria-hidden="true"
