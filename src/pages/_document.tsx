@@ -62,7 +62,7 @@ class WebDocument extends Document {
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=G-Z3K6D9SXF4"
-          ></script>
+           />
           <script
             dangerouslySetInnerHTML={{
               __html: `
