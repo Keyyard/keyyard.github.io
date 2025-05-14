@@ -1,26 +1,26 @@
 .carousel .slide {
-    background: none;
-    border: none;
+  background: none;
+  border: none;
 }
 
 .carousel .control-arrow,
 .carousel.carousel-slider .control-arrow {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 .carousel .control-arrow:hover,
 .carousel.carousel-slider .control-arrow:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .carousel .control-dots .dot {
-    display: none;
+  display: none;
 }
 
 .carousel .control-dots .dot.selected {
-    display: none;
+  display: none;
 }
 
 .carousel .thumb {
-    border-color: #171717;
+  border-color: #171717;
 }

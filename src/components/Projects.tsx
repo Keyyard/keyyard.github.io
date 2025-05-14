@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
 import { Carousel } from "react-responsive-carousel";
-import { Projects } from "../data"; 
+import { Projects } from "../data";
 
 const OtherProjects = () => {
   return (
     <section id="projects" className="min-h-[95vh]">
-      <h2 className="text-4xl font-semibold pt-4 text-center border-t-2">Projects</h2>
+      <h2 className="text-4xl font-semibold pt-4 text-center border-t-2">
+        Projects
+      </h2>
       <span className="text-xs text-gray-400 text-right block">
         Download counts are aggregated from multiple sources.
       </span>
@@ -24,10 +26,12 @@ const OtherProjects = () => {
               <h3 className="text-xl font-bold flex justify-between items-center">
                 <span>{proj.title}</span>
               </h3>
-              <h4 className="text-md text-gray-200 leading-3">{proj.short_info}</h4>
-                <h4 className="text-md text-gray-200 text-ellipsis overflow-hidden mt-2 leading-5 group-hover:overflow-visible group-hover:whitespace-normal">
+              <h4 className="text-md text-gray-200 leading-3">
+                {proj.short_info}
+              </h4>
+              <h4 className="text-md text-gray-200 text-ellipsis overflow-hidden mt-2 leading-5 group-hover:overflow-visible group-hover:whitespace-normal">
                 {proj.description}
-                </h4>
+              </h4>
               <Carousel className="mt-4" infiniteLoop={true}>
                 {proj.imgs &&
                   proj.imgs.map((img, imgIndex) => (

@@ -27,7 +27,9 @@ const Experiences = () => {
 
   return (
     <section id="experiences" className="min-h-[95vh]">
-      <h2 className="text-4xl font-semibold pt-4 text-center border-t-2 ">Experiences</h2>
+      <h2 className="text-4xl font-semibold pt-4 text-center border-t-2 ">
+        Experiences
+      </h2>
       <div className="p-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div className="space-y-4">
           {resolution <= 1024 && selectedExperience && (
@@ -69,7 +71,10 @@ const Experiences = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: sectionInView ? 1 : 0, y: sectionInView ? 0 : 20 }}
+              animate={{
+                opacity: sectionInView ? 1 : 0,
+                y: sectionInView ? 0 : 20,
+              }}
               transition={{ duration: 0.25, delay: index * 0.1 }}
               ref={sectionRef}
             >
