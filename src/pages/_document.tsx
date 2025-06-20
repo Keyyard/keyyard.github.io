@@ -1,4 +1,4 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from "next/document";
 
 class WebDocument extends Document {
   render() {
@@ -62,7 +62,7 @@ class WebDocument extends Document {
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=G-Z3K6D9SXF4"
-          ></script>
+          />
           <script
             dangerouslySetInnerHTML={{
               __html: `
