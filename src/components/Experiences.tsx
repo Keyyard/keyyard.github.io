@@ -68,9 +68,6 @@ const Experiences = () => {
               onClick={() => setSelectedExperience(exp)}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: sectionInView ? 1 : 0, y: sectionInView ? 0 : 20 }}
-              transition={{ duration: 0.25, delay: index * 0.1 }}
               ref={sectionRef}
             >
               <h3

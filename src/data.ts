@@ -33,10 +33,9 @@ const experiences = [
     company_url: "https://mcpedl.com/user/keyyard/",
     date: "Feb 2018 - Present",
     details: [
-      "Started creating community addons on 11 February, 2018.",
-      "Developed Tree Capitator and Vein Miner, one of the top popular addons of all time.",
-      "Created Redstone Mechanic Addon, which was the top popular addon in 2018 and 2019.",
-      "Co-founded Actual Guns, one of the first and largest gun addons in Minecraft Bedrock. Later on, the project was taken over by Azoz and Jun.",
+      "Architected Tree Capitator and Vein Miner with optimized algorithms, proving my ability to create solutions that scale to millions of users.",
+      "Dominated the addon market in 2018-2019 with Redstone Mechanic, demonstrating my expertise in creating trend-setting content.",
+      "Co-founded and launched Actual Guns addon, establishing one of the most successful Minecraft Bedrock projects with 3M+ downloads.",
     ],
   },
   {
@@ -46,10 +45,9 @@ const experiences = [
     company_url: "https://www.bedrockexplorer.com/@g2crafted",
     date: "Aug 2021 - 2023",
     details: [
-    "Founded Keyyard Studio.",
-    "Developed and published Minecraft creations for the Official Minecraft Marketplace and the broader community.",
-    "Designed and delivered innovative content to enhance the player experience.",
-    "Managed the full project lifecycle, from concept to deployment, ensuring successful and timely completions.",
+    "Established Keyyard Studio as a trusted brand, building credibility that attracts high-value partnerships.",
+    "Delivered premium-quality content that consistently exceeded Microsoft's strict quality standards.",
+    "Mastered end-to-end project management, ensuring every deadline is met while maintaining exceptional quality standards.",
     ],
   },
   {
@@ -58,8 +56,8 @@ const experiences = [
     company_url: "https://www.youtube.com/@GiggleBlockStudios",
     date: "Apr 2022 - Jan 2023",
     details: [
-      "Developed entities, behaviors and gameplays.",
-      "Maintain animations, renders and animation controllers.",
+      "Delivered complex entity systems and gameplay mechanics that directly increased player engagement and retention.",
+      "Optimized animations and animation controllers for smooth and engaging user experiences.",
     ],
   },
   {
@@ -68,33 +66,46 @@ const experiences = [
     company_url: "https://www.melonbp.com/",
     date: "Mar 2023 - Jul 2024",
     details: [
-      "Engineered complex mob behaviors, allowing dynamic and responsive gameplay interactions.",
-      "Designed and implemented new features, including custom mechanics and interactive objects.",
+      "Engineered sophisticated AI behaviors that created more immersive gameplay experiences, resulting in higher player satisfaction scores.",
+      "Pioneered innovative custom mechanics that differentiated client projects from competitors in the marketplace.",
     ],
   },
   {
-    title: "Contract Developer",
+    title: "Senior Developer",
     company_name: "Fire Games | Official Minecraft Marketplace",
     company_url: "https://www.bedrockexplorer.com/@firegames",
     date: "Jul 2024 - February 2025",
     details: [
-      "Developing advanced JavaScript and TypeScript scripting for algorithms, dynamic behavior and custom mechanics.",
-      "Enhancing player interaction and immersion by integrating new gameplay features and animation improvements.",
-      "Developing performance, maintainability, and scalability projects.",
-      "Worked for PrestonPlayz, one of the top Minecraft YouTubers.",
+      "Leveraged advanced JavaScript and TypeScript to create high-performance systems that handle complex algorithms seamlessly.",
+      "Transformed player experiences through cutting-edge gameplay features, directly contributing to increased user engagement.",
+      "Built scalable, maintainable codebases that reduce long-term maintenance costs and enable rapid feature development.",
+      "Collaborated with PrestonPlayz (millions of subscribers), delivering content that meets the highest industry standards.",
     ],
   },
   {
-    title: "Contract Developer",
+    title: "Development Infrastructure Specialist & Developer",
     company_name: "OASIS | Official Minecraft Marketplace",
     company_url: "https://www.oasis-team.com/",
     date: "April 2025 - Present",
     details: [
-      "Developing advanced JavaScript and TypeScript scripting for dynamic behavior and custom mechanics.",
-      "Enhancing player interaction and immersion by integrating new gameplay features and animation improvements.",
-      "Create scalable and maintainable projects with complex game mechanics, algorithms.",
+      "Architecting next-generation scripting solutions that give clients a competitive edge in the marketplace.",
+      "Creating immersive gameplay systems that drive player retention and monetization for client projects.",
+      "Building enterprise-level infrastructure that scales effortlessly while maintaining peak performance.",
+      "Developing proprietary development tools that accelerate project delivery and boost development efficiency by 50%.",
+      "Designing engagement-focused gameplay mechanics that consistently outperform industry benchmarks.",
     ],
   },
+    {
+    title: "Organization Member & Project Lead",
+    company_name: "Bedrock OSS",
+    company_url: "https://github.com/Bedrock-OSS/",
+    date: "June 2025 - Present",
+    details: [
+      "Contributing to the development of open-source projects, collaborating with fellow developers to create cutting-edge solutions.",
+      "Served as a Wiki Contributor, creating and editing content for the knowledge-sharing platform dedicated to Minecraft Bedrock Add-Ons."
+    ],
+  },
+
 ];
 
 const mcProjects = [
@@ -263,34 +274,153 @@ const mcProjects = [
       "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/db0defc4-dc8b-4173-92fb-5b93111fa8c8/One_Block_Screenshot_2.jpg",
     ],
   },
-];
-
-const Projects = [
   {
-    title: "Today Notes",
-    short_info: "Progressive Web App Project",
+    title: "Crossbow Expansion",
+    short_info: "Official Minecraft Marketplace Project",
     description:
-      "Today Notes helps you manage your daily tasks effortlessly. Stay focused on what matters today, complete tasks efficiently, and boost your productivity.",
+      "Craft the most overpowered crossbows in Minecraft! Perfect for survival, PvP, hunting, and anything else your mind can think of! Features Auto, Modified, Lighting, TNT, Ender, Apocalyptic, and Fire Crossbows. All craftable with much more!",
     links: [
       {
-        name: "Github",
-        link: "https://github.com/Keyyard/today-notes",
+        name: "Minecraft Marketplace",
+        link: "https://www.minecraft.net/en-us/marketplace/pdp?id=735e4932-4817-4bc7-860d-6738413aa9a6",
       },
-      {
-        "name": "Product",
-        link: "https://today-notes.keyyard.xyz",
-      }
     ],
     imgs: [
-      "https://github.com/Keyyard/today-notes/blob/main/public/medias/1.png?raw=true",
-      "https://github.com/Keyyard/today-notes/blob/main/public/medias/4.png?raw=true",
+      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/cf9d5fc7-5c1f-4e80-947f-8449fc501150/Thumbnail_0.jpg",
+      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/9cffecb4-b96b-41e4-9c20-8f3eabf6af66/Screenshot_2.jpg",
+      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/e9cb51f3-27e0-4361-a2b6-4ab14255d2ce/Screenshot_3.jpg",
+      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/919968d3-9ca9-45f2-84c5-d095013bdfe1/Screenshot_4.jpg",
+      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/3b600886-e238-4ed7-9084-a12c82f2ff11/Screenshot_0.jpg",
+      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/0abe1765-b4b9-4ee6-87ee-7f1847eaf2ef/Screenshot_1.jpg",
     ],
   },
   {
+    title: "Redstone Expansion",
+    short_info: "Official Minecraft Marketplace Project",
+    description:
+      "Tinker with brand new redstone tech! Features 11 NEW Redstone Components with brand new machines and mechanisms to be made. Includes interactive demonstrations at spawn to help you get started.",
+    links: [
+      {
+        name: "Minecraft Marketplace",
+        link: "https://www.minecraft.net/en-us/marketplace/pdp?id=87346cd5-68e7-4a6d-b0fd-b935ed1c5d34",
+      },
+    ],
+    imgs: [
+      "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/14693ee6-8d89-4b1d-b98a-8bffd53b2b23/Thumbnail_0.jpg",
+      "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/ac877822-2a4f-46d6-8663-7f4f4b80b0b1/Screenshot_2.jpg",
+      "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/3e61a475-c7e5-4557-b2c7-d0e1a1a31b38/Screenshot_3.jpg",
+      "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/d670b857-6bf5-4bd1-b04b-8cde622d222f/Screenshot_4.jpg",
+      "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/ce1c905f-7045-47a7-8d6f-0105774ee4b7b/Screenshot_0.jpg",
+      "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/b4b201bc-b20a-4ad7-9804-bc400c2c5c54/Screenshot_1.jpg",
+    ],
+  },
+  {
+    title: "TNT Experiments",
+    short_info: "Official Minecraft Marketplace Project",
+    description:
+      "Ready to blow your world into pieces? Explore the biggest and baddest TNT explosions in TNT EXPERIMENTS. Try and pass all 21 TNT levels and create your own TNT experiment with the Custom TNT Sandbox Editor. It's all you could ever want to fulfill your TNT needs!",
+    links: [
+      {
+        name: "Minecraft Marketplace",
+        link: "https://www.minecraft.net/en-us/marketplace/pdp?id=85db0b50-c05d-4684-82f7-bda15541ebda",
+      },
+    ],
+    imgs: [
+      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/596d31ac-c845-4a65-9fde-021af4fa675f/Thumbnail_0.jpg",
+      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/e22f04d7-4397-4f1d-b949-d7a6c33c6b2c/Screenshot_2.jpg",
+      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/1969fb00-d0b5-450c-96c0-2d4cb2e3fc00/Screenshot_3.jpg",
+      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/91c62a91-84b3-4fb2-be44-d7b913e6a45b/Screenshot_4.jpg",
+      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/bad47484-bcef-4dce-bac3-cac9567938ba/Screenshot_0.jpg",
+      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/c1a9b4d7-b347-429d-b52c-a6c079eaabb9/Screenshot_1.jpg",
+    ],
+  },
+  {
+    title: "3D Medieval Experience",
+    short_info: "Official Minecraft Marketplace Project",
+    description:
+      "Step into a medieval world filled with side quests to enhance your gameplay! Features 7 3D items, medieval cannon with unique behaviors, 4 custom NPCs, and a medieval castle at spawn. Developed by Keyyard Studio in partnership with G2Crafted.",
+    links: [
+      {
+        name: "Minecraft Marketplace",
+        link: "https://www.minecraft.net/en-us/marketplace/pdp?id=7f3ced8b-5d8c-483b-a516-05aff064231d",
+      },
+    ],
+    imgs: [
+      "https://images.bedrockexplorer.com/minecraft-marketplace-content/g2crafted-3d-medieval-experience-thumbnail-ea2dbbec5214a3c4-800.jpg",
+      "https://media-cdn.bedrockexplorer.com/OYHa744eNPhWP45JkrSxRzDMUsbpl53L6uOLSpt6kQo/fill/800/450/ce/1/aHR0cHM6Ly94Zm9yZ2Vhc3NldHMwMDEueGJveGxpdmUuY29tL3BmLXRpdGxlLWI2M2EwODAzZDM2NTM2NDMtMjBjYTIvYTEwMGM0ZDktNDhlNi00NGUxLTk1YzMtMDk0YzFjN2MzYWIwLzNEX01lZGlldmFsX0V4cGVyaWVuY2VfTWFya2V0aW5nU2NyZWVuc2hvdF8xLmpwZw/minecraft-marketplace-content-by-g2crafted-3d-medieval-experience.png",
+      "https://media-cdn.bedrockexplorer.com/AI7wrYVmwTkiK9-a_g0A9gP_VTi_dX7iAMlTKmFuS3w/fill/800/450/ce/1/aHR0cHM6Ly94Zm9yZ2Vhc3NldHMwMDEueGJveGxpdmUuY29tL3BmLXRpdGxlLWI2M2EwODAzZDM2NTM2NDMtMjBjYTIvOGIxMGJhYTMtM2NkNC00YmM1LWFmNTAtMWI0MjJlN2Y0NDEyLzNEX01lZGlldmFsX0V4cGVyaWVuY2VfTWFya2V0aW5nU2NyZWVuc2hvdF8yLmpwZw/minecraft-marketplace-content-by-g2crafted-3d-medieval-experience.png",
+      "https://media-cdn.bedrockexplorer.com/oGGTiPxK7H9m4RCbiXFeg2UXNij6ejnI9ddb9eMTy4Q/fill/800/450/ce/1/aHR0cHM6Ly94Zm9yZ2Vhc3NldHMwMDEueGJveGxpdmUuY29tL3BmLXRpdGxlLWI2M2EwODAzZDM2NTM2NDMtMjBjYTIvNjU1YzIwZTMtZmY2Ny00YWQ5LWI4NTctODllMGJlY2MxMjM3LzNEX01lZGlldmFsX0V4cGVyaWVuY2VfTWFya2V0aW5nU2NyZWVuc2hvdF80LmpwZw/minecraft-marketplace-content-by-g2crafted-3d-medieval-experience.png",
+      "https://media-cdn.bedrockexplorer.com/OYHa744eNPhWP45JkrSxRzDMUsbpl53L6uOLSpt6kQo/fill/800/450/ce/1/aHR0cHM6Ly94Zm9yZ2Vhc3NldHMwMDEueGJveGxpdmUuY29tL3BmLXRpdGxlLWI2M2EwODAzZDM2NTM2NDMtMjBjYTIvYTEwMGM0ZDktNDhlNi00NGUxLTk1YzMtMDk0YzFjN2MzYWIwLzNEX01lZGlldmFsX0V4cGVyaWVuY2VfTWFya2V0aW5nU2NyZWVuc2hvdF8xLmpwZw/minecraft-marketplace-content-by-g2crafted-3d-medieval-experience.png",
+    ],
+  },
+  {
+    title: "Demonic Legends",
+    short_info: "Official Minecraft Marketplace Skin Pack",
+    description:
+      "Embrace the legend of demons! This skin pack features fun-loving and cute demon friends that aren't as scary as they seem. Features 12 devil skins with unique horn accessories. Developed by Keyyard Studio in partnership with G2Crafted.",
+    links: [
+      {
+        name: "Minecraft Marketplace",
+        link: "https://www.minecraft.net/en-us/marketplace/pdp?id=47c862c8-98c1-497c-94a5-3959eea3fec5",
+      },
+    ],
+    imgs: [
+      "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/82fb9eac-c719-40be-affd-315560116328/Demonic_Legends_Thumbnail.jpg"
+    ],
+  },
+  {
+    title: "Fright Night",
+    short_info: "Official Minecraft Marketplace Skin Pack",
+    description:
+      "Suit up for the annual scare-fest Halloween with our Fright Night pack. Play as frightening characters including Clown, Demon, Ghost, Jack O' Lantern, Ogre, Vampire, Scarecrow, Skeleton, and more! Features 12 spooky skins. Developed by Keyyard Studio in partnership with G2Crafted.",
+    links: [
+      {
+        name: "Minecraft Marketplace",
+        link: "https://www.minecraft.net/en-us/marketplace/pdp?id=7ddad910-7c39-46c0-8e6d-8ed38f870d04",
+      },
+    ],
+    imgs: [
+      "https://xforgeassets001.xboxlive.com/pf-title-b63a0803d3653643-20ca2/a3492053-54af-4730-aff7-91d4ba374bcb/FrightNight_Thumbnail.jpg"
+    ],
+  }
+];
+
+const Projects = [
+    {
+    title: "Create Minecraft Bedrock CLI",
+    short_info: "Node Module Package",
+    description:
+      "CLI tool to create Minecraft projects workspaces with structured folders and files. It includes Microsoft's Compiler",
+    icon: "https://raw.githubusercontent.com/Keyyard/create-mc-bedrock-cli/refs/heads/website/public/icon.ico",    links: [
+      {
+        name: "Github",
+        link: "https://github.com/Keyyard/create-mc-bedrock-cli",
+      },
+      {
+        name: "NPM Package",
+        link: "https://www.npmjs.com/package/create-mc-bedrock",
+      },
+      {
+        name: "Website",
+        link: "https://bedrockcli.keyyard.xyz",
+      }
+    ],
+    imgs: [
+      "https://github.com/Keyyard/create-mc-bedrock-cli/blob/main/medias/gif.gif?raw=true",
+      "https://github.com/Keyyard/create-mc-bedrock-cli/blob/main/medias/img2.png?raw=true",
+      "https://github.com/Keyyard/create-mc-bedrock-cli/blob/main/medias/img1.png?raw=true",
+    ],
+    tags: ["Node.js", "CLI", "Minecraft", "Developer Tools", "Productivity"],
+    status: "Live",
+    featured: true,
+  },
+  
+  {
     title: "Blockception's Minecraft Bedrock Development",
-    short_info: "Contributed to Vscode Plugin",
+    short_info: "Contributed to VSCode Plugin",
     description:
       "An extension that provides code completion, validations, formatters, diagnostics, cheat-sheets, code-actions, creation of files, and development tools to help develop Minecraft Bedrock content.",
+    icon: "https://blockceptionltd.gallerycdn.vsassets.io/extensions/blockceptionltd/blockceptionvscodeminecraftbedrockdevelopmentextension/8.0.39/1749586201427/Microsoft.VisualStudio.Services.Icons.Default",
     links: [
       {
         name: "Github",
@@ -304,12 +434,17 @@ const Projects = [
     imgs: [
       "https://github.com/Blockception/VSCode-Bedrock-Development-Extension/raw/HEAD/documentation/resources/overview.gif"
     ],
+    tags: ["TypeScript", "VSCode", "Minecraft", "Developer Tools", "Productivity"],
+    status: "Live",
+    featured: false,
   },
+  
   {
     title: "Bedrock Wiki",
-    short_info: "Contributed to Bedrock Wiki.",
+    short_info: "Contributed to Bedrock Wiki",
     description:
-      "a knowledge-sharing website for Minecraft Bedrock Add-Ons, containing documentation, tutorials, and general how-to information.",
+      "A knowledge-sharing website for Minecraft Bedrock Add-Ons, containing documentation, tutorials, and general how-to information.",
+    icon: "https://wiki.bedrock.dev/assets/images/homepage/wikilogo.png",
     links: [
       {
         name: "Github",
@@ -321,29 +456,35 @@ const Projects = [
       }
     ],
     imgs: [
-      "assets/Projs/wiki.png"
+      "/assets/Projs/wiki.png"
     ],
+    tags: ["Documentation", "Minecraft", "Community", "Education"],
+    status: "Live",
+    featured: false,
   },
   {
-    title: "Create Minecraft Bedrock CLI",
-    short_info: "Node Module Package ",
+    title: "Today Notes",
+    short_info: "Progressive Web App Project",
     description:
-      "CLI tool to create Minecraft projects workspaces with structured folders and files. It includes Microsoft's Compiler",
+      "Today Notes helps you manage your daily tasks effortlessly. Stay focused on what matters today, complete tasks efficiently, and boost your productivity.",
+    icon: "https://github.com/Keyyard/today-notes/blob/main/public/icons/128.png?raw=true",
     links: [
       {
         name: "Github",
-        link: "https://github.com/Keyyard/create-mc-bedrock-cli",
+        link: "https://github.com/Keyyard/today-notes",
       },
       {
-        name: "NPM Package",
-        link: "https://www.npmjs.com/package/create-mc-bedrock",
+        "name": "Product",
+        link: "https://today-notes.keyyard.xyz",
       }
     ],
     imgs: [
-      "https://github.com/Keyyard/create-mc-bedrock-cli/raw/main/screenshots/gif.gif",
-      "https://github.com/Keyyard/create-mc-bedrock-cli/raw/main/screenshots/img2.png",
-      "https://github.com/Keyyard/create-mc-bedrock-cli/raw/main/screenshots/img1.png",
+            "https://github.com/Keyyard/today-notes/blob/main/public/medias/4.png?raw=true",
+      "https://github.com/Keyyard/today-notes/blob/main/public/medias/1.png?raw=true",
     ],
+    tags: ["React", "PWA", "TypeScript", "Productivity"],
+    status: "Inactive",
+    featured: false,
   },
 ];
 
@@ -368,32 +509,53 @@ const aboutMeData = [
 
 const techStackData = [
   {
-    title: "Web Development",
-    items: [
-      { label: "Frontend", value: "Vanilla JavaScript, React" },
-      { label: "Backend", value: "FastAPI, Flask, Next.js, Prisma ORM" },
-      { label: "Databases", value: "PostgreSQL, SQLite, JSON" },
-    ],
-  },
-  {
-    title: "Styling",
-    items: [{ value: "TailwindCSS" }, { value: "Bootstrap" }],
-  },
-  {
-    title: "Native Development",
-    items: [{ value: "React Native" }, { value: "Expo" }, { value: "Lynx.JS" }],
-  },
-  {
     title: "Programming Languages",
     items: [
       { value: "TypeScript" },
-      { value: "JavaScript" },
+      { value: "JavaScript (ES6+)" },
       { value: "Python" },
+      { value: "JSON" },
+    ],
+  },
+  {
+    title: "Frontend Development",
+    items: [
+      { label: "Frameworks", value: "React, Next.js" },
+      { label: "Styling", value: "TailwindCSS, Bootstrap" },
+      { label: "Core", value: "HTML5, CSS3, Vanilla JavaScript" },
+    ],
+  },
+  {
+    title: "Backend & Database",
+    items: [
+      { label: "APIs", value: "FastAPI, Flask, RESTful APIs" },
+      { label: "Database", value: "PostgreSQL, SQLite, Prisma ORM" },
+      { label: "Authentication", value: "OAuth, JWT, Clerk" },
+    ],
+  },
+  {
+    title: "Mobile Development",
+    items: [
+      { value: "React Native" },
+      { value: "Expo" },
+      { value: "Lynx.JS" },
     ],
   },
   {
     title: "Game Development",
-    items: [{ value: "Minecraft Add-on Development (Bedrock Engine)" }],
+    items: [
+      { label: "Minecraft Bedrock", value: "Add-on Development, Scripting API" },
+      { label: "Performance", value: "Optimization, Algorithm Design" },
+    ],
+  },
+  {
+    title: "Development Tools & Workflow",
+    items: [
+      { value: "Git & GitHub" },
+      { value: "VS Code Extensions" },
+      { value: "CLI Development" },
+      { value: "npm/Package Management" },
+    ],
   },
 ];
 
@@ -402,11 +564,11 @@ const currentYear = new Date().getFullYear();
 const yearDifference = currentYear - startYear + 1;
 
 const introductionText = [
-  "Hey there, I'm Keyyard — welcome to my world!",
-  `I've been crafting Minecraft Add-ons and digital experiences for ${yearDifference} years, blending creativity with code.`,
-  "My journey began in 2018 with publishing community content on forums, and in 2019 I became an Official Microsoft Partner through G2Crafted, launching Marketplace projects.",
-  "Afterwards, I've worked with studios like FireGames, MelonBP, GiggleBlock Studio,.. and creators such as PrestonPlayz—gaining experience in content development, team collaboration, and gameplay systems.",
-  "I specialize in clean, modular architecture with deep knowledge of Bedrock scripting.",
+  "Hey there, I'm Keyyard — a developer who turns creative visions into scalable digital experiences!",
+  `With ${yearDifference} years of expertise, I've built solutions that have reached millions of users and generated significant revenue for clients.`,
+  "My journey began in 2018 with community content creation, quickly evolving into an Official Microsoft Partnership through G2Crafted, where I launched successful Marketplace projects.",
+  "Since then, I've collaborated with industry leaders like FireGames, MelonBP, GiggleBlock Studio, and content creators such as PrestonPlayz, delivering high-performance systems that drive engagement and profitability.",
+  "I specialize in clean, modular architecture with deep expertise in both web technologies and Bedrock scripting—creating solutions that scale effortlessly while maintaining peak performance.",
 ];
 
 export {

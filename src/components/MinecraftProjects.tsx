@@ -5,48 +5,46 @@ import { mcProjects } from "../data"
 const MinecraftProjects = () => {
   return (
     <section id="projects" className="min-h-[95vh]">
-      <h2 className="text-4xl font-semibold pt-4 text-center border-t-2">Minecraft Projects</h2>
-      <span className="text-xs text-gray-400 text-right block">
+      <h2 className="text-4xl font-semibold pt-4 text-center border-t-2">Minecraft Projects</h2>      <span className="text-xs text-gray-400 text-right block">
         Download counts are aggregated from multiple sources.
       </span>
-      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-4 p-6 pb-32">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 p-6 pb-32">
         {mcProjects.map((proj, index) => (
           <div key={index} className="group">
             <motion.div
-              className="p-4 cursor-pointer bg-black bg-opacity-20 shadow-black inset-2 shadow-lg rounded-lg overflow-hidden whitespace-nowrap"
+              className="p-3 cursor-pointer bg-black bg-opacity-20 shadow-black inset-2 shadow-lg rounded-lg overflow-hidden"
               initial={{ opacity: 0, y: 20 }}
               animate={{
                 opacity: 1,
                 y: 0,
               }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <h3 className="text-xl font-bold flex justify-between items-center">
-                <span>{proj.title}</span>
+            >              <h3 className="text-md font-bold flex justify-between items-center mb-1">
+                <span className="truncate">{proj.title}</span>
                 {proj.downloads && (
                   <img
-                    className="inline-block"
+                    className="inline-block ml-2 h-5"
                     alt="downloads"
                     src={`https://img.shields.io/badge/downloads-${proj.downloads}-blue`}
                   />
                 )}
               </h3>
-              <h4 className="text-md text-gray-200 leading-3">{proj.short_info}</h4>
-                <h4 className="text-md text-gray-200 text-ellipsis overflow-hidden mt-2 leading-5 group-hover:overflow-visible group-hover:whitespace-normal">
+              <h4 className="text-xs text-gray-200 leading-3 mb-2">{proj.short_info}</h4>
+              <h4 className="text-xs text-gray-200 text-ellipsis overflow-hidden leading-4 group-hover:overflow-visible group-hover:whitespace-normal line-clamp-2 h-5">
                 {proj.description}
-                </h4>
-              <Carousel className="mt-4" infiniteLoop={true}>
+              </h4>              <Carousel className="mt-3 mb-3" infiniteLoop={true} showThumbs={false} showStatus={false}>
                 {proj.imgs &&
                   proj.imgs.map((img, imgIndex) => (
-                    <div key={imgIndex}>
+                    <div key={imgIndex} className="aspect-video">
                       <img
                         src={img}
                         alt={`${proj.title} image ${imgIndex + 1}`}
+                        className="w-full h-full object-cover rounded"
                       />
                     </div>
                   ))}
               </Carousel>
-              <div className="flex items-center justify-center mt-4">
+              <div className="flex flex-wrap gap-2 justify-center">
                 {proj.links &&
                   proj.links.map((linkObj, i) => (
                     <a
@@ -54,7 +52,7 @@ const MinecraftProjects = () => {
                       href={linkObj.link || "#"}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`text-sm font-bold inline-block px-4 py-2 rounded-xl mr-5 shadow-inner shadow-black ${
+                      className={`text-xs font-bold inline-block px-3 py-1.5 rounded-lg shadow-inner shadow-black ${
                         linkObj.name === "Github"
                           ? "bg-[#5a4378] text-white hover:bg-[#5a4378]"
                           : linkObj.name === "MCPEDL"
