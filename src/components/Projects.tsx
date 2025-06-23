@@ -91,8 +91,8 @@ const OtherProjects = () => {
                             proj.status === "Live"
                               ? "bg-green-500 bg-opacity-20 text-green-400 border border-green-500 border-opacity-30"
                               : proj.status === "In Development"
-                              ? "bg-yellow-500 bg-opacity-20 text-yellow-400 border border-yellow-500 border-opacity-30"
-                              : "bg-blue-500 bg-opacity-20 text-blue-400 border border-blue-500 border-opacity-30"
+                                ? "bg-yellow-500 bg-opacity-20 text-yellow-400 border border-yellow-500 border-opacity-30"
+                                : "bg-blue-500 bg-opacity-20 text-blue-400 border border-blue-500 border-opacity-30"
                           }`}
                         >
                           {proj.status}
@@ -124,9 +124,13 @@ const OtherProjects = () => {
                               {tag}
                             </span>
                           ))}
-                        {proj.tags.length > (window.innerWidth < 640 ? 1 : 4) && (
+                        {proj.tags.length >
+                          (window.innerWidth < 640 ? 1 : 4) && (
                           <span className="px-2 py-1 text-xs bg-gray-700 bg-opacity-50 text-gray-400 rounded-md">
-                            +{proj.tags.length - (window.innerWidth < 640 ? 1 : 4)} more
+                            +
+                            {proj.tags.length -
+                              (window.innerWidth < 640 ? 1 : 4)}{" "}
+                            more
                           </span>
                         )}
                       </div>
@@ -135,7 +139,9 @@ const OtherProjects = () => {
 
                   {/* Click indicator */}
                   <div className="flex items-center text-gray-400 group-hover:text-white transition-colors ml-4">
-                    <span className="text-sm mr-2 hidden sm:inline">Click to view</span>
+                    <span className="text-sm mr-2 hidden sm:inline">
+                      Click to view
+                    </span>
                     <svg
                       className="w-5 h-5"
                       fill="none"
@@ -215,8 +221,8 @@ const OtherProjects = () => {
                         selectedProject.status === "Live"
                           ? "bg-green-500 bg-opacity-20 text-green-400 border border-green-500 border-opacity-30"
                           : selectedProject.status === "In Development"
-                          ? "bg-yellow-500 bg-opacity-20 text-yellow-400 border border-yellow-500 border-opacity-30"
-                          : "bg-blue-500 bg-opacity-20 text-blue-400 border border-blue-500 border-opacity-30"
+                            ? "bg-yellow-500 bg-opacity-20 text-yellow-400 border border-yellow-500 border-opacity-30"
+                            : "bg-blue-500 bg-opacity-20 text-blue-400 border border-blue-500 border-opacity-30"
                       }`}
                     >
                       {selectedProject.status}
@@ -241,7 +247,7 @@ const OtherProjects = () => {
                         >
                           {tag}
                         </span>
-                      )
+                      ),
                     )}
                   </div>
                 )}
@@ -272,7 +278,7 @@ const OtherProjects = () => {
                             className="rounded-lg max-h-[400px] object-contain"
                           />
                         </div>
-                      )
+                      ),
                     )}
                   </Carousel>
                 </div>
@@ -291,22 +297,23 @@ const OtherProjects = () => {
                         linkObj.name === "Github"
                           ? "bg-[#5a4378] text-white hover:bg-[#6b5189]"
                           : linkObj.name === "Product"
-                          ? "bg-blue-600 text-white hover:bg-blue-700"
-                          : linkObj.name === "MCPEDL"
-                          ? "bg-[#4a8a4a] text-white hover:bg-[#5a9a5a]"
-                          : linkObj.name === "CurseForge"
-                          ? "bg-[#f16436] text-white hover:bg-[#ff7446]"
-                          : linkObj.name === "VSCode Marketplace"
-                          ? "bg-[#007ACC] text-white hover:bg-[#1e8acc]"
-                          : linkObj.name === "NPM Package"
-                          ? "bg-[#cb3837] text-white hover:bg-[#db4847]"
-                          : linkObj.name === "Wiki Website"
-                          ? "bg-[#00599c] text-white hover:bg-[#0069ac]"
-                          : linkObj.name === "Website"
-                          ? "bg-[#00599c] text-white hover:bg-[#0069ac]"  
-                          : linkObj.name === "Minecraft Marketplace"
-                          ? "bg-[#00A651] text-white hover:bg-[#10B661]"
-                          : "bg-gray-600 text-white hover:bg-gray-700"
+                            ? "bg-blue-600 text-white hover:bg-blue-700"
+                            : linkObj.name === "MCPEDL"
+                              ? "bg-[#4a8a4a] text-white hover:bg-[#5a9a5a]"
+                              : linkObj.name === "CurseForge"
+                                ? "bg-[#f16436] text-white hover:bg-[#ff7446]"
+                                : linkObj.name === "VSCode Marketplace"
+                                  ? "bg-[#007ACC] text-white hover:bg-[#1e8acc]"
+                                  : linkObj.name === "NPM Package"
+                                    ? "bg-[#cb3837] text-white hover:bg-[#db4847]"
+                                    : linkObj.name === "Wiki Website"
+                                      ? "bg-[#00599c] text-white hover:bg-[#0069ac]"
+                                      : linkObj.name === "Website"
+                                        ? "bg-[#00599c] text-white hover:bg-[#0069ac]"
+                                        : linkObj.name ===
+                                            "Minecraft Marketplace"
+                                          ? "bg-[#00A651] text-white hover:bg-[#10B661]"
+                                          : "bg-gray-600 text-white hover:bg-gray-700"
                       }`}
                     >
                       {linkObj.name}
