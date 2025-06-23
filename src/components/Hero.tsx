@@ -40,7 +40,7 @@ export function Hero() {
         dragConstraints={{
           top: -50,
           left: -200,
-          right: 200,
+          right: 50,
           bottom: 50,
         }}
       >

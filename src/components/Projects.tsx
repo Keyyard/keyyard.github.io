@@ -81,7 +81,7 @@ const OtherProjects = () => {
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
-                      <h3 className="text-2xl font-bold text-white">
+                      <h3 className="sm:text-md md:text-2xl font-bold text-white">
                         {proj.title}
                       </h3>
                       {/* Status Badge */}
@@ -100,22 +100,22 @@ const OtherProjects = () => {
                       )}
                       {/* Featured Badge */}
                       {proj.featured && (
-                        <span className="px-2 py-1 text-xs font-medium bg-purple-500 bg-opacity-20 text-purple-400 border border-purple-500 border-opacity-30 rounded-full">
-                          ⭐ Featured
+                        <span className="px-2 py-1 text-xs  font-medium bg-purple-500 bg-opacity-20 text-purple-400 border border-purple-500 border-opacity-30 rounded-full">
+                          ⭐
                         </span>
                       )}
                     </div>
-                    <p className="text-sm text-gray-300 mb-2">
+                    <p className="text-sm sm:text-xs text-gray-300 mb-2">
                       {proj.short_info}
                     </p>
-                    <p className="text-gray-400 text-sm leading-relaxed mb-3">
+                    <p className="text-gray-400 text-sm sm:text-xs leading-relaxed mb-3">
                       {proj.description}
                     </p>
                     {/* Tags */}
                     {proj.tags && proj.tags.length > 0 && (
                       <div className="flex flex-wrap gap-2">
                         {proj.tags
-                          .slice(0, 4)
+                          .slice(0, window.innerWidth < 640 ? 1 : 4)
                           .map((tag: string, tagIndex: number) => (
                             <span
                               key={tagIndex}
@@ -124,9 +124,9 @@ const OtherProjects = () => {
                               {tag}
                             </span>
                           ))}
-                        {proj.tags.length > 4 && (
+                        {proj.tags.length > (window.innerWidth < 640 ? 1 : 4) && (
                           <span className="px-2 py-1 text-xs bg-gray-700 bg-opacity-50 text-gray-400 rounded-md">
-                            +{proj.tags.length - 4} more
+                            +{proj.tags.length - (window.innerWidth < 640 ? 1 : 4)} more
                           </span>
                         )}
                       </div>
@@ -135,7 +135,7 @@ const OtherProjects = () => {
 
                   {/* Click indicator */}
                   <div className="flex items-center text-gray-400 group-hover:text-white transition-colors ml-4">
-                    <span className="text-sm mr-2">Click to view</span>
+                    <span className="text-sm mr-2 hidden sm:inline">Click to view</span>
                     <svg
                       className="w-5 h-5"
                       fill="none"
