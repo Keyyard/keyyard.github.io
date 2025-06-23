@@ -30,35 +30,6 @@ const Experiences = () => {
       <h2 className="text-4xl font-semibold pt-4 text-center border-t-2 ">Experiences</h2>
       <div className="p-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div className="space-y-4">
-          {resolution <= 1024 && selectedExperience && (
-            <motion.div
-              key={selectedExperience.title + selectedExperience.company_name}
-              className="mx-auto p-6 bg-black bg-opacity-20 rounded-xl shadow shadow-stone-900 drop-shadow"
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.25 }}
-            >
-              <h3 className="text-md font-bold">{selectedExperience.title}</h3>
-              <h4 className="text-sm text-gray-300">
-                <a
-                  href={selectedExperience.company_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline"
-                >
-                  {selectedExperience.company_name}
-                </a>
-              </h4>
-              <p className="text-sm text-gray-300">{selectedExperience.date}</p>
-              <ul className="list-disc list-inside mt-2">
-                {selectedExperience.details.map((detail, i) => (
-                  <li key={i} className="text-sm text-gray-100">
-                    {detail}
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          )}
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
@@ -95,6 +66,35 @@ const Experiences = () => {
               </h4>
             </motion.div>
           ))}
+                    {resolution <= 1024 && selectedExperience && (
+            <motion.div
+              key={selectedExperience.title + selectedExperience.company_name}
+              className="mx-auto p-6 bg-black bg-opacity-20 rounded-xl shadow shadow-stone-900 drop-shadow"
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.25 }}
+            >
+              <h3 className="text-md font-bold">{selectedExperience.title}</h3>
+              <h4 className="text-sm text-gray-300">
+                <a
+                  href={selectedExperience.company_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  {selectedExperience.company_name}
+                </a>
+              </h4>
+              <p className="text-sm text-gray-300">{selectedExperience.date}</p>
+              <ul className="list-disc list-inside mt-2">
+                {selectedExperience.details.map((detail, i) => (
+                  <li key={i} className="text-sm text-gray-100">
+                    {detail}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          )}
         </div>
         <div>
           {resolution > 1024 && selectedExperience && (
