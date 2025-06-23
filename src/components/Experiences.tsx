@@ -27,7 +27,9 @@ const Experiences = () => {
 
   return (
     <section id="experiences" className="min-h-[95vh]">
-      <h2 className="text-4xl font-semibold pt-4 text-center border-t-2 ">Experiences</h2>
+      <h2 className="text-4xl font-semibold pt-4 text-center border-t-2 ">
+        Experiences
+      </h2>
       <div className="p-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div className="space-y-4">
           {experiences.map((exp, index) => (
@@ -66,7 +68,7 @@ const Experiences = () => {
               </h4>
             </motion.div>
           ))}
-                    {resolution <= 1024 && selectedExperience && (
+          {resolution <= 1024 && selectedExperience && (
             <motion.div
               key={selectedExperience.title + selectedExperience.company_name}
               className="mx-auto p-6 bg-black bg-opacity-20 rounded-xl shadow shadow-stone-900 drop-shadow"
