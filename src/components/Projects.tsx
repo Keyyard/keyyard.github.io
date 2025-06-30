@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 
 const OtherProjects = () => {
   const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [windowWidth, setWindowWidth] = useState<number>(0);
 
   const openModal = (project: any) => {
     setSelectedProject(project);
@@ -13,6 +14,25 @@ const OtherProjects = () => {
   const closeModal = () => {
     setSelectedProject(null);
   };
+
+  // Handle window resize
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    // Set initial width
+    if (typeof window !== 'undefined') {
+      setWindowWidth(window.innerWidth);
+      window.addEventListener('resize', handleResize);
+    }
+
+    return () => {
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('resize', handleResize);
+      }
+    };
+  }, []);
 
   // Handle ESC key press
   useEffect(() => {
@@ -32,6 +52,12 @@ const OtherProjects = () => {
       document.body.style.overflow = "unset";
     };
   }, [selectedProject]);
+
+  // Determine how many tags to show based on screen size
+  const getTagsToShow = () => {
+    if (windowWidth === 0) return 4; // Default for SSR
+    return windowWidth < 640 ? 1 : 4;
+  };
 
   return (
     <section id="projects" className="min-h-[95vh]">
@@ -115,7 +141,7 @@ const OtherProjects = () => {
                     {proj.tags && proj.tags.length > 0 && (
                       <div className="flex flex-wrap gap-2">
                         {proj.tags
-                          .slice(0, window.innerWidth < 640 ? 1 : 4)
+                          .slice(0, getTagsToShow())
                           .map((tag: string, tagIndex: number) => (
                             <span
                               key={tagIndex}
@@ -124,9 +150,9 @@ const OtherProjects = () => {
                               {tag}
                             </span>
                           ))}
-                        {proj.tags.length > (window.innerWidth < 640 ? 1 : 4) && (
+                        {proj.tags.length > getTagsToShow() && (
                           <span className="px-2 py-1 text-xs bg-gray-700 bg-opacity-50 text-gray-400 rounded-md">
-                            +{proj.tags.length - (window.innerWidth < 640 ? 1 : 4)} more
+                            +{proj.tags.length - getTagsToShow()} more
                           </span>
                         )}
                       </div>
@@ -320,7 +346,7 @@ const OtherProjects = () => {
                           strokeLinecap="round"
                           strokeLinejoin="round"
                           strokeWidth={2}
-                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                         />
                       </svg>
                     </a>

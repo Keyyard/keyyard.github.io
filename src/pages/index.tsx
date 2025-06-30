@@ -8,8 +8,6 @@ import About from "../components/About";
 import MinecraftProjects from "../components/MinecraftProjects";
 import OtherProjects from "../components/Projects";
 export default function Home() {
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress);
   return (
     <>
       <Analytics />
@@ -19,13 +17,6 @@ export default function Home() {
       <OtherProjects />
       <MinecraftProjects />
       <Contact />
-      <motion.div
-        style={{
-          scaleX,
-          transformOrigin: "left",
-        }}
-        className="p-0 fixed top-0 w-full h-1 bg-white"
-      />
       <Navbar />
     </>
   );

@@ -444,7 +444,7 @@ const Projects = [
     short_info: "Contributed to Bedrock Wiki",
     description:
       "A knowledge-sharing website for Minecraft Bedrock Add-Ons, containing documentation, tutorials, and general how-to information.",
-    icon: "https://wiki.bedrock.dev/assets/images/homepage/wikilogo.png",
+    icon: "https://wiki.bedrock.dev/assets/images/icons/logo.png",
     links: [
       {
         name: "Github",
