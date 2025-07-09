@@ -40,14 +40,13 @@ const experiences = [
   },
   {
     title: "Official Microsoft Partner",
-    company_name:
-      "G2crafted | Official Minecraft Marketplace",
+    company_name: "G2crafted | Official Minecraft Marketplace",
     company_url: "https://www.bedrockexplorer.com/@g2crafted",
     date: "Aug 2021 - 2023",
     details: [
-    "Established Keyyard Studio as a trusted brand, building credibility that attracts high-value partnerships.",
-    "Delivered premium-quality content that consistently exceeded Microsoft's strict quality standards.",
-    "Mastered end-to-end project management, ensuring every deadline is met while maintaining exceptional quality standards.",
+      "Established Keyyard Studio as a trusted brand, building credibility that attracts high-value partnerships.",
+      "Delivered premium-quality content that consistently exceeded Microsoft's strict quality standards.",
+      "Mastered end-to-end project management, ensuring every deadline is met while maintaining exceptional quality standards.",
     ],
   },
   {
@@ -95,17 +94,16 @@ const experiences = [
       "Designing engagement-focused gameplay mechanics that consistently outperform industry benchmarks.",
     ],
   },
-    {
+  {
     title: "Organization Member & Project Lead",
     company_name: "Bedrock OSS",
     company_url: "https://github.com/Bedrock-OSS/",
     date: "June 2025 - Present",
     details: [
       "Contributing to the development of open-source projects, collaborating with fellow developers to create cutting-edge solutions.",
-      "Served as a Wiki Contributor, creating and editing content for the knowledge-sharing platform dedicated to Minecraft Bedrock Add-Ons."
+      "Served as a Wiki Contributor, creating and editing content for the knowledge-sharing platform dedicated to Minecraft Bedrock Add-Ons.",
     ],
   },
-
 ];
 
 const mcProjects = [
@@ -365,7 +363,7 @@ const mcProjects = [
       },
     ],
     imgs: [
-      "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/82fb9eac-c719-40be-affd-315560116328/Demonic_Legends_Thumbnail.jpg"
+      "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/82fb9eac-c719-40be-affd-315560116328/Demonic_Legends_Thumbnail.jpg",
     ],
   },
   {
@@ -380,18 +378,19 @@ const mcProjects = [
       },
     ],
     imgs: [
-      "https://xforgeassets001.xboxlive.com/pf-title-b63a0803d3653643-20ca2/a3492053-54af-4730-aff7-91d4ba374bcb/FrightNight_Thumbnail.jpg"
+      "https://xforgeassets001.xboxlive.com/pf-title-b63a0803d3653643-20ca2/a3492053-54af-4730-aff7-91d4ba374bcb/FrightNight_Thumbnail.jpg",
     ],
-  }
+  },
 ];
 
 const Projects = [
-    {
+  {
     title: "Create Minecraft Bedrock CLI",
     short_info: "Node Module Package",
     description:
       "CLI tool to create Minecraft projects workspaces with structured folders and files. It includes Microsoft's Compiler",
-    icon: "https://raw.githubusercontent.com/Keyyard/create-mc-bedrock-cli/refs/heads/website/public/icon.ico",    links: [
+    icon: "https://raw.githubusercontent.com/Keyyard/create-mc-bedrock-cli/refs/heads/website/public/icon.ico",
+    links: [
       {
         name: "Github",
         link: "https://github.com/Keyyard/create-mc-bedrock-cli",
@@ -403,7 +402,7 @@ const Projects = [
       {
         name: "Website",
         link: "https://bedrockcli.keyyard.xyz",
-      }
+      },
     ],
     imgs: [
       "https://github.com/Keyyard/create-mc-bedrock-cli/blob/main/medias/gif.gif?raw=true",
@@ -414,7 +413,7 @@ const Projects = [
     status: "Live",
     featured: true,
   },
-  
+
   {
     title: "Blockception's Minecraft Bedrock Development",
     short_info: "Contributed to VSCode Plugin",
@@ -429,16 +428,22 @@ const Projects = [
       {
         name: "VSCode Marketplace",
         link: "https://marketplace.visualstudio.com/items/?itemName=BlockceptionLtd.blockceptionvscodeminecraftbedrockdevelopmentextension",
-      }
+      },
     ],
     imgs: [
-      "https://github.com/Blockception/VSCode-Bedrock-Development-Extension/raw/HEAD/documentation/resources/overview.gif"
+      "https://github.com/Blockception/VSCode-Bedrock-Development-Extension/raw/HEAD/documentation/resources/overview.gif",
     ],
-    tags: ["TypeScript", "VSCode", "Minecraft", "Developer Tools", "Productivity"],
+    tags: [
+      "TypeScript",
+      "VSCode",
+      "Minecraft",
+      "Developer Tools",
+      "Productivity",
+    ],
     status: "Live",
     featured: false,
   },
-  
+
   {
     title: "Bedrock Wiki",
     short_info: "Contributed to Bedrock Wiki",
@@ -453,11 +458,9 @@ const Projects = [
       {
         name: "Wiki Website",
         link: "https://wiki.bedrock.dev/",
-      }
+      },
     ],
-    imgs: [
-      "/assets/Projs/wiki.png"
-    ],
+    imgs: ["/assets/Projs/wiki.png"],
     tags: ["Documentation", "Minecraft", "Community", "Education"],
     status: "Live",
     featured: false,
@@ -474,12 +477,12 @@ const Projects = [
         link: "https://github.com/Keyyard/today-notes",
       },
       {
-        "name": "Product",
+        name: "Product",
         link: "https://today-notes.keyyard.xyz",
-      }
+      },
     ],
     imgs: [
-            "https://github.com/Keyyard/today-notes/blob/main/public/medias/4.png?raw=true",
+      "https://github.com/Keyyard/today-notes/blob/main/public/medias/4.png?raw=true",
       "https://github.com/Keyyard/today-notes/blob/main/public/medias/1.png?raw=true",
     ],
     tags: ["React", "PWA", "TypeScript", "Productivity"],
@@ -513,7 +516,7 @@ const techStackData = [
     items: [
       { value: "TypeScript" },
       { value: "JavaScript" },
-      { value: "Python" }
+      { value: "Python" },
     ],
   },
   {
@@ -534,16 +537,16 @@ const techStackData = [
   },
   {
     title: "Mobile Development",
-    items: [
-      { value: "React Native" },
-      { value: "Expo" },
-      { value: "Lynx.JS" },
-    ],
+    items: [{ value: "React Native" }, { value: "Expo" }, { value: "Lynx.JS" }],
   },
   {
     title: "Game Development",
     items: [
-      { label: "Minecraft Bedrock", value: "Add-on Development, Scripting API" }    ],
+      {
+        label: "Minecraft Bedrock",
+        value: "Add-on Development, Scripting API",
+      },
+    ],
   },
   {
     title: "Development Tools & Workflow",
