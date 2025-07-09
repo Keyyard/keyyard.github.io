@@ -39,8 +39,8 @@ export function Hero() {
         drag
         dragConstraints={{
           top: -50,
-          left: -200,
-          right: 50,
+          left: -100,
+          right: 25,
           bottom: 50,
         }}
       >
@@ -48,7 +48,7 @@ export function Hero() {
       </motion.div>
       <div className="pt-4 flex w-[50vw] h-[55vh]" id="head" />
       <div className="flex flex-col items-center justify-items-center p-4 text-[15px]">
-        <div className="text-start mt-32 md:mt-20">
+        <div className="text-start mt-32 m:mt-20">
           {introductionText.map((text, index) => (
             <p key={index} className="text-lg">
               {text}

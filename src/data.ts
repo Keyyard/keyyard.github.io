@@ -512,9 +512,8 @@ const techStackData = [
     title: "Programming Languages",
     items: [
       { value: "TypeScript" },
-      { value: "JavaScript (ES6+)" },
-      { value: "Python" },
-      { value: "JSON" },
+      { value: "JavaScript" },
+      { value: "Python" }
     ],
   },
   {
@@ -528,7 +527,7 @@ const techStackData = [
   {
     title: "Backend & Database",
     items: [
-      { label: "APIs", value: "FastAPI, Flask, RESTful APIs" },
+      { label: "APIs Frameworks", value: "FastAPI, Flask, Next.js" },
       { label: "Database", value: "PostgreSQL, SQLite, Prisma ORM" },
       { label: "Authentication", value: "OAuth, JWT, Clerk" },
     ],
@@ -544,9 +543,7 @@ const techStackData = [
   {
     title: "Game Development",
     items: [
-      { label: "Minecraft Bedrock", value: "Add-on Development, Scripting API" },
-      { label: "Performance", value: "Optimization, Algorithm Design" },
-    ],
+      { label: "Minecraft Bedrock", value: "Add-on Development, Scripting API" }    ],
   },
   {
     title: "Development Tools & Workflow",
@@ -564,11 +561,9 @@ const currentYear = new Date().getFullYear();
 const yearDifference = currentYear - startYear + 1;
 
 const introductionText = [
-  "Hey there, I'm Keyyard — a developer who turns creative visions into scalable digital experiences!",
-  `With ${yearDifference} years of expertise, I've built solutions that have reached millions of users and generated significant revenue for clients.`,
-  "My journey began in 2018 with community content creation, quickly evolving into an Official Microsoft Partnership through G2Crafted, where I launched successful Marketplace projects.",
-  "Since then, I've collaborated with industry leaders like FireGames, MelonBP, GiggleBlock Studio, and content creators such as PrestonPlayz, delivering high-performance systems that drive engagement and profitability.",
-  "I specialize in clean, modular architecture with deep expertise in both web technologies and Bedrock scripting—creating solutions that scale effortlessly while maintaining peak performance.",
+  "Hi, I'm Keyyard, a developer with a passion for turning creative visions into scalable digital experiences.",
+  `With ${yearDifference} years of expertise, I've delivered high-performance solutions for clients and partners including FireGames, MelonBP, GiggleBlock Studio, PrestonPlayz, and Official Microsoft Partnership through G2Crafted.`,
+  "I specialize in clean, modular architecture, with a strong focus on web technologies and Bedrock scripting.",
 ];
 
 export {
