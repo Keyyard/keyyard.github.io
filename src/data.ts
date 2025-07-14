@@ -105,7 +105,15 @@ const experiences = [
       "Served as a Wiki Contributor, creating and editing content for the knowledge-sharing platform dedicated to Minecraft Bedrock Add-Ons."
     ],
   },
-
+    {
+    title: "Developer",
+    company_name: "Mushco",
+    company_url: "https://www.mushco.games/",
+    date: "July 2025 - Present",
+    details: [
+      "New Developer at Mushco, still learning and adapting to the company's development practices and culture.",
+    ],
+  },
 ];
 
 const mcProjects = [

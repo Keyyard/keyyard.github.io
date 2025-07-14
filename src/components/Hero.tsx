@@ -21,17 +21,17 @@ export function Hero() {
     ));
   }, []);
   return (
-    <section id="hero" className="flex flex-col items-center min-h-[95vh]">
+    <section id="hero" className="flex flex-col items-center min-h-[860px]">
       <Toaster />
       <Bg />
       <div className="flex flex-col justify-center">
         <span className="absolute pt-4 flex border w-fit bg-white blur-xl bg-clip-text text-4xl box-content font-extrabold text-transparent text-center select-none">
-          I&#39;m Hieu
+          Keyyard - Hieu
         </span>
         <h1 className="relative top-0 w-fit h-auto pt-4 flex bg-white bg-clip-text text-4xl font-extrabold text-transparent text-center select-auto">
-          I&#39;m Hieu
+          Keyyard - Hieu
         </h1>
-        <h2 className="text-center leading-3">Also known as Keyyard</h2>
+        <h2 className="text-center leading-3 mt-2">Minecraft Add-on Developer & Fullstack Developer</h2>
       </div>
       <motion.div
         className="flex w-[50vw] h-[70vh] absolute"
