@@ -31,7 +31,9 @@ export function Hero() {
         <h1 className="relative top-0 w-fit h-auto pt-4 flex bg-white bg-clip-text text-4xl font-extrabold text-transparent text-center select-auto">
           Keyyard - Hieu
         </h1>
-        <h2 className="text-center leading-3 mt-2">Minecraft Add-on Developer & Fullstack Developer</h2>
+        <h2 className="text-center leading-3 mt-2">
+          Minecraft Add-on Developer & Fullstack Developer
+        </h2>
       </div>
       <motion.div
         className="flex w-[50vw] h-[70vh] absolute"
