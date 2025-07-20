@@ -1,0 +1,7 @@
+<!-- Placeholder SVG for failed image loads -->
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#374151"/>
+  <text x="100" y="100" font-family="Arial, sans-serif" font-size="14" fill="#9CA3AF" text-anchor="middle" dy=".3em">
+    Image Not Available
+  </text>
+</svg>

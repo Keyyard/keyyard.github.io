@@ -10,20 +10,20 @@ class WebDocument extends Document {
           {/* SEO Enhancements */}
           <meta
             name="description"
-            content="Explore the portfolio of Hieu - Keyyard, a key figure in Minecraft content creation. Discover mods like 'Tree Capitator and Vein Miner', 'Actual Guns MCBE', and official Minecraft Marketplace projects including 'Trains (CRAFTABLE)', 'One Block Extra', 'Scary Myth Mobs', and 'TNT Experiments'. Experience a blend of creativity, innovation, and technical prowess in the world of Minecraft."
+            content="Official Website of Keyyard, portfolio showcasing Minecraft mods, maps, skins, and marketplace projects. Discover unique content to enhance your Minecraft experience."
           />
           <meta
             name="keywords"
-            content="Minecraft, Keyyard, Mods, Addons, Marketplace, Minecraft Creations, Tree Capitator, Vein Miner, Actual Guns, Trains Game, One Block, Lucky Block, MCPEDL, Preston, Roblox, Scary Myth Mobs, TNT Experiments, Minecraft Developer, Portfolio, Game Design, Minecraft Bedrock, Custom Content, Mod Development, MCPEDL, MODBAY"
+            content="Keyyard, Minecraft, Mods, Addons, Marketplace, Minecraft, Tree Capitator, Vein Miner, Actual Guns, Trains Game, One Block, Lucky Block, MCPEDL, Preston, Roblox, Scary Myth Mobs, TNT Experiments, Minecraft Developer, Portfolio, Game Design, Minecraft Bedrock, Custom Content, Mod Development, MCPEDL, MODBAY"
           />
           <meta name="author" content="Hieu - Keyyard (Trinh Minh Hieu)" />
 
           {/* Open Graph data */}
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="Keyyard's Minecraft Portfolio" />
+          <meta property="og:title" content="Keyyard Official Website" />
           <meta
             property="og:description"
-            content="Explore Hieu's creative Minecraft mods, maps, skins, and marketplace projects. Enhance your Minecraft experience with unique content."
+            content="Official Website of Keyyard, portfolio showcasing Minecraft mods, maps, skins, and marketplace projects. Discover unique content to enhance your Minecraft experience."
           />
           <meta property="og:url" content="https://www.keyyard.xyz/" />
           <meta property="og:site_name" content="Keyyard.xyz" />

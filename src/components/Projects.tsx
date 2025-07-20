@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Carousel } from "react-responsive-carousel";
 import { Projects } from "../data";
 import { useState, useEffect } from "react";
+import SafeImage from "./SafeImage";
 
 const OtherProjects = () => {
   const [selectedProject, setSelectedProject] = useState<any>(null);
@@ -94,7 +95,7 @@ const OtherProjects = () => {
               {/* Project Icon - NEW: Using dedicated icon instead of first image */}
               <div className="flex-shrink-0 w-16 h-16 rounded-xl overflow-hidden bg-gray-700 shadow-lg">
                 {proj.icon && (
-                  <img
+                  <SafeImage
                     src={proj.icon}
                     alt={`${proj.title} icon`}
                     className="w-full h-full object-cover"
@@ -222,7 +223,7 @@ const OtherProjects = () => {
               {/* Project Icon in Modal */}
               <div className="flex-shrink-0 w-16 h-16 rounded-xl overflow-hidden bg-gray-700 shadow-lg mr-4">
                 {selectedProject.icon && (
-                  <img
+                  <SafeImage
                     src={selectedProject.icon}
                     alt={`${selectedProject.title} icon`}
                     className="w-full h-full object-cover"
@@ -290,7 +291,7 @@ const OtherProjects = () => {
                     {selectedProject.imgs.map(
                       (img: string, imgIndex: number) => (
                         <div key={imgIndex}>
-                          <img
+                          <SafeImage
                             src={img}
                             alt={`${selectedProject.title} image ${
                               imgIndex + 1

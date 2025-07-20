@@ -135,10 +135,6 @@ const mcProjects = [
     imgs: [
       "/assets/mcProjs/tc.png",
       "https://i.ytimg.com/vi/lze7XP_hMio/maxresdefault.jpg",
-      "https://github.com/Keyyard/Minecraft-Tree-Capitator-and-Vein-Miner-Addon/raw/main/imgs/img5.png",
-      "https://github.com/Keyyard/Minecraft-Tree-Capitator-and-Vein-Miner-Addon/raw/main/imgs/img4.png",
-      "https://github.com/Keyyard/Minecraft-Tree-Capitator-and-Vein-Miner-Addon/raw/main/imgs/img3.png",
-      "https://github.com/Keyyard/Minecraft-Tree-Capitator-and-Vein-Miner-Addon/raw/main/imgs/img2.png",
     ],
   },
   {
@@ -157,8 +153,6 @@ const mcProjects = [
       "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/1510cab7-b0b3-4896-8c71-86b5e44ea6af/fg_screenshot_1.jpg",
       "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/76faee75-a4a2-43ff-9efc-f2fa97b2f5ce/fg_screenshot_2.jpg",
       "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/369417ac-b8ba-435d-99c5-7c08f593c2a3/fg_screenshot_0.jpg",
-      "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/7b3b3b3b-3b3b-3b3b-3b3b-3b3b3b3b3b3b/fg_screenshot_3.jpg",
-      "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/3b3b3b3b-3b3b-3b3b-3b3b-3b3b3b3b3b3b/fg_screenshot_4.jpg",
     ],
   },
   {
@@ -183,9 +177,6 @@ const mcProjects = [
     imgs: [
       "https://github.com/Keyyard/dynamic-torchlight/raw/main/medias/torch.gif",
       "https://github.com/Keyyard/dynamic-torchlight/raw/main/medias/torch2.gif",
-      "https://github.com/Keyyard/dynamic-torchlight/raw/main/medias/image1.png",
-      "https://github.com/Keyyard/dynamic-torchlight/raw/main/medias/image2.png",
-      "https://github.com/Keyyard/dynamic-torchlight/raw/main/medias/image3.png",
     ],
   },
   {
@@ -201,7 +192,6 @@ const mcProjects = [
     ],
     imgs: [
       "https://github.com/Keyyard/PortalGunsAddon-ScriptingAPI/raw/main/medias/portal-appears.gif",
-      "https://github.com/Keyyard/PortalGunsAddon-ScriptingAPI/raw/main/medias/portals.gif",
     ],
   },
   {
@@ -317,7 +307,6 @@ const mcProjects = [
       "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/ac877822-2a4f-46d6-8663-7f4f4b80b0b1/Screenshot_2.jpg",
       "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/3e61a475-c7e5-4557-b2c7-d0e1a1a31b38/Screenshot_3.jpg",
       "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/d670b857-6bf5-4bd1-b04b-8cde622d222f/Screenshot_4.jpg",
-      "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/ce1c905f-7045-47a7-8d6f-0105774ee4b7b/Screenshot_0.jpg",
       "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/b4b201bc-b20a-4ad7-9804-bc400c2c5c54/Screenshot_1.jpg",
     ],
   },
@@ -415,8 +404,6 @@ const Projects = [
     ],
     imgs: [
       "https://github.com/Keyyard/create-mc-bedrock-cli/blob/main/medias/gif.gif?raw=true",
-      "https://github.com/Keyyard/create-mc-bedrock-cli/blob/main/medias/img2.png?raw=true",
-      "https://github.com/Keyyard/create-mc-bedrock-cli/blob/main/medias/img1.png?raw=true",
     ],
     tags: ["Node.js", "CLI", "Minecraft", "Developer Tools", "Productivity"],
     status: "Live",
@@ -469,7 +456,9 @@ const Projects = [
         link: "https://wiki.bedrock.dev/",
       },
     ],
-    imgs: ["/assets/Projs/wiki.png"],
+    imgs: [
+      "/assets/Projs/wiki.png",
+    ],
     tags: ["Documentation", "Minecraft", "Community", "Education"],
     status: "Live",
     featured: false,
@@ -479,7 +468,7 @@ const Projects = [
     short_info: "Progressive Web App Project",
     description:
       "Today Notes helps you manage your daily tasks effortlessly. Stay focused on what matters today, complete tasks efficiently, and boost your productivity.",
-    icon: "https://github.com/Keyyard/today-notes/blob/main/public/icons/128.png?raw=true",
+    icon: "https://github.com/Keyyard/today-notes/blob/main/public/icons/icon-192x192.png?raw=true",
     links: [
       {
         name: "Github",
@@ -492,7 +481,6 @@ const Projects = [
     ],
     imgs: [
       "https://github.com/Keyyard/today-notes/blob/main/public/medias/4.png?raw=true",
-      "https://github.com/Keyyard/today-notes/blob/main/public/medias/1.png?raw=true",
     ],
     tags: ["React", "PWA", "TypeScript", "Productivity"],
     status: "Inactive",

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { Carousel } from "react-responsive-carousel";
-import { mcProjects } from "../data" 
+import { mcProjects } from "../data";
+import SafeImage from "./SafeImage";
+import SafeCarousel from "./SafeCarousel";
 
 const MinecraftProjects = () => {
   return (
@@ -22,7 +23,7 @@ const MinecraftProjects = () => {
             >              <h3 className="text-md font-bold flex justify-between items-center mb-1">
                 <span className="truncate">{proj.title}</span>
                 {proj.downloads && (
-                  <img
+                  <SafeImage
                     className="inline-block ml-2 h-5"
                     alt="downloads"
                     src={`https://img.shields.io/badge/downloads-${proj.downloads}-blue`}
@@ -32,18 +33,11 @@ const MinecraftProjects = () => {
               <h4 className="text-xs text-gray-200 leading-3 mb-2">{proj.short_info}</h4>
               <h4 className="text-xs text-gray-200 text-ellipsis overflow-hidden leading-4 group-hover:overflow-visible group-hover:whitespace-normal line-clamp-2 h-5">
                 {proj.description}
-              </h4>              <Carousel className="mt-3 mb-3" infiniteLoop={true} showThumbs={false} showStatus={false}>
-                {proj.imgs &&
-                  proj.imgs.map((img, imgIndex) => (
-                    <div key={imgIndex} className="aspect-video">
-                      <img
-                        src={img}
-                        alt={`${proj.title} image ${imgIndex + 1}`}
-                        className="w-full h-full object-cover rounded"
-                      />
-                    </div>
-                  ))}
-              </Carousel>
+              </h4>              <SafeCarousel 
+                className="mt-3 mb-3" 
+                images={proj.imgs || []}
+                alt={proj.title}
+              />
               <div className="flex flex-wrap gap-2 justify-center">
                 {proj.links &&
                   proj.links.map((linkObj, i) => (
