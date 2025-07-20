@@ -12,14 +12,16 @@ export const preloadImage = (src: string): Promise<boolean> => {
 };
 
 // Utility to filter out broken images from an array
-export const filterWorkingImages = async (imageUrls: string[]): Promise<string[]> => {
+export const filterWorkingImages = async (
+  imageUrls: string[],
+): Promise<string[]> => {
   const results = await Promise.allSettled(
-    imageUrls.map(url => preloadImage(url))
+    imageUrls.map((url) => preloadImage(url)),
   );
-  
+
   return imageUrls.filter((_, index) => {
     const result = results[index];
-    return result.status === 'fulfilled' && result.value === true;
+    return result.status === "fulfilled" && result.value === true;
   });
 };
 
@@ -27,10 +29,10 @@ export const filterWorkingImages = async (imageUrls: string[]): Promise<string[]
 export const isProblematicUrl = (url: string): boolean => {
   // Check for known problematic patterns
   const problematicPatterns = [
-    /github\.com.*\.raw.*true/,  // GitHub raw files can be rate limited
+    /github\.com.*\.raw.*true/, // GitHub raw files can be rate limited
     /xforgeassets.*xboxlive\.com.*3b3b3b/, // Known broken Xbox Live assets
     /githubusercontent\.com/, // Can be rate limited
   ];
-  
-  return problematicPatterns.some(pattern => pattern.test(url));
+
+  return problematicPatterns.some((pattern) => pattern.test(url));
 };

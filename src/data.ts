@@ -456,9 +456,7 @@ const Projects = [
         link: "https://wiki.bedrock.dev/",
       },
     ],
-    imgs: [
-      "/assets/Projs/wiki.png",
-    ],
+    imgs: ["/assets/Projs/wiki.png"],
     tags: ["Documentation", "Minecraft", "Community", "Education"],
     status: "Live",
     featured: false,

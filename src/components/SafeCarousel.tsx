@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
-import SafeImage from './SafeImage';
-import { filterWorkingImages } from '../utils/imageUtils';
+import SafeImage from "./SafeImage";
+import { filterWorkingImages } from "../utils/imageUtils";
 
 interface SafeCarouselProps {
   images: string[];
@@ -9,7 +9,11 @@ interface SafeCarouselProps {
   className?: string;
 }
 
-const SafeCarousel: React.FC<SafeCarouselProps> = ({ images, alt, className = "" }) => {
+const SafeCarousel: React.FC<SafeCarouselProps> = ({
+  images,
+  alt,
+  className = "",
+}) => {
   const [workingImages, setWorkingImages] = useState<string[]>(images);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -27,7 +31,9 @@ const SafeCarousel: React.FC<SafeCarouselProps> = ({ images, alt, className = ""
 
   if (isLoading) {
     return (
-      <div className={`${className} flex items-center justify-center bg-gray-800 rounded`}>
+      <div
+        className={`${className} flex items-center justify-center bg-gray-800 rounded`}
+      >
         <div className="text-gray-400 text-sm">Loading images...</div>
       </div>
     );
@@ -35,7 +41,9 @@ const SafeCarousel: React.FC<SafeCarouselProps> = ({ images, alt, className = ""
 
   if (workingImages.length === 0) {
     return (
-      <div className={`${className} flex items-center justify-center bg-gray-800 rounded`}>
+      <div
+        className={`${className} flex items-center justify-center bg-gray-800 rounded`}
+      >
         <div className="text-gray-400 text-sm">No images available</div>
       </div>
     );

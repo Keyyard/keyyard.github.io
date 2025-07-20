@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 interface SafeImageProps {
   src: string;
@@ -9,13 +9,13 @@ interface SafeImageProps {
   showPlaceholderOnError?: boolean;
 }
 
-const SafeImage: React.FC<SafeImageProps> = ({ 
-  src, 
-  alt, 
-  className = "", 
+const SafeImage: React.FC<SafeImageProps> = ({
+  src,
+  alt,
+  className = "",
   fallbackSrc = "/image-placeholder.svg",
   onError,
-  showPlaceholderOnError = true
+  showPlaceholderOnError = true,
 }) => {
   const [imgSrc, setImgSrc] = useState(src);
   const [hasError, setHasError] = useState(false);
@@ -40,12 +40,7 @@ const SafeImage: React.FC<SafeImageProps> = ({
   }
 
   return (
-    <img
-      src={imgSrc}
-      alt={alt}
-      className={className}
-      onError={handleError}
-    />
+    <img src={imgSrc} alt={alt} className={className} onError={handleError} />
   );
 };
 
