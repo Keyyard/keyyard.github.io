@@ -10,13 +10,8 @@ export function Hero() {
     <section id="hero" className="section-hero">
       <Bg />
       <div className="flex flex-col justify-center">
-        <span className="hero-title-blur">
-          Keyyard
-        </span>
-        <h1 
-          className="hero-title"
-          style={{ fontSize: '2.25rem' }}
-        >
+        <span className="hero-title-blur">Keyyard</span>
+        <h1 className="hero-title" style={{ fontSize: "2.25rem" }}>
           Keyyard
         </h1>
         <h2 className="hero-subtitle">

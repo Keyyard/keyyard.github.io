@@ -6,7 +6,8 @@ import SafeCarousel from "../ui/SafeCarousel";
 const MinecraftProjects = () => {
   return (
     <section id="projects" className="section">
-      <h2 className="section-title">Minecraft Projects</h2>      <span className="text-xs text-gray-400 text-right block">
+      <h2 className="section-title">Minecraft Projects</h2>{" "}
+      <span className="text-xs text-gray-400 text-right block">
         Download counts are aggregated from multiple sources.
       </span>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 p-6 pb-32">
@@ -20,7 +21,9 @@ const MinecraftProjects = () => {
                 y: 0,
               }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-            >              <h3 className="project-title">
+            >
+              {" "}
+              <h3 className="project-title">
                 <span className="truncate">{proj.title}</span>
                 {proj.downloads && (
                   <SafeImage
@@ -31,10 +34,9 @@ const MinecraftProjects = () => {
                 )}
               </h3>
               <h4 className="project-subtitle">{proj.short_info}</h4>
-              <h4 className="project-description">
-                {proj.description}
-              </h4>              <SafeCarousel 
-                className="mt-3 mb-3" 
+              <h4 className="project-description">{proj.description}</h4>{" "}
+              <SafeCarousel
+                className="mt-3 mb-3"
                 images={proj.imgs || []}
                 alt={proj.title}
               />
@@ -50,8 +52,10 @@ const MinecraftProjects = () => {
                         linkObj.name === "Github"
                           ? "bg-[#5a4378] text-white hover:bg-[#5a4378]"
                           : linkObj.name === "MCPEDL"
-                          ? "bg-[#4a8a4a] text-white hover:bg-[#4a8a4a]"
-                          : linkObj.name === "CurseForge" ? "bg-[#f16436] text-white hover:bg-[#f16436]" : "bg-[#333] text-white hover:bg-[#333]"
+                            ? "bg-[#4a8a4a] text-white hover:bg-[#4a8a4a]"
+                            : linkObj.name === "CurseForge"
+                              ? "bg-[#f16436] text-white hover:bg-[#f16436]"
+                              : "bg-[#333] text-white hover:bg-[#333]"
                       }`}
                     >
                       {linkObj.name}

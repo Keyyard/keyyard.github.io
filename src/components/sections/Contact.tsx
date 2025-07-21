@@ -37,9 +37,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="section">
-      <h2 className="section-title">
-        Contact
-      </h2>
+      <h2 className="section-title">Contact</h2>
       <Toaster />
       <h3 className="text-center text-lg mt-4">
         Let's Build Something Cool! Drop me a message.

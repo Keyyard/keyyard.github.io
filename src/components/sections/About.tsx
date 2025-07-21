@@ -37,7 +37,8 @@ const About = () => {
                 <ul className="tech-list">
                   {stack.items.map((item, idx) => (
                     <li key={idx}>
-                      {"label" in item && <strong>{item.label}:</strong>} {item.value}
+                      {"label" in item && <strong>{item.label}:</strong>}{" "}
+                      {item.value}
                     </li>
                   ))}
                 </ul>

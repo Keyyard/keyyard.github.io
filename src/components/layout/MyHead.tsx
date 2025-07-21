@@ -72,8 +72,8 @@ function Model() {
 const HeadRender = () => {
   return (
     <>
-    <Canvas camera={{ position: [0, 0, 6], fov: 50 }} id="head">
-        <ambientLight intensity={0.5}/>
+      <Canvas camera={{ position: [0, 0, 6], fov: 50 }} id="head">
+        <ambientLight intensity={0.5} />
         <Model />
       </Canvas>
     </>
