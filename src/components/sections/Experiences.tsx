@@ -65,7 +65,7 @@ const Experiences = () => {
               </h4>
             </motion.div>
           ))}
-                    {resolution <= 1024 && selectedExperience && (
+          {resolution <= 1024 && selectedExperience && (
             <motion.div
               key={selectedExperience.title + selectedExperience.company_name}
               className="experience-details"
@@ -112,7 +112,8 @@ const Experiences = () => {
                 <a
                   href={selectedExperience.company_url}
                   target="_blank"
-                  rel="noopener noreferrer">
+                  rel="noopener noreferrer"
+                >
                   {selectedExperience.company_name}
                 </a>
               </h4>
