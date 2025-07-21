@@ -1,28 +1,30 @@
 import { motion } from "framer-motion";
-import HeadRender from "./layout/MyHead";
-import Bg from "./layout/Background";
-import { introductionText } from "../data";
+import { useEffect } from "react";
+import toast, { Toaster } from "react-hot-toast";
+import HeadRender from "../layout/MyHead";
+import Bg from "../layout/Background";
+import { introductionText } from "../../data";
 
 export function Hero() {
   return (
-    <section id="hero" className="flex flex-col items-center min-h-[860px]">
+    <section id="hero" className="section-hero">
       <Bg />
       <div className="flex flex-col justify-center">
-        <span className="absolute pt-4 flex border w-fit bg-white blur-xl bg-clip-text text-4xl box-content font-extrabold text-transparent text-center select-none">
-          Keyyard - Hieu
+        <span className="hero-title-blur">
+          Keyyard
         </span>
         <h1 
-          className="relative top-0 w-fit h-auto pt-4 flex bg-white bg-clip-text text-4xl font-extrabold text-transparent text-center select-auto"
+          className="hero-title"
           style={{ fontSize: '2.25rem' }}
         >
-          Keyyard - Hieu
+          Keyyard
         </h1>
-        <h2 className="text-center leading-3 mt-2">
+        <h2 className="hero-subtitle">
           Minecraft Add-on Developer & Fullstack Developer
         </h2>
       </div>
       <motion.div
-        className="flex w-[50vw] h-[70vh] absolute"
+        className="draggable-head"
         id="MyHead"
         drag
         dragConstraints={{
@@ -35,8 +37,8 @@ export function Hero() {
         <HeadRender />
       </motion.div>
       <div className="pt-4 flex w-[50vw] h-[55vh]" id="head" />
-      <div className="flex flex-col items-center justify-items-center p-4 text-[15px]">
-        <div className="text-start mt-32 m:mt-20">
+      <div className="intro-text-container">
+        <div className="intro-text-content">
           {introductionText.map((text, index) => (
             <p key={index} className="text-lg">
               {text}

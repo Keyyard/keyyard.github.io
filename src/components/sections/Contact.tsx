@@ -36,8 +36,8 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="min-h-[95vh]">
-      <h2 className="text-4xl font-semibold pt-4 text-center border-t-2">
+    <section id="contact" className="section">
+      <h2 className="section-title">
         Contact
       </h2>
       <Toaster />

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { navs } from "../data";
+import { navs } from "../../data";
 
 const Nav = () => {
   const [activeSection, setActiveSection] = useState("");

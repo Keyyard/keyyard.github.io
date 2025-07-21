@@ -2,6 +2,111 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  /* Section Styles */
+  .section {
+    @apply min-h-[95vh];
+  }
+  
+  .section-hero {
+    @apply flex flex-col items-center min-h-[860px];
+  }
+  
+  /* Typography */
+  .section-title {
+    @apply text-4xl font-semibold pt-4 text-center border-t-2;
+  }
+  
+  .subsection-title {
+    @apply text-3xl font-semibold mb-2 text-center;
+  }
+  
+  .hero-title {
+    @apply relative top-0 w-fit h-auto pt-4 flex bg-white bg-clip-text text-4xl font-extrabold text-transparent text-center select-auto;
+  }
+  
+  .hero-title-blur {
+    @apply absolute pt-4 flex border w-fit bg-white blur-xl bg-clip-text text-4xl box-content font-extrabold text-transparent text-center select-none;
+  }
+  
+  .hero-subtitle {
+    @apply text-center leading-3 mt-2;
+  }
+  
+  /* Cards */
+  .card {
+    @apply p-6 bg-neutral-800 rounded-xl shadow shadow-stone-900 drop-shadow;
+  }
+  
+  .card-sm {
+    @apply p-4 bg-neutral-800 rounded-lg shadow shadow-stone-900 drop-shadow;
+  }
+  
+  .experience-card {
+    @apply mx-auto p-6 cursor-pointer border rounded-lg transition-colors;
+  }
+  
+  .experience-card--selected {
+    @apply bg-neutral-700;
+  }
+  
+  .experience-details {
+    @apply mx-auto p-6 bg-black bg-opacity-20 rounded-xl shadow shadow-stone-900 drop-shadow;
+  }
+  
+  /* Layout */
+  .container-main {
+    @apply container mx-auto px-6 lg:px-20 mt-8;
+  }
+  
+  .grid-two-col {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-8;
+  }
+  
+  .grid-experiences {
+    @apply p-4 grid grid-cols-1 lg:grid-cols-2 gap-4;
+  }
+  
+  /* Content */
+  .content-text {
+    @apply text-lg leading-8 space-y-6;
+  }
+  
+  .tech-list {
+    @apply list-disc list-inside space-y-2 text-gray-300;
+  }
+  
+  /* Interactive Elements */
+  .draggable-head {
+    @apply flex w-[50vw] h-[70vh] absolute;
+  }
+  
+  .intro-text-container {
+    @apply flex flex-col items-center justify-items-center p-4 text-[15px];
+  }
+  
+  .intro-text-content {
+    @apply text-start mt-32 md:mt-20;
+  }
+  
+  /* Project Cards */
+  .project-card {
+    @apply p-3 cursor-pointer bg-black bg-opacity-20 shadow-black inset-2 shadow-lg rounded-lg overflow-hidden;
+  }
+  
+  .project-title {
+    @apply text-base font-bold flex justify-between items-center mb-1;
+  }
+  
+  .project-subtitle {
+    @apply text-xs text-gray-200 leading-3 mb-2;
+  }
+  
+  .project-description {
+    @apply text-xs text-gray-200 text-ellipsis overflow-hidden leading-4 group-hover:overflow-visible group-hover:whitespace-normal line-clamp-2 h-5;
+  }
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
 }

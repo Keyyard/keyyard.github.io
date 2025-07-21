@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
-import { experiences } from "../data";
+import { experiences } from "../../data";
 
 const Experiences = () => {
   const [selectedExperience, setSelectedExperience] = useState(experiences[0]);
@@ -26,15 +26,15 @@ const Experiences = () => {
   });
 
   return (
-    <section id="experiences" className="min-h-[95vh]">
-      <h2 className="text-4xl font-semibold pt-4 text-center border-t-2 ">Experiences</h2>
-      <div className="p-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
+    <section id="experiences" className="section">
+      <h2 className="section-title">Experiences</h2>
+      <div className="grid-experiences">
         <div className="space-y-4">
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
-              className={`mx-auto p-6 cursor-pointer border rounded-lg ${
-                selectedExperience === exp ? "bg-neutral-700" : ""
+              className={`experience-card ${
+                selectedExperience === exp ? "experience-card--selected" : ""
               }`}
               onClick={() => setSelectedExperience(exp)}
               whileHover={{ scale: 1.02 }}
@@ -69,7 +69,7 @@ const Experiences = () => {
                     {resolution <= 1024 && selectedExperience && (
             <motion.div
               key={selectedExperience.title + selectedExperience.company_name}
-              className="mx-auto p-6 bg-black bg-opacity-20 rounded-xl shadow shadow-stone-900 drop-shadow"
+              className="experience-details"
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.25 }}
@@ -100,7 +100,7 @@ const Experiences = () => {
           {resolution > 1024 && selectedExperience && (
             <motion.div
               key={selectedExperience.title + selectedExperience.company_name}
-              className="mx-auto p-4 bg-black bg-opacity-20 rounded-xl shadow shadow-stone-900 drop-shadow"
+              className="experience-details mx-auto p-4"
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{
                 opacity: sectionInView ? 1 : 0,

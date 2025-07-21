@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { Carousel } from "react-responsive-carousel";
-import { Projects } from "../data";
+import { Projects } from "../../data";
 import { useState, useEffect } from "react";
-import SafeImage from "./SafeImage";
+import SafeImage from "../ui/SafeImage";
 
 const OtherProjects = () => {
   const [selectedProject, setSelectedProject] = useState<any>(null);
@@ -61,8 +61,8 @@ const OtherProjects = () => {
   };
 
   return (
-    <section id="projects" className="min-h-[95vh]">
-      <h2 className="text-4xl font-semibold pt-4 text-center border-t-2">
+    <section id="projects" className="section">
+      <h2 className="section-title">
         Projects
       </h2>
       <span className="text-xs text-gray-400 text-right block">
