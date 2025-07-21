@@ -3,26 +3,28 @@ import toast, { Toaster } from "react-hot-toast";
 
 const Contact = () => {
   const copyToClipboard = (text: string, platform: string) => {
-    navigator.clipboard.writeText(text).then(() => {
-      toast.success(`${platform} copied to clipboard!`, {
-        duration: 2000,
-        position: 'top-left',
-        style: {
-          background: 'var(--color-surface)',
-          color: 'var(--color-text-primary)',
-          border: '1px solid var(--color-secondary)',
-        },
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        toast.success(`${platform} copied to clipboard!`, {
+          duration: 2000,
+          position: "top-left",
+          style: {
+            background: "var(--color-surface)",
+            color: "var(--color-text-primary)",
+            border: "1px solid var(--color-secondary)",
+          },
+        });
+      })
+      .catch(() => {
+        toast.error("Failed to copy to clipboard", {
+          duration: 2000,
+          position: "top-left",
+        });
       });
-    }).catch(() => {
-      toast.error('Failed to copy to clipboard', {
-        duration: 2000,
-        position: 'top-left',
-      });
-    });
   };
 
   const contactLinks = [
-    
     {
       icon: (
         <svg
@@ -43,7 +45,7 @@ const Contact = () => {
       platform: "Work Email",
       handle: "contact@keyyard.xyz",
       copyText: "contact@keyyard.xyz",
-      action: "copy"
+      action: "copy",
     },
     {
       icon: (
@@ -65,9 +67,9 @@ const Contact = () => {
       platform: "Personal",
       handle: "keyyard8888@gmail.com",
       copyText: "keyyard8888@gmail.com",
-      action: "copy"
+      action: "copy",
     },
-    
+
     {
       icon: (
         <svg
@@ -89,9 +91,9 @@ const Contact = () => {
       platform: "Discord",
       handle: "keyyard",
       copyText: "keyyard",
-      action: "copy"
+      action: "copy",
     },
-        {
+    {
       icon: (
         <svg
           aria-hidden="true"
@@ -112,7 +114,7 @@ const Contact = () => {
       platform: "GitHub",
       handle: "github.com/keyyard",
       url: "https://github.com/keyyard",
-      action: "link"
+      action: "link",
     },
     {
       icon: (
@@ -135,9 +137,9 @@ const Contact = () => {
       platform: "X (Twitter)",
       handle: "@keyyard",
       url: "https://twitter.com/keyyard",
-      action: "link"
+      action: "link",
     },
-        {
+    {
       icon: (
         <svg
           aria-hidden="true"
@@ -158,7 +160,7 @@ const Contact = () => {
       platform: "YouTube",
       handle: "@Keyyard",
       url: "https://youtube.com/c/keyyard",
-      action: "link"
+      action: "link",
     },
   ];
 
@@ -174,9 +176,7 @@ const Contact = () => {
     <section id="contact" className="section">
       <Toaster />
       <div className="contact-container">
-        <h2 className="contact-title">
-          Let's Connect
-        </h2>
+        <h2 className="contact-title">Let's Connect</h2>
         <p className="contact-subtitle">
           I'm open to collabs, freelance, or just chatting.
         </p>
@@ -185,22 +185,20 @@ const Contact = () => {
         </p>
         <div className="contact-links">
           {contactLinks.map((link, index) => (
-            <div 
+            <div
               key={index}
               onClick={() => handleContactClick(link)}
               className="contact-link"
-              style={{ cursor: 'pointer' }}
+              style={{ cursor: "pointer" }}
             >
               <span className="contact-icon">{link.icon}</span>
               <span className="contact-platform">{link.platform}</span>
-              <span className="contact-handle">
-                {link.handle}
-              </span>
+              <span className="contact-handle">{link.handle}</span>
             </div>
           ))}
         </div>
       </div>
-      
+
       <div className="flex justify-center mt-8 pb-20">
         Copyright © 2024 Keyyard
       </div>
