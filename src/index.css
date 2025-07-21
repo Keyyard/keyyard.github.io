@@ -31,7 +31,7 @@
   /* Accent colors */
   --color-accent-blue: #84a59d;
   --color-accent-blue-hover: #7BA47C;
-  
+
   /* Highlight colors */
   --color-highlight: rgba(143, 169, 151, 0.15);
   --color-text-highlight: #95c796;
@@ -63,7 +63,7 @@
   
   /* Typography */
   .section-title {
-    @apply text-4xl font-semibold pt-4 text-center border-t-2;
+    @apply text-4xl font-semibold pt-4 text-center;
   }
   
   .subsection-title {
@@ -257,6 +257,57 @@ button:focus-visible {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* Contact Section */
+.contact-container {
+  @apply max-w-2xl mx-auto px-6;
+}
+
+.contact-title {
+  @apply text-4xl font-bold mb-4;
+  color: var(--color-secondary);
+  text-align: center;
+}
+
+.contact-subtitle {
+  @apply text-lg mb-8 text-center;
+  color: var(--color-text-secondary);
+}
+
+.contact-links {
+  @apply space-y-4;
+}
+
+.contact-link {
+  @apply flex items-center gap-4 p-4 rounded-lg transition-all duration-300 hover:bg-surface;
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+
+.contact-link:hover {
+  background-color: var(--color-surface);
+  border-color: var(--color-secondary);
+  transform: translateX(8px);
+}
+
+.contact-icon {
+  @apply text-2xl w-8 flex-shrink-0;
+}
+
+.contact-platform {
+  @apply font-semibold text-lg flex-shrink-0 min-w-32;
+  color: var(--color-text-primary);
+}
+
+.contact-description {
+  @apply text-sm text-text-light mb-2;
+  color: var(--color-text-muted);
+}
+
+.contact-handle {
+  @apply text-base;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 @supports (-ms-ime-align: auto) {
