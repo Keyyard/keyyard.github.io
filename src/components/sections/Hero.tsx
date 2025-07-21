@@ -44,6 +44,29 @@ export function Hero() {
               {text}
             </p>
           ))}
+          <p className="mt-4">
+            I write too! Check out my <a className="text-[--color-secondary] hover:text-[--color-text-highlight]" href="https://blogs.keyyard.xyz"> Digital Garden here </a>
+            </p>
+        </div>
+        <div className="hero-buttons">
+          <button 
+            onClick={() => {
+              const projectsSection = document.getElementById('projects');
+              projectsSection?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="hero-button-primary"
+          >
+            View My Work
+          </button>
+          <button 
+            onClick={() => {
+              const contactSection = document.getElementById('contact');
+              contactSection?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="hero-button-secondary"
+          >
+            Contact Me
+          </button>
         </div>
       </div>
     </section>

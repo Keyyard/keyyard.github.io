@@ -468,7 +468,7 @@ const Projects = [
     short_info: "Progressive Web App Project",
     description:
       "Today Notes helps you manage your daily tasks effortlessly. Stay focused on what matters today, complete tasks efficiently, and boost your productivity.",
-    icon: "https://github.com/Keyyard/today-notes/blob/main/public/icons/icon-192x192.png?raw=true",
+    icon: "https://github.com/Keyyard/today-notes/blob/main/public/icons/196.png?raw=true",
     links: [
       {
         name: "Github",
@@ -495,7 +495,7 @@ const aboutMeData = [
   },
   {
     icon: "🎮",
-    text: "Minecraft Add-on Developer (Bedrock Engine) since 2019.",
+    text: "Minecraft Add-on Developer (Bedrock Engine) since 2018.",
   },
   {
     icon: "🚀",
@@ -556,14 +556,14 @@ const techStackData = [
   },
 ];
 
-const startYear = 2019;
+const startYear = 2018;
 const currentYear = new Date().getFullYear();
 const yearDifference = currentYear - startYear + 1;
 
 const introductionText = [
   "Hi, I'm Keyyard, a developer with a passion for turning creative visions into scalable digital experiences.",
-  `With ${yearDifference} years of expertise, I've delivered high-performance solutions for clients and partners including FireGames, MelonBP, GiggleBlock Studio, PrestonPlayz, and Official Microsoft Partnership through G2Crafted.`,
-  "I specialize in clean, modular architecture, with a strong focus on web technologies and Bedrock scripting.",
+  `With ${yearDifference} years of expertise, I've delivered high-quality contents for big creators like Preston (30M+ subscribers), MrWoofless (1M+ subscribers), and many teams like Giggle Block Studios, FireGames, Mushco,..`,
+  "I specialize in Bedrock scripting, gameplay quality, and architecture, ensuring every project is optimized for performance and user engagement.",
 ];
 
 export {

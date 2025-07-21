@@ -2,6 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Design Tokens - Easy to edit fonts and colors */
+:root {
+  /* Fonts */
+  --font-primary: 'Inter', sans-serif;
+  --font-headings: 'Be Vietnam Pro', sans-serif;
+  --font-accent: 'Inter', sans-serif;
+  
+  /* Colors */
+  --color-primary: #F2F7F2;
+  --color-secondary: #7BA47C;
+  --color-background: #161618;
+  --color-surface: #393639;
+  --color-surface-light: #646464;
+  --color-border: #84a59d;
+  
+  /* Card colors */
+  --color-card-bg: #1e1e21;
+  --color-card-selected: #1e1c1e;
+  --color-card-shadow: #161618;
+  
+  /* Text colors */
+  --color-text-primary: #F2F7F2;
+  --color-text-secondary: #d4d4d4;
+  --color-text-muted: #646464;
+  --color-text-light: #d4d4d4;
+  
+  /* Accent colors */
+  --color-accent-blue: #84a59d;
+  --color-accent-blue-hover: #7BA47C;
+  
+  /* Highlight colors */
+  --color-highlight: rgba(143, 169, 151, 0.15);
+  --color-text-highlight: #95c796;
+
+  /* Base styles */
+  font-family: var(--font-accent);
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: var(--color-primary);
+  background-color: var(--color-background);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+}
+
 @layer components {
   /* Section Styles */
   .section {
@@ -35,11 +84,11 @@
   
   /* Cards */
   .card {
-    @apply p-6 bg-neutral-800 rounded-xl shadow shadow-stone-900 drop-shadow;
+    @apply p-6 bg-card-bg rounded-xl shadow-card-shadow drop-shadow;
   }
   
   .card-sm {
-    @apply p-4 bg-neutral-800 rounded-lg shadow shadow-stone-900 drop-shadow;
+    @apply p-4 bg-card-bg rounded-lg shadow-card-shadow drop-shadow;
   }
   
   .experience-card {
@@ -47,11 +96,11 @@
   }
   
   .experience-card--selected {
-    @apply bg-neutral-700;
+    @apply bg-card-selected;
   }
   
   .experience-details {
-    @apply mx-auto p-6 bg-black bg-opacity-20 rounded-xl shadow shadow-stone-900 drop-shadow;
+    @apply mx-auto p-6 bg-black bg-opacity-20 rounded-xl shadow-card-shadow drop-shadow;
   }
   
   /* Layout */
@@ -73,7 +122,7 @@
   }
   
   .tech-list {
-    @apply list-disc list-inside space-y-2 text-gray-300;
+    @apply list-disc list-inside space-y-2 text-text-secondary;
   }
   
   /* Interactive Elements */
@@ -89,6 +138,48 @@
     @apply text-start mt-32 md:mt-20;
   }
   
+  /* Hero Buttons */
+  .hero-buttons {
+    @apply flex gap-4 mt-8 justify-center;
+  }
+  
+  .hero-button-primary {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hero-button-primary:hover {
+    background-color: var(--color-tertiary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .hero-button-secondary {
+    background-color: transparent;
+    color: var(--color-secondary);
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    border: 2px solid var(--color-secondary);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .hero-button-secondary:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    transform: translateY(-2px);
+  }
+  
   /* Project Cards */
   .project-card {
     @apply p-3 cursor-pointer bg-black bg-opacity-20 shadow-black inset-2 shadow-lg rounded-lg overflow-hidden;
@@ -99,16 +190,21 @@
   }
   
   .project-subtitle {
-    @apply text-xs text-gray-200 leading-3 mb-2;
+    @apply text-xs leading-3 mb-2 text-text-light;
   }
   
   .project-description {
-    @apply text-xs text-gray-200 text-ellipsis overflow-hidden leading-4 group-hover:overflow-visible group-hover:whitespace-normal line-clamp-2 h-5;
+    @apply text-xs text-ellipsis overflow-hidden leading-4 group-hover:overflow-visible group-hover:whitespace-normal line-clamp-2 h-5 text-text-light;
   }
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  @apply font-primary bg-main text-primary;
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
 }
 
 h1,
@@ -117,75 +213,54 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Montserrat', sans-serif;
+  @apply font-headings;
 }
 
 .accent {
-  font-family: 'Lora', serif;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-@supports (-ms-ime-align: auto) {
-  /* Edge-specific styles */
-  .icon-class {
-    font-size: 1rem; /* Adjust as needed */
-  }
-}
-:root {
-  font-family: 'Lora', serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: #f4f3ee;
-  background-color: #242424;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
-  scrollbar-width: thin;
+  @apply font-accent;
 }
 
 a {
   font-weight: 500;
-  color: inherit;
+  color: var(--color-text-secondary);
   text-decoration: inherit;
 }
 
 a:hover {
-  color: #8c8c8c;
+  @apply text-gray-300;
 }
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
 
 button {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
   border-radius: 8px;
-  border: 1px solid transparent;
+  border-width: 1px;
+  border-color: transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: all 0.25s ease;
 }
 
 button:hover {
-  border-color: #646cff;
+  background-color: var(--color-tertiary);
 }
 
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@supports (-ms-ime-align: auto) {
+  .icon-class {
+    font-size: 1rem;
+  }
 }

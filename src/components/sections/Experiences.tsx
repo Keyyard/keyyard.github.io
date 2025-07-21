@@ -59,7 +59,6 @@ const Experiences = () => {
                   href={exp.company_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline"
                 >
                   {exp.company_name}
                 </a>
@@ -80,7 +79,6 @@ const Experiences = () => {
                   href={selectedExperience.company_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline"
                 >
                   {selectedExperience.company_name}
                 </a>
@@ -114,9 +112,7 @@ const Experiences = () => {
                 <a
                   href={selectedExperience.company_url}
                   target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline text-blue-400 hover:text-blue-600"
-                >
+                  rel="noopener noreferrer">
                   {selectedExperience.company_name}
                 </a>
               </h4>
