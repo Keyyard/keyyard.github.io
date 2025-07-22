@@ -45,7 +45,7 @@ const Nav = () => {
   }, []);
 
   return (
-    <nav className="fixed p-4 bottom-0 items-center mx-auto inset-x-0 bg-[#242424]" id="nav">
+    <nav className="fixed p-4 bottom-0 items-center mx-auto inset-x-0 bg-[#242424] z-[99]" id="nav">
       <ul className="flex justify-center">
         {navs.map((nav, index) => (
           <motion.li
