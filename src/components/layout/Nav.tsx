@@ -30,7 +30,7 @@ const Nav = () => {
           setActiveSection(entry.target.id);
         });
       },
-      { threshold: 0.01 }
+      { threshold: 0.01 },
     );
 
     sections.forEach((section) => {
@@ -45,20 +45,23 @@ const Nav = () => {
   }, []);
 
   return (
-    <nav className="fixed p-4 bottom-0 items-center mx-auto inset-x-0 bg-[#242424] z-[99]" id="nav">
+    <nav
+      className="fixed p-4 bottom-0 items-center mx-auto inset-x-0 bg-[#242424] z-[99]"
+      id="nav"
+    >
       <ul className="flex justify-center">
         {navs.map((nav, index) => (
           <motion.li
             key={index}
             className={`mx-4 ${
-              activeSection === nav.sectionId ? "underline underline-offset-8 text-gray-200" : "text-gray-500"
+              activeSection === nav.sectionId
+                ? "underline underline-offset-8 text-gray-200"
+                : "text-gray-500"
             }`}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            <a href={`${nav.link.toLowerCase()}`}>
-              {nav.name}
-            </a>
+            <a href={`${nav.link.toLowerCase()}`}>{nav.name}</a>
           </motion.li>
         ))}
       </ul>
