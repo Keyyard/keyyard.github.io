@@ -44,8 +44,16 @@ export function Hero() {
               {text}
             </p>
           ))}
-          <p className="mt-4">
-            I write too! Check out my <a className="text-[--color-secondary] hover:text-[--color-text-highlight]" href="https://blogs.keyyard.xyz"> Digital Garden here </a>
+            <p className="mt-4">
+            I also enjoy writing! Explore my thoughts & perspectives in my{" "}
+            <a
+              className="text-[--color-secondary] hover:text-[--color-text-highlight]"
+              href="https://blogs.keyyard.xyz"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Digital Garden
+            </a>.
             </p>
         </div>
         <div className="hero-buttons">
