@@ -14,9 +14,9 @@ class WebDocument extends Document {
           />
           <meta
             name="keywords"
-            content="Keyyard, Minecraft, Mods, Addons, Marketplace, Minecraft, Tree Capitator, Vein Miner, Actual Guns, Trains Game, One Block, Lucky Block, MCPEDL, Preston, Roblox, Scary Myth Mobs, TNT Experiments, Minecraft Developer, Portfolio, Game Design, Minecraft Bedrock, Custom Content, Mod Development, MCPEDL, MODBAY"
+            content="Keyyard, Minecraft, Mods, Addons, Marketplace, Minecraft, Tree Capitator, Vein Miner, Actual Guns, MCPEDL, Modbay, PrestonPlayz, Official Minecraft Marketplace, Minecraft Developer, Portfolio, Game Design, Minecraft Bedrock"
           />
-          <meta name="author" content="Hieu - Keyyard (Trinh Minh Hieu)" />
+          <meta name="author" content="Keyyard" />
 
           {/* Open Graph data */}
           <meta property="og:type" content="website" />
@@ -62,16 +62,6 @@ class WebDocument extends Document {
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=G-Z3K6D9SXF4"
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'G-Z3K6D9SXF4');
-              `,
-            }}
           />
         </Head>
         <body>
