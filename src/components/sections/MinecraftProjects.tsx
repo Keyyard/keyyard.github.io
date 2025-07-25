@@ -77,7 +77,7 @@ const MinecraftProjects = () => {
                             linkObj.name === "Github"
                               ? "bg-[#5a4378] text-white hover:bg-[#5a4378]"
                               : linkObj.name === "MCPEDL"
-                              ? "bg-[#4a8a4a] text-white hover:bg-[#4a8a4a]"
+                              ? "bg-[#7CBB7C] text-[#242424] hover:bg-[#97C997] hover:text-[#383838]"
                               : linkObj.name === "CurseForge"
                               ? "bg-[#f16436] text-white hover:bg-[#f16436]"
                               : "bg-[#333] text-white hover:bg-[#333]"

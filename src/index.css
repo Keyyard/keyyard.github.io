@@ -301,8 +301,7 @@ button:focus-visible {
 }
 
 .contact-description {
-  @apply text-sm text-text-light mb-2;
-  color: var(--color-text-muted);
+  @apply text-sm mb-2 text-[--color-text-secondary];
 }
 
 .contact-handle {

@@ -58,7 +58,7 @@ export function Hero() {
               const projectsSection = document.getElementById("projects");
               projectsSection?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="hero-button-primary"
+            className="hero-button-primary text-[--color-background]"
           >
             View My Work
           </button>
