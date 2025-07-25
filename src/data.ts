@@ -134,7 +134,7 @@ const mcProjects = [
     downloads: "2.0M+",
     imgs: [
       "/assets/mcProjs/tc.png",
-      "https://i.ytimg.com/vi/lze7XP_hMio/maxresdefault.jpg",
+      "/assets/mcProjs/tc/maxresdefault.jpg",
     ],
   },
   {
@@ -150,9 +150,9 @@ const mcProjects = [
     ],
     imgs: [
       "/assets/mcProjs/smm.png",
-      "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/1510cab7-b0b3-4896-8c71-86b5e44ea6af/fg_screenshot_1.jpg",
-      "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/76faee75-a4a2-43ff-9efc-f2fa97b2f5ce/fg_screenshot_2.jpg",
-      "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/369417ac-b8ba-435d-99c5-7c08f593c2a3/fg_screenshot_0.jpg",
+      "/assets/mcProjs/smm/fg_screenshot_0.jpg",
+      "/assets/mcProjs/smm/fg_screenshot_1.jpg",
+      "/assets/mcProjs/smm/fg_screenshot_2.jpg",
     ],
   },
   {
@@ -175,8 +175,8 @@ const mcProjects = [
       },
     ],
     imgs: [
-      "https://github.com/Keyyard/dynamic-torchlight/raw/main/medias/torch.gif",
-      "https://github.com/Keyyard/dynamic-torchlight/raw/main/medias/torch2.gif",
+      "/assets/mcProjs/torch/torch.gif",
+      "/assets/mcProjs/torch/torch2.gif",
     ],
   },
   {
@@ -191,7 +191,7 @@ const mcProjects = [
       },
     ],
     imgs: [
-      "https://github.com/Keyyard/PortalGunsAddon-ScriptingAPI/raw/main/medias/portal-appears.gif",
+      "/assets/mcProjs/portal/portal-appears.gif",
     ],
   },
   {
@@ -228,11 +228,9 @@ const mcProjects = [
     ],
     downloads: "3.0M+",
     imgs: [
-      "https://pbs.twimg.com/media/GTqwM7SWQAAIEVq?format=jpg&name=large",
-      "https://pbs.twimg.com/media/GWFjLdgWgAAVYUq?format=jpg&name=large",
-      "https://pbs.twimg.com/media/GLZezFubUAA4E5O?format=jpg&name=large",
-      "https://pbs.twimg.com/media/GGFd4o_W0AA5A_n?format=jpg&name=large",
-      "https://pbs.twimg.com/media/GDl2vZhXQAAU-8H?format=jpg&name=large",
+      "/assets/mcProjs/ag/GWFjLdgWgAAVYUq.jpg",
+      "/assets/mcProjs/ag/GLZezFubUAA4E5O.jpg",
+      "/assets/mcProjs/ag/GDl2vZhXQAAU-8H.jpg",
     ],
   },
   {
@@ -247,10 +245,10 @@ const mcProjects = [
       },
     ],
     imgs: [
-      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/ba27f9a3-6b02-49a3-85a7-91f311240a2e/Trains_Thumbnail_0.jpg",
-      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/a8fa42ce-c57a-4566-8057-fce0fdbcf665/Trains_MarketingScreenshot_2.jpg",
-      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/05e286fb-2e1a-40b5-ad1e-2217ac1afa05/Trains_MarketingScreenshot_0.jpg",
-      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/d7e0d146-9f83-4f3f-9e25-9d4a64780221/Trains_MarketingScreenshot_1.jpg",
+      "/assets/mcProjs/train/Trains_Thumbnail_0.jpg",
+      "/assets/mcProjs/train/Trains_MarketingScreenshot_0.jpg",
+      "/assets/mcProjs/train/Trains_MarketingScreenshot_1.jpg",
+      "/assets/mcProjs/train/Trains_MarketingScreenshot_2.jpg",
     ],
   },
   {
@@ -265,10 +263,10 @@ const mcProjects = [
       },
     ],
     imgs: [
-      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/9ddd017d-cab7-4265-9113-ad3f6c5bf0bb/One_Block_Thumbnail_0.jpg",
-      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/adc467e8-813c-4c53-98d1-93ce2df6382e/One_Block_Screenshot_3.jpg",
-      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/c5019b04-27f0-483a-950a-0f90deafad2a/One_Block_Screenshot_0.jpg",
-      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/db0defc4-dc8b-4173-92fb-5b93111fa8c8/One_Block_Screenshot_2.jpg",
+      "/assets/mcProjs/obe/One_Block_Thumbnail_0.jpg",
+      "/assets/mcProjs/obe/One_Block_Screenshot_0.jpg",
+      "/assets/mcProjs/obe/One_Block_Screenshot_2.jpg",
+      "/assets/mcProjs/obe/One_Block_Screenshot_3.jpg",
     ],
   },
   {
@@ -283,12 +281,11 @@ const mcProjects = [
       },
     ],
     imgs: [
-      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/cf9d5fc7-5c1f-4e80-947f-8449fc501150/Thumbnail_0.jpg",
-      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/9cffecb4-b96b-41e4-9c20-8f3eabf6af66/Screenshot_2.jpg",
-      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/e9cb51f3-27e0-4361-a2b6-4ab14255d2ce/Screenshot_3.jpg",
-      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/919968d3-9ca9-45f2-84c5-d095013bdfe1/Screenshot_4.jpg",
-      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/3b600886-e238-4ed7-9084-a12c82f2ff11/Screenshot_0.jpg",
-      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/0abe1765-b4b9-4ee6-87ee-7f1847eaf2ef/Screenshot_1.jpg",
+      "/assets/mcProjs/cbe/Thumbnail_0.jpg",
+      "/assets/mcProjs/cbe/Screenshot_1.jpg",
+      "/assets/mcProjs/cbe/Screenshot_2.jpg",
+      "/assets/mcProjs/cbe/Screenshot_3.jpg",
+      "/assets/mcProjs/cbe/Screenshot_4.jpg",
     ],
   },
   {
@@ -303,11 +300,11 @@ const mcProjects = [
       },
     ],
     imgs: [
-      "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/14693ee6-8d89-4b1d-b98a-8bffd53b2b23/Thumbnail_0.jpg",
-      "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/ac877822-2a4f-46d6-8663-7f4f4b80b0b1/Screenshot_2.jpg",
-      "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/3e61a475-c7e5-4557-b2c7-d0e1a1a31b38/Screenshot_3.jpg",
-      "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/d670b857-6bf5-4bd1-b04b-8cde622d222f/Screenshot_4.jpg",
-      "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/b4b201bc-b20a-4ad7-9804-bc400c2c5c54/Screenshot_1.jpg",
+      "/assets/mcProjs/rse/Thumbnail_0 (1).jpg",
+      "/assets/mcProjs/rse/Screenshot_1.jpg",
+      "/assets/mcProjs/rse/Screenshot_2.jpg",
+      "/assets/mcProjs/rse/Screenshot_3.jpg",
+      "/assets/mcProjs/rse/Screenshot_4.jpg",
     ],
   },
   {
@@ -322,12 +319,12 @@ const mcProjects = [
       },
     ],
     imgs: [
-      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/596d31ac-c845-4a65-9fde-021af4fa675f/Thumbnail_0.jpg",
-      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/e22f04d7-4397-4f1d-b949-d7a6c33c6b2c/Screenshot_2.jpg",
-      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/1969fb00-d0b5-450c-96c0-2d4cb2e3fc00/Screenshot_3.jpg",
-      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/91c62a91-84b3-4fb2-be44-d7b913e6a45b/Screenshot_4.jpg",
-      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/bad47484-bcef-4dce-bac3-cac9567938ba/Screenshot_0.jpg",
-      "https://xforgeassets002.xboxlive.com/pf-namespace-b63a0803d3653643/c1a9b4d7-b347-429d-b52c-a6c079eaabb9/Screenshot_1.jpg",
+      "assets/mcProjs/tnt/Thumbnail_0.jpg",
+      "assets/mcProjs/tnt/Screenshot_2.jpg",
+      "assets/mcProjs/tnt/Screenshot_3.jpg",
+      "assets/mcProjs/tnt/Screenshot_4.jpg",
+      "assets/mcProjs/tnt/Screenshot_0.jpg",
+      "assets/mcProjs/tnt/Screenshot_1.jpg",
     ],
   },
   {
@@ -342,11 +339,10 @@ const mcProjects = [
       },
     ],
     imgs: [
-      "https://images.bedrockexplorer.com/minecraft-marketplace-content/g2crafted-3d-medieval-experience-thumbnail-ea2dbbec5214a3c4-800.jpg",
-      "https://media-cdn.bedrockexplorer.com/OYHa744eNPhWP45JkrSxRzDMUsbpl53L6uOLSpt6kQo/fill/800/450/ce/1/aHR0cHM6Ly94Zm9yZ2Vhc3NldHMwMDEueGJveGxpdmUuY29tL3BmLXRpdGxlLWI2M2EwODAzZDM2NTM2NDMtMjBjYTIvYTEwMGM0ZDktNDhlNi00NGUxLTk1YzMtMDk0YzFjN2MzYWIwLzNEX01lZGlldmFsX0V4cGVyaWVuY2VfTWFya2V0aW5nU2NyZWVuc2hvdF8xLmpwZw/minecraft-marketplace-content-by-g2crafted-3d-medieval-experience.png",
-      "https://media-cdn.bedrockexplorer.com/AI7wrYVmwTkiK9-a_g0A9gP_VTi_dX7iAMlTKmFuS3w/fill/800/450/ce/1/aHR0cHM6Ly94Zm9yZ2Vhc3NldHMwMDEueGJveGxpdmUuY29tL3BmLXRpdGxlLWI2M2EwODAzZDM2NTM2NDMtMjBjYTIvOGIxMGJhYTMtM2NkNC00YmM1LWFmNTAtMWI0MjJlN2Y0NDEyLzNEX01lZGlldmFsX0V4cGVyaWVuY2VfTWFya2V0aW5nU2NyZWVuc2hvdF8yLmpwZw/minecraft-marketplace-content-by-g2crafted-3d-medieval-experience.png",
-      "https://media-cdn.bedrockexplorer.com/oGGTiPxK7H9m4RCbiXFeg2UXNij6ejnI9ddb9eMTy4Q/fill/800/450/ce/1/aHR0cHM6Ly94Zm9yZ2Vhc3NldHMwMDEueGJveGxpdmUuY29tL3BmLXRpdGxlLWI2M2EwODAzZDM2NTM2NDMtMjBjYTIvNjU1YzIwZTMtZmY2Ny00YWQ5LWI4NTctODllMGJlY2MxMjM3LzNEX01lZGlldmFsX0V4cGVyaWVuY2VfTWFya2V0aW5nU2NyZWVuc2hvdF80LmpwZw/minecraft-marketplace-content-by-g2crafted-3d-medieval-experience.png",
-      "https://media-cdn.bedrockexplorer.com/OYHa744eNPhWP45JkrSxRzDMUsbpl53L6uOLSpt6kQo/fill/800/450/ce/1/aHR0cHM6Ly94Zm9yZ2Vhc3NldHMwMDEueGJveGxpdmUuY29tL3BmLXRpdGxlLWI2M2EwODAzZDM2NTM2NDMtMjBjYTIvYTEwMGM0ZDktNDhlNi00NGUxLTk1YzMtMDk0YzFjN2MzYWIwLzNEX01lZGlldmFsX0V4cGVyaWVuY2VfTWFya2V0aW5nU2NyZWVuc2hvdF8xLmpwZw/minecraft-marketplace-content-by-g2crafted-3d-medieval-experience.png",
+      "/assets/mcProjs/3dme/g2crafted-3d-medieval-experience-thumbnail-ea2dbbec5214a3c4-800.jpg",
+      "/assets/mcProjs/3dme/3D_Medieval_Experience_MarketingScreenshot_1.jpg",
+      "/assets/mcProjs/3dme/3D_Medieval_Experience_MarketingScreenshot_2.jpg",
+      "/assets/mcProjs/3dme/3D_Medieval_Experience_MarketingScreenshot_4.jpg",
     ],
   },
   {
@@ -361,7 +357,7 @@ const mcProjects = [
       },
     ],
     imgs: [
-      "https://xforgeassets001.xboxlive.com/pf-namespace-b63a0803d3653643/82fb9eac-c719-40be-affd-315560116328/Demonic_Legends_Thumbnail.jpg",
+      "/assets/mcProjs/dl/Demonic_Legends_Thumbnail.jpg",
     ],
   },
   {
@@ -376,7 +372,7 @@ const mcProjects = [
       },
     ],
     imgs: [
-      "https://xforgeassets001.xboxlive.com/pf-title-b63a0803d3653643-20ca2/a3492053-54af-4730-aff7-91d4ba374bcb/FrightNight_Thumbnail.jpg",
+      "/assets/mcProjs/fn/FrightNight_Thumbnail.jpg",
     ],
   },
 ];
@@ -403,7 +399,7 @@ const Projects = [
       },
     ],
     imgs: [
-      "https://github.com/Keyyard/create-mc-bedrock-cli/blob/main/medias/gif.gif?raw=true",
+      "assets/Projs/bedrockcli/gif.gif",
     ],
     tags: ["Node.js", "CLI", "Minecraft", "Developer Tools", "Productivity"],
     status: "Live",
@@ -427,7 +423,7 @@ const Projects = [
       },
     ],
     imgs: [
-      "https://github.com/Blockception/VSCode-Bedrock-Development-Extension/raw/HEAD/documentation/resources/overview.gif",
+      "/assets/Projs/blockception/overview.gif",
     ],
     tags: [
       "TypeScript",
@@ -457,7 +453,7 @@ const Projects = [
       },
     ],
     imgs: [
-      "/assets/Projs/wiki.png",
+      "/assets/Projs/wiki/wiki.png",
     ],
     tags: ["Documentation", "Minecraft", "Community", "Education"],
     status: "Live",
@@ -480,7 +476,7 @@ const Projects = [
       },
     ],
     imgs: [
-      "https://github.com/Keyyard/today-notes/blob/main/public/medias/4.png?raw=true",
+      "assets/Projs/today/4.png",
     ],
     tags: ["React", "PWA", "TypeScript", "Productivity"],
     status: "Inactive",
