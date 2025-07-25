@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Projects } from "../../data";
@@ -21,7 +20,10 @@ const ProjectsSection = () => {
       <div className="px-6 mx-auto py-6 pb-32 space-y-6">
         {loading
           ? skeletons.map((_, i) => (
-              <div key={i} className="group relative overflow-hidden rounded-lg bg-gray-200 animate-pulse h-32 flex items-center p-6">
+              <div
+                key={i}
+                className="group relative overflow-hidden rounded-lg bg-gray-200 animate-pulse h-32 flex items-center p-6"
+              >
                 <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-gray-300 mr-6" />
                 <div className="flex-1 space-y-3">
                   <div className="h-6 w-1/2 bg-gray-300 rounded" />
@@ -76,8 +78,8 @@ const ProjectsSection = () => {
                             proj.status === "Live"
                               ? "bg-green-500 bg-opacity-20 text-green-400 border border-green-500 border-opacity-30"
                               : proj.status === "In Development"
-                              ? "bg-yellow-500 bg-opacity-20 text-yellow-400 border border-yellow-500 border-opacity-30"
-                              : "bg-blue-500 bg-opacity-20 text-blue-400 border border-blue-500 border-opacity-30"
+                                ? "bg-yellow-500 bg-opacity-20 text-yellow-400 border border-yellow-500 border-opacity-30"
+                                : "bg-blue-500 bg-opacity-20 text-blue-400 border border-blue-500 border-opacity-30"
                           }`}
                         >
                           {proj.status}
