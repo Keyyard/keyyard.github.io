@@ -1,14 +1,15 @@
-
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Projects } from "../../data";
 import SafeImage from "../ui/SafeImage";
 
-type ProjectType = typeof Projects[number];
+type ProjectType = (typeof Projects)[number];
 
 const ProjectsSection = () => {
   const [loading, setLoading] = useState(true);
-  const [selectedProject, setSelectedProject] = useState<ProjectType | null>(null);
+  const [selectedProject, setSelectedProject] = useState<ProjectType | null>(
+    null,
+  );
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 600);
@@ -28,7 +29,10 @@ const ProjectsSection = () => {
       <div className="px-6 mx-auto py-6 pb-32 space-y-6">
         {loading
           ? skeletons.map((_, i) => (
-              <div key={i} className="group relative overflow-hidden rounded-lg bg-gray-200 animate-pulse h-32 flex items-center p-6">
+              <div
+                key={i}
+                className="group relative overflow-hidden rounded-lg bg-gray-200 animate-pulse h-32 flex items-center p-6"
+              >
                 <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-gray-300 mr-6" />
                 <div className="flex-1 space-y-3">
                   <div className="h-6 w-1/2 bg-gray-300 rounded" />
@@ -83,8 +87,8 @@ const ProjectsSection = () => {
                             proj.status === "Live"
                               ? "bg-green-500 bg-opacity-20 text-green-400 border border-green-500 border-opacity-30"
                               : proj.status === "In Development"
-                              ? "bg-yellow-500 bg-opacity-20 text-yellow-400 border border-yellow-500 border-opacity-30"
-                              : "bg-blue-500 bg-opacity-20 text-blue-400 border border-blue-500 border-opacity-30"
+                                ? "bg-yellow-500 bg-opacity-20 text-yellow-400 border border-yellow-500 border-opacity-30"
+                                : "bg-blue-500 bg-opacity-20 text-blue-400 border border-blue-500 border-opacity-30"
                           }`}
                         >
                           {proj.status}
@@ -138,7 +142,7 @@ const ProjectsSection = () => {
               initial={{ scale: 0.95 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.95 }}
-              onClick={e => e.stopPropagation()}
+              onClick={(e) => e.stopPropagation()}
             >
               <button
                 onClick={closeModal}
@@ -183,8 +187,8 @@ const ProjectsSection = () => {
                           selectedProject.status === "Live"
                             ? "bg-green-500 bg-opacity-20 text-green-400 border border-green-500 border-opacity-30"
                             : selectedProject.status === "In Development"
-                            ? "bg-yellow-500 bg-opacity-20 text-yellow-400 border border-yellow-500 border-opacity-30"
-                            : "bg-blue-500 bg-opacity-20 text-blue-400 border border-blue-500 border-opacity-30"
+                              ? "bg-yellow-500 bg-opacity-20 text-yellow-400 border border-yellow-500 border-opacity-30"
+                              : "bg-blue-500 bg-opacity-20 text-blue-400 border border-blue-500 border-opacity-30"
                         }`}
                       >
                         {selectedProject.status}
@@ -209,7 +213,7 @@ const ProjectsSection = () => {
                           >
                             {tag}
                           </span>
-                        )
+                        ),
                       )}
                     </div>
                   )}
@@ -224,15 +228,20 @@ const ProjectsSection = () => {
                 {/* Image Gallery */}
                 {selectedProject.imgs && selectedProject.imgs.length > 0 && (
                   <div className="mb-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {selectedProject.imgs.map((img: string, imgIndex: number) => (
-                      <div key={imgIndex} className="w-full h-48 bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
-                        <SafeImage
-                          src={img}
-                          alt={`${selectedProject.title} image ${imgIndex + 1}`}
-                          className="object-contain max-h-full max-w-full"
-                        />
-                      </div>
-                    ))}
+                    {selectedProject.imgs.map(
+                      (img: string, imgIndex: number) => (
+                        <div
+                          key={imgIndex}
+                          className="w-full h-48 bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center"
+                        >
+                          <SafeImage
+                            src={img}
+                            alt={`${selectedProject.title} image ${imgIndex + 1}`}
+                            className="object-contain max-h-full max-w-full"
+                          />
+                        </div>
+                      ),
+                    )}
                   </div>
                 )}
 
@@ -249,22 +258,23 @@ const ProjectsSection = () => {
                           linkObj.name === "Github"
                             ? "bg-[#5a4378] text-white hover:bg-[#6b5189]"
                             : linkObj.name === "Product"
-                            ? "bg-blue-600 text-white hover:bg-blue-700"
-                            : linkObj.name === "MCPEDL"
-                            ? "bg-[#4a8a4a] text-white hover:bg-[#5a9a5a]"
-                            : linkObj.name === "CurseForge"
-                            ? "bg-[#f16436] text-white hover:bg-[#ff7446]"
-                            : linkObj.name === "VSCode Marketplace"
-                            ? "bg-[#007ACC] text-white hover:bg-[#1e8acc]"
-                            : linkObj.name === "NPM Package"
-                            ? "bg-[#cb3837] text-white hover:bg-[#db4847]"
-                            : linkObj.name === "Wiki Website"
-                            ? "bg-[#00599c] text-white hover:bg-[#0069ac]"
-                            : linkObj.name === "Website"
-                            ? "bg-[#00599c] text-white hover:bg-[#0069ac]"
-                            : linkObj.name === "Minecraft Marketplace"
-                            ? "bg-[#00A651] text-white hover:bg-[#10B661]"
-                            : "bg-gray-600 text-white hover:bg-gray-700"
+                              ? "bg-blue-600 text-white hover:bg-blue-700"
+                              : linkObj.name === "MCPEDL"
+                                ? "bg-[#4a8a4a] text-white hover:bg-[#5a9a5a]"
+                                : linkObj.name === "CurseForge"
+                                  ? "bg-[#f16436] text-white hover:bg-[#ff7446]"
+                                  : linkObj.name === "VSCode Marketplace"
+                                    ? "bg-[#007ACC] text-white hover:bg-[#1e8acc]"
+                                    : linkObj.name === "NPM Package"
+                                      ? "bg-[#cb3837] text-white hover:bg-[#db4847]"
+                                      : linkObj.name === "Wiki Website"
+                                        ? "bg-[#00599c] text-white hover:bg-[#0069ac]"
+                                        : linkObj.name === "Website"
+                                          ? "bg-[#00599c] text-white hover:bg-[#0069ac]"
+                                          : linkObj.name ===
+                                              "Minecraft Marketplace"
+                                            ? "bg-[#00A651] text-white hover:bg-[#10B661]"
+                                            : "bg-gray-600 text-white hover:bg-gray-700"
                         }`}
                       >
                         {linkObj.name}
