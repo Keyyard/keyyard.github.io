@@ -53,10 +53,7 @@ class WebDocument extends Document {
           <link rel="mask-icon" color="#05ac31" href="/safari-pinned-tab.svg" />
 
           {/* Fonts */}
-          <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
-            rel="stylesheet"
-          />
+          {/* Fonts are now self-hosted via @font-face in index.css */}
 
           {/* Google Tag Manager */}
           <script

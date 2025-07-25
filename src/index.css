@@ -3,6 +3,19 @@
 @tailwind utilities;
 
 /* Design Tokens - Easy to edit fonts and colors */
+@font-face {
+  font-family: 'Inter';
+  src: url('/assets/fonts/Inter.ttf') format('truetype');
+  font-weight: 400 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  src: url('/assets/fonts/BeVietnamPro.ttf') format('truetype');
+  font-weight: 400 700;
+  font-display: swap;
+}
+
 :root {
   /* Fonts */
   --font-primary: 'Inter', sans-serif;
