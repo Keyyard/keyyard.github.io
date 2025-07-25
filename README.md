@@ -14,10 +14,13 @@ Welcome to the **Keyyard Portfolio** project! This is my personal portfolio webs
 
 ## Live Website
 
-Check out the live portfolio here: [https://keyyard.xyz](https://keyyard.xyz).
+Check out the Official Website - Portfolio at: [https://keyyard.xyz](https://keyyard.xyz).
 
-![Keyyard Portfolio Screenshot](public/image.png)
-![Keyyard Portfolio Screenshot](public/image2.png)
+![Keyyard Official Website Screenshot1](public/img1.png)
+![Keyyard Official Website Screenshot2](public/img2.png)
+![Keyyard Official Website Screenshot3](public/img3.png)
+![Keyyard Official Website Screenshot4](public/img4.png)
+![Keyyard Official Website Screenshot5](public/img5.png)
 
 ## About the Project
 
@@ -50,8 +53,6 @@ This portfolio showcases my journey as a developer specializing in **Minecraft A
 
 ### Tools and Utilities
 - **Vite**: Modern frontend build tool
-- **EmailJS**: Email service for JavaScript
-- **React Hot Toast**: Notification library for React
 - **Google Analytics**: Website performance tracking
 - **GitHub Actions**: CI/CD for automated deployment with Vercel
 
