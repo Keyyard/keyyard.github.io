@@ -133,7 +133,7 @@ const mcProjects = [
     ],
     downloads: "2.0M+",
     imgs: [
-      "/assets/mcProjs/tc.png",
+      "/assets/mcProjs/tc.webp",
       "/assets/mcProjs/tc/maxresdefault.webp",
     ],
   },
@@ -149,7 +149,7 @@ const mcProjects = [
       },
     ],
     imgs: [
-      "/assets/mcProjs/smm.png",
+      "/assets/mcProjs/smm.webp",
       "/assets/mcProjs/smm/fg_screenshot_0.webp",
       "/assets/mcProjs/smm/fg_screenshot_1.webp",
       "/assets/mcProjs/smm/fg_screenshot_2.webp",
@@ -208,7 +208,7 @@ const mcProjects = [
       },
     ],
     imgs: [
-      "/assets/mcProjs/wc/keyart.png",
+      "/assets/mcProjs/wc/keyart.webp",
       "/assets/mcProjs/wc/wc1.webp",
       "/assets/mcProjs/wc/wc2.webp",
     ],
@@ -435,7 +435,7 @@ const Projects = [
     short_info: "Contributed to Bedrock Wiki",
     description:
       "A knowledge-sharing website for Minecraft Bedrock Add-Ons, containing documentation, tutorials, and general how-to information.",
-    icon: "https://wiki.bedrock.dev/assets/images/icons/logo.png",
+    icon: "https://wiki.bedrock.dev/assets/images/icons/logo.webp",
     links: [
       {
         name: "Github",
@@ -458,7 +458,7 @@ const Projects = [
     short_info: "Progressive Web App Project",
     description:
       "Today Notes helps you manage your daily tasks effortlessly. Stay focused on what matters today, complete tasks efficiently, and boost your productivity.",
-    icon: "https://github.com/Keyyard/today-notes/blob/main/public/icons/196.png?raw=true",
+    icon: "https://github.com/Keyyard/today-notes/blob/main/public/icons/196.webp?raw=true",
     links: [
       {
         name: "Github",
