@@ -1,28 +1,28 @@
 .carousel .slide {
-    background: none;
-    border: none;
-    z-index: 1;
+  background: none;
+  border: none;
+  z-index: 1;
 }
 
 .carousel .control-arrow,
 .carousel.carousel-slider .control-arrow {
-    opacity: 0.5;
-    z-index: 10;
+  opacity: 0.5;
+  z-index: 10;
 }
 
 .carousel .control-arrow:hover,
 .carousel.carousel-slider .control-arrow:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .carousel .control-dots .dot {
-    display: none;
+  display: none;
 }
 
 .carousel .control-dots .dot.selected {
-    display: none;
+  display: none;
 }
 
 .carousel .thumb {
-    border-color: #171717;
+  border-color: #171717;
 }
