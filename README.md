@@ -28,7 +28,6 @@ This portfolio showcases my journey as a developer specializing in **Minecraft A
 
 ## Features
 
-- **Interactive 3D Background Waves**: Dynamic wave animations built with `Three.js` and `Canvas`, responsive to user interactions.
 - **Interactive 3D Avatar**: A fully interactive 3D model of my Minecraft avatar that reacts to user input.
 - **Smooth Scrolling and Animations**: Enhanced navigation and animations powered by `Framer Motion`.
 - **Responsive Design**: Optimized for desktop, tablet, and mobile devices.
