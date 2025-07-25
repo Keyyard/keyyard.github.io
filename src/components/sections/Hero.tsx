@@ -10,13 +10,8 @@ export function Hero() {
     <section id="hero" className="section-hero">
       <Bg />
       <div className="flex flex-col justify-center">
-        <span className="hero-title-blur">
-          Keyyard
-        </span>
-        <h1 
-          className="hero-title"
-          style={{ fontSize: '2.25rem' }}
-        >
+        <span className="hero-title-blur">Keyyard</span>
+        <h1 className="hero-title" style={{ fontSize: "2.25rem" }}>
           Keyyard
         </h1>
         <h2 className="hero-subtitle">
@@ -44,7 +39,7 @@ export function Hero() {
               {text}
             </p>
           ))}
-            <p className="mt-4">
+          <p className="mt-4">
             I also enjoy writing! Explore my thoughts & perspectives in my{" "}
             <a
               className="text-[--color-secondary] hover:text-[--color-text-highlight]"
@@ -53,23 +48,24 @@ export function Hero() {
               rel="noopener noreferrer"
             >
               Digital Garden
-            </a>.
-            </p>
+            </a>
+            .
+          </p>
         </div>
         <div className="hero-buttons">
-          <button 
+          <button
             onClick={() => {
-              const projectsSection = document.getElementById('projects');
-              projectsSection?.scrollIntoView({ behavior: 'smooth' });
+              const projectsSection = document.getElementById("projects");
+              projectsSection?.scrollIntoView({ behavior: "smooth" });
             }}
             className="hero-button-primary"
           >
             View My Work
           </button>
-          <button 
+          <button
             onClick={() => {
-              const contactSection = document.getElementById('contact');
-              contactSection?.scrollIntoView({ behavior: 'smooth' });
+              const contactSection = document.getElementById("contact");
+              contactSection?.scrollIntoView({ behavior: "smooth" });
             }}
             className="hero-button-secondary"
           >
