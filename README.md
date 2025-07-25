@@ -39,25 +39,31 @@ This portfolio showcases my journey as a developer specializing in **Minecraft A
 ## Tech Stack
 
 ### Web Development
+
 - **Frontend**: React, Vanilla JavaScript
 - **Backend**: FastAPI, Flask, Next.js, Prisma ORM
 - **Databases**: PostgreSQL, SQLite, JSON
 
 ### Styling
+
 - **Tailwind CSS**: Utility-first CSS framework
 - **Bootstrap**: Additional styling framework
 
 ### 3D and Animations
+
 - **Three.js**: JavaScript library for 3D graphics
 - **Framer Motion**: Library for animations and transitions
 
 ### Tools and Utilities
+
 - **Vite**: Modern frontend build tool
 - **Google Analytics**: Website performance tracking
 - **GitHub Actions**: CI/CD for automated deployment with Vercel
 
 ### Programming Languages
+
 - TypeScript, JavaScript
 
 ## Inspired?
+
 Feel free to explore the code and contribute! If you like the project, consider giving it a star ⭐️ on GitHub. It means a lot to me!
