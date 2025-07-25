@@ -3,8 +3,10 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { mcProjects } from "../../data";
-import SafeImage from "../ui/SafeImage";
-import SafeCarousel from "../ui/SafeCarousel";
+import { Suspense, lazy } from "react";
+
+const SafeImage = lazy(() => import("../ui/SafeImage"));
+const SafeCarousel = lazy(() => import("../ui/SafeCarousel"));
 
 const MinecraftProjects = () => {
   const [loading, setLoading] = useState(true);
@@ -49,22 +51,26 @@ const MinecraftProjects = () => {
                   <h3 className="project-title">
                     <span className="truncate">{proj.title}</span>
                     {proj.downloads && (
-                      <SafeImage
-                        className="inline-block ml-2 h-5"
-                        alt="downloads"
-                        src={`https://img.shields.io/badge/downloads-${proj.downloads}-blue`}
-                      />
+                      <Suspense fallback={<span className="inline-block ml-2 h-5 bg-gray-200 rounded w-12 animate-pulse" />}>
+                        <SafeImage
+                          className="inline-block ml-2 h-5"
+                          alt="downloads"
+                          src={`https://img.shields.io/badge/downloads-${proj.downloads}-blue`}
+                        />
+                      </Suspense>
                     )}
                   </h3>
                   <h4 className="project-subtitle">{proj.short_info}</h4>
                   <h4 className="project-description">
                     {proj.description}
                   </h4>
-                  <SafeCarousel
-                    className="mt-3 mb-3"
-                    images={proj.imgs || []}
-                    alt={proj.title}
-                  />
+                  <Suspense fallback={<div className="h-32 w-full bg-gray-200 animate-pulse rounded mb-2" />}>
+                    <SafeCarousel
+                      className="mt-3 mb-3"
+                      images={proj.imgs || []}
+                      alt={proj.title}
+                    />
+                  </Suspense>
                   <div className="flex flex-wrap gap-2 justify-center">
                     {proj.links &&
                       proj.links.map((linkObj, i) => (
@@ -79,7 +85,7 @@ const MinecraftProjects = () => {
                               : linkObj.name === "MCPEDL"
                               ? "bg-[#7CBB7C] text-[#242424] hover:bg-[#97C997] hover:text-[#383838]"
                               : linkObj.name === "CurseForge"
-                              ? "bg-[#f16436] text-white hover:bg-[#f16436]"
+                              ? "bg-[#F5A184] text-[#242424] hover:bg-[#F7B39C] hover:text-[#383838]"
                               : "bg-[#333] text-white hover:bg-[#333]"
                           }`}
                         >

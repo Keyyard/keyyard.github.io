@@ -3,7 +3,6 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { easing } from "maath";
 import { useEffect, useRef, useState } from "react";
 import { Object3D, LoopOnce, AnimationMixer } from "three";
-
 function Model({ onLoaded }: { onLoaded: () => void }) {
   const gltf = useGLTF("/assets/myHead.gltf");
   const { scene, animations } = gltf;

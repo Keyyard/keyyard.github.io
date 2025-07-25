@@ -2,7 +2,9 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Projects } from "../../data";
-import SafeImage from "../ui/SafeImage";
+import { Suspense, lazy } from "react";
+
+const SafeImage = lazy(() => import("../ui/SafeImage"));
 
 type ProjectType = typeof Projects[number];
 
@@ -64,11 +66,13 @@ const ProjectsSection = () => {
                   {/* Project Icon */}
                   <div className="flex-shrink-0 w-16 h-16 rounded-xl overflow-hidden bg-gray-700 shadow-lg">
                     {proj.icon && (
-                      <SafeImage
-                        src={proj.icon}
-                        alt={`${proj.title} icon`}
-                        className="w-full h-full object-cover"
-                      />
+                      <Suspense fallback={<div className="w-full h-full bg-gray-300 animate-pulse rounded-xl" />}>
+                        <SafeImage
+                          src={proj.icon}
+                          alt={`${proj.title} icon`}
+                          className="w-full h-full object-cover"
+                        />
+                      </Suspense>
                     )}
                   </div>
                   {/* Project Info */}
@@ -164,11 +168,13 @@ const ProjectsSection = () => {
                 {/* Project Icon in Modal */}
                 <div className="flex-shrink-0 w-16 h-16 rounded-xl overflow-hidden bg-gray-700 shadow-lg mr-4">
                   {selectedProject.icon && (
-                    <SafeImage
-                      src={selectedProject.icon}
-                      alt={`${selectedProject.title} icon`}
-                      className="w-full h-full object-cover"
-                    />
+                    <Suspense fallback={<div className="w-full h-full bg-gray-300 animate-pulse rounded-xl" />}>
+                      <SafeImage
+                        src={selectedProject.icon}
+                        alt={`${selectedProject.title} icon`}
+                        className="w-full h-full object-cover"
+                      />
+                    </Suspense>
                   )}
                 </div>
                 <div className="flex-1">
@@ -226,11 +232,13 @@ const ProjectsSection = () => {
                   <div className="mb-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {selectedProject.imgs.map((img: string, imgIndex: number) => (
                       <div key={imgIndex} className="w-full h-48 bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
-                        <SafeImage
-                          src={img}
-                          alt={`${selectedProject.title} image ${imgIndex + 1}`}
-                          className="object-contain max-h-full max-w-full"
-                        />
+                        <Suspense fallback={<div className="object-contain max-h-full max-w-full bg-gray-300 animate-pulse w-full h-full rounded-lg" />}>
+                          <SafeImage
+                            src={img}
+                            alt={`${selectedProject.title} image ${imgIndex + 1}`}
+                            className="object-contain max-h-full max-w-full"
+                          />
+                        </Suspense>
                       </div>
                     ))}
                   </div>

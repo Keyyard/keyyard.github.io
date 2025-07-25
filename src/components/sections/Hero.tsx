@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
-import { useEffect } from "react";
-import toast, { Toaster } from "react-hot-toast";
-import HeadRender from "../layout/MyHead";
-import Bg from "../layout/Background";
+import dynamic from "next/dynamic";
 import { introductionText } from "../../data";
+import Bg from "../layout/Background";
+
+const HeadRender = dynamic(() => import("../layout/MyHead"), {
+  ssr: false,
+  loading: () => <div className="h-64 bg-gray-200 animate-pulse" />,
+});
 
 export function Hero() {
   return (
