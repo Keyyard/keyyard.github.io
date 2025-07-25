@@ -190,9 +190,7 @@ const mcProjects = [
         link: "https://github.com/Keyyard/PortalGunsAddon-ScriptingAPI",
       },
     ],
-    imgs: [
-      "/assets/mcProjs/portal/portal-appears.gif",
-    ],
+    imgs: ["/assets/mcProjs/portal/portal-appears.gif"],
   },
   {
     title: "Weapon Combiner",
@@ -398,9 +396,7 @@ const Projects = [
         link: "https://bedrockcli.keyyard.xyz",
       },
     ],
-    imgs: [
-      "assets/Projs/bedrockcli/gif.gif",
-    ],
+    imgs: ["assets/Projs/bedrockcli/gif.gif"],
     tags: ["Node.js", "CLI", "Minecraft", "Developer Tools", "Productivity"],
     status: "Live",
     featured: true,
@@ -422,9 +418,7 @@ const Projects = [
         link: "https://marketplace.visualstudio.com/items/?itemName=BlockceptionLtd.blockceptionvscodeminecraftbedrockdevelopmentextension",
       },
     ],
-    imgs: [
-      "/assets/Projs/blockception/overview.gif",
-    ],
+    imgs: ["/assets/Projs/blockception/overview.gif"],
     tags: [
       "TypeScript",
       "VSCode",
