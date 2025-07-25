@@ -134,7 +134,7 @@ const mcProjects = [
     downloads: "2.0M+",
     imgs: [
       "/assets/mcProjs/tc.png",
-      "/assets/mcProjs/tc/maxresdefault.jpg",
+      "/assets/mcProjs/tc/maxresdefault.webp",
     ],
   },
   {
@@ -150,9 +150,9 @@ const mcProjects = [
     ],
     imgs: [
       "/assets/mcProjs/smm.png",
-      "/assets/mcProjs/smm/fg_screenshot_0.jpg",
-      "/assets/mcProjs/smm/fg_screenshot_1.jpg",
-      "/assets/mcProjs/smm/fg_screenshot_2.jpg",
+      "/assets/mcProjs/smm/fg_screenshot_0.webp",
+      "/assets/mcProjs/smm/fg_screenshot_1.webp",
+      "/assets/mcProjs/smm/fg_screenshot_2.webp",
     ],
   },
   {
@@ -211,8 +211,8 @@ const mcProjects = [
     ],
     imgs: [
       "/assets/mcProjs/wc/keyart.png",
-      "/assets/mcProjs/wc/wc1.jpg",
-      "/assets/mcProjs/wc/wc2.jpg",
+      "/assets/mcProjs/wc/wc1.webp",
+      "/assets/mcProjs/wc/wc2.webp",
     ],
   },
   {
@@ -228,9 +228,9 @@ const mcProjects = [
     ],
     downloads: "3.0M+",
     imgs: [
-      "/assets/mcProjs/ag/GWFjLdgWgAAVYUq.jpg",
-      "/assets/mcProjs/ag/GLZezFubUAA4E5O.jpg",
-      "/assets/mcProjs/ag/GDl2vZhXQAAU-8H.jpg",
+      "/assets/mcProjs/ag/GWFjLdgWgAAVYUq.webp",
+      "/assets/mcProjs/ag/GLZezFubUAA4E5O.webp",
+      "/assets/mcProjs/ag/GDl2vZhXQAAU-8H.webp",
     ],
   },
   {
@@ -245,10 +245,10 @@ const mcProjects = [
       },
     ],
     imgs: [
-      "/assets/mcProjs/train/Trains_Thumbnail_0.jpg",
-      "/assets/mcProjs/train/Trains_MarketingScreenshot_0.jpg",
-      "/assets/mcProjs/train/Trains_MarketingScreenshot_1.jpg",
-      "/assets/mcProjs/train/Trains_MarketingScreenshot_2.jpg",
+      "/assets/mcProjs/train/Trains_Thumbnail_0.webp",
+      "/assets/mcProjs/train/Trains_MarketingScreenshot_0.webp",
+      "/assets/mcProjs/train/Trains_MarketingScreenshot_1.webp",
+      "/assets/mcProjs/train/Trains_MarketingScreenshot_2.webp",
     ],
   },
   {
@@ -263,10 +263,10 @@ const mcProjects = [
       },
     ],
     imgs: [
-      "/assets/mcProjs/obe/One_Block_Thumbnail_0.jpg",
-      "/assets/mcProjs/obe/One_Block_Screenshot_0.jpg",
-      "/assets/mcProjs/obe/One_Block_Screenshot_2.jpg",
-      "/assets/mcProjs/obe/One_Block_Screenshot_3.jpg",
+      "/assets/mcProjs/obe/One_Block_Thumbnail_0.webp",
+      "/assets/mcProjs/obe/One_Block_Screenshot_0.webp",
+      "/assets/mcProjs/obe/One_Block_Screenshot_2.webp",
+      "/assets/mcProjs/obe/One_Block_Screenshot_3.webp",
     ],
   },
   {
@@ -281,11 +281,11 @@ const mcProjects = [
       },
     ],
     imgs: [
-      "/assets/mcProjs/cbe/Thumbnail_0.jpg",
-      "/assets/mcProjs/cbe/Screenshot_1.jpg",
-      "/assets/mcProjs/cbe/Screenshot_2.jpg",
-      "/assets/mcProjs/cbe/Screenshot_3.jpg",
-      "/assets/mcProjs/cbe/Screenshot_4.jpg",
+      "/assets/mcProjs/cbe/Thumbnail_0.webp",
+      "/assets/mcProjs/cbe/Screenshot_1.webp",
+      "/assets/mcProjs/cbe/Screenshot_2.webp",
+      "/assets/mcProjs/cbe/Screenshot_3.webp",
+      "/assets/mcProjs/cbe/Screenshot_4.webp",
     ],
   },
   {
@@ -300,11 +300,11 @@ const mcProjects = [
       },
     ],
     imgs: [
-      "/assets/mcProjs/rse/Thumbnail_0 (1).jpg",
-      "/assets/mcProjs/rse/Screenshot_1.jpg",
-      "/assets/mcProjs/rse/Screenshot_2.jpg",
-      "/assets/mcProjs/rse/Screenshot_3.jpg",
-      "/assets/mcProjs/rse/Screenshot_4.jpg",
+      "/assets/mcProjs/rse/Thumbnail_0 (1).webp",
+      "/assets/mcProjs/rse/Screenshot_1.webp",
+      "/assets/mcProjs/rse/Screenshot_2.webp",
+      "/assets/mcProjs/rse/Screenshot_3.webp",
+      "/assets/mcProjs/rse/Screenshot_4.webp",
     ],
   },
   {
@@ -319,12 +319,12 @@ const mcProjects = [
       },
     ],
     imgs: [
-      "assets/mcProjs/tnt/Thumbnail_0.jpg",
-      "assets/mcProjs/tnt/Screenshot_2.jpg",
-      "assets/mcProjs/tnt/Screenshot_3.jpg",
-      "assets/mcProjs/tnt/Screenshot_4.jpg",
-      "assets/mcProjs/tnt/Screenshot_0.jpg",
-      "assets/mcProjs/tnt/Screenshot_1.jpg",
+      "assets/mcProjs/tnt/Thumbnail_0.webp",
+      "assets/mcProjs/tnt/Screenshot_2.webp",
+      "assets/mcProjs/tnt/Screenshot_3.webp",
+      "assets/mcProjs/tnt/Screenshot_4.webp",
+      "assets/mcProjs/tnt/Screenshot_0.webp",
+      "assets/mcProjs/tnt/Screenshot_1.webp",
     ],
   },
   {
@@ -339,10 +339,10 @@ const mcProjects = [
       },
     ],
     imgs: [
-      "/assets/mcProjs/3dme/g2crafted-3d-medieval-experience-thumbnail-ea2dbbec5214a3c4-800.jpg",
-      "/assets/mcProjs/3dme/3D_Medieval_Experience_MarketingScreenshot_1.jpg",
-      "/assets/mcProjs/3dme/3D_Medieval_Experience_MarketingScreenshot_2.jpg",
-      "/assets/mcProjs/3dme/3D_Medieval_Experience_MarketingScreenshot_4.jpg",
+      "/assets/mcProjs/3dme/g2crafted-3d-medieval-experience-thumbnail-ea2dbbec5214a3c4-800.webp",
+      "/assets/mcProjs/3dme/3D_Medieval_Experience_MarketingScreenshot_1.webp",
+      "/assets/mcProjs/3dme/3D_Medieval_Experience_MarketingScreenshot_2.webp",
+      "/assets/mcProjs/3dme/3D_Medieval_Experience_MarketingScreenshot_4.webp",
     ],
   },
   {
@@ -357,7 +357,7 @@ const mcProjects = [
       },
     ],
     imgs: [
-      "/assets/mcProjs/dl/Demonic_Legends_Thumbnail.jpg",
+      "/assets/mcProjs/dl/Demonic_Legends_Thumbnail.webp",
     ],
   },
   {
@@ -372,7 +372,7 @@ const mcProjects = [
       },
     ],
     imgs: [
-      "/assets/mcProjs/fn/FrightNight_Thumbnail.jpg",
+      "/assets/mcProjs/fn/FrightNight_Thumbnail.webp",
     ],
   },
 ];
@@ -453,7 +453,7 @@ const Projects = [
       },
     ],
     imgs: [
-      "/assets/Projs/wiki/wiki.png",
+      "/assets/Projs/wiki/wiki.webp",
     ],
     tags: ["Documentation", "Minecraft", "Community", "Education"],
     status: "Live",
@@ -476,7 +476,7 @@ const Projects = [
       },
     ],
     imgs: [
-      "assets/Projs/today/4.png",
+      "assets/Projs/today/4.webp",
     ],
     tags: ["React", "PWA", "TypeScript", "Productivity"],
     status: "Inactive",
