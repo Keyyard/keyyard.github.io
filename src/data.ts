@@ -132,10 +132,7 @@ const mcProjects = [
       },
     ],
     downloads: "2.0M+",
-    imgs: [
-      "/assets/mcProjs/tc.png",
-      "/assets/mcProjs/tc/maxresdefault.jpg",
-    ],
+    imgs: ["/assets/mcProjs/tc.png", "/assets/mcProjs/tc/maxresdefault.jpg"],
   },
   {
     title: "Scary Myth Mobs",
@@ -190,9 +187,7 @@ const mcProjects = [
         link: "https://github.com/Keyyard/PortalGunsAddon-ScriptingAPI",
       },
     ],
-    imgs: [
-      "/assets/mcProjs/portal/portal-appears.gif",
-    ],
+    imgs: ["/assets/mcProjs/portal/portal-appears.gif"],
   },
   {
     title: "Weapon Combiner",
@@ -356,9 +351,7 @@ const mcProjects = [
         link: "https://www.minecraft.net/en-us/marketplace/pdp?id=47c862c8-98c1-497c-94a5-3959eea3fec5",
       },
     ],
-    imgs: [
-      "/assets/mcProjs/dl/Demonic_Legends_Thumbnail.jpg",
-    ],
+    imgs: ["/assets/mcProjs/dl/Demonic_Legends_Thumbnail.jpg"],
   },
   {
     title: "Fright Night",
@@ -371,9 +364,7 @@ const mcProjects = [
         link: "https://www.minecraft.net/en-us/marketplace/pdp?id=7ddad910-7c39-46c0-8e6d-8ed38f870d04",
       },
     ],
-    imgs: [
-      "/assets/mcProjs/fn/FrightNight_Thumbnail.jpg",
-    ],
+    imgs: ["/assets/mcProjs/fn/FrightNight_Thumbnail.jpg"],
   },
 ];
 
@@ -398,9 +389,7 @@ const Projects = [
         link: "https://bedrockcli.keyyard.xyz",
       },
     ],
-    imgs: [
-      "assets/Projs/bedrockcli/gif.gif",
-    ],
+    imgs: ["assets/Projs/bedrockcli/gif.gif"],
     tags: ["Node.js", "CLI", "Minecraft", "Developer Tools", "Productivity"],
     status: "Live",
     featured: true,
@@ -422,9 +411,7 @@ const Projects = [
         link: "https://marketplace.visualstudio.com/items/?itemName=BlockceptionLtd.blockceptionvscodeminecraftbedrockdevelopmentextension",
       },
     ],
-    imgs: [
-      "/assets/Projs/blockception/overview.gif",
-    ],
+    imgs: ["/assets/Projs/blockception/overview.gif"],
     tags: [
       "TypeScript",
       "VSCode",
@@ -452,9 +439,7 @@ const Projects = [
         link: "https://wiki.bedrock.dev/",
       },
     ],
-    imgs: [
-      "/assets/Projs/wiki/wiki.png",
-    ],
+    imgs: ["/assets/Projs/wiki/wiki.png"],
     tags: ["Documentation", "Minecraft", "Community", "Education"],
     status: "Live",
     featured: false,
@@ -475,9 +460,7 @@ const Projects = [
         link: "https://today-notes.keyyard.xyz",
       },
     ],
-    imgs: [
-      "assets/Projs/today/4.png",
-    ],
+    imgs: ["assets/Projs/today/4.png"],
     tags: ["React", "PWA", "TypeScript", "Productivity"],
     status: "Inactive",
     featured: false,
