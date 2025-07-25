@@ -381,7 +381,7 @@ const Projects = [
     short_info: "Node Module Package",
     description:
       "CLI tool to create Minecraft projects workspaces with structured folders and files. It includes Microsoft's Compiler",
-    icon: "https://raw.githubusercontent.com/Keyyard/create-mc-bedrock-cli/refs/heads/website/public/icon.ico",
+    icon: "assets/Projs/bedrockcli/icon.webp",
     links: [
       {
         name: "Github",
@@ -435,7 +435,7 @@ const Projects = [
     short_info: "Contributed to Bedrock Wiki",
     description:
       "A knowledge-sharing website for Minecraft Bedrock Add-Ons, containing documentation, tutorials, and general how-to information.",
-    icon: "https://wiki.bedrock.dev/assets/images/icons/logo.webp",
+    icon: "/assets/Projs/wiki/logo.webp",
     links: [
       {
         name: "Github",
@@ -458,7 +458,7 @@ const Projects = [
     short_info: "Progressive Web App Project",
     description:
       "Today Notes helps you manage your daily tasks effortlessly. Stay focused on what matters today, complete tasks efficiently, and boost your productivity.",
-    icon: "https://github.com/Keyyard/today-notes/blob/main/public/icons/196.webp?raw=true",
+    icon: "/assets/Projs/today/icon.webp",
     links: [
       {
         name: "Github",
