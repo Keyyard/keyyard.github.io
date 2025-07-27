@@ -61,7 +61,7 @@ export function Hero() {
               const projectsSection = document.getElementById("projects");
               projectsSection?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="hero-button-primary text-[--color-background]"
+            className="hero-button-primary text-[--color-background] hover:text-[--color-text-highlight]"
           >
             View My Work
           </button>

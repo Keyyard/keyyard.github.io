@@ -5,7 +5,7 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import typescript from '@typescript-eslint/eslint-plugin'
 import parser from '@typescript-eslint/parser'
-
+import next from 'eslint-plugin-next'
 
 export default [
   { ignores: ['dist', '.next'] },
@@ -27,6 +27,7 @@ export default [
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
       '@typescript-eslint': typescript,
+      next, 
     },
     rules: {
       ...js.configs.recommended.rules,
@@ -34,6 +35,7 @@ export default [
       ...react.configs['jsx-runtime'].rules,
       ...reactHooks.configs.recommended.rules,
       ...typescript.configs.recommended.rules,
+      ...next.configs.recommended.rules,
       'react/jsx-no-target-blank': 'off',
       'react-refresh/only-export-components': [
         'warn',

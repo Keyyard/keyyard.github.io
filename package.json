@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "deploy": "vercel --prod"
+    "deploy": "vercel --prod",
+    "analyze": "$env:ANALYZE=\"true\"; npm run build"
   },
   "dependencies": {
     "@react-three/drei": "^9.111.3",
