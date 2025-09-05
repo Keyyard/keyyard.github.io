@@ -85,7 +85,7 @@ const experiences = [
     title: "Development Infrastructure Specialist & Developer",
     company_name: "OASIS | Official Minecraft Marketplace",
     company_url: "https://www.oasis-team.com/",
-    date: "April 2025 - Present",
+    date: "April 2025 - September 2025",
     details: [
       "Architecting next-generation scripting solutions that give clients a competitive edge in the marketplace.",
       "Creating immersive gameplay systems that drive player retention and monetization for client projects.",
@@ -110,7 +110,8 @@ const experiences = [
     company_url: "https://www.mushco.games/",
     date: "July 2025 - Present",
     details: [
-      "New Developer at Mushco, still learning and adapting to the company's development practices and culture.",
+      "Create and maintain high-quality Minecraft DLC* content that meets the highest standards of quality and performance.",
+      "DLC*: Unlike typical Minecraft Marketplace contents, DLC contents are usually content that collaborate with other brands, games, movies,.. Like Moana DLC, Sonic DLC,..",
     ],
   },
 ];
