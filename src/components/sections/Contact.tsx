@@ -202,7 +202,7 @@ const Contact = () => {
       </div>
       
       <div className="flex justify-center mt-8 pb-20">
-        Copyright © 2024 Keyyard
+        Copyright © 2025 Keyyard
       </div>
     </section>
   );
