@@ -133,10 +133,7 @@ const mcProjects = [
       },
     ],
     downloads: "2.0M+",
-    imgs: [
-      "/assets/mcProjs/tc.webp",
-      "/assets/mcProjs/tc/maxresdefault.webp",
-    ],
+    imgs: ["/assets/mcProjs/tc.webp", "/assets/mcProjs/tc/maxresdefault.webp"],
   },
   {
     title: "Scary Myth Mobs",
@@ -355,9 +352,7 @@ const mcProjects = [
         link: "https://www.minecraft.net/en-us/marketplace/pdp?id=47c862c8-98c1-497c-94a5-3959eea3fec5",
       },
     ],
-    imgs: [
-      "/assets/mcProjs/dl/Demonic_Legends_Thumbnail.webp",
-    ],
+    imgs: ["/assets/mcProjs/dl/Demonic_Legends_Thumbnail.webp"],
   },
   {
     title: "Fright Night",
@@ -370,9 +365,7 @@ const mcProjects = [
         link: "https://www.minecraft.net/en-us/marketplace/pdp?id=7ddad910-7c39-46c0-8e6d-8ed38f870d04",
       },
     ],
-    imgs: [
-      "/assets/mcProjs/fn/FrightNight_Thumbnail.webp",
-    ],
+    imgs: ["/assets/mcProjs/fn/FrightNight_Thumbnail.webp"],
   },
 ];
 
@@ -447,9 +440,7 @@ const Projects = [
         link: "https://wiki.bedrock.dev/",
       },
     ],
-    imgs: [
-      "/assets/Projs/wiki/wiki.webp",
-    ],
+    imgs: ["/assets/Projs/wiki/wiki.webp"],
     tags: ["Documentation", "Minecraft", "Community", "Education"],
     status: "Live",
     featured: false,
@@ -470,9 +461,7 @@ const Projects = [
         link: "https://today-notes.keyyard.xyz",
       },
     ],
-    imgs: [
-      "assets/Projs/today/4.webp",
-    ],
+    imgs: ["assets/Projs/today/4.webp"],
     tags: ["React", "PWA", "TypeScript", "Productivity"],
     status: "Inactive",
     featured: false,
