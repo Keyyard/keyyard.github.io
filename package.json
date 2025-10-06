@@ -11,26 +11,22 @@
     "analyze": "$env:ANALYZE=\"true\"; npm run build"
   },
   "dependencies": {
-    "gray-matter": "^4.0.3",
-    "unified": "^12.1.2",
-    "remark-parse": "^10.0.2",
-    "remark-gfm": "^3.0.1",
-    "remark-rehype": "^10.1.0",
-    "rehype-stringify": "^9.0.3",
-    "rehype-sanitize": "^5.0.1",
-    "feed": "^4.2.2",
-    "date-fns": "^2.32.0",
     "@react-three/drei": "^9.111.3",
     "@react-three/fiber": "^8.17.6",
     "@types/three": "^0.167.2",
     "@vercel/analytics": "^1.4.1",
+    "date-fns": "^2.29.3",
+    "feed": "^4.2.2",
     "framer-motion": "^11.11.17",
+    "gray-matter": "^4.0.3",
+    "marked": "^16.3.0",
     "next": "^15.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.1",
     "react-intersection-observer": "^9.13.1",
-    "react-responsive-carousel": "^3.2.23"
+    "react-responsive-carousel": "^3.2.23",
+    "sanitize-html": "^2.17.0"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^15.4.4",
