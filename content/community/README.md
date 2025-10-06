@@ -10,12 +10,12 @@ Required frontmatter
 ```yaml
 ---
 title: "My Project"
-slug: "my-project"       # optional (defaults to filename)
-tags: ["tag1","tag2"]
+slug: "my-project" # optional (defaults to filename)
+tags: ["tag1", "tag2"]
 description: "One-line summary used in the index and RSS"
-date: "2025-10-06"       # ISO YYYY-MM-DD
+date: "2025-10-06" # ISO YYYY-MM-DD
 image: "/community/my-project/hero.png"
-download: "https://cdn.example.com/my-project/my-project.zip"  # external URL recommended for paid/large files
+download: "https://cdn.example.com/my-project/my-project.zip" # external URL recommended for paid/large files
 ---
 ```
 
