@@ -30,7 +30,6 @@ export default function DiscoveryPost({ post }: any) {
       <section className="section">
         <div className="w-full flex justify-center py-12">
           <article className="w-full max-w-4xl px-4 lg:px-8 mx-auto">
-
             {/* Breadcrumb + Back */}
             <div className="mb-4 flex items-center justify-between">
               <div className="flex items-center gap-3">
@@ -54,8 +53,12 @@ export default function DiscoveryPost({ post }: any) {
             </div>
 
             <header className="mb-6">
-              <h1 className="text-3xl lg:text-4xl font-bold text-center">{meta.title}</h1>
-              <p className="text-sm text-gray-400 mt-2 text-center">{meta.date}</p>
+              <h1 className="text-3xl lg:text-4xl font-bold text-center">
+                {meta.title}
+              </h1>
+              <p className="text-sm text-gray-400 mt-2 text-center">
+                {meta.date}
+              </p>
 
               {/* Image */}
               <div className="mt-6 flex justify-center">
@@ -72,7 +75,10 @@ export default function DiscoveryPost({ post }: any) {
               <div className="mt-4">
                 <div className="flex justify-start gap-2">
                   {meta.tags?.map((t: string) => (
-                    <span key={t} className="text-xs bg-gray-700 text-gray-200 px-2 py-1 rounded">
+                    <span
+                      key={t}
+                      className="text-xs bg-gray-700 text-gray-200 px-2 py-1 rounded"
+                    >
                       {t}
                     </span>
                   ))}
@@ -80,7 +86,10 @@ export default function DiscoveryPost({ post }: any) {
               </div>
             </header>
 
-            <div className="prose prose-invert mx-auto" dangerouslySetInnerHTML={{ __html: html }} />
+            <div
+              className="prose prose-invert mx-auto"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
 
             {/* Downloads should be included in the markdown content if desired. */}
           </article>

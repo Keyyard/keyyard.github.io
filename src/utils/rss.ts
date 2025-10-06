@@ -22,7 +22,7 @@ export function generateRss(posts: PostMeta[]) {
   });
 
   posts.forEach((post) => {
-  const url = `${siteUrl}/discovery/${post.slug}`;
+    const url = `${siteUrl}/discovery/${post.slug}`;
     feed.addItem({
       title: post.title,
       id: url,
