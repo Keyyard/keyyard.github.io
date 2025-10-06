@@ -10,7 +10,7 @@ image: "/community/super-tool/hero.png"
 download: "https://cdn.example.com/super-tool/super-tool-1.0.0.zip"
 ---
 
-# Super Tool
+## Overview
 
 Super Tool is a tiny utility to help export and manipulate map data. This is a demo project to show how community posts will render.
 

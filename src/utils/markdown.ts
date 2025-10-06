@@ -1,12 +1,8 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { unified } from "unified";
-import remarkParse from "remark-parse";
-import remarkGfm from "remark-gfm";
-import remarkRehype from "remark-rehype";
-import rehypeSanitize from "rehype-sanitize";
-import rehypeStringify from "rehype-stringify";
+import { marked } from "marked";
+import sanitizeHtml from "sanitize-html";
 
 export type PostMeta = {
   title: string;
@@ -21,14 +17,17 @@ export type PostMeta = {
 const CONTENT_PATH = path.join(process.cwd(), "content", "community");
 
 export async function renderMarkdownToHtml(markdown: string) {
-  const file = await unified()
-    .use(remarkParse)
-    .use(remarkGfm)
-    .use(remarkRehype)
-    .use(rehypeSanitize)
-    .use(rehypeStringify)
-    .process(markdown);
-  return String(file);
+  // marked.parse may return a string or a Promise depending on environment/types;
+  // normalize to a string to satisfy the sanitizer typing.
+  const rawHtml = (await Promise.resolve(marked.parse(markdown, { gfm: true }))) as string;
+  const clean = sanitizeHtml(rawHtml, {
+    allowedTags: sanitizeHtml.defaults.allowedTags.concat(["img", "h1", "h2", "h3"]),
+    allowedAttributes: {
+      ...sanitizeHtml.defaults.allowedAttributes,
+      img: ["src", "alt", "title"],
+    },
+  });
+  return clean;
 }
 
 export async function getAllCommunityPosts(): Promise<PostMeta[]> {

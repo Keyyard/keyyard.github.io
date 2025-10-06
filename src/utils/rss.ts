@@ -18,6 +18,7 @@ export function generateRss(posts: PostMeta[]) {
     author: {
       name: "Keyyard",
     },
+    copyright: `© ${new Date().getFullYear()} Keyyard`,
   });
 
   posts.forEach((post) => {
