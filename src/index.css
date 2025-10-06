@@ -209,7 +209,7 @@
   }
   
   .project-subtitle {
-    @apply text-xs leading-3 mb-2 text-text-light;
+    @apply text-xs mb-2 text-text-light;
   }
   
   .project-description {
