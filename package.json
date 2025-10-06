@@ -11,6 +11,15 @@
     "analyze": "$env:ANALYZE=\"true\"; npm run build"
   },
   "dependencies": {
+    "gray-matter": "^4.0.3",
+    "unified": "^12.1.2",
+    "remark-parse": "^10.0.2",
+    "remark-gfm": "^3.0.1",
+    "remark-rehype": "^10.1.0",
+    "rehype-stringify": "^9.0.3",
+    "rehype-sanitize": "^5.0.1",
+    "feed": "^4.2.2",
+    "date-fns": "^2.32.0",
     "@react-three/drei": "^9.111.3",
     "@react-three/fiber": "^8.17.6",
     "@types/three": "^0.167.2",

@@ -20,6 +20,11 @@ const navs = [
     sectionId: "projects",
   },
   {
+    name: "Community",
+    link: "/community",
+    sectionId: "community",
+  },
+  {
     name: "Contact",
     link: "/#contact",
     sectionId: "contact",

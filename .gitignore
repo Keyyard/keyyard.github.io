@@ -48,3 +48,10 @@ public/build/
 .env.local
 .env.development.local
 .env.production.local
+
+# Prevent committing large/binary download artifacts for community posts
+public/community/*/*.zip
+public/community/*/*.tar.gz
+public/community/*/*.7z
+public/community/*/*.exe
+public/community/*/*.rar
