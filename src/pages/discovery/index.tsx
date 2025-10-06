@@ -52,7 +52,7 @@ export default function DiscoveryIndex({ posts }: { posts: any[] }) {
               <span className="text-gray-200">Discovery</span>
             </div>
           </div>
-          <h2 className="section-title">Keyyard Discovery</h2>
+          <h2 className="section-title pb-2">Keyyard Discovery</h2>
           <div className="flex gap-4 mb-6 items-center">
             <input
               value={q}
