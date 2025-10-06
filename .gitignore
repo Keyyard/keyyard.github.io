@@ -16,6 +16,9 @@ dist-ssr
 .next/
 out/
 
+# Next build cache
+.next/cache
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -28,3 +31,20 @@ out/
 *.sw?
 
 .vercel
+
+# Vercel build output API and CLI cache
+.vercel/output/
+.vercel/.cache/
+.vercel/project.json
+
+# General build / dev caches
+build/
+.cache/
+public/build/
+
+# Environment files (do NOT track secrets)
+.env
+.env.*
+.env.local
+.env.development.local
+.env.production.local
