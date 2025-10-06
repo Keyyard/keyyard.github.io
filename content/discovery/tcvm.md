@@ -19,7 +19,7 @@ github: https://github.com/Keyyard/Minecraft-Tree-Capitator-and-Vein-Miner-Addon
 
 ![Thumbnail](/discovery/tcvm/banner2.webp)
 
-This addon makes resource gathering faster and more convenient by adding two complementary mechanics: Tree Capitator and Vein Miner (TCVM). It's designed for Bedrock Edition and optimized to minimize game lag while preserving expected behavior and enchantment support.
+This addon makes resource gathering faster and more convenient.
 
 ## Credits
 
@@ -30,7 +30,7 @@ This addon was created by @keyyard.
 - Worldwidebrine: commands in version 0.0.2
 - [GlitchyTurtle](https://github.com/GlitchyTurtle): algorithms suggestion
 - [Trea Beane](https://github.com/TreaBeane): algorithms suggestion
-
+- [Beyond64](https://github.com/OsmaanGani): controller item
 ## Features
 
 - **Tree Capitator and Vein Miner Controller:** allows enabling and disabling TCVM.
