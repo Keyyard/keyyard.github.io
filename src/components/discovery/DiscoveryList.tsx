@@ -8,7 +8,11 @@ type Props = {
 
 export default function DiscoveryList({ posts }: Props) {
   if (!posts.length)
-    return <p className="text-center text-gray-400">No posts yet, come back later?</p>;
+    return (
+      <p className="text-center text-gray-400">
+        No posts yet, come back later?
+      </p>
+    );
   // Ensure posts are sorted by date (newest first). Some posts may omit dates.
   const sorted = [...posts].sort((a, b) => {
     const da = a.date ? new Date(a.date).getTime() : 0;

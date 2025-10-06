@@ -31,17 +31,23 @@ export default function DiscoveryIndex({ posts }: { posts: any[] }) {
 
   const filtered = posts.filter((p: any) => {
     if (filter && !(p.tags || []).includes(filter)) return false;
-    if (q && !(p.title + p.description).toLowerCase().includes(q.toLowerCase())) return false;
+    if (q && !(p.title + p.description).toLowerCase().includes(q.toLowerCase()))
+      return false;
     return true;
   });
 
   return (
     <>
       <Head>
-  <title>Keyyard Discovery</title>
-  <link rel="alternate" type="application/rss+xml" title="Discovery RSS" href="/discovery/rss.xml" />
+        <title>Keyyard Discovery</title>
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Discovery RSS"
+          href="/discovery/rss.xml"
+        />
       </Head>
-  <section id="discovery" className="section">
+      <section id="discovery" className="section">
         <div className="px-4 mx-auto w-full">
           <div className="mb-4 pt-2 flex items-center justify-between">
             <div className="flex items-center gap-3 text-sm text-gray-400">
@@ -61,7 +67,9 @@ export default function DiscoveryIndex({ posts }: { posts: any[] }) {
               className="flex-1 p-2 border rounded bg-[#111] text-gray-100"
             />
             <div className="flex gap-2 items-center">
-              <label htmlFor="tag-select" className="sr-only">Filter by tag</label>
+              <label htmlFor="tag-select" className="sr-only">
+                Filter by tag
+              </label>
               <select
                 id="tag-select"
                 value={filter || ""}
