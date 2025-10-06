@@ -4,46 +4,46 @@
 
 /* Design Tokens - Easy to edit fonts and colors */
 @font-face {
-  font-family: 'Inter';
-  src: url('/assets/fonts/Inter.ttf') format('truetype');
+  font-family: "Inter";
+  src: url("/assets/fonts/Inter.ttf") format("truetype");
   font-weight: 400 700;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Be Vietnam Pro';
-  src: url('/assets/fonts/BeVietnamPro.ttf') format('truetype');
+  font-family: "Be Vietnam Pro";
+  src: url("/assets/fonts/BeVietnamPro.ttf") format("truetype");
   font-weight: 400 700;
   font-display: swap;
 }
 
 :root {
   /* Fonts */
-  --font-primary: 'Inter', sans-serif;
-  --font-headings: 'Be Vietnam Pro', sans-serif;
-  --font-accent: 'Inter', sans-serif;
-  
+  --font-primary: "Inter", sans-serif;
+  --font-headings: "Be Vietnam Pro", sans-serif;
+  --font-accent: "Inter", sans-serif;
+
   /* Colors */
-  --color-primary: #F2F7F2;
-  --color-secondary: #7BA47C;
+  --color-primary: #f2f7f2;
+  --color-secondary: #7ba47c;
   --color-background: #161618;
   --color-surface: #393639;
   --color-surface-light: #646464;
   --color-border: #84a59d;
-  
+
   /* Card colors */
   --color-card-bg: #1e1e21;
   --color-card-selected: #1e1c1e;
   --color-card-shadow: #161618;
-  
+
   /* Text colors */
-  --color-text-primary: #F2F7F2;
+  --color-text-primary: #f2f7f2;
   --color-text-secondary: #d4d4d4;
   --color-text-muted: #646464;
   --color-text-light: #d4d4d4;
-  
+
   /* Accent colors */
   --color-accent-blue: #84a59d;
-  --color-accent-blue-hover: #7BA47C;
+  --color-accent-blue-hover: #7ba47c;
 
   /* Highlight colors */
   --color-highlight: rgba(143, 169, 151, 0.15);
@@ -69,20 +69,20 @@
   .section {
     @apply min-h-[95vh];
   }
-  
+
   .section-hero {
     @apply flex flex-col items-center min-h-[860px];
   }
-  
+
   /* Typography */
   .section-title {
     @apply text-4xl font-semibold pt-4 text-center;
   }
-  
+
   .subsection-title {
     @apply text-3xl font-semibold mb-2 text-center;
   }
-  
+
   .hero-title {
     /* mobile-first: slightly smaller, center text */
     @apply relative top-0 w-full h-auto pt-4 flex justify-center bg-white bg-clip-text text-2xl md:text-4xl font-extrabold text-transparent text-center select-auto;
@@ -96,72 +96,72 @@
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   .hero-subtitle {
     @apply text-center leading-3 mt-2;
   }
-  
+
   /* Cards */
   .card {
     @apply p-6 bg-card-bg rounded-xl shadow-card-shadow drop-shadow;
   }
-  
+
   .card-sm {
     @apply p-4 bg-card-bg rounded-lg shadow-card-shadow drop-shadow;
   }
-  
+
   .experience-card {
     @apply mx-auto p-6 cursor-pointer border rounded-lg transition-colors;
   }
-  
+
   .experience-card--selected {
     @apply bg-card-selected;
   }
-  
+
   .experience-details {
     @apply mx-auto p-6 bg-black bg-opacity-20 rounded-xl shadow-card-shadow drop-shadow;
   }
-  
+
   /* Layout */
   .container-main {
     @apply container mx-auto px-6 lg:px-20 mt-8;
   }
-  
+
   .grid-two-col {
     @apply grid grid-cols-1 md:grid-cols-2 gap-8;
   }
-  
+
   .grid-experiences {
     @apply p-4 grid grid-cols-1 lg:grid-cols-2 gap-4;
   }
-  
+
   /* Content */
   .content-text {
     @apply text-lg leading-8 space-y-6;
   }
-  
+
   .tech-list {
     @apply list-disc list-inside space-y-2 text-text-secondary;
   }
-  
+
   /* Interactive Elements */
   .draggable-head {
     @apply flex w-[50vw] h-[70vh] absolute;
   }
-  
+
   .intro-text-container {
     @apply flex flex-col items-center justify-items-center p-4 text-[15px];
   }
-  
+
   .intro-text-content {
     @apply text-start mt-32 md:mt-20;
   }
-  
+
   /* Hero Buttons */
   .hero-buttons {
     @apply flex gap-4 mt-8 justify-center;
   }
-  
+
   .hero-button-primary {
     background-color: var(--color-secondary);
     color: var(--color-primary);
@@ -174,13 +174,13 @@
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
-  
+
   .hero-button-primary:hover {
     background-color: var(--color-tertiary);
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
   }
-  
+
   .hero-button-secondary {
     background-color: transparent;
     color: var(--color-secondary);
@@ -192,26 +192,26 @@
     cursor: pointer;
     transition: all 0.3s ease;
   }
-  
+
   .hero-button-secondary:hover {
     background-color: var(--color-secondary);
     color: var(--color-primary);
     transform: translateY(-2px);
   }
-  
+
   /* Project Cards */
   .project-card {
     @apply p-3 cursor-pointer bg-black bg-opacity-20 shadow-black inset-2 shadow-lg rounded-lg overflow-hidden;
   }
-  
+
   .project-title {
     @apply text-base font-bold flex justify-between items-center mb-1;
   }
-  
+
   .project-subtitle {
     @apply text-xs mb-2 text-text-light;
   }
-  
+
   .project-description {
     @apply text-xs text-ellipsis overflow-hidden leading-4 group-hover:overflow-visible group-hover:whitespace-normal line-clamp-2 h-5 text-text-light;
   }
@@ -346,36 +346,36 @@ button:focus-visible {
 
 .contact-handle {
   @apply text-base;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
 }
 
-  /* Prose overrides for Markdown content rendered with tailwind-typography */
-  .prose img {
-    @apply mx-auto rounded-md;
-    max-width: 100%;
-  }
+/* Prose overrides for Markdown content rendered with tailwind-typography */
+.prose img {
+  @apply mx-auto rounded-md;
+  max-width: 100%;
+}
 
-  .prose a {
-    @apply text-accent-blue hover:underline;
-  }
+.prose a {
+  @apply text-accent-blue hover:underline;
+}
 
-  /* TOC styling for discovery posts */
-  .toc ul {
-    list-style: none;
-    padding-left: 0;
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
+/* TOC styling for discovery posts */
+.toc ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
 
-  .toc li {
-    margin: 0;
-    padding: 0;
-  }
+.toc li {
+  margin: 0;
+  padding: 0;
+}
 
-  .toc a {
-    @apply text-accent-blue hover:underline;
-  }
+.toc a {
+  @apply text-accent-blue hover:underline;
+}
 
 @supports (-ms-ime-align: auto) {
   .icon-class {
