@@ -15,13 +15,13 @@
             <link>https://keyyard.xyz/discovery/hello-world</link>
             <guid>https://keyyard.xyz/discovery/hello-world</guid>
             <pubDate>Mon, 06 Oct 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[A tiny hello-world demo post]]></description>
+            <description><![CDATA[first post!]]></description>
         </item>
         <item>
             <title><![CDATA[README]]></title>
             <link>https://keyyard.xyz/discovery/README</link>
             <guid>https://keyyard.xyz/discovery/README</guid>
-            <pubDate>Mon, 06 Oct 2025 04:54:20 GMT</pubDate>
+            <pubDate>Mon, 06 Oct 2025 07:21:14 GMT</pubDate>
         </item>
     </channel>
 </rss>
