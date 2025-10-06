@@ -31,6 +31,7 @@ This addon was created by @keyyard.
 - [GlitchyTurtle](https://github.com/GlitchyTurtle): algorithms suggestion
 - [Trea Beane](https://github.com/TreaBeane): algorithms suggestion
 - [Beyond64](https://github.com/OsmaanGani): controller item
+
 ## Features
 
 - **Tree Capitator and Vein Miner Controller:** allows enabling and disabling TCVM.
