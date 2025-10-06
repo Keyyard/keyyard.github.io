@@ -19,7 +19,7 @@ export default function DiscoveryList({ posts }: Props) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 p-6 pb-32">
       {sorted.map((p) => (
-        <div key={p.slug} className="group">
+        <div key={p.slug} className="group h-full">
           <DiscoveryCard post={p} />
         </div>
       ))}

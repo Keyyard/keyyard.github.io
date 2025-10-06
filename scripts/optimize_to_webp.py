@@ -1,8 +1,9 @@
 import os
 from PIL import Image
 
-root_dir = os.path.join('public', 'assets', 'mcProjs')
-exts = ('.jpg', '.jpeg', '.png', ".webp")
+root_dir = os.path.join('public', 'discovery')
+# Convert only these source formats (skip existing .webp files)
+exts = ('.jpg', '.jpeg', '.png')
 
 for subdir, _, files in os.walk(root_dir):
     for file in files:

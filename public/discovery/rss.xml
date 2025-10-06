@@ -11,17 +11,11 @@
         <copyright>© 2025 Keyyard</copyright>
         <atom:link href="https://keyyard.xyz/discovery/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
-            <title><![CDATA[Hello World]]></title>
-            <link>https://keyyard.xyz/discovery/hello-world</link>
-            <guid>https://keyyard.xyz/discovery/hello-world</guid>
+            <title><![CDATA[Tree Capitator & Vein Miner Addon]]></title>
+            <link>https://keyyard.xyz/discovery/tcvm</link>
+            <guid>https://keyyard.xyz/discovery/tcvm</guid>
             <pubDate>Mon, 06 Oct 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[first post!]]></description>
-        </item>
-        <item>
-            <title><![CDATA[README]]></title>
-            <link>https://keyyard.xyz/discovery/README</link>
-            <guid>https://keyyard.xyz/discovery/README</guid>
-            <pubDate>Mon, 06 Oct 2025 07:21:14 GMT</pubDate>
         </item>
     </channel>
 </rss>

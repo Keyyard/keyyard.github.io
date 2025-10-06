@@ -11,10 +11,9 @@ function Website({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>
-          Keyyard | Minecraft Addon Developer - Where Creativity Is Built Block
-          by Block
-        </title>
+        <title>{
+          'Keyyard | Minecraft Addon Developer - Where Creativity Is Built Block by Block'
+        }</title>
       </Head>
       {/* Google Tag Manager */}
       <Script

@@ -43,14 +43,14 @@ export default function DiscoveryIndex({ posts }: { posts: any[] }) {
       </Head>
   <section id="discovery" className="section">
         <div className="px-4 mx-auto w-full">
-          <div className="mb-4 pt-2 flex items-center justify-between">
-            <div className="flex items-center gap-3 text-sm text-gray-400">
+          <div className="mb-4 p-4 flex items-center justify-between">
+            <nav aria-label="Breadcrumb" className="text-sm text-gray-400 flex items-center gap-3">
               <Link href="/" className="hover:underline">
                 Home
               </Link>
               <span className="mx-2">/</span>
               <span className="text-gray-200">Discovery</span>
-            </div>
+            </nav>
           </div>
           <h2 className="section-title pb-2">Keyyard Discovery</h2>
           <div className="flex gap-4 mb-6 items-center">

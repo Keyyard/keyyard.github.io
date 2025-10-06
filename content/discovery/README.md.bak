@@ -1,0 +1,152 @@
+# Discovery — Authoring Tutorial & Formatting Tips
+
+This document is a short tutorial that walks you through creating a new Discovery post (Markdown) and the formatting best-practices we use on the site.
+
+Quick summary
+
+- Files live in: `content/discovery/` (one Markdown file per post)
+- Images/assets live in: `public/discovery/<slug>/`
+- Build-time RSS: `public/discovery/rss.xml` (generated at build time)
+
+## Create a new post (quick start)
+
+1. Create the Markdown file. Use a lowercase, hyphenated slug for the filename.
+
+```bash
+mkdir -p content/discovery/my-project
+code content/discovery/my-project/index.md
+```
+
+1. Add frontmatter (required fields shown) at the top of the file:
+
+```yaml
+---
+title: "My Project"
+slug: "my-project"        # optional (defaults to filename)
+tags: ["utility","map"]
+description: "One-line summary used in the listing and RSS"
+date: "2025-10-08"       # ISO YYYY-MM-DD
+image: "/discovery/my-project/hero.png"
+download: "https://cdn.example.com/my-project/my-project.zip"
+---
+```
+
+1. Add Markdown content below the frontmatter. Use H2/H3 headings for structure (avoid H1 in the body because the post title is the page H1).
+
+Minimal file example:
+
+Frontmatter (top of the file):
+
+```yaml
+---
+title: "My Project"
+description: "Short summary for listing"
+date: "2025-10-08"
+image: "/discovery/my-project/hero.png"
+---
+```
+
+Content skeleton (add below the frontmatter):
+
+## Overview
+
+Short intro paragraph used as the listing summary.
+
+## Installation
+
+Instructions, code block (add language):
+
+```bash
+curl -L -o myproject.zip https://cdn.example.com/myproject.zip
+```
+
+## Usage
+
+Explain how to use the project, include screenshots with alt text:
+
+![Screenshot](/discovery/my-project/screenshot1.png)
+
+Formatting & styling tips
+
+- Headings:
+  - Use H2 (`##`) for section titles and H3 (`###`) for subsections. Do NOT add another H1 — the site's title comes from the post frontmatter.
+- Lists:
+  - Use bulleted lists (`-` or `*`) for short item lists. For numbered steps use `1.`.
+- Code blocks:
+  - Always include a language for fenced code blocks (e.g. `bash`, `ts`, `json`) so syntax highlighting works.
+- Images:
+  - Store images under `public/discovery/<slug>/` and reference them with absolute paths (e.g., `/discovery/my-project/hero.png`).
+  - Recommended sizes: hero image ~1200×600 px (or 3:2), thumbnails ~600×400. Use compressed web-friendly formats (WebP/PNG/JPEG).
+  - Always include descriptive `alt` text for accessibility and SEO.
+- Links & downloads:
+  - For paid or large files host externally (S3, CDN, Gumroad). Put the public URL in the frontmatter `download:` field.
+  - For small free samples you may put a small archive under `public/discovery/<slug>/` and link to it from the body or frontmatter.
+  
+## Downloads in frontmatter
+
+  You can include download URLs in a post's frontmatter. Two formats are supported:
+
+  1. Legacy single-download string:
+
+  ```yaml
+  download: "https://example.com/files/my-addon-v1.0.mcpack"
+  ```
+
+  1. Multiple-downloads array (recommended) — allows labeling versions and adding notes:
+
+  ```yaml
+  downloads:
+    - label: "Release v1.2"
+      url: "https://cdn.example.com/tcvm/v1.2/tcvm.mcpack"
+      notes: "Stable release — recommended"
+    - label: "Beta v1.3-beta"
+      url: "https://cdn.example.com/tcvm/v1.3-beta/tcvm-modded.mcpack"
+      notes: "Beta — may be unstable"
+  ```
+
+  Buttons for each download will be rendered on the post page. For large or paid downloads, host files on an external CDN or filesharing service and add the external URL in the frontmatter to avoid committing binaries to the repository.
+
+- Table of contents and heading anchors
+
+- We inject `id` attributes for H2–H6 headings automatically, so linking to `#your-heading` in the page will work.
+- If you want a TOC, place an explicit list at the top of the document. We render a `prose` style; you can add a small `.toc` wrapper if you want custom styling.
+
+Preview & RSS
+
+- Local preview: `npm run dev` and browse `http://localhost:3000/discovery`.
+- Build-time RSS: `getStaticProps` generates `public/discovery/rss.xml` during `next build`. To regenerate the feed, run:
+
+```bash
+npm run build
+```
+
+Accessibility & SEO tips
+
+- Keep the `description` short (1–2 sentences) — it’s used for RSS and card summaries.
+- Use complete sentences, include descriptive alt text for images, and prefer semantic headings (H2/H3).
+
+Common troubleshooting
+
+- Images 404: ensure images are placed under `public/discovery/<slug>/` and that your `image` frontmatter path matches exactly.
+- Linter warnings:
+  - MD025: avoid adding a second H1; remove H1 from the body.
+  - MD033: the linter flags raw HTML inside Markdown — the README allows a small wrapper div for TOC but you can avoid inline HTML if you prefer.
+- Styles not applying: ensure Tailwind's typography plugin is installed and the page uses `prose` or `prose-invert` for dark theme.
+
+Developer commands (quick)
+
+```bash
+# scaffold a new post folder
+mkdir -p public/discovery/my-project && mkdir -p content/discovery/my-project
+cp path/to/image.png public/discovery/my-project/hero.png
+code content/discovery/my-project/index.md
+
+# regenerate RSS (build)
+npm run build
+```
+
+Finish & tips
+
+- Keep entries focused and short; the site shows a short description and thumbnails on the index page. Use the body for details, screenshots, and instructions.
+- When ready to publish, verify the post preview under `npm run dev`, then commit the `content/discovery/<slug>.md` and any small images under `public/discovery/<slug>/`.
+
