@@ -4,7 +4,7 @@ slug: "tcvm"
 tags:
   - addon
   - free
-description: "first post!"
+description: "Tree Capitator and Vein Miner Addon Mod for Minecraft."
 date: "2025-10-06"
 image: "/discovery/tcvm/banner2.webp"
 downloads:
