@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Keyyard — Discovery</title>
+        <link>https://keyyard.xyz</link>
+        <description>Discover Keyyard's works</description>
+        <lastBuildDate>Mon, 06 Oct 2025 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <copyright>© 2025 Keyyard</copyright>
+        <atom:link href="https://keyyard.xyz/discovery/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Hello World]]></title>
+            <link>https://keyyard.xyz/discovery/hello-world</link>
+            <guid>https://keyyard.xyz/discovery/hello-world</guid>
+            <pubDate>Mon, 06 Oct 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[A tiny hello-world demo post]]></description>
+        </item>
+        <item>
+            <title><![CDATA[README]]></title>
+            <link>https://keyyard.xyz/discovery/README</link>
+            <guid>https://keyyard.xyz/discovery/README</guid>
+            <pubDate>Mon, 06 Oct 2025 04:54:20 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

@@ -8,10 +8,13 @@ import {
   MinecraftProjects, 
   Contact 
 } from "../components/sections";
+import DiscoveryButton from "../components/DiscoveryButton";
 import { Nav as Navbar } from "../components/layout";
+
 export default function Home() {
   return (
     <>
+      <DiscoveryButton />
       <Analytics />
       <Hero />
       <About />

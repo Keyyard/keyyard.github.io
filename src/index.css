@@ -209,13 +209,34 @@
   .project-description {
     @apply text-xs text-ellipsis overflow-hidden leading-4 group-hover:overflow-visible group-hover:whitespace-normal line-clamp-2 h-5 text-text-light;
   }
+
+  /* Discovery-specific card tweaks: larger image area and show full text */
+  .discovery-card {
+    @apply p-4 bg-card-bg rounded-xl shadow-card-shadow drop-shadow;
+  }
+
+  .discovery-card .project-title {
+    @apply text-lg;
+  }
+
+  .discovery-card .discovery-description {
+    /* override truncation from project-description */
+    overflow: visible !important;
+    white-space: normal !important;
+    height: auto !important;
+    display: block !important;
+    line-height: 1.4;
+    color: var(--color-text-light);
+  }
 }
 
 body {
   @apply font-primary bg-main text-primary;
   margin: 0;
-  display: flex;
-  place-items: center;
+  /* Use normal document flow so pages and sections control their own layout.
+     Removing `display:flex` prevents unexpected horizontal centering and
+     allows content to span the available width. */
+  display: block;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -321,6 +342,34 @@ button:focus-visible {
   @apply text-base;
   font-family: 'JetBrains Mono', monospace;
 }
+
+  /* Prose overrides for Markdown content rendered with tailwind-typography */
+  .prose img {
+    @apply mx-auto rounded-md;
+    max-width: 100%;
+  }
+
+  .prose a {
+    @apply text-accent-blue hover:underline;
+  }
+
+  /* TOC styling for discovery posts */
+  .toc ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .toc li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .toc a {
+    @apply text-accent-blue hover:underline;
+  }
 
 @supports (-ms-ime-align: auto) {
   .icon-class {

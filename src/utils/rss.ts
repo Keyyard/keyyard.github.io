@@ -6,14 +6,14 @@ import { PostMeta } from "./markdown";
 export function generateRss(posts: PostMeta[]) {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://keyyard.xyz";
   const feed = new Feed({
-    title: "Keyyard — Community",
-    description: "Community projects and downloads",
+    title: "Keyyard — Discovery",
+    description: "Discover Keyyard's works",
     id: siteUrl,
     link: siteUrl,
     language: "en",
     updated: posts.length ? new Date(posts[0].date || Date.now()) : new Date(),
     feedLinks: {
-      rss: `${siteUrl}/community/rss.xml`,
+      rss: `${siteUrl}/discovery/rss.xml`,
     },
     author: {
       name: "Keyyard",
@@ -22,7 +22,7 @@ export function generateRss(posts: PostMeta[]) {
   });
 
   posts.forEach((post) => {
-    const url = `${siteUrl}/community/${post.slug}`;
+  const url = `${siteUrl}/discovery/${post.slug}`;
     feed.addItem({
       title: post.title,
       id: url,
@@ -33,7 +33,7 @@ export function generateRss(posts: PostMeta[]) {
   });
 
   const rss = feed.rss2();
-  const outDir = path.join(process.cwd(), "public", "community");
+  const outDir = path.join(process.cwd(), "public", "discovery");
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
   fs.writeFileSync(path.join(outDir, "rss.xml"), rss);
 }

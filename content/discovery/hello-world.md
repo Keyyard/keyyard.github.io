@@ -1,0 +1,67 @@
+---
+title: "Hello World"
+slug: "hello-world"
+tags:
+  - demo
+description: "first post!"
+date: "2025-10-06"
+image: "https://placehold.co/600x400/333/ddd?text=Hello+World"
+---
+
+Hello! This is the first Discovery post.
+
+I will be posting my works -- addons, tools,..etc here in the future. So you can access it easier, download it directly!
+![demo banner](https://placehold.co/500x200/333/ddd?text=Demo+Banner)
+
+## Table of contents
+
+<div class="toc">
+
+- [Overview](#overview)
+- [For users](#for-users)
+- [For clients](#for-clients)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Contact & Support](#contact--support)
+- [License & Download](#license--download)
+
+</div>
+
+## Overview
+
+This is the first Discovery post. The Discovery section is where I will publish downloadable projects, tools, and community contributions.
+
+## For users
+
+- Browse projects and tools in one place — thumbnails and short descriptions make it easy to find what you need.
+- Download links are provided per-post; paid assets link to secure hosts and free samples may be directly downloadable.
+- Each post includes usage notes, screenshots, and basic troubleshooting tips so you can get up and running quickly.
+
+## For clients
+
+- Looking for custom work or commercial licenses? Use the Contact section to request a quote or start a discussion.
+- Premium work (paid add-ons, enterprise integrations) will be delivered via secure download links and include license terms.
+- I can provide custom development, white-labeling, or integration work — include requirements and timelines when you reach out.
+
+## Installation
+
+No installation is required to read posts — they are static pages on this site. If a post includes a downloadable asset, the frontmatter `download` field will point to an external URL where you can get the file.
+
+## Usage
+
+Use the Discovery index to browse projects. Click any item to open the full post where you'll find usage instructions, screenshots, and a download link if provided.
+
+## Contributing
+
+- If you want to contribute (bug reports, patches, or small assets), open an issue or a pull request on the corresponding GitHub repository linked in the post.
+- For community-contributed assets, include a short README and a clear license so others know how to use your work.
+
+## Contact & Support
+
+- For general questions or help with a post, use the Contact section on the main site or open an issue if the project has a GitHub repo.
+- For business inquiries (sponsorships, licensing, custom development), email [keyyard8888@gmail.com](mailto:keyyard8888@gmail.com) with a subject like "Discovery — Request" and include a short project brief.
+
+## License & Download
+
+Each post should include licensing information or a link to the license inside the Markdown content. For paid or large downloads I will provide external links; for small free samples a direct download link may be included.
