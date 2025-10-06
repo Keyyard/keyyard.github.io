@@ -29,7 +29,8 @@ export default function CommunityIndex({ posts }: { posts: any[] }) {
 
   const filtered = posts.filter((p: any) => {
     if (filter && !(p.tags || []).includes(filter)) return false;
-    if (q && !(p.title + p.description).toLowerCase().includes(q.toLowerCase())) return false;
+    if (q && !(p.title + p.description).toLowerCase().includes(q.toLowerCase()))
+      return false;
     return true;
   });
 
@@ -37,12 +38,19 @@ export default function CommunityIndex({ posts }: { posts: any[] }) {
     <>
       <Head>
         <title>Community — Keyyard</title>
-        <link rel="alternate" type="application/rss+xml" title="Community RSS" href="/community/rss.xml" />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Community RSS"
+          href="/community/rss.xml"
+        />
       </Head>
       <main className="container mx-auto p-6">
         <header className="mb-6">
           <h1 className="text-3xl font-bold">Community</h1>
-          <p className="text-gray-400">Free community projects, tools, and downloads.</p>
+          <p className="text-gray-400">
+            Free community projects, tools, and downloads.
+          </p>
         </header>
 
         <div className="flex gap-4 mb-6 items-center">
@@ -55,14 +63,16 @@ export default function CommunityIndex({ posts }: { posts: any[] }) {
           <div className="flex gap-2">
             <button
               onClick={() => setFilter(null)}
-              className={`px-3 py-1 rounded ${filter ? "bg-gray-700" : "bg-green-600"}`}>
+              className={`px-3 py-1 rounded ${filter ? "bg-gray-700" : "bg-green-600"}`}
+            >
               All
             </button>
             {tags.map((t) => (
               <button
                 key={t}
                 onClick={() => setFilter((f) => (f === t ? null : t))}
-                className={`px-3 py-1 rounded ${filter === t ? "bg-green-600" : "bg-gray-700"}`}>
+                className={`px-3 py-1 rounded ${filter === t ? "bg-green-600" : "bg-gray-700"}`}
+              >
                 {t}
               </button>
             ))}

@@ -60,10 +60,7 @@ export async function getAllCommunityPosts(): Promise<PostMeta[]> {
 }
 
 export async function getCommunityPost(slug: string) {
-  const filenameCandidates = [
-    `${slug}.md`,
-    path.join(slug, "index.md"),
-  ];
+  const filenameCandidates = [`${slug}.md`, path.join(slug, "index.md")];
 
   for (const candidate of filenameCandidates) {
     const full = path.join(CONTENT_PATH, candidate);

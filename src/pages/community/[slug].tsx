@@ -28,24 +28,41 @@ export default function CommunityPost({ post }: any) {
           <h1 className="text-3xl font-bold">{meta.title}</h1>
           <p className="text-sm text-gray-400">{meta.date}</p>
           <div className="mt-4">
-            {meta.image ? <img src={meta.image} alt={meta.title} className="w-full max-h-72 object-cover" /> : null}
+            {meta.image ? (
+              <img
+                src={meta.image}
+                alt={meta.title}
+                className="w-full max-h-72 object-cover"
+              />
+            ) : null}
           </div>
           <div className="mt-4 flex gap-2">
             {meta.tags?.map((t: string) => (
-              <span key={t} className="text-xs bg-gray-700 text-gray-200 px-2 py-1 rounded">
+              <span
+                key={t}
+                className="text-xs bg-gray-700 text-gray-200 px-2 py-1 rounded"
+              >
                 {t}
               </span>
             ))}
           </div>
           <div className="mt-6">
             {meta.download ? (
-              <a href={meta.download} className="px-4 py-2 bg-green-600 rounded text-white inline-block" target="_blank" rel="noreferrer">
+              <a
+                href={meta.download}
+                className="px-4 py-2 bg-green-600 rounded text-white inline-block"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Download
               </a>
             ) : null}
           </div>
 
-          <div className="prose max-w-none mt-8" dangerouslySetInnerHTML={{ __html: html }} />
+          <div
+            className="prose max-w-none mt-8"
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
         </article>
       </main>
     </>
