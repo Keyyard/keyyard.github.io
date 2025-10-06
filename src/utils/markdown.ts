@@ -19,9 +19,16 @@ const CONTENT_PATH = path.join(process.cwd(), "content", "community");
 export async function renderMarkdownToHtml(markdown: string) {
   // marked.parse may return a string or a Promise depending on environment/types;
   // normalize to a string to satisfy the sanitizer typing.
-  const rawHtml = (await Promise.resolve(marked.parse(markdown, { gfm: true }))) as string;
+  const rawHtml = (await Promise.resolve(
+    marked.parse(markdown, { gfm: true }),
+  )) as string;
   const clean = sanitizeHtml(rawHtml, {
-    allowedTags: sanitizeHtml.defaults.allowedTags.concat(["img", "h1", "h2", "h3"]),
+    allowedTags: sanitizeHtml.defaults.allowedTags.concat([
+      "img",
+      "h1",
+      "h2",
+      "h3",
+    ]),
     allowedAttributes: {
       ...sanitizeHtml.defaults.allowedAttributes,
       img: ["src", "alt", "title"],
@@ -59,10 +66,7 @@ export async function getAllCommunityPosts(): Promise<PostMeta[]> {
 }
 
 export async function getCommunityPost(slug: string) {
-  const filenameCandidates = [
-    `${slug}.md`,
-    path.join(slug, "index.md"),
-  ];
+  const filenameCandidates = [`${slug}.md`, path.join(slug, "index.md")];
 
   for (const candidate of filenameCandidates) {
     const full = path.join(CONTENT_PATH, candidate);
