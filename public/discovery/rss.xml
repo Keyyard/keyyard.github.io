@@ -4,12 +4,19 @@
         <title>Keyyard — Discovery</title>
         <link>https://keyyard.xyz</link>
         <description>Discover Keyyard's works</description>
-        <lastBuildDate>Mon, 06 Oct 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 31 Oct 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>© 2025 Keyyard</copyright>
         <atom:link href="https://keyyard.xyz/discovery/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Absolute Guns 3.3D Addon]]></title>
+            <link>https://keyyard.xyz/discovery/absolute-guns-3-3d</link>
+            <guid>https://keyyard.xyz/discovery/absolute-guns-3-3d</guid>
+            <pubDate>Fri, 31 Oct 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[The add-on focuses on being able to use simple 3D weapons in any add-on! Supports realms, worlds multiplayer, and servers. Fully made with scripts, allowing easy modification!]]></description>
+        </item>
         <item>
             <title><![CDATA[Tree Capitator & Vein Miner Addon]]></title>
             <link>https://keyyard.xyz/discovery/tcvm</link>
