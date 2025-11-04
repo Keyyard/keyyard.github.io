@@ -10,13 +10,22 @@ type Props = {
 const DiscoveryCard = memo(({ post }: Props) => {
   return (
     <article className="group h-full">
-      <Link href={`/discovery/${post.slug}`} className="project-card discovery-card block h-full flex flex-col">
+      <Link
+        href={`/discovery/${post.slug}`}
+        className="project-card discovery-card block h-full flex flex-col"
+      >
         {/* Fixed-height image area so cards align evenly */}
         <div className="w-full h-56 overflow-hidden rounded-t">
           {post.image ? (
-            <SafeImage src={post.image} alt={post.title} className="w-full h-full object-cover" />
+            <SafeImage
+              src={post.image}
+              alt={post.title}
+              className="w-full h-full object-cover"
+            />
           ) : (
-            <div className="w-full h-full bg-gray-800 flex items-center justify-center text-gray-400">No Image</div>
+            <div className="w-full h-full bg-gray-800 flex items-center justify-center text-gray-400">
+              No Image
+            </div>
           )}
         </div>
 
@@ -27,7 +36,10 @@ const DiscoveryCard = memo(({ post }: Props) => {
           <p className="project-subtitle">{post.description}</p>
           <div className="mt-3 flex flex-wrap gap-2">
             {post.tags?.map((t) => (
-              <span key={t} className="text-xs bg-gray-700 text-gray-200 px-2 py-1 rounded">
+              <span
+                key={t}
+                className="text-xs bg-gray-700 text-gray-200 px-2 py-1 rounded"
+              >
                 {t}
               </span>
             ))}
@@ -38,6 +50,6 @@ const DiscoveryCard = memo(({ post }: Props) => {
   );
 });
 
-DiscoveryCard.displayName = 'DiscoveryCard';
+DiscoveryCard.displayName = "DiscoveryCard";
 
 export default DiscoveryCard;

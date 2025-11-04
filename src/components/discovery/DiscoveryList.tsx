@@ -8,8 +8,12 @@ type Props = {
 
 export default function DiscoveryList({ posts }: Props) {
   if (!posts.length)
-    return <p className="text-center text-gray-400">No posts yet, come back later?</p>;
-  
+    return (
+      <p className="text-center text-gray-400">
+        No posts yet, come back later?
+      </p>
+    );
+
   // Ensure posts are sorted by date (newest first). Memoize to avoid re-sorting on every render.
   const sorted = useMemo(() => {
     return [...posts].sort((a, b) => {
