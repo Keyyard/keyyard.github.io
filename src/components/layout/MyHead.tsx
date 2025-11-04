@@ -1,7 +1,7 @@
 import { useGLTF } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { easing } from "maath";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, memo } from "react";
 import { Object3D, LoopOnce, AnimationMixer } from "three";
 function Model({ onLoaded }: { onLoaded: () => void }) {
   const gltf = useGLTF("/assets/myHead.gltf");
@@ -62,7 +62,7 @@ function Model({ onLoaded }: { onLoaded: () => void }) {
   return <primitive object={head.current} />;
 }
 
-const HeadRender = () => {
+const HeadRender = memo(() => {
   const [loading, setLoading] = useState(true);
   return (
     <div className="relative w-full h-[600px]">
@@ -81,6 +81,8 @@ const HeadRender = () => {
       </Canvas>
     </div>
   );
-};
+});
+
+HeadRender.displayName = "HeadRender";
 
 export default HeadRender;

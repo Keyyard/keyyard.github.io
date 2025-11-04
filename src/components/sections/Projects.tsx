@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, memo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Projects } from "../../data";
 import { Suspense, lazy } from "react";
@@ -7,7 +7,7 @@ const SafeImage = lazy(() => import("../ui/SafeImage"));
 
 type ProjectType = (typeof Projects)[number];
 
-const ProjectsSection = () => {
+const ProjectsSection = memo(() => {
   const [loading, setLoading] = useState(true);
   const [selectedProject, setSelectedProject] = useState<ProjectType | null>(
     null,
@@ -325,6 +325,8 @@ const ProjectsSection = () => {
       </AnimatePresence>
     </section>
   );
-};
+});
+
+ProjectsSection.displayName = "ProjectsSection";
 
 export default ProjectsSection;

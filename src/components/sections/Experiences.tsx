@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { useEffect, useState, useCallback, useRef } from "react";
+import { useEffect, useState, useCallback, useRef, memo } from "react";
 import { useInView } from "react-intersection-observer";
 import { experiences } from "../../data";
 
-const Experiences = () => {
+const Experiences = memo(() => {
   const [selectedExperience, setSelectedExperience] = useState(experiences[0]);
   const [resolution, setResolution] = useState(0);
   const timeoutIdRef = useRef<NodeJS.Timeout>();
@@ -150,6 +150,8 @@ const Experiences = () => {
       </div>
     </section>
   );
-};
+});
+
+Experiences.displayName = "Experiences";
 
 export default Experiences;

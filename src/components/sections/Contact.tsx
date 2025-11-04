@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo } from "react";
+import React, { useCallback, useMemo, memo } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
 interface ContactLink {
@@ -10,7 +10,7 @@ interface ContactLink {
   action: "copy" | "link";
 }
 
-const Contact = () => {
+const Contact = memo(() => {
   const copyToClipboard = useCallback((text: string, platform: string) => {
     navigator.clipboard
       .writeText(text)
@@ -219,6 +219,8 @@ const Contact = () => {
       </div>
     </section>
   );
-};
+});
+
+Contact.displayName = "Contact";
 
 export default Contact;

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
-import { useCallback } from "react";
+import { useCallback, memo } from "react";
 import { introductionText } from "../../data";
 import Bg from "../layout/Background";
 
@@ -9,7 +9,7 @@ const HeadRender = dynamic(() => import("../layout/MyHead"), {
   loading: () => <div className="h-64 bg-gray-200 animate-pulse" />,
 });
 
-export function Hero() {
+const Hero = memo(() => {
   const scrollToProjects = useCallback(() => {
     const projectsSection = document.getElementById("projects");
     projectsSection?.scrollIntoView({ behavior: "smooth" });
@@ -80,4 +80,8 @@ export function Hero() {
       </div>
     </section>
   );
-}
+});
+
+Hero.displayName = "Hero";
+
+export { Hero };
