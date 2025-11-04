@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { useInView } from "react-intersection-observer";
 import { experiences } from "../../data";
 
@@ -10,14 +10,26 @@ const Experiences = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       setResolution(window.innerWidth);
+      
+      let timeoutId: NodeJS.Timeout;
       const handleResize = () => {
-        setResolution(window.innerWidth);
+        // Debounce resize event to prevent excessive re-renders
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+          setResolution(window.innerWidth);
+        }, 150);
       };
+      
       window.addEventListener("resize", handleResize);
       return () => {
+        clearTimeout(timeoutId);
         window.removeEventListener("resize", handleResize);
       };
     }
+  }, []);
+
+  const handleExperienceClick = useCallback((exp: typeof experiences[number]) => {
+    setSelectedExperience(exp);
   }, []);
 
   const { ref: sectionRef, inView: sectionInView } = useInView({
@@ -36,7 +48,7 @@ const Experiences = () => {
               className={`experience-card ${
                 selectedExperience === exp ? "experience-card--selected" : ""
               }`}
-              onClick={() => setSelectedExperience(exp)}
+              onClick={() => handleExperienceClick(exp)}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               ref={sectionRef}

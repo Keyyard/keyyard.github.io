@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useCallback, useMemo } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
+interface ContactLink {
+  icon: JSX.Element;
+  platform: string;
+  handle: string;
+  copyText?: string;
+  url?: string;
+  action: "copy" | "link";
+}
+
 const Contact = () => {
-  const copyToClipboard = (text: string, platform: string) => {
+  const copyToClipboard = useCallback((text: string, platform: string) => {
     navigator.clipboard.writeText(text).then(() => {
       toast.success(`${platform} copied to clipboard!`, {
         duration: 2000,
@@ -19,9 +28,9 @@ const Contact = () => {
         position: 'top-left',
       });
     });
-  };
+  }, []);
 
-  const contactLinks = [
+  const contactLinks = useMemo<ContactLink[]>(() => [
     
     {
       icon: (
@@ -160,15 +169,15 @@ const Contact = () => {
       url: "https://youtube.com/c/keyyard",
       action: "link"
     },
-  ];
+  ], []);
 
-  const handleContactClick = (link: any) => {
-    if (link.action === "copy") {
+  const handleContactClick = useCallback((link: ContactLink) => {
+    if (link.action === "copy" && link.copyText) {
       copyToClipboard(link.copyText, link.platform);
-    } else if (link.action === "link") {
+    } else if (link.action === "link" && link.url) {
       window.open(link.url, "_blank", "noopener,noreferrer");
     }
-  };
+  }, [copyToClipboard]);
 
   return (
     <section id="contact" className="section">
