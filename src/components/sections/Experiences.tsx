@@ -1,28 +1,32 @@
 import { motion } from "framer-motion";
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import { experiences } from "../../data";
 
 const Experiences = () => {
   const [selectedExperience, setSelectedExperience] = useState(experiences[0]);
   const [resolution, setResolution] = useState(0);
+  const timeoutIdRef = useRef<NodeJS.Timeout>();
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       setResolution(window.innerWidth);
 
-      let timeoutId: NodeJS.Timeout;
       const handleResize = () => {
         // Debounce resize event to prevent excessive re-renders
-        clearTimeout(timeoutId);
-        timeoutId = setTimeout(() => {
+        if (timeoutIdRef.current) {
+          clearTimeout(timeoutIdRef.current);
+        }
+        timeoutIdRef.current = setTimeout(() => {
           setResolution(window.innerWidth);
         }, 150);
       };
 
       window.addEventListener("resize", handleResize);
       return () => {
-        clearTimeout(timeoutId);
+        if (timeoutIdRef.current) {
+          clearTimeout(timeoutIdRef.current);
+        }
         window.removeEventListener("resize", handleResize);
       };
     }

@@ -52,9 +52,11 @@ function Model({ onLoaded }: { onLoaded: () => void }) {
     }
 
     // Update head rotation to follow cursor
-    dummy.lookAt(cursor.x, cursor.y, 1);
-    dummy.rotation.y += Math.PI;
-    easing.dampQ(head.current.quaternion, dummy.quaternion, 0.15, delta);
+    if (head.current) {
+      dummy.lookAt(cursor.x, cursor.y, 1);
+      dummy.rotation.y += Math.PI;
+      easing.dampQ(head.current.quaternion, dummy.quaternion, 0.15, delta);
+    }
   });
 
   return <primitive object={head.current} />;
