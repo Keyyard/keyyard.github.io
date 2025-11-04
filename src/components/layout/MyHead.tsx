@@ -50,7 +50,7 @@ function Model({ onLoaded }: { onLoaded: () => void }) {
     if (mixer.current) {
       mixer.current.update(delta);
     }
-    
+
     // Update head rotation to follow cursor
     dummy.lookAt(cursor.x, cursor.y, 1);
     dummy.rotation.y += Math.PI;
@@ -69,7 +69,11 @@ const HeadRender = () => {
           <div className="animate-pulse bg-gray-300 rounded-full w-40 h-40" />
         </div>
       )}
-      <Canvas camera={{ position: [0, 0, 6], fov: 50 }} id="head" className="w-full h-full">
+      <Canvas
+        camera={{ position: [0, 0, 6], fov: 50 }}
+        id="head"
+        className="w-full h-full"
+      >
         <ambientLight intensity={0.5} />
         <Model onLoaded={() => setLoading(false)} />
       </Canvas>

@@ -73,10 +73,7 @@ export function Hero() {
           >
             View My Work
           </button>
-          <button
-            onClick={scrollToContact}
-            className="hero-button-secondary"
-          >
+          <button onClick={scrollToContact} className="hero-button-secondary">
             Contact Me
           </button>
         </div>
