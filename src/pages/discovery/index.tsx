@@ -29,11 +29,13 @@ export default function DiscoveryIndex({ posts }: { posts: any[] }) {
     return Array.from(s).sort();
   }, [posts]);
 
-  const filtered = posts.filter((p: any) => {
-    if (filter && !(p.tags || []).includes(filter)) return false;
-    if (q && !(p.title + p.description).toLowerCase().includes(q.toLowerCase())) return false;
-    return true;
-  });
+  const filtered = useMemo(() => {
+    return posts.filter((p: any) => {
+      if (filter && !(p.tags || []).includes(filter)) return false;
+      if (q && !(p.title + p.description).toLowerCase().includes(q.toLowerCase())) return false;
+      return true;
+    });
+  }, [posts, filter, q]);
 
   return (
     <>

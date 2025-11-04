@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React from "react";
+import React, { memo } from "react";
 import { PostMeta } from "../../utils/markdown";
 import SafeImage from "../ui/SafeImage";
 
@@ -7,7 +7,7 @@ type Props = {
   post: PostMeta;
 };
 
-export default function DiscoveryCard({ post }: Props) {
+const DiscoveryCard = memo(({ post }: Props) => {
   return (
     <article className="group h-full">
       <Link href={`/discovery/${post.slug}`} className="project-card discovery-card block h-full flex flex-col">
@@ -36,4 +36,8 @@ export default function DiscoveryCard({ post }: Props) {
       </Link>
     </article>
   );
-}
+});
+
+DiscoveryCard.displayName = 'DiscoveryCard';
+
+export default DiscoveryCard;
