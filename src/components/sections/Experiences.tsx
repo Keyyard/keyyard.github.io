@@ -10,7 +10,7 @@ const Experiences = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       setResolution(window.innerWidth);
-      
+
       let timeoutId: NodeJS.Timeout;
       const handleResize = () => {
         // Debounce resize event to prevent excessive re-renders
@@ -19,7 +19,7 @@ const Experiences = () => {
           setResolution(window.innerWidth);
         }, 150);
       };
-      
+
       window.addEventListener("resize", handleResize);
       return () => {
         clearTimeout(timeoutId);
@@ -28,9 +28,12 @@ const Experiences = () => {
     }
   }, []);
 
-  const handleExperienceClick = useCallback((exp: typeof experiences[number]) => {
-    setSelectedExperience(exp);
-  }, []);
+  const handleExperienceClick = useCallback(
+    (exp: (typeof experiences)[number]) => {
+      setSelectedExperience(exp);
+    },
+    [],
+  );
 
   const { ref: sectionRef, inView: sectionInView } = useInView({
     triggerOnce: true,
@@ -77,7 +80,7 @@ const Experiences = () => {
               </h4>
             </motion.div>
           ))}
-                    {resolution <= 1024 && selectedExperience && (
+          {resolution <= 1024 && selectedExperience && (
             <motion.div
               key={selectedExperience.title + selectedExperience.company_name}
               className="experience-details"
@@ -124,7 +127,8 @@ const Experiences = () => {
                 <a
                   href={selectedExperience.company_url}
                   target="_blank"
-                  rel="noopener noreferrer">
+                  rel="noopener noreferrer"
+                >
                   {selectedExperience.company_name}
                 </a>
               </h4>
