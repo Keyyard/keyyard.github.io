@@ -27,7 +27,9 @@ const Nav = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
-          setActiveSection(entry.target.id);
+          // Only update if the active section has actually changed
+          const newSection = entry.target.id;
+          setActiveSection((prev) => prev !== newSection ? newSection : prev);
         });
       },
       { threshold: 0.01 },

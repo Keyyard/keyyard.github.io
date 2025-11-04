@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, memo } from 'react';
 import { Carousel } from "react-responsive-carousel";
 import SafeImage from './SafeImage';
 import { filterWorkingImages } from '../../utils/imageUtils';
@@ -9,7 +9,7 @@ interface SafeCarouselProps {
   className?: string;
 }
 
-const SafeCarousel: React.FC<SafeCarouselProps> = ({ images, alt, className = "" }) => {
+const SafeCarousel: React.FC<SafeCarouselProps> = memo(({ images, alt, className = "" }) => {
   const [workingImages, setWorkingImages] = useState<string[]>(images);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -61,6 +61,8 @@ const SafeCarousel: React.FC<SafeCarouselProps> = ({ images, alt, className = ""
       ))}
     </Carousel>
   );
-};
+});
+
+SafeCarousel.displayName = 'SafeCarousel';
 
 export default SafeCarousel;

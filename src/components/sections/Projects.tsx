@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Projects } from "../../data";
 import { Suspense, lazy } from "react";
@@ -18,8 +18,8 @@ const ProjectsSection = () => {
   }, []);
   const skeletons = Array.from({ length: 3 });
 
-  const openModal = (proj: ProjectType) => setSelectedProject(proj);
-  const closeModal = () => setSelectedProject(null);
+  const openModal = useCallback((proj: ProjectType) => setSelectedProject(proj), []);
+  const closeModal = useCallback(() => setSelectedProject(null), []);
 
   return (
     <section id="projects" className="section">

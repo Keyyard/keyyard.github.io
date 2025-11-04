@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 
 interface SafeImageProps {
   src: string;
@@ -9,7 +9,7 @@ interface SafeImageProps {
   showPlaceholderOnError?: boolean;
 }
 
-const SafeImage: React.FC<SafeImageProps> = ({ 
+const SafeImage: React.FC<SafeImageProps> = memo(({ 
   src, 
   alt, 
   className = "", 
@@ -47,6 +47,8 @@ const SafeImage: React.FC<SafeImageProps> = ({
       onError={handleError}
     />
   );
-};
+});
+
+SafeImage.displayName = 'SafeImage';
 
 export default SafeImage;

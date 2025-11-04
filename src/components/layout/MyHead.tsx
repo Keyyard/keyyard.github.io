@@ -39,26 +39,22 @@ function Model({ onLoaded }: { onLoaded: () => void }) {
   }, [scene, animations]);
 
   useEffect(() => {
-    const animate = () => {
-      requestAnimationFrame(animate);
-      if (mixer.current) {
-        mixer.current.update(0.01);
-      }
-    };
-    animate();
-  }, []);
-
-  useEffect(() => {
     if (head.current) {
       head.current.rotation.set(0, Math.PI, 0);
       head.current.position.set(0, -0.5, 0);
     }
   }, []);
 
-  useFrame((state, dt) => {
+  useFrame((state, delta) => {
+    // Update animation mixer if active
+    if (mixer.current) {
+      mixer.current.update(delta);
+    }
+    
+    // Update head rotation to follow cursor
     dummy.lookAt(cursor.x, cursor.y, 1);
     dummy.rotation.y += Math.PI;
-    easing.dampQ(head.current.quaternion, dummy.quaternion, 0.15, dt);
+    easing.dampQ(head.current.quaternion, dummy.quaternion, 0.15, delta);
   });
 
   return <primitive object={head.current} />;
