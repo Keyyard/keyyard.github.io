@@ -1,24 +1,43 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback, useRef, memo } from "react";
 import { useInView } from "react-intersection-observer";
 import { experiences } from "../../data";
 
-const Experiences = () => {
+const Experiences = memo(() => {
   const [selectedExperience, setSelectedExperience] = useState(experiences[0]);
   const [resolution, setResolution] = useState(0);
+  const timeoutIdRef = useRef<NodeJS.Timeout>();
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       setResolution(window.innerWidth);
+
       const handleResize = () => {
-        setResolution(window.innerWidth);
+        // Debounce resize event to prevent excessive re-renders
+        if (timeoutIdRef.current) {
+          clearTimeout(timeoutIdRef.current);
+        }
+        timeoutIdRef.current = setTimeout(() => {
+          setResolution(window.innerWidth);
+        }, 150);
       };
+
       window.addEventListener("resize", handleResize);
       return () => {
+        if (timeoutIdRef.current) {
+          clearTimeout(timeoutIdRef.current);
+        }
         window.removeEventListener("resize", handleResize);
       };
     }
   }, []);
+
+  const handleExperienceClick = useCallback(
+    (exp: (typeof experiences)[number]) => {
+      setSelectedExperience(exp);
+    },
+    [],
+  );
 
   const { ref: sectionRef, inView: sectionInView } = useInView({
     triggerOnce: true,
@@ -36,7 +55,7 @@ const Experiences = () => {
               className={`experience-card ${
                 selectedExperience === exp ? "experience-card--selected" : ""
               }`}
-              onClick={() => setSelectedExperience(exp)}
+              onClick={() => handleExperienceClick(exp)}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               ref={sectionRef}
@@ -65,7 +84,7 @@ const Experiences = () => {
               </h4>
             </motion.div>
           ))}
-                    {resolution <= 1024 && selectedExperience && (
+          {resolution <= 1024 && selectedExperience && (
             <motion.div
               key={selectedExperience.title + selectedExperience.company_name}
               className="experience-details"
@@ -112,7 +131,8 @@ const Experiences = () => {
                 <a
                   href={selectedExperience.company_url}
                   target="_blank"
-                  rel="noopener noreferrer">
+                  rel="noopener noreferrer"
+                >
                   {selectedExperience.company_name}
                 </a>
               </h4>
@@ -130,6 +150,8 @@ const Experiences = () => {
       </div>
     </section>
   );
-};
+});
+
+Experiences.displayName = "Experiences";
 
 export default Experiences;

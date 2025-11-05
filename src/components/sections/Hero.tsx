@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
+import { useCallback, memo } from "react";
 import { introductionText } from "../../data";
 import Bg from "../layout/Background";
 
@@ -8,7 +9,17 @@ const HeadRender = dynamic(() => import("../layout/MyHead"), {
   loading: () => <div className="h-64 bg-gray-200 animate-pulse" />,
 });
 
-export function Hero() {
+const Hero = memo(() => {
+  const scrollToProjects = useCallback(() => {
+    const projectsSection = document.getElementById("projects");
+    projectsSection?.scrollIntoView({ behavior: "smooth" });
+  }, []);
+
+  const scrollToContact = useCallback(() => {
+    const contactSection = document.getElementById("contact");
+    contactSection?.scrollIntoView({ behavior: "smooth" });
+  }, []);
+
   return (
     <section id="hero" className="section-hero">
       <Bg />
@@ -57,25 +68,20 @@ export function Hero() {
         </div>
         <div className="hero-buttons">
           <button
-            onClick={() => {
-              const projectsSection = document.getElementById("projects");
-              projectsSection?.scrollIntoView({ behavior: "smooth" });
-            }}
+            onClick={scrollToProjects}
             className="hero-button-primary text-[--color-background] hover:text-[--color-text-highlight]"
           >
             View My Work
           </button>
-          <button
-            onClick={() => {
-              const contactSection = document.getElementById("contact");
-              contactSection?.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="hero-button-secondary"
-          >
+          <button onClick={scrollToContact} className="hero-button-secondary">
             Contact Me
           </button>
         </div>
       </div>
     </section>
   );
-}
+});
+
+Hero.displayName = "Hero";
+
+export { Hero };
