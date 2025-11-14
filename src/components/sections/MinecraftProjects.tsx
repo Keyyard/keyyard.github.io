@@ -28,7 +28,6 @@ const MinecraftProjects = () => {
                 <div className="project-card animate-pulse flex flex-col gap-2">
                   <div className="bg-gray-300 h-6 w-3/4 rounded mb-2" />
                   <div className="bg-gray-200 h-4 w-1/2 rounded mb-1" />
-                  <div className="bg-gray-200 h-4 w-full rounded mb-1" />
                   <div className="bg-gray-200 h-32 w-full rounded mb-2" />
                   <div className="flex gap-2 mt-2">
                     <div className="bg-gray-300 h-6 w-16 rounded" />
@@ -61,9 +60,6 @@ const MinecraftProjects = () => {
                     )}
                   </h3>
                   <h4 className="project-subtitle">{proj.short_info}</h4>
-                  <h4 className="project-description">
-                    {proj.description}
-                  </h4>
                   <Suspense fallback={<div className="h-32 w-full bg-gray-200 animate-pulse rounded mb-2" />}>
                     <SafeCarousel
                       className="mt-3 mb-3"
