@@ -118,6 +118,21 @@ const experiences = [
 
 const mcProjects = [
   {
+    title: "Cut the Rope x Minecraft DLC",
+    short_info: "Official Minecraft Marketplace DLC",
+    description:
+      "Official Minecraft Marketplace DLC collaboration between Cut the Rope and Minecraft. A premium DLC experience bringing the beloved Cut the Rope gameplay mechanics into the Minecraft universe. Developed in partnership with Mushco.",
+    links: [
+      {
+        name: "Minecraft Marketplace",
+        link: "https://www.minecraft.net/en-us/marketplace/pdp/mush-co/cut-the-rope/b5c52ceb-8b81-4f97-9aae-f5fa668c0278",
+      },
+    ],
+    imgs: [
+      "/assets/mcProjs/ctr/thumbnail.svg",
+    ],
+  },
+  {
     title: "Tree Capitator and Vein Miner Addon",
     short_info: "Community Project",
     description:
