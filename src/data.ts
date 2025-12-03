@@ -128,7 +128,9 @@ const mcProjects = [
         link: "https://www.minecraft.net/en-us/marketplace/pdp/mush-co/cut-the-rope/b5c52ceb-8b81-4f97-9aae-f5fa668c0278",
       },
     ],
-    imgs: ["/assets/mcProjs/ctr/thumbnail.svg"],
+    imgs: [
+      "/assets/mcProjs/ctr/thumbnail.svg", // TODO: Replace with actual WebP image from marketplace
+    ],
   },
   {
     title: "Tree Capitator and Vein Miner Addon",
