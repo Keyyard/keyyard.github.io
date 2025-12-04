@@ -129,7 +129,11 @@ const mcProjects = [
       },
     ],
     imgs: [
-      "/assets/mcProjs/ctr/thumbnail.svg", // TODO: Replace with actual WebP image from marketplace
+      "/assets/mcProjs/ctr/CTR_Thumbnail_0.webp",
+      "/assets/mcProjs/ctr/CTR_MarketingScreenshot_1.webp",
+      "/assets/mcProjs/ctr/CTR_MarketingScreenshot_2.webp",
+      "/assets/mcProjs/ctr/CTR_MarketingScreenshot_3.webp",
+      "/assets/mcProjs/ctr/CTR_MarketingScreenshot_4.webp",
     ],
   },
   {
