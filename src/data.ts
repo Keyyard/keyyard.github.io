@@ -562,6 +562,7 @@ const yearDifference = currentYear - startYear + 1;
 const introductionText = [
   "Hi, I'm Keyyard, a developer with a passion for turning creative visions into scalable digital experiences.",
   `With ${yearDifference} years of expertise, I've delivered high-quality contents for big creators like Preston (30M+ subscribers), MrWoofless (1M+ subscribers), and many teams like Giggle Block Studios, FireGames, Mushco,..`,
+  "I had the privilege of working as a programmer on the official Minecraft x Cut the Rope DLC, a collaboration between Mush Co. (Minecraft's Official Partner @ Microsoft, Mojang), and ZeptoLab (CutTheRope).",
   "I specialize in Bedrock scripting, gameplay quality, and architecture, ensuring every project is optimized for performance and user engagement.",
 ];
 
