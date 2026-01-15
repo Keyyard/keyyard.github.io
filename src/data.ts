@@ -28,17 +28,6 @@ const navs = [
 
 const experiences = [
   {
-    title: "Legendary Creator",
-    company_name: "MCPEDL",
-    company_url: "https://mcpedl.com/user/keyyard/",
-    date: "Feb 2018 - Present",
-    details: [
-      "Architected Tree Capitator and Vein Miner with optimized algorithms, proving my ability to create solutions that scale to millions of users.",
-      "Dominated the addon market in 2018-2019 with Redstone Mechanic, demonstrating my expertise in creating trend-setting content.",
-      "Co-founded and launched Actual Guns addon, establishing one of the most successful Minecraft Bedrock projects with 3M+ downloads.",
-    ],
-  },
-  {
     title: "Official Microsoft Partner",
     company_name: "G2crafted | Official Minecraft Marketplace",
     company_url: "https://www.bedrockexplorer.com/@g2crafted",
@@ -112,6 +101,15 @@ const experiences = [
     details: [
       "Create and maintain high-quality Minecraft DLC* content that meets the highest standards of quality and performance.",
       "DLC*: Unlike typical Minecraft Marketplace contents, DLC contents are usually content that collaborate with other brands, games, movies,.. Like Moana DLC, Sonic DLC,..",
+    ],
+  },
+    {
+    title: "Developer",
+    company_name: "Block Factory",
+    company_url: "https://blockfactory.studio/",
+    date: "January 2026 - Present",
+    details: [
+      "Working on entities, gameplay mechanics, and scripting systems to deliver engaging Minecraft experiences.",
     ],
   },
 ];
