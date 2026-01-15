@@ -103,7 +103,7 @@ const experiences = [
       "DLC*: Unlike typical Minecraft Marketplace contents, DLC contents are usually content that collaborate with other brands, games, movies,.. Like Moana DLC, Sonic DLC,..",
     ],
   },
-    {
+  {
     title: "Developer",
     company_name: "Block Factory",
     company_url: "https://blockfactory.studio/",
