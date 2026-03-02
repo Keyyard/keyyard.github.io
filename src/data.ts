@@ -53,7 +53,7 @@ const heroData = {
     link: "#projects",
     label: "Featured Work",
     title: "Cut the Rope × Minecraft DLC",
-    description: `Shipped as an official DLC in partnership with <strong style="color:var(--diamond)">Mush Co., Microsoft, Mojang</strong> &amp; ZeptoLab — available on the Minecraft Marketplace worldwide.`,
+    description: `Shipped as an official DLC in partnership with <strong style="color:var(--diamond)">Mush Co., Microsoft, Mojang &amp; ZeptoLab</strong> — available on the Minecraft Marketplace worldwide.`,
   },
   ctaButtons: [
     { text: "⛏ View My Work", action: "projects", variant: "primary" },
