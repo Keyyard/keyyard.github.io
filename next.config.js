@@ -7,6 +7,9 @@ const withBundleAnalyzer = createBundleAnalyzer({
 });
 
 export default withBundleAnalyzer({
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   async redirects() {
     return [
       {

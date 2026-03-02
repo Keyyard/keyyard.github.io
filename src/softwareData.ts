@@ -13,7 +13,7 @@ export const softwareProjects = [
     ],
     imgs: ["assets/Projs/today/4.webp"],
     tags: ["React", "TypeScript", "PWA", "Productivity"],
-    status: "Inactive" as const,
+    status: "Live" as const,
   },
   // Add more software projects here
 ];
