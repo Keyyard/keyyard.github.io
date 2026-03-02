@@ -4,4 +4,5 @@ export { default as About } from './About';
 export { default as Experiences } from './Experiences';
 export { default as Projects } from './Projects';
 export { default as MinecraftProjects } from './MinecraftProjects';
+export { default as MinecraftCommunity } from './MinecraftCommunity';
 export { default as Contact } from './Contact';

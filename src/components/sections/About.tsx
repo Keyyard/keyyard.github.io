@@ -1,49 +1,132 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { aboutMeData, techStackData } from "../../data";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+import dynamic from "next/dynamic";
+import { aboutPlayerInfo, mcSkillsData, techStackData } from "../../data";
+
+const HeadRender = dynamic(() => import("../layout/MyHead"), {
+  ssr: false,
+  loading: () => (
+    <div
+      style={{
+        width: "100%", height: "100%",
+        background: "var(--coal)",
+        clipPath: "polygon(0 4px,4px 0,calc(100% - 4px) 0,100% 4px,100% calc(100% - 4px),calc(100% - 4px) 100%,4px 100%,0 calc(100% - 4px))",
+        animation: "pulse 1.5s ease-in-out infinite",
+      }}
+    />
+  ),
+});
+
+function SkillBar({ label, percent, delay = 0 }: { label: string; percent: number; delay?: number }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-40px" });
+
+  return (
+    <div ref={ref}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 5 }}>
+        <span style={{ fontFamily: "var(--font-primary)", fontSize: "0.82rem", color: "var(--text-dim)" }}>
+          {label}
+        </span>
+        <span style={{ fontFamily: "var(--font-headings)", fontSize: "0.42rem", color: "var(--grass-glow)" }}>
+          {percent}%
+        </span>
+      </div>
+      <div className="skill-bar-track">
+        <motion.div
+          className="skill-bar-fill"
+          initial={{ width: 0 }}
+          animate={inView ? { width: `${percent}%` } : { width: 0 }}
+          transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1], delay }}
+        />
+      </div>
+    </div>
+  );
+}
 
 const About = () => {
   return (
-    <section id="about" className="section">
-      <h2 className="section-title mt-10 mb-6">About</h2>
-      <div className="container-main">
-        <motion.div
-          className="card"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className="content-text">
-            {aboutMeData.map((item, index) => (
-              <p key={index}>
-                {item.icon} <strong>{item.text}</strong>
-              </p>
-            ))}
-          </div>
-        </motion.div>
+    <section id="about" className="section" style={{ padding: "80px 0 60px" }}>
+      <h2 className="section-title" style={{ marginBottom: 48 }}>About Me</h2>
 
-        <div className="mt-12 mb-4">
-          <h3 className="subsection-title">Tech Stack</h3>
-          <div className="grid-two-col">
-            {techStackData.map((stack, index) => (
-              <motion.div
-                key={index}
-                className="card-sm"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 * index }}
-              >
-                <h4 className="text-xl font-bold mb-4">{stack.title}</h4>
-                <ul className="tech-list">
-                  {stack.items.map((item, idx) => (
-                    <li key={idx}>
-                      {"label" in item && <strong>{item.label}:</strong>} {item.value}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
+      <div className="container-main">
+        {/* Top row: 3D head + player info */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24, marginBottom: 24, alignItems: "start" }}>
+
+          {/* 3D Head */}
+          <div style={{ position: "relative" }}>
+            <div
+              style={{
+                fontFamily: "var(--font-headings)", fontSize: "0.5rem", color: "var(--grass-bright)",
+                letterSpacing: "0.12em", marginBottom: 12,
+              }}
+            >
+              ▶ ME
+            </div>
+            <div
+              style={{
+                width: "100%", height: 280,
+                border: "1px solid rgba(255,255,255,0.08)",
+                clipPath: "polygon(0 4px,4px 0,calc(100% - 4px) 0,100% 4px,100% calc(100% - 4px),calc(100% - 4px) 100%,4px 100%,0 calc(100% - 4px))",
+                overflow: "hidden",
+              }}
+            >
+              <HeadRender />
+            </div>
+            <p style={{ fontFamily: "var(--font-vt323)", fontSize: "0.85rem", color: "var(--text-muted)", textAlign: "center", marginTop: 8, letterSpacing: "0.08em" }}>
+              Move mouse · Click to animate
+            </p>
+          </div>
+
+          {/* Player Info */}
+          <div className="card" style={{ height: "100%" }}>
+            <div style={{ fontFamily: "var(--font-headings)", fontSize: "0.5rem", color: "var(--grass-bright)", letterSpacing: "0.12em", marginBottom: 20 }}>
+              ▶ PLAYER INFO
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+              {aboutPlayerInfo.map((paragraph, i) => (
+                <p key={i} style={{ fontSize: "0.88rem", lineHeight: 1.75, color: "var(--text-dim)" }}>
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Minecraft Skill Stats */}
+        <div className="card" style={{ marginBottom: 24 }}>
+          <div style={{ fontFamily: "var(--font-headings)", fontSize: "0.5rem", color: "var(--grass-glow)", letterSpacing: "0.12em", marginBottom: 24 }}>
+            ▶ MINECRAFT SKILL STATS
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+            {mcSkillsData.map((skill, i) => (
+              <SkillBar key={skill.label} label={skill.label} percent={skill.percent} delay={i * 0.12} />
             ))}
           </div>
+        </div>
+
+        {/* Tech Stack */}
+        <h3 className="subsection-title" style={{ marginBottom: 20 }}>Tech Stack</h3>
+        <div className="grid-two-col" style={{ marginBottom: 40 }}>
+          {techStackData.map((stack, index) => (
+            <motion.div
+              key={index}
+              className="card-sm"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.07 * index }}
+            >
+              <h4 style={{ fontFamily: "var(--font-headings)", fontSize: "0.46rem", color: "var(--grass-bright)", letterSpacing: "0.08em", marginBottom: 12 }}>
+                {stack.title}
+              </h4>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+                {stack.items.map((item, idx) => (
+                  <span key={idx} className="mc-tag">
+                    {"label" in item && item.label ? `${item.label}: ` : ""}{item.value}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

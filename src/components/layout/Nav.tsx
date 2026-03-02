@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 import { navs } from "../../data";
+
+const NAV_ICONS: Record<string, string> = {
+  hero:        "🏠",
+  about:       "📖",
+  experiences: "⚔️",
+  projects:    "🗂️",
+  contact:     "📬",
+};
 
 const Nav = () => {
   const [activeSection, setActiveSection] = useState("");
@@ -14,12 +21,9 @@ const Nav = () => {
         setActiveSection(hash);
       }
     };
-
     window.addEventListener("hashchange", handleHashChange);
-    return () => {
-      window.removeEventListener("hashchange", handleHashChange);
-    };
-  }, [setActiveSection]);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
@@ -27,46 +31,36 @@ const Nav = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
-          // Only update if the active section has actually changed
-          const newSection = entry.target.id;
-          setActiveSection((prev) => (prev !== newSection ? newSection : prev));
+          const id = entry.target.id;
+          setActiveSection((prev) => (prev !== id ? id : prev));
         });
       },
       { threshold: 0.01 },
     );
-
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
-
-    return () => {
-      sections.forEach((section) => {
-        observer.unobserve(section);
-      });
-    };
+    sections.forEach((s) => observer.observe(s));
+    return () => sections.forEach((s) => observer.unobserve(s));
   }, []);
 
   return (
-    <nav
-      className="hidden sm:flex fixed p-4 bottom-0 items-center mx-auto inset-x-0 bg-[#242424] z-[99]"
-      id="nav"
-    >
-      <ul className="flex justify-center">
-        {navs.map((nav, index) => (
-          <motion.li
-            key={index}
-            className={`mx-4 ${
-              activeSection === nav.sectionId
-                ? "underline underline-offset-8 text-gray-200"
-                : "text-gray-500"
-            }`}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <a href={`${nav.link.toLowerCase()}`}>{nav.name}</a>
-          </motion.li>
-        ))}
-      </ul>
+    <nav className="hotbar hidden sm:flex" id="nav">
+      <div className="hotbar-slots">
+        {navs.map((nav) => {
+          const isActive = activeSection === nav.sectionId;
+          return (
+            <a
+              key={nav.sectionId}
+              href={nav.link.toLowerCase()}
+              className={`hotbar-slot${isActive ? " hotbar-slot--active" : ""}`}
+              title={nav.name}
+            >
+              <span className="hotbar-slot-icon">
+                {NAV_ICONS[nav.sectionId] ?? "📌"}
+              </span>
+              <span className="hotbar-slot-label">{nav.shortName}</span>
+            </a>
+          );
+        })}
+      </div>
     </nav>
   );
 };

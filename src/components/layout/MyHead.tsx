@@ -23,7 +23,27 @@ function Model({ onLoaded }: { onLoaded: () => void }) {
         y: -(event.clientY / window.innerHeight) * 2 + 0.5,
       });
     };
+    const playPopSound = () => {
+      try {
+        const ctx = new (window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext)();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.type = "square";
+        osc.frequency.setValueAtTime(880, ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(440, ctx.currentTime + 0.08);
+        gain.gain.setValueAtTime(0.15, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.12);
+        osc.start(ctx.currentTime);
+        osc.stop(ctx.currentTime + 0.12);
+      } catch {
+        // Web Audio not available — silent fail
+      }
+    };
+
     const handleClick = () => {
+      playPopSound();
       mixer.current = new AnimationMixer(scene);
       const action = mixer.current.clipAction(animations[1]);
       action.setLoop(LoopOnce, 1); // Set the loop mode to play once
@@ -41,7 +61,7 @@ function Model({ onLoaded }: { onLoaded: () => void }) {
   useEffect(() => {
     if (head.current) {
       head.current.rotation.set(0, Math.PI, 0);
-      head.current.position.set(0, -0.5, 0);
+      head.current.position.set(0, 0.9, 0);
     }
   }, []);
 
@@ -73,6 +93,8 @@ const HeadRender = memo(() => {
       )}
       <Canvas
         camera={{ position: [0, 0, 6], fov: 50 }}
+        gl={{ alpha: true }}
+        style={{ background: "transparent" }}
         id="head"
         className="w-full h-full"
       >

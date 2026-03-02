@@ -1,152 +1,146 @@
-import { motion } from "framer-motion";
-import { useEffect, useState, useCallback, useRef, memo } from "react";
-import { useInView } from "react-intersection-observer";
-import { experiences } from "../../data";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, memo } from "react";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import { experiences, experienceNodeStyles, experienceTiers, experienceLegend } from "../../data";
 
-const Experiences = memo(() => {
-  const [selectedExperience, setSelectedExperience] = useState(experiences[0]);
-  const [resolution, setResolution] = useState(0);
-  const timeoutIdRef = useRef<NodeJS.Timeout>();
+function ExperienceNode({
+  exp,
+  tier,
+  index,
+}: {
+  exp: (typeof experiences)[number];
+  tier: string;
+  index: number;
+}) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-40px" });
+  const node = experienceNodeStyles[tier] ?? experienceNodeStyles.stone;
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setResolution(window.innerWidth);
-
-      const handleResize = () => {
-        // Debounce resize event to prevent excessive re-renders
-        if (timeoutIdRef.current) {
-          clearTimeout(timeoutIdRef.current);
-        }
-        timeoutIdRef.current = setTimeout(() => {
-          setResolution(window.innerWidth);
-        }, 150);
-      };
-
-      window.addEventListener("resize", handleResize);
-      return () => {
-        if (timeoutIdRef.current) {
-          clearTimeout(timeoutIdRef.current);
-        }
-        window.removeEventListener("resize", handleResize);
-      };
-    }
-  }, []);
-
-  const handleExperienceClick = useCallback(
-    (exp: (typeof experiences)[number]) => {
-      setSelectedExperience(exp);
-    },
-    [],
-  );
-
-  const { ref: sectionRef, inView: sectionInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.01,
-  });
+  const isPresentJob = exp.date.toLowerCase().includes("present");
 
   return (
-    <section id="experiences" className="section">
-      <h2 className="section-title">Experiences</h2>
-      <div className="grid-experiences">
-        <div className="space-y-4">
-          {experiences.map((exp, index) => (
-            <motion.div
-              key={index}
-              className={`experience-card ${
-                selectedExperience === exp ? "experience-card--selected" : ""
-              }`}
-              onClick={() => handleExperienceClick(exp)}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              ref={sectionRef}
-            >
-              <h3
-                className={`${
-                  resolution <= 1024 ? "text-sm font-bold" : "text-xl font-bold"
-                }`}
-              >
+    <motion.div
+      ref={ref}
+      className="mc-timeline-node"
+      initial={{ opacity: 0, x: -24 }}
+      animate={inView ? { opacity: 1, x: 0 } : {}}
+      transition={{ duration: 0.45, delay: index * 0.07, ease: "easeOut" }}
+    >
+      {/* Block node icon */}
+      <div
+        className="mc-timeline-icon"
+        style={{ background: node.bg, boxShadow: node.shadow }}
+        aria-hidden="true"
+      />
+
+      {/* Content card */}
+      <div
+        className={`mc-timeline-content${open ? " active" : ""}`}
+        onClick={() => setOpen((v) => !v)}
+        role="button"
+        aria-expanded={open}
+        tabIndex={0}
+        onKeyDown={(e) => e.key === "Enter" && setOpen((v) => !v)}
+      >
+        {/* Header row */}
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12, flexWrap: "wrap" }}>
+          <div>
+            <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4, flexWrap: "wrap" }}>
+              <h3 style={{ fontFamily: "var(--font-primary)", fontWeight: 700, fontSize: "0.95rem", color: "var(--text-main)" }}>
                 {exp.title}
               </h3>
-              <h4
-                className={`${
-                  resolution <= 1024
-                    ? "text-sm text-gray-200 leading-5"
-                    : "text-lg text-gray-200 leading-7"
-                }`}
-              >
-                <a
-                  href={exp.company_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {exp.company_name}
-                </a>
-              </h4>
-            </motion.div>
-          ))}
-          {resolution <= 1024 && selectedExperience && (
-            <motion.div
-              key={selectedExperience.title + selectedExperience.company_name}
-              className="experience-details"
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.25 }}
+              {isPresentJob && (
+                <span style={{
+                  fontFamily: "var(--font-headings)", fontSize: "0.38rem", padding: "2px 8px",
+                  background: "rgba(163,217,119,0.15)", color: "var(--grass-glow)",
+                  border: "1px solid rgba(163,217,119,0.35)",
+                  clipPath: "polygon(0 2px,2px 0,calc(100% - 2px) 0,100% 2px,100% calc(100% - 2px),calc(100% - 2px) 100%,2px 100%,0 calc(100% - 2px))",
+                }}>
+                  ● CURRENT
+                </span>
+              )}
+            </div>
+            <a
+              href={exp.company_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              style={{ fontFamily: "var(--font-vt323)", fontSize: "1.05rem", color: "var(--text-dim)", letterSpacing: "0.05em" }}
             >
-              <h3 className="text-md font-bold">{selectedExperience.title}</h3>
-              <h4 className="text-sm text-gray-300">
-                <a
-                  href={selectedExperience.company_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {selectedExperience.company_name}
-                </a>
-              </h4>
-              <p className="text-sm text-gray-300">{selectedExperience.date}</p>
-              <ul className="list-disc list-inside mt-2">
-                {selectedExperience.details.map((detail, i) => (
-                  <li key={i} className="text-sm text-gray-100">
-                    {detail}
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          )}
+              {exp.company_name}
+            </a>
+          </div>
+          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+            <span style={{ fontFamily: "var(--font-primary)", fontSize: "0.72rem", color: "var(--text-muted)", whiteSpace: "nowrap" }}>
+              {exp.date}
+            </span>
+            <span style={{ fontFamily: "var(--font-headings)", fontSize: "0.5rem", color: open ? "var(--diamond)" : "var(--text-muted)", transform: open ? "rotate(90deg)" : "rotate(0deg)", display: "inline-block", transition: "all 0.2s" }}>
+              ▶
+            </span>
+          </div>
         </div>
-        <div>
-          {resolution > 1024 && selectedExperience && (
-            <motion.div
-              key={selectedExperience.title + selectedExperience.company_name}
-              className="experience-details mx-auto p-4"
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{
-                opacity: sectionInView ? 1 : 0,
-                scale: sectionInView ? 1 : 0.5,
-              }}
-              transition={{ duration: 0.25 }}
-              ref={sectionRef}
+
+        {/* Expandable details */}
+        <AnimatePresence>
+          {open && (
+            <motion.ul
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.25, ease: "easeInOut" }}
+              style={{ overflow: "hidden", marginTop: 12, paddingLeft: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 8 }}
             >
-              <h3 className="text-xl font-bold">{selectedExperience.title}</h3>
-              <h4 className="text-md text-gray-300 leading-5">
-                <a
-                  href={selectedExperience.company_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {selectedExperience.company_name}
-                </a>
-              </h4>
-              <p className="text-sm text-gray-300">{selectedExperience.date}</p>
-              <ul className="list-disc list-inside mt-2">
-                {selectedExperience.details.map((detail, i) => (
-                  <li key={i} className="text-sm text-gray-100">
-                    {detail}
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+              {exp.details.map((detail, i) => (
+                <li key={i} style={{ display: "flex", gap: 8, alignItems: "flex-start", fontSize: "0.85rem", color: "var(--text-dim)", lineHeight: 1.65 }}>
+                  <span style={{ color: "var(--grass-bright)", flexShrink: 0, marginTop: 3 }}>▸</span>
+                  {detail}
+                </li>
+              ))}
+            </motion.ul>
           )}
-        </div>
+        </AnimatePresence>
+      </div>
+    </motion.div>
+  );
+}
+
+const Experiences = memo(() => {
+  return (
+    <section id="experiences" className="section" style={{ padding: "80px 0 60px" }}>
+      <h2 className="section-title" style={{ marginBottom: 8 }}>Career Journey</h2>
+      <p style={{ textAlign: "center", fontFamily: "var(--font-vt323)", fontSize: "1.1rem", color: "var(--text-muted)", letterSpacing: "0.1em", marginBottom: 48 }}>
+        Click any entry to expand details
+      </p>
+
+      {/* Timeline legend */}
+      <div style={{ display: "flex", justifyContent: "center", gap: 16, marginBottom: 40, flexWrap: "wrap" }}>
+        {experienceLegend.map(({ label, tier }) => {
+          const s = experienceNodeStyles[tier];
+          return (
+            <div key={label} style={{ display: "flex", alignItems: "center", gap: 6 }}>
+              <div style={{
+                width: 14, height: 14,
+                background: s.bg,
+                clipPath: "polygon(0 2px,2px 0,calc(100% - 2px) 0,100% 2px,100% calc(100% - 2px),calc(100% - 2px) 100%,2px 100%,0 calc(100% - 2px))",
+                flexShrink: 0,
+              }} />
+              <span style={{ fontFamily: "var(--font-primary)", fontSize: "0.72rem", color: "var(--text-muted)" }}>{label}</span>
+            </div>
+          );
+        })}
+      </div>
+
+      <div className="mc-timeline">
+        {experiences.map((exp, i) => (
+          <ExperienceNode
+            key={`${exp.company_name}-${i}`}
+            exp={exp}
+            tier={experienceTiers[i] ?? "stone"}
+            index={i}
+          />
+        ))}
       </div>
     </section>
   );
