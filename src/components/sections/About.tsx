@@ -56,7 +56,7 @@ const About = () => {
           <div style={{ position: "relative" }}>
             <div
               style={{
-                fontFamily: "var(--font-headings)", fontSize: "0.5rem", color: "var(--grass-bright)",
+                fontFamily: "var(--font-headings)", fontSize: "1rem", color: "var(--grass-bright)",
                 letterSpacing: "0.12em", marginBottom: 12,
               }}
             >
@@ -79,7 +79,7 @@ const About = () => {
 
           {/* Player Info */}
           <div className="card" style={{ height: "100%" }}>
-            <div style={{ fontFamily: "var(--font-headings)", fontSize: "0.5rem", color: "var(--grass-bright)", letterSpacing: "0.12em", marginBottom: 20 }}>
+            <div style={{ fontFamily: "var(--font-headings)", fontSize: "1rem", color: "var(--grass-bright)", letterSpacing: "0.12em", marginBottom: 20 }}>
               ▶ PLAYER INFO
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
@@ -94,7 +94,7 @@ const About = () => {
 
         {/* Minecraft Skill Stats */}
         <div className="card" style={{ marginBottom: 24 }}>
-          <div style={{ fontFamily: "var(--font-headings)", fontSize: "0.5rem", color: "var(--grass-glow)", letterSpacing: "0.12em", marginBottom: 24 }}>
+          <div style={{ fontFamily: "var(--font-headings)", fontSize: "1rem", color: "var(--grass-glow)", letterSpacing: "0.12em", marginBottom: 24 }}>
             ▶ MINECRAFT SKILL STATS
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
@@ -115,7 +115,7 @@ const About = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.07 * index }}
             >
-              <h4 style={{ fontFamily: "var(--font-headings)", fontSize: "0.46rem", color: "var(--grass-bright)", letterSpacing: "0.08em", marginBottom: 12 }}>
+              <h4 style={{ fontFamily: "var(--font-headings)", fontSize: "0.85rem", color: "var(--grass-bright)", letterSpacing: "0.08em", marginBottom: 12 }}>
                 {stack.title}
               </h4>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
