@@ -8,9 +8,10 @@ class WebDocument extends Document {
           <meta charSet="UTF-8" />
 
           {/* SEO Enhancements */}
+          <title>Keyyard | Minecraft Bedrock Developer</title>
           <meta
             name="description"
-            content="Official Website of Keyyard, portfolio showcasing Minecraft mods, maps, skins, and marketplace projects. Discover unique content to enhance your Minecraft experience."
+            content="Official Website of Keyyard, a Minecraft Bedrock Developer since 2018. Exploring high-quality mods, addons, and marketplace content like Cut the Rope × Minecraft DLC."
           />
           <meta
             name="keywords"
@@ -64,6 +65,56 @@ class WebDocument extends Document {
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=G-Z3K6D9SXF4"
+          />
+
+          {/* Structured Data for Knowledge Graph */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Keyyard",
+                "url": "https://www.keyyard.xyz",
+                "image": "https://www.keyyard.xyz/keyyard.png",
+                "sameAs": [
+                  "https://twitter.com/keyyard",
+                  "https://github.com/keyyard",
+                  "https://www.youtube.com/@keyyard",
+                  "https://mcpedl.com/user/keyyard/",
+                  "https://modbay.org/user/Keyyard/",
+                  "https://www.bedrockexplorer.com/@g2crafted",
+                  "https://www.npmjs.com/package/create-mc-bedrock"
+                ],
+                "jobTitle": "Minecraft Bedrock Developer & Fullstack Engineer",
+                "worksFor": [
+                  {
+                    "@type": "Organization",
+                    "name": "Mushco",
+                    "url": "https://www.mushco.games/"
+                  },
+                  {
+                    "@type": "Organization",
+                    "name": "Microsoft × Mojang (Partner)",
+                    "description": "Collaborated on official Minecraft DLC content."
+                  }
+                ],
+                "description": "Minecraft Bedrock Developer since 2018, specializing in high-performance scripting, entity AI, and official marketplace content. Creator of Actual Guns, Tree Capitator, and lead collaborator on the Cut the Rope × Minecraft DLC.",
+                "knowsAbout": [
+                  "Minecraft Bedrock Scripting",
+                  "Game Mechanics Design",
+                  "TypeScript & Node.js",
+                  "CLI Tooling",
+                  "Entity AI Development",
+                  "Cut the Rope × Minecraft DLC"
+                ],
+                "knowsLanguage": ["English", "Indonesian"],
+                "alumniOf": {
+                  "@type": "Organization",
+                  "name": "Bedrock OSS"
+                }
+              })
+            }}
           />
         </Head>
         <body>
