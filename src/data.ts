@@ -25,8 +25,8 @@ const heroData = {
     "block-stone", "block-dirt", "block-grass",
   ] as string[],
   pixelName: "KEYYARD",
-  roleBadge: "Minecraft Dev + Fullstack Engineer",
-  storyHook: `In 2018, I started modding Minecraft from scratch — no tutorials, just curiosity and a text editor.<br/>By 2024, <strong>one of my projects shipped as an official <span class="hl-diamond">Microsoft × Mojang DLC</span></strong>, and my addons had been downloaded <span class="hl-gold">5M+ times</span> across the world.`,
+  roleBadge: "Minecraft Developer & Software Engineer",
+  storyHook: `In 2018, I started modding Minecraft from scratch — no tutorials, just curiosity and a text editor.<br/>By 2024, <strong>I contributed to the official <span class="hl-diamond">Minecraft × Cut The Rope crossover DLC</span></strong>, and my addons had been downloaded <span class="hl-gold">5M+ times</span> across the world.`,
   statCards: [
     {
       cssClass: "gold",  blockBg: "var(--gold)",
@@ -46,7 +46,7 @@ const heroData = {
     {
       cssClass: "stone", blockBg: "var(--stone)",
       blockShadow: "inset -2px -2px 0 rgba(0,0,0,0.35)",
-      num: "31M", label: "Sub Collab", title: "Collaborated with Preston (31M subscribers)",
+      num: "31M SUBS", label: "Youtuber Collab", title: "Collaborated with Preston (31M subscribers)",
     },
   ],
   featuredCallout: {
@@ -460,20 +460,18 @@ const mcCommunityProjects = [
 // ─── ABOUT — PLAYER INFO ─────────────────────────────────────
 // Edit these paragraphs to change the About section story text
 const aboutPlayerInfo = [
-  "I'm a developer who builds from curiosity — not from tutorials. I started modding Minecraft in 2018 with nothing but a text editor and the stubbornness to figure things out. That instinct to learn through building has defined everything since.",
-  "I'm drawn to systems that demand both precision and creativity. Scripting a complex entity AI, designing physics-driven gameplay, or architecting a developer toolchain — I care deeply about the craft behind all of it.",
-  "Being multidisciplinary isn't a side effect for me, it's the point. I've worked across Bedrock scripting, web development, and CLI tooling because I believe every domain sharpens your thinking in the others.",
-  "I do my best work on ambitious projects with people who care about quality. If you're building something that pushes limits — I want to be part of it.",
-];
+  "I'm a developer who builds from curiosity — not from tutorials. I started modding Minecraft in 2018 with nothing but a text editor in an iPad and the stubbornness to figure things out. That instinct to learn through building has defined everything since.",
+  "I'm drawn to systems that demand both precision and creativity, where I can use my logical thinking with creativity. Scripting a complex boss, designing physics-driven gameplay, or architecting a developer toolchain — I care deeply about the craft behind all of it.",
+  "Being multidisciplinary isn't a side effect for me, it's the point. I've spent most of my time learning and working across Bedrock scripting, software development, and various non-technical fields because I believe every domain sharpens your thinking in the others.",
+"I do my best work on ambitious projects with talented people who care about making their dreams a reality. If you're building something that pushes limits — I want to be part of it."];
 
 // ─── ABOUT — MINECRAFT SKILL BARS ────────────────────────────
 const mcSkillsData = [
   { label: "Bedrock Entity Behavior",          percent: 98 },
   { label: "Bedrock Scripting API",            percent: 99  },
   { label: "Bedrock Items Functions", percent: 99  },
-  { label: "Bedrock Animation Controller Manipulatation", percent: 93  },
-  { label: "Bedrock Blocks", percent: 78  },
-
+  { label: "Bedrock Animation Manipulatation", percent: 93  },
+  { label: "Bedrock Blocks Features", percent: 78  },
 ];
 
 // ─── ABOUT — TECH STACK ──────────────────────────────────────
@@ -498,8 +496,8 @@ const techStackData = [
     title: "Backend & Database",
     items: [
       { label: "APIs Frameworks", value: "FastAPI, Flask, Next.js" },
-      { label: "Database", value: "PostgreSQL, SQLite, Prisma ORM" },
-      { label: "Authentication", value: "OAuth, JWT, Clerk" },
+      { label: "Database", value: "PostgreSQL, SQLite, Prisma ORM, Supabase" },
+      { label: "Authentication", value: "OAuth, JWT, Clerk, Supabase" },
     ],
   },
   {
@@ -507,9 +505,20 @@ const techStackData = [
     items: [{ value: "React Native" }, { value: "Expo" }, { value: "Lynx.JS" }],
   },
   {
-    title: "Game Development",
+    title: "Creative Tools",
     items: [
-      { label: "Minecraft Bedrock", value: "Add-on Development, Scripting API" },
+      {
+        label: "3D Modeling & Animation",
+        value: "Blockbench",
+      },
+      {
+        label: "Graphics",
+        value: "Aseprite, Adobe Photoshop, Figma",
+      },
+      {
+        label: "Video Editing",
+        value: "DaVinci Resolve, CapCut",
+      }
     ],
   },
   {
