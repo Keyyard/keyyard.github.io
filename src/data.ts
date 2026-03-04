@@ -1,10 +1,25 @@
 // ─── NAV ────────────────────────────────────────────────────
 const navs = [
-  { name: "Hero",        shortName: "Home",    link: "/#hero",        sectionId: "hero" },
-  { name: "About",       shortName: "About",   link: "/#about",       sectionId: "about" },
-  { name: "Experiences", shortName: "Career",  link: "/#experiences", sectionId: "experiences" },
-  { name: "Projects",    shortName: "Builds",  link: "/#projects",    sectionId: "projects" },
-  { name: "Contact",     shortName: "Contact", link: "/#contact",     sectionId: "contact" },
+  { name: "Hero", shortName: "Home", link: "/#hero", sectionId: "hero" },
+  { name: "About", shortName: "About", link: "/#about", sectionId: "about" },
+  {
+    name: "Experiences",
+    shortName: "Career",
+    link: "/#experiences",
+    sectionId: "experiences",
+  },
+  {
+    name: "Projects",
+    shortName: "Builds",
+    link: "/#projects",
+    sectionId: "projects",
+  },
+  {
+    name: "Contact",
+    shortName: "Contact",
+    link: "/#contact",
+    sectionId: "contact",
+  },
 ];
 
 // ─── BIRTHDAY / DOB ──────────────────────────────────────────
@@ -12,18 +27,30 @@ const DOB = new Date(2004, 8, 30); // September 30, 2004
 
 function getBirthdayXP() {
   const now = new Date();
-  const thisYearBday = new Date(now.getFullYear(), DOB.getMonth(), DOB.getDate());
-  const isBirthday = now.getMonth() === DOB.getMonth() && now.getDate() === DOB.getDate();
-  const lastBday = now >= thisYearBday
-    ? thisYearBday
-    : new Date(now.getFullYear() - 1, DOB.getMonth(), DOB.getDate());
-  const nextBday = now >= thisYearBday
-    ? new Date(now.getFullYear() + 1, DOB.getMonth(), DOB.getDate())
-    : thisYearBday;
-  const age = now.getFullYear() - DOB.getFullYear() - (now < thisYearBday ? 1 : 0);
+  const thisYearBday = new Date(
+    now.getFullYear(),
+    DOB.getMonth(),
+    DOB.getDate(),
+  );
+  const isBirthday =
+    now.getMonth() === DOB.getMonth() && now.getDate() === DOB.getDate();
+  const lastBday =
+    now >= thisYearBday
+      ? thisYearBday
+      : new Date(now.getFullYear() - 1, DOB.getMonth(), DOB.getDate());
+  const nextBday =
+    now >= thisYearBday
+      ? new Date(now.getFullYear() + 1, DOB.getMonth(), DOB.getDate())
+      : thisYearBday;
+  const age =
+    now.getFullYear() - DOB.getFullYear() - (now < thisYearBday ? 1 : 0);
   const xpPercent = isBirthday
     ? 0
-    : Math.round((now.getTime() - lastBday.getTime()) / (nextBday.getTime() - lastBday.getTime()) * 100);
+    : Math.round(
+        ((now.getTime() - lastBday.getTime()) /
+          (nextBday.getTime() - lastBday.getTime())) *
+          100,
+      );
   return { age, xpPercent, isBirthday, nextLevel: age + 1 };
 }
 const _birthdayXP = getBirthdayXP();
@@ -37,37 +64,55 @@ const heroData = {
   floatingBlocksCount: 12,
   groundSegments: 28,
   cornerBlocks: {
-    topLeft:  ["var(--grass)", "var(--dirt)", "var(--stone-dark)"],
+    topLeft: ["var(--grass)", "var(--dirt)", "var(--stone-dark)"],
     topRight: ["var(--diamond)", "var(--gold)", "var(--stone-dark)"],
   },
   blockRow: [
-    "block-grass", "block-dirt", "block-stone",
+    "block-grass",
+    "block-dirt",
+    "block-stone",
     "block-gold",
-    "block-stone", "block-dirt", "block-grass",
+    "block-stone",
+    "block-dirt",
+    "block-grass",
   ] as string[],
   pixelName: "KEYYARD",
   roleBadge: "Minecraft Developer & Software Engineer",
   storyHook: `In 2018, I started modding Minecraft from scratch — no tutorials, just curiosity and a text editor.<br/>By 2024, <strong>I contributed to the official <span class="hl-diamond">Minecraft × Cut The Rope crossover DLC</span></strong>, and my addons had been downloaded <span class="hl-gold">5M+ times</span> across the world.`,
   statCards: [
     {
-      cssClass: "gold",  blockBg: "var(--gold)",
-      blockShadow: "inset -2px -2px 0 rgba(0,0,0,0.4), inset 2px 2px 0 rgba(255,255,255,0.3)",
-      num: "5M+", label: "Downloads", title: "Total downloads across all projects",
+      cssClass: "gold",
+      blockBg: "var(--gold)",
+      blockShadow:
+        "inset -2px -2px 0 rgba(0,0,0,0.4), inset 2px 2px 0 rgba(255,255,255,0.3)",
+      num: "5M+",
+      label: "Downloads",
+      title: "Total downloads across all projects",
     },
     {
-      cssClass: "green", blockBg: "var(--grass)",
+      cssClass: "green",
+      blockBg: "var(--grass)",
       blockShadow: "inset -2px -2px 0 rgba(0,0,0,0.3)",
-      num: `${_yearsXp} YRS`, label: "Experience", title: "Years of experience since 2018",
+      num: `${_yearsXp} YRS`,
+      label: "Experience",
+      title: "Years of experience since 2018",
     },
     {
-      cssClass: "blue",  blockBg: "var(--diamond)",
-      blockShadow: "inset -2px -2px 0 rgba(0,0,0,0.3), 0 0 8px rgba(78,205,196,0.5)",
-      num: "MSFT", label: "Partner", title: "Official Microsoft Marketplace Partner",
+      cssClass: "blue",
+      blockBg: "var(--diamond)",
+      blockShadow:
+        "inset -2px -2px 0 rgba(0,0,0,0.3), 0 0 8px rgba(78,205,196,0.5)",
+      num: "MSFT",
+      label: "Partner",
+      title: "Official Microsoft Marketplace Partner",
     },
     {
-      cssClass: "stone", blockBg: "var(--stone)",
+      cssClass: "stone",
+      blockBg: "var(--stone)",
       blockShadow: "inset -2px -2px 0 rgba(0,0,0,0.35)",
-      num: "31M SUBS", label: "Youtuber Collab", title: "Collaborated with Preston (31M subscribers)",
+      num: "31M SUBS",
+      label: "Youtuber Collab",
+      title: "Collaborated with Preston (31M subscribers)",
     },
   ],
   featuredCallout: {
@@ -78,7 +123,7 @@ const heroData = {
   },
   ctaButtons: [
     { text: "⛏ View My Work", action: "projects", variant: "primary" },
-    { text: "✉ Contact Me",   action: "contact",  variant: "secondary" },
+    { text: "✉ Contact Me", action: "contact", variant: "secondary" },
   ] as { text: string; action: string; variant: "primary" | "secondary" }[],
   xpPercent: _birthdayXP.xpPercent,
   xpBar: {
@@ -180,31 +225,51 @@ const experiences = [
 
 // Experience timeline visual data
 const experienceNodeStyles: Record<string, { bg: string; shadow: string }> = {
-  gold:    { bg: "var(--gold)",         shadow: "inset -3px -3px 0 rgba(0,0,0,0.4), inset 3px 3px 0 rgba(255,255,255,0.3), 0 0 10px rgba(245,197,66,0.35)" },
-  diamond: { bg: "var(--diamond)",      shadow: "inset -3px -3px 0 rgba(0,0,0,0.35), inset 3px 3px 0 rgba(255,255,255,0.35), 0 0 12px rgba(78,205,196,0.5)" },
-  grass:   { bg: "var(--grass-bright)", shadow: "inset -3px -3px 0 rgba(0,0,0,0.3), inset 3px 3px 0 rgba(255,255,255,0.15)" },
-  stone:   { bg: "var(--stone)",        shadow: "inset -3px -3px 0 rgba(0,0,0,0.35), inset 3px 3px 0 rgba(255,255,255,0.15)" },
-  wood:    { bg: "var(--wood)",         shadow: "inset -3px -3px 0 rgba(0,0,0,0.3), inset 3px 3px 0 rgba(255,255,255,0.12)" },
+  gold: {
+    bg: "var(--gold)",
+    shadow:
+      "inset -3px -3px 0 rgba(0,0,0,0.4), inset 3px 3px 0 rgba(255,255,255,0.3), 0 0 10px rgba(245,197,66,0.35)",
+  },
+  diamond: {
+    bg: "var(--diamond)",
+    shadow:
+      "inset -3px -3px 0 rgba(0,0,0,0.35), inset 3px 3px 0 rgba(255,255,255,0.35), 0 0 12px rgba(78,205,196,0.5)",
+  },
+  grass: {
+    bg: "var(--grass-bright)",
+    shadow:
+      "inset -3px -3px 0 rgba(0,0,0,0.3), inset 3px 3px 0 rgba(255,255,255,0.15)",
+  },
+  stone: {
+    bg: "var(--stone)",
+    shadow:
+      "inset -3px -3px 0 rgba(0,0,0,0.35), inset 3px 3px 0 rgba(255,255,255,0.15)",
+  },
+  wood: {
+    bg: "var(--wood)",
+    shadow:
+      "inset -3px -3px 0 rgba(0,0,0,0.3), inset 3px 3px 0 rgba(255,255,255,0.12)",
+  },
 };
 
 // Corresponds 1:1 with the experiences array above
 const experienceTiers = [
-  "gold",    // G2crafted — first MS Partner
-  "grass",    // Giggle Block Studios
-  "grass",    // MELONBP
-  "diamond",     // Fire Games — Preston collab
-  "grass",  // OASIS
-  "wood",     // Bedrock OSS
-  "diamond",  // Mushco — Cut the Rope DLC
-  "grass",    // Block Factory
+  "gold", // G2crafted — first MS Partner
+  "grass", // Giggle Block Studios
+  "grass", // MELONBP
+  "diamond", // Fire Games — Preston collab
+  "grass", // OASIS
+  "wood", // Bedrock OSS
+  "diamond", // Mushco — Cut the Rope DLC
+  "grass", // Block Factory
 ];
 
 const experienceLegend = [
-  { label: "Milestone",   tier: "diamond" },
+  { label: "Milestone", tier: "diamond" },
   { label: "Partnership", tier: "gold" },
-  { label: "Contract",    tier: "grass" },
-  { label: "Community",   tier: "wood" },
-  { label: "Other",       tier: "stone" },
+  { label: "Contract", tier: "grass" },
+  { label: "Community", tier: "wood" },
+  { label: "Other", tier: "stone" },
 ];
 
 // ─── MINECRAFT PROJECTS ──────────────────────────────────────
@@ -240,8 +305,14 @@ const mcProjects = [
       "Designed an optimized scripting system that accelerates resource gathering. Features dynamic block breaking, enchantment support, and durability tracking, improving vanilla gameplay with minified performance loss.",
     downloads: "2.0M+",
     links: [
-      { name: "Github", link: "https://github.com/Keyyard/Minecraft-Tree-Capitator-and-Vein-Miner-Addon" },
-      { name: "MCPEDL", link: "https://mcpedl.com/tree-capacitor-addon-lumberjack/" },
+      {
+        name: "Github",
+        link: "https://github.com/Keyyard/Minecraft-Tree-Capitator-and-Vein-Miner-Addon",
+      },
+      {
+        name: "MCPEDL",
+        link: "https://mcpedl.com/tree-capacitor-addon-lumberjack/",
+      },
     ],
     imgs: ["/assets/mcProjs/tc.webp", "/assets/mcProjs/tc/maxresdefault.webp"],
   },
@@ -252,9 +323,7 @@ const mcProjects = [
     description:
       "Help creating the add-on in early stages with UI & Gun Shooting mechanic via Animation Controller & Snowball run identifier, and later on, the project was taken over by Azoz and Jun.",
     downloads: "3.0M+",
-    links: [
-      { name: "MCPEDL", link: "https://mcpedl.com/actual-guns-addon/" },
-    ],
+    links: [{ name: "MCPEDL", link: "https://mcpedl.com/actual-guns-addon/" }],
     imgs: [
       "/assets/mcProjs/ag/GWFjLdgWgAAVYUq.webp",
       "/assets/mcProjs/ag/GLZezFubUAA4E5O.webp",
@@ -268,7 +337,10 @@ const mcProjects = [
     description:
       "Led the development of custom entities, weapons, and boss fights in an engaging One Block survival experience. Engineered mechanics and scripted immersive player interactions.",
     links: [
-      { name: "Minecraft Marketplace", link: "https://www.minecraft.net/en-us/marketplace/pdp?id=2d374bf8-38c5-4bce-966e-8b25e2ae6263" },
+      {
+        name: "Minecraft Marketplace",
+        link: "https://www.minecraft.net/en-us/marketplace/pdp?id=2d374bf8-38c5-4bce-966e-8b25e2ae6263",
+      },
     ],
     imgs: [
       "/assets/mcProjs/obe/One_Block_Thumbnail_0.webp",
@@ -284,7 +356,10 @@ const mcProjects = [
     description:
       "Designed a fully functional train system with attachable carts. Developed animation controllers and entity mechanics to ensure seamless movement and interaction.",
     links: [
-      { name: "Minecraft Marketplace", link: "https://www.minecraft.net/en-us/marketplace/pdp?id=8313ab50-e5e6-4eef-81ce-9aba7c65b200" },
+      {
+        name: "Minecraft Marketplace",
+        link: "https://www.minecraft.net/en-us/marketplace/pdp?id=8313ab50-e5e6-4eef-81ce-9aba7c65b200",
+      },
     ],
     imgs: [
       "/assets/mcProjs/train/Trains_Thumbnail_0.webp",
@@ -300,7 +375,10 @@ const mcProjects = [
     description:
       "Created unique gameplay elements, including custom weapons and deep-driven horror mechanics. Developed scripting for jump scares and advanced weapons with math formulas.",
     links: [
-      { name: "Minecraft Marketplace", link: "https://www.minecraft.net/en-us/marketplace/pdp?id=aa1a855c-628e-48f2-bfdb-174bb25c45ab" },
+      {
+        name: "Minecraft Marketplace",
+        link: "https://www.minecraft.net/en-us/marketplace/pdp?id=aa1a855c-628e-48f2-bfdb-174bb25c45ab",
+      },
     ],
     imgs: [
       "/assets/mcProjs/smm.webp",
@@ -318,9 +396,15 @@ const mcProjects = [
     links: [
       { name: "Github", link: "https://github.com/Keyyard/dynamic-torchlight" },
       { name: "MCPEDL", link: "https://mcpedl.com/dynamic-torchlight-addon/" },
-      { name: "CurseForge", link: "https://www.curseforge.com/minecraft-bedrock/addons/dynamic-torch-by-keyyard" },
+      {
+        name: "CurseForge",
+        link: "https://www.curseforge.com/minecraft-bedrock/addons/dynamic-torch-by-keyyard",
+      },
     ],
-    imgs: ["/assets/mcProjs/torch/torch.gif", "/assets/mcProjs/torch/torch2.gif"],
+    imgs: [
+      "/assets/mcProjs/torch/torch.gif",
+      "/assets/mcProjs/torch/torch2.gif",
+    ],
   },
   {
     category: "normal" as const,
@@ -329,7 +413,10 @@ const mcProjects = [
     description:
       "Developed a custom teleportation system inspired by Portal, allowing instant travel between two points using interactive gun mechanics.",
     links: [
-      { name: "Github", link: "https://github.com/Keyyard/PortalGunsAddon-ScriptingAPI" },
+      {
+        name: "Github",
+        link: "https://github.com/Keyyard/PortalGunsAddon-ScriptingAPI",
+      },
     ],
     imgs: ["/assets/mcProjs/portal/portal-appears.gif"],
   },
@@ -341,7 +428,10 @@ const mcProjects = [
       "Developed a custom crafting block that allows players to fuse weapons with unique abilities. Introduced new enchanting table with randomized enchantments and skill-based upgrades.",
     links: [
       { name: "MCPEDL", link: "https://mcpedl.com/weapon-combiner/" },
-      { name: "CurseForge", link: "https://www.curseforge.com/minecraft-bedrock/addons/weapon-combiner" },
+      {
+        name: "CurseForge",
+        link: "https://www.curseforge.com/minecraft-bedrock/addons/weapon-combiner",
+      },
     ],
     imgs: [
       "/assets/mcProjs/wc/keyart.webp",
@@ -356,7 +446,10 @@ const mcProjects = [
     description:
       "Craft the most overpowered crossbows in Minecraft! Features Auto, Modified, Lighting, TNT, Ender, Apocalyptic, and Fire Crossbows. All craftable with much more!",
     links: [
-      { name: "Minecraft Marketplace", link: "https://www.minecraft.net/en-us/marketplace/pdp?id=735e4932-4817-4bc7-860d-6738413aa9a6" },
+      {
+        name: "Minecraft Marketplace",
+        link: "https://www.minecraft.net/en-us/marketplace/pdp?id=735e4932-4817-4bc7-860d-6738413aa9a6",
+      },
     ],
     imgs: [
       "/assets/mcProjs/cbe/Thumbnail_0.webp",
@@ -373,7 +466,10 @@ const mcProjects = [
     description:
       "Tinker with brand new redstone tech! Features 11 NEW Redstone Components with brand new machines and mechanisms. Includes interactive demonstrations at spawn.",
     links: [
-      { name: "Minecraft Marketplace", link: "https://www.minecraft.net/en-us/marketplace/pdp?id=87346cd5-68e7-4a6d-b0fd-b935ed1c5d34" },
+      {
+        name: "Minecraft Marketplace",
+        link: "https://www.minecraft.net/en-us/marketplace/pdp?id=87346cd5-68e7-4a6d-b0fd-b935ed1c5d34",
+      },
     ],
     imgs: [
       "/assets/mcProjs/rse/Thumbnail_0 (1).webp",
@@ -390,7 +486,10 @@ const mcProjects = [
     description:
       "Ready to blow your world into pieces? Explore the biggest and baddest TNT explosions in TNT EXPERIMENTS. Try and pass all 21 TNT levels and create your own TNT experiment.",
     links: [
-      { name: "Minecraft Marketplace", link: "https://www.minecraft.net/en-us/marketplace/pdp?id=85db0b50-c05d-4684-82f7-bda15541ebda" },
+      {
+        name: "Minecraft Marketplace",
+        link: "https://www.minecraft.net/en-us/marketplace/pdp?id=85db0b50-c05d-4684-82f7-bda15541ebda",
+      },
     ],
     imgs: [
       "assets/mcProjs/tnt/Thumbnail_0.webp",
@@ -405,7 +504,10 @@ const mcProjects = [
     description:
       "Step into a medieval world filled with side quests! Features 7 3D items, medieval cannon with unique behaviors, 4 custom NPCs, and a medieval castle at spawn.",
     links: [
-      { name: "Minecraft Marketplace", link: "https://www.minecraft.net/en-us/marketplace/pdp?id=7f3ced8b-5d8c-483b-a516-05aff064231d" },
+      {
+        name: "Minecraft Marketplace",
+        link: "https://www.minecraft.net/en-us/marketplace/pdp?id=7f3ced8b-5d8c-483b-a516-05aff064231d",
+      },
     ],
     imgs: [
       "/assets/mcProjs/3dme/g2crafted-3d-medieval-experience-thumbnail-ea2dbbec5214a3c4-800.webp",
@@ -419,7 +521,10 @@ const mcProjects = [
     description:
       "Embrace the legend of demons! Features 12 devil skins with unique horn accessories. Developed by Keyyard Studio in partnership with G2Crafted.",
     links: [
-      { name: "Minecraft Marketplace", link: "https://www.minecraft.net/en-us/marketplace/pdp?id=47c862c8-98c1-497c-94a5-3959eea3fec5" },
+      {
+        name: "Minecraft Marketplace",
+        link: "https://www.minecraft.net/en-us/marketplace/pdp?id=47c862c8-98c1-497c-94a5-3959eea3fec5",
+      },
     ],
     imgs: ["/assets/mcProjs/dl/Demonic_Legends_Thumbnail.webp"],
   },
@@ -430,7 +535,10 @@ const mcProjects = [
     description:
       "Suit up for Halloween with our Fright Night pack. Includes 12 spooky skins. Developed by Keyyard Studio in partnership with G2Crafted.",
     links: [
-      { name: "Minecraft Marketplace", link: "https://www.minecraft.net/en-us/marketplace/pdp?id=7ddad910-7c39-46c0-8e6d-8ed38f870d04" },
+      {
+        name: "Minecraft Marketplace",
+        link: "https://www.minecraft.net/en-us/marketplace/pdp?id=7ddad910-7c39-46c0-8e6d-8ed38f870d04",
+      },
     ],
     imgs: ["/assets/mcProjs/fn/FrightNight_Thumbnail.webp"],
   },
@@ -445,9 +553,15 @@ const mcCommunityProjects = [
       "CLI tool to scaffold Minecraft Bedrock add-on workspaces in seconds. Generates structured folders, manifests, and includes Microsoft's official compiler. Used by developers to skip boilerplate and jump straight into scripting.",
     icon: "assets/Projs/bedrockcli/icon.webp",
     links: [
-      { name: "Github",      link: "https://github.com/Keyyard/create-mc-bedrock-cli" },
-      { name: "NPM Package", link: "https://www.npmjs.com/package/create-mc-bedrock" },
-      { name: "Website",     link: "https://bedrockcli.keyyard.xyz" },
+      {
+        name: "Github",
+        link: "https://github.com/Keyyard/create-mc-bedrock-cli",
+      },
+      {
+        name: "NPM Package",
+        link: "https://www.npmjs.com/package/create-mc-bedrock",
+      },
+      { name: "Website", link: "https://bedrockcli.keyyard.xyz" },
     ],
     imgs: ["assets/Projs/bedrockcli/gif.gif"],
     tags: ["TypeScript", "Node.js", "CLI", "Developer Tools"],
@@ -459,8 +573,14 @@ const mcCommunityProjects = [
       "A VS Code extension providing code completion, validations, diagnostics, formatters, and creation tools for Minecraft Bedrock development. One of the most-used tools in the Bedrock dev community.",
     icon: "https://blockceptionltd.gallerycdn.vsassets.io/extensions/blockceptionltd/blockceptionvscodeminecraftbedrockdevelopmentextension/8.0.39/1749586201427/Microsoft.VisualStudio.Services.Icons.Default",
     links: [
-      { name: "Github",            link: "https://github.com/Blockception/VSCode-Bedrock-Development-Extension" },
-      { name: "VSCode Marketplace", link: "https://marketplace.visualstudio.com/items/?itemName=BlockceptionLtd.blockceptionvscodeminecraftbedrockdevelopmentextension" },
+      {
+        name: "Github",
+        link: "https://github.com/Blockception/VSCode-Bedrock-Development-Extension",
+      },
+      {
+        name: "VSCode Marketplace",
+        link: "https://marketplace.visualstudio.com/items/?itemName=BlockceptionLtd.blockceptionvscodeminecraftbedrockdevelopmentextension",
+      },
     ],
     imgs: ["/assets/Projs/blockception/overview.gif"],
     tags: ["TypeScript", "VSCode", "Developer Tools"],
@@ -472,7 +592,7 @@ const mcCommunityProjects = [
       "The go-to knowledge-sharing platform for Minecraft Bedrock Add-On development. Contains documentation, tutorials, and community-driven guides. Contributed articles and technical documentation.",
     icon: "/assets/Projs/wiki/logo.webp",
     links: [
-      { name: "Github",       link: "https://github.com/Bedrock-OSS/bedrock-wiki" },
+      { name: "Github", link: "https://github.com/Bedrock-OSS/bedrock-wiki" },
       { name: "Wiki Website", link: "https://wiki.bedrock.dev/" },
     ],
     imgs: ["/assets/Projs/wiki/wiki.webp"],
@@ -486,15 +606,16 @@ const aboutPlayerInfo = [
   "I'm a developer who builds from curiosity — not from tutorials. I started modding Minecraft in 2018 with nothing but a text editor in an iPad and the stubbornness to figure things out. That instinct to learn through building has defined everything since.",
   "I'm drawn to systems that demand both precision and creativity, where I can use my logical thinking with creativity. Scripting a complex boss, designing physics-driven gameplay, or architecting a developer toolchain — I care deeply about the craft behind all of it.",
   "Being multidisciplinary isn't a side effect for me, it's the point. I've spent most of my time learning and working across Bedrock scripting, software development, and various non-technical fields because I believe every domain sharpens your thinking in the others.",
-"I do my best work on ambitious projects with talented people who care about making their dreams a reality. If you're building something that pushes limits — I want to be part of it."];
+  "I do my best work on ambitious projects with talented people who care about making their dreams a reality. If you're building something that pushes limits — I want to be part of it.",
+];
 
 // ─── ABOUT — MINECRAFT SKILL BARS ────────────────────────────
 const mcSkillsData = [
-  { label: "Bedrock Entity Behavior",          percent: 98 },
-  { label: "Bedrock Scripting API",            percent: 99  },
-  { label: "Bedrock Items Functions", percent: 99  },
-  { label: "Bedrock Animation Manipulatation", percent: 93  },
-  { label: "Bedrock Blocks Features", percent: 78  },
+  { label: "Bedrock Entity Behavior", percent: 98 },
+  { label: "Bedrock Scripting API", percent: 99 },
+  { label: "Bedrock Items Functions", percent: 99 },
+  { label: "Bedrock Animation Manipulatation", percent: 93 },
+  { label: "Bedrock Blocks Features", percent: 78 },
 ];
 
 // ─── ABOUT — TECH STACK ──────────────────────────────────────
@@ -541,7 +662,7 @@ const techStackData = [
       {
         label: "Video Editing",
         value: "DaVinci Resolve, CapCut",
-      }
+      },
     ],
   },
   {
@@ -556,22 +677,31 @@ const techStackData = [
 ];
 
 // ─── TROPHIES ─────────────────────────────────────────────────
-// Each trophy is a milestone displayed as a 3D model on /trophies.
-// shape: "gem" | "cup" | "star" | "sword" | "medal" — which placeholder geometry to render
-// glowColor: hex color for the outline glow and model tint
-// modelUrl: leave "" until a Blockbench GLB is ready
+// Each trophy is a milestone displayed as a 2D image on /trophies.
+// image: path to the PNG trophy image in /public/assets/trophies/
+//        Replace these placeholder PNGs with final artwork as needed.
+// glowColor: hex color for the outline glow
 const trophiesData: Array<{
-  id: string; name: string; subtitle: string; description: string; date: string;
+  id: string;
+  name: string;
+  subtitle: string;
+  description: string;
+  date: string;
   shape: "gem" | "cup" | "star" | "sword" | "medal";
-  glowColor: string; link?: string; tags?: string[];
+  image: string;
+  glowColor: string;
+  link?: string;
+  tags?: string[];
 }> = [
   {
     id: "cut-the-rope-dlc",
     name: "DLC Developer",
     subtitle: "Cut the Rope × Minecraft",
-    description: "Developed the official Cut the Rope × Minecraft DLC in partnership with Mushco, Microsoft, Mojang, and ZeptoLab — available worldwide on the Minecraft Marketplace.",
+    description:
+      "Developed the official Cut the Rope × Minecraft DLC in partnership with Mushco, Microsoft, Mojang, and ZeptoLab — available worldwide on the Minecraft Marketplace.",
     date: "2024 — 2025",
     shape: "gem",
+    image: "/assets/trophies/dlc-developer.png",
     glowColor: "#4ECDC4",
     link: "https://www.minecraft.net/en-us/marketplace/pdp/mush-co/cut-the-rope/b5c52ceb-8b81-4f97-9aae-f5fa668c0278",
     tags: ["Official DLC", "Microsoft", "Mojang", "ZeptoLab"],
@@ -580,9 +710,11 @@ const trophiesData: Array<{
     id: "ms-partner",
     name: "Microsoft Partner",
     subtitle: "Official Marketplace Partner",
-    description: "Became an Official Microsoft Marketplace Partner through G2Crafted, establishing Keyyard Studio as a trusted brand in the Minecraft ecosystem.",
+    description:
+      "Became an Official Microsoft Marketplace Partner through G2Crafted, establishing Keyyard Studio as a trusted brand in the Minecraft ecosystem.",
     date: "Aug 2021",
     shape: "cup",
+    image: "/assets/trophies/ms-partner.png",
     glowColor: "#F5C542",
     link: "https://www.bedrockexplorer.com/@g2crafted",
     tags: ["Microsoft", "Official Partner", "Marketplace"],
@@ -591,9 +723,11 @@ const trophiesData: Array<{
     id: "5m-downloads",
     name: "5M Downloads",
     subtitle: "Community Milestone",
-    description: "Reached 5 million total downloads across all community add-on projects. Tree Capitator & Vein Miner (2M+) and Actual Guns MCBE (3M+) lead the count.",
+    description:
+      "Reached 5 million total downloads across all community add-on projects. Tree Capitator & Vein Miner (2M+) and Actual Guns MCBE (3M+) lead the count.",
     date: "2023",
     shape: "star",
+    image: "/assets/trophies/5m-downloads.png",
     glowColor: "#9B59B6",
     tags: ["Community", "Downloads", "Open Source"],
   },
@@ -601,9 +735,11 @@ const trophiesData: Array<{
     id: "preston-collab",
     name: "Preston Collab",
     subtitle: "31M Subscriber Partnership",
-    description: "Collaborated with PrestonPlayz (31M+ subscribers) on official Minecraft Marketplace content via Fire Games — one of the biggest creator partnerships in my career.",
+    description:
+      "Collaborated with PrestonPlayz (31M+ subscribers) on official Minecraft Marketplace content via Fire Games — one of the biggest creator partnerships in my career.",
     date: "2024",
     shape: "sword",
+    image: "/assets/trophies/preston-collab.png",
     glowColor: "#E74C3C",
     link: "https://www.youtube.com/@PrestonPlayz",
     tags: ["Content Creator", "Fire Games", "31M Subscribers"],
@@ -612,9 +748,11 @@ const trophiesData: Array<{
     id: "bedrock-oss",
     name: "Bedrock OSS",
     subtitle: "Open Source Contributor",
-    description: "Organization member and project lead at Bedrock OSS, contributing to the Bedrock Wiki and open-source tooling used by the entire Minecraft Bedrock dev community.",
+    description:
+      "Organization member and project lead at Bedrock OSS, contributing to the Bedrock Wiki and open-source tooling used by the entire Minecraft Bedrock dev community.",
     date: "Jun 2025",
     shape: "medal",
+    image: "/assets/trophies/bedrock-oss.png",
     glowColor: "#78B04A",
     link: "https://github.com/Bedrock-OSS/",
     tags: ["Open Source", "Community", "Wiki"],
@@ -623,8 +761,20 @@ const trophiesData: Array<{
 
 // ─── ABOUT — CREDENTIALS & AWARDS ────────────────────────────
 // Update these with your real credentials. Each entry: icon, category, title, detail, date
-const academicData: Array<{ icon: string; category: string; title: string; detail: string; date: string }> = [
-   { icon: "🏆", category: "Coming soon",       title: "Awards",       detail: "",  date: "" },
+const academicData: Array<{
+  icon: string;
+  category: string;
+  title: string;
+  detail: string;
+  date: string;
+}> = [
+  {
+    icon: "🏆",
+    category: "Coming soon",
+    title: "Awards",
+    detail: "",
+    date: "",
+  },
   // { icon: "🌐", category: "Language",    title: "IELTS Academic",   detail: "Band —",   date: "—" },
   // { icon: "🏆", category: "Award",       title: "Award Name",       detail: "Details",  date: "Year" },
   // { icon: "📜", category: "Certificate", title: "Certificate Name", detail: "Issuer",   date: "Year" },
@@ -642,9 +792,15 @@ const Projects = [
       "CLI tool to create Minecraft projects workspaces with structured folders and files. It includes Microsoft's Compiler",
     icon: "assets/Projs/bedrockcli/icon.webp",
     links: [
-      { name: "Github",      link: "https://github.com/Keyyard/create-mc-bedrock-cli" },
-      { name: "NPM Package", link: "https://www.npmjs.com/package/create-mc-bedrock" },
-      { name: "Website",     link: "https://bedrockcli.keyyard.xyz" },
+      {
+        name: "Github",
+        link: "https://github.com/Keyyard/create-mc-bedrock-cli",
+      },
+      {
+        name: "NPM Package",
+        link: "https://www.npmjs.com/package/create-mc-bedrock",
+      },
+      { name: "Website", link: "https://bedrockcli.keyyard.xyz" },
     ],
     imgs: ["assets/Projs/bedrockcli/gif.gif"],
     tags: ["Node.js", "CLI", "Minecraft", "Developer Tools", "Productivity"],
@@ -658,11 +814,23 @@ const Projects = [
       "An extension that provides code completion, validations, formatters, diagnostics, cheat-sheets, code-actions, creation of files, and development tools to help develop Minecraft Bedrock content.",
     icon: "https://blockceptionltd.gallerycdn.vsassets.io/extensions/blockceptionltd/blockceptionvscodeminecraftbedrockdevelopmentextension/8.0.39/1749586201427/Microsoft.VisualStudio.Services.Icons.Default",
     links: [
-      { name: "Github",            link: "https://github.com/Blockception/VSCode-Bedrock-Development-Extension" },
-      { name: "VSCode Marketplace", link: "https://marketplace.visualstudio.com/items/?itemName=BlockceptionLtd.blockceptionvscodeminecraftbedrockdevelopmentextension" },
+      {
+        name: "Github",
+        link: "https://github.com/Blockception/VSCode-Bedrock-Development-Extension",
+      },
+      {
+        name: "VSCode Marketplace",
+        link: "https://marketplace.visualstudio.com/items/?itemName=BlockceptionLtd.blockceptionvscodeminecraftbedrockdevelopmentextension",
+      },
     ],
     imgs: ["/assets/Projs/blockception/overview.gif"],
-    tags: ["TypeScript", "VSCode", "Minecraft", "Developer Tools", "Productivity"],
+    tags: [
+      "TypeScript",
+      "VSCode",
+      "Minecraft",
+      "Developer Tools",
+      "Productivity",
+    ],
     status: "Live",
     featured: false,
   },
@@ -673,7 +841,7 @@ const Projects = [
       "A knowledge-sharing website for Minecraft Bedrock Add-Ons, containing documentation, tutorials, and general how-to information.",
     icon: "/assets/Projs/wiki/logo.webp",
     links: [
-      { name: "Github",       link: "https://github.com/Bedrock-OSS/bedrock-wiki" },
+      { name: "Github", link: "https://github.com/Bedrock-OSS/bedrock-wiki" },
       { name: "Wiki Website", link: "https://wiki.bedrock.dev/" },
     ],
     imgs: ["/assets/Projs/wiki/wiki.webp"],
@@ -688,8 +856,8 @@ const Projects = [
       "Today Notes helps you manage your daily tasks effortlessly. Stay focused on what matters today, complete tasks efficiently, and boost your productivity.",
     icon: "/assets/Projs/today/icon.webp",
     links: [
-      { name: "Github",   link: "https://github.com/Keyyard/today-notes" },
-      { name: "Product",  link: "https://today-notes.keyyard.xyz" },
+      { name: "Github", link: "https://github.com/Keyyard/today-notes" },
+      { name: "Product", link: "https://today-notes.keyyard.xyz" },
     ],
     imgs: ["assets/Projs/today/4.webp"],
     tags: ["React", "PWA", "TypeScript", "Productivity"],
