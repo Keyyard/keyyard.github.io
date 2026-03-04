@@ -1,7 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import dynamic from "next/dynamic";
-import { aboutPlayerInfo, mcSkillsData, techStackData } from "../../data";
+import { aboutPlayerInfo, mcSkillsData, techStackData, academicData } from "../../data";
 
 const HeadRender = dynamic(() => import("../layout/MyHead"), {
   ssr: false,
@@ -24,10 +24,10 @@ function SkillBar({ label, percent, delay = 0 }: { label: string; percent: numbe
   return (
     <div ref={ref}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 5 }}>
-        <span style={{ fontFamily: "var(--font-primary)", fontSize: "0.82rem", color: "var(--text-dim)" }}>
+        <span style={{ fontFamily: "var(--font-primary)", fontSize: "0.92rem", color: "var(--text-dim)" }}>
           {label}
         </span>
-        <span style={{ fontFamily: "var(--font-headings)", fontSize: "0.42rem", color: "var(--grass-glow)" }}>
+        <span style={{ fontFamily: "var(--font-headings)", fontSize: "0.62rem", color: "var(--grass-glow)" }}>
           {percent}%
         </span>
       </div>
@@ -104,6 +104,45 @@ const About = () => {
           </div>
         </div>
 
+        {/* Credentials & Awards */}
+        {academicData.length > 0 && (
+          <div className="card" style={{ marginBottom: 24 }}>
+            <div style={{ fontFamily: "var(--font-headings)", fontSize: "1rem", color: "var(--gold)", letterSpacing: "0.12em", marginBottom: 20 }}>
+              ▶ CREDENTIALS & AWARDS
+            </div>
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              {academicData.map((item, i) => (
+                <div
+                  key={i}
+                  style={{
+                    display: "flex", alignItems: "flex-start", gap: 14,
+                    padding: "14px 0",
+                    borderBottom: i < academicData.length - 1 ? "1px solid rgba(255,255,255,0.05)" : "none",
+                  }}
+                >
+                  <span style={{ fontSize: "1.4rem", lineHeight: 1, marginTop: 2, flexShrink: 0 }}>{item.icon}</span>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", marginBottom: 4 }}>
+                      <span style={{ fontFamily: "var(--font-primary)", fontSize: "0.95rem", fontWeight: 600, color: "var(--text-main)" }}>
+                        {item.title}
+                      </span>
+                      <span className="mc-tag" style={{ color: "var(--gold)", borderColor: "rgba(245,197,66,0.3)", background: "rgba(245,197,66,0.08)" }}>
+                        {item.category}
+                      </span>
+                      <span style={{ fontFamily: "var(--font-vt323)", fontSize: "0.95rem", color: "var(--text-muted)", marginLeft: "auto" }}>
+                        {item.date}
+                      </span>
+                    </div>
+                    <p style={{ fontFamily: "var(--font-primary)", fontSize: "0.88rem", color: "var(--text-dim)", margin: 0 }}>
+                      {item.detail}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Tech Stack */}
         <h3 className="subsection-title" style={{ marginBottom: 20 }}>Tech Stack</h3>
         <div className="grid-two-col" style={{ marginBottom: 40 }}>
@@ -115,7 +154,7 @@ const About = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.07 * index }}
             >
-              <h4 style={{ fontFamily: "var(--font-headings)", fontSize: "0.85rem", color: "var(--grass-bright)", letterSpacing: "0.08em", marginBottom: 12 }}>
+              <h4 style={{ fontFamily: "var(--font-headings)", fontSize: "1rem", color: "var(--grass-bright)", letterSpacing: "0.08em", marginBottom: 12 }}>
                 {stack.title}
               </h4>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>

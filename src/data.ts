@@ -7,6 +7,27 @@ const navs = [
   { name: "Contact",     shortName: "Contact", link: "/#contact",     sectionId: "contact" },
 ];
 
+// ─── BIRTHDAY / DOB ──────────────────────────────────────────
+const DOB = new Date(2004, 8, 30); // September 30, 2004
+
+function getBirthdayXP() {
+  const now = new Date();
+  const thisYearBday = new Date(now.getFullYear(), DOB.getMonth(), DOB.getDate());
+  const isBirthday = now.getMonth() === DOB.getMonth() && now.getDate() === DOB.getDate();
+  const lastBday = now >= thisYearBday
+    ? thisYearBday
+    : new Date(now.getFullYear() - 1, DOB.getMonth(), DOB.getDate());
+  const nextBday = now >= thisYearBday
+    ? new Date(now.getFullYear() + 1, DOB.getMonth(), DOB.getDate())
+    : thisYearBday;
+  const age = now.getFullYear() - DOB.getFullYear() - (now < thisYearBday ? 1 : 0);
+  const xpPercent = isBirthday
+    ? 0
+    : Math.round((now.getTime() - lastBday.getTime()) / (nextBday.getTime() - lastBday.getTime()) * 100);
+  return { age, xpPercent, isBirthday, nextLevel: age + 1 };
+}
+const _birthdayXP = getBirthdayXP();
+
 // ─── HERO DATA ───────────────────────────────────────────────
 const _startYear = 2018;
 const _currentYear = new Date().getFullYear();
@@ -59,10 +80,12 @@ const heroData = {
     { text: "⛏ View My Work", action: "projects", variant: "primary" },
     { text: "✉ Contact Me",   action: "contact",  variant: "secondary" },
   ] as { text: string; action: string; variant: "primary" | "secondary" }[],
-  xpPercent: 78,
+  xpPercent: _birthdayXP.xpPercent,
   xpBar: {
-    label: `Dev Level · ${_yearsXp} years`,
-    progressText: "78% to next level",
+    label: `LVL ${_birthdayXP.age} · KEYYARD`,
+    progressText: _birthdayXP.isBirthday
+      ? `★ HAPPY BIRTHDAY! LVL UP! ★`
+      : `${_birthdayXP.xpPercent}% to LVL ${_birthdayXP.nextLevel}`,
   },
 };
 
@@ -532,6 +555,16 @@ const techStackData = [
   },
 ];
 
+// ─── ABOUT — CREDENTIALS & AWARDS ────────────────────────────
+// Update these with your real credentials. Each entry: icon, category, title, detail, date
+const academicData: Array<{ icon: string; category: string; title: string; detail: string; date: string }> = [
+   { icon: "🏆", category: "Coming soon",       title: "Awards",       detail: "",  date: "" },
+  // { icon: "🌐", category: "Language",    title: "IELTS Academic",   detail: "Band —",   date: "—" },
+  // { icon: "🏆", category: "Award",       title: "Award Name",       detail: "Details",  date: "Year" },
+  // { icon: "📜", category: "Certificate", title: "Certificate Name", detail: "Issuer",   date: "Year" },
+  // { icon: "🎓", category: "Education",   title: "School / Degree",  detail: "Details",  date: "Year" },
+];
+
 // ─── LEGACY (kept for compatibility) ─────────────────────────
 const aboutMeData = aboutPlayerInfo.map((text) => ({ icon: "", text }));
 
@@ -624,5 +657,6 @@ export {
   aboutPlayerInfo,
   mcSkillsData,
   techStackData,
+  academicData,
   introductionText,
 };

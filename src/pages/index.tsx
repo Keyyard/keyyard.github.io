@@ -91,6 +91,78 @@ export default function Home() {
     return () => window.removeEventListener("keydown", handleKey);
   }, []);
 
+  // Birthday toast — September 30, 2004
+  useEffect(() => {
+    const now = new Date();
+    if (now.getMonth() !== 8 || now.getDate() !== 30) return;
+    const key = `bday-toast-${now.getFullYear()}`;
+    if (localStorage.getItem(key)) return;
+    localStorage.setItem(key, "1");
+    const age = now.getFullYear() - 2004;
+    const tweetText = encodeURIComponent(`Happy Birthday @keyyard! 🎂🎉 You leveled up to LVL ${age}!`);
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${tweetText}`;
+    const igUrl = "https://www.instagram.com/keyyard/";
+    const timer = setTimeout(() => {
+      toast.custom(
+        (t) => (
+          <div style={{
+            display: "flex", flexDirection: "column", gap: 12,
+            background: "#1A1A1F",
+            border: "2px solid #4ECDC4",
+            boxShadow: "0 0 24px rgba(78,205,196,0.45), 0 4px 24px rgba(0,0,0,0.8)",
+            padding: "16px 20px",
+            opacity: t.visible ? 1 : 0,
+            transition: "opacity 0.3s",
+            clipPath: "polygon(8px 0%,calc(100% - 8px) 0%,100% 8px,100% calc(100% - 8px),calc(100% - 8px) 100%,8px 100%,0% calc(100% - 8px),0% 8px)",
+            maxWidth: 360,
+            position: "relative",
+          }}>
+            <button
+              onClick={() => toast.dismiss(t.id)}
+              style={{ position: "absolute", top: 8, right: 10, background: "transparent", color: "#7A6A55", fontSize: "0.65rem", fontFamily: "'Press Start 2P',monospace", cursor: "pointer", padding: 0, border: "none" }}
+            >✕</button>
+            <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+              <span style={{ fontSize: 34 }}>🎂</span>
+              <div>
+                <div style={{ fontFamily: "'Press Start 2P',monospace", fontSize: "0.38rem", color: "#4ECDC4", letterSpacing: "0.5px", marginBottom: 4 }}>
+                  ACHIEVEMENT GET!
+                </div>
+                <div style={{ fontFamily: "'Press Start 2P',monospace", fontSize: "0.6rem", color: "#F0EAD6" }}>
+                  Happy Birthday!
+                </div>
+                <div style={{ fontFamily: "VT323,monospace", fontSize: "1rem", color: "#A3D977", marginTop: 3 }}>
+                  You leveled up to LVL {age}!
+                </div>
+              </div>
+            </div>
+            <div style={{ display: "flex", gap: 8 }}>
+              <a href={twitterUrl} target="_blank" rel="noopener noreferrer" style={{
+                fontFamily: "'Press Start 2P',monospace", fontSize: "0.38rem",
+                padding: "7px 10px",
+                background: "rgba(29,161,242,0.12)",
+                border: "1px solid rgba(29,161,242,0.5)",
+                color: "#1DA1F2",
+                textDecoration: "none",
+                clipPath: "polygon(2px 0,calc(100% - 2px) 0,100% 2px,100% calc(100% - 2px),calc(100% - 2px) 100%,2px 100%,0 calc(100% - 2px),0 2px)",
+              }}>𝕏 Tweet Wishes</a>
+              <a href={igUrl} target="_blank" rel="noopener noreferrer" style={{
+                fontFamily: "'Press Start 2P',monospace", fontSize: "0.38rem",
+                padding: "7px 10px",
+                background: "rgba(225,48,108,0.12)",
+                border: "1px solid rgba(225,48,108,0.5)",
+                color: "#E1306C",
+                textDecoration: "none",
+                clipPath: "polygon(2px 0,calc(100% - 2px) 0,100% 2px,100% calc(100% - 2px),calc(100% - 2px) 100%,2px 100%,0 calc(100% - 2px),0 2px)",
+              }}>📸 Instagram</a>
+            </div>
+          </div>
+        ),
+        { duration: Infinity, position: "top-center" }
+      );
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
       <Bg />
