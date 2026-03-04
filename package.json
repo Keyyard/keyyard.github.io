@@ -13,6 +13,7 @@
   "dependencies": {
     "@react-three/drei": "^9.111.3",
     "@react-three/fiber": "^8.17.6",
+    "@react-three/postprocessing": "^2.19.1",
     "@types/three": "^0.167.2",
     "@vercel/analytics": "^1.4.1",
     "date-fns": "^2.29.3",
@@ -26,7 +27,8 @@
     "react-hot-toast": "^2.4.1",
     "react-intersection-observer": "^9.13.1",
     "react-responsive-carousel": "^3.2.23",
-    "sanitize-html": "^2.17.0"
+    "sanitize-html": "^2.17.0",
+    "three": "^0.167.1"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^15.4.4",

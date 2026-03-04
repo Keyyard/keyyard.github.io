@@ -555,6 +555,72 @@ const techStackData = [
   },
 ];
 
+// ─── TROPHIES ─────────────────────────────────────────────────
+// Each trophy is a milestone displayed as a 3D model on /trophies.
+// shape: "gem" | "cup" | "star" | "sword" | "medal" — which placeholder geometry to render
+// glowColor: hex color for the outline glow and model tint
+// modelUrl: leave "" until a Blockbench GLB is ready
+const trophiesData: Array<{
+  id: string; name: string; subtitle: string; description: string; date: string;
+  shape: "gem" | "cup" | "star" | "sword" | "medal";
+  glowColor: string; link?: string; tags?: string[];
+}> = [
+  {
+    id: "cut-the-rope-dlc",
+    name: "DLC Developer",
+    subtitle: "Cut the Rope × Minecraft",
+    description: "Developed the official Cut the Rope × Minecraft DLC in partnership with Mushco, Microsoft, Mojang, and ZeptoLab — available worldwide on the Minecraft Marketplace.",
+    date: "2024 — 2025",
+    shape: "gem",
+    glowColor: "#4ECDC4",
+    link: "https://www.minecraft.net/en-us/marketplace/pdp/mush-co/cut-the-rope/b5c52ceb-8b81-4f97-9aae-f5fa668c0278",
+    tags: ["Official DLC", "Microsoft", "Mojang", "ZeptoLab"],
+  },
+  {
+    id: "ms-partner",
+    name: "Microsoft Partner",
+    subtitle: "Official Marketplace Partner",
+    description: "Became an Official Microsoft Marketplace Partner through G2Crafted, establishing Keyyard Studio as a trusted brand in the Minecraft ecosystem.",
+    date: "Aug 2021",
+    shape: "cup",
+    glowColor: "#F5C542",
+    link: "https://www.bedrockexplorer.com/@g2crafted",
+    tags: ["Microsoft", "Official Partner", "Marketplace"],
+  },
+  {
+    id: "5m-downloads",
+    name: "5M Downloads",
+    subtitle: "Community Milestone",
+    description: "Reached 5 million total downloads across all community add-on projects. Tree Capitator & Vein Miner (2M+) and Actual Guns MCBE (3M+) lead the count.",
+    date: "2023",
+    shape: "star",
+    glowColor: "#9B59B6",
+    tags: ["Community", "Downloads", "Open Source"],
+  },
+  {
+    id: "preston-collab",
+    name: "Preston Collab",
+    subtitle: "31M Subscriber Partnership",
+    description: "Collaborated with PrestonPlayz (31M+ subscribers) on official Minecraft Marketplace content via Fire Games — one of the biggest creator partnerships in my career.",
+    date: "2024",
+    shape: "sword",
+    glowColor: "#E74C3C",
+    link: "https://www.youtube.com/@PrestonPlayz",
+    tags: ["Content Creator", "Fire Games", "31M Subscribers"],
+  },
+  {
+    id: "bedrock-oss",
+    name: "Bedrock OSS",
+    subtitle: "Open Source Contributor",
+    description: "Organization member and project lead at Bedrock OSS, contributing to the Bedrock Wiki and open-source tooling used by the entire Minecraft Bedrock dev community.",
+    date: "Jun 2025",
+    shape: "medal",
+    glowColor: "#78B04A",
+    link: "https://github.com/Bedrock-OSS/",
+    tags: ["Open Source", "Community", "Wiki"],
+  },
+];
+
 // ─── ABOUT — CREDENTIALS & AWARDS ────────────────────────────
 // Update these with your real credentials. Each entry: icon, category, title, detail, date
 const academicData: Array<{ icon: string; category: string; title: string; detail: string; date: string }> = [
@@ -658,5 +724,6 @@ export {
   mcSkillsData,
   techStackData,
   academicData,
+  trophiesData,
   introductionText,
 };

@@ -49,11 +49,10 @@ function FeaturedCard({ proj }: { proj: Project }) {
   return (
     <motion.div
       ref={ref}
-      className="mc-card mc-card-featured"
+      className="mc-card mc-card-featured featured-card-grid"
       initial={{ opacity: 0, y: 28 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5 }}
-      style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 0, minHeight: 280 }}
     >
       {/* Left: image */}
       <div style={{ overflow: "hidden", background: "#0D0D12" }}>

@@ -58,6 +58,8 @@
   --color-text-light:   var(--text-dim);
   --color-accent-blue:  var(--diamond);
   --color-accent-blue-hover: #3ABDB4;
+  --color-accent-brown: var(--dirt);
+  --color-accent-brown-hover: #9B7349;
   --color-highlight:    rgba(78, 205, 196, 0.1);
   --color-text-highlight: var(--grass-glow);
 
@@ -465,6 +467,17 @@
     transform: translateY(-2px);
   }
 
+  .btn-mc-trophies {
+    background: var(--dirt);
+    color: #fff;
+    box-shadow: 0 4px 0 rgba(78,205,196,0.7), 0 6px 16px rgba(78,205,196,0.5);
+  }
+  .btn-mc-trophies:hover {
+    background: var(--color-accent-brown-hover);
+    box-shadow: 0 4px 0 rgba(78,205,196,0.9), 0 8px 24px rgba(78,205,196,0.7);
+    transform: translateY(-2px);
+  }
+
   /* ── Section styles ──────────────────────────────── */
   .section { @apply min-h-[95vh]; }
   .section-hero { @apply flex flex-col items-center; min-height: 100vh; }
@@ -628,6 +641,38 @@
     border: 1px solid rgba(255,255,255,0.1);
     color: var(--text-dim);
     clip-path: polygon(0 2px, 2px 0, calc(100% - 2px) 0, 100% 2px, 100% calc(100% - 2px), calc(100% - 2px) 100%, 2px 100%, 0 calc(100% - 2px));
+  }
+
+  /* ── Featured card responsive grid ──────────────── */
+  .featured-card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 280px;
+  }
+  @media (max-width: 600px) {
+    .featured-card-grid {
+      grid-template-columns: 1fr;
+      min-height: unset;
+    }
+    .featured-card-grid > div:first-child {
+      min-height: 200px;
+      max-height: 260px;
+    }
+  }
+
+  /* ── Hero stat cards balanced grid ──────────────── */
+  .stat-cards-row {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (max-width: 580px) {
+    .stat-cards-row {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   /* ── Layout helpers ──────────────────────────────── */

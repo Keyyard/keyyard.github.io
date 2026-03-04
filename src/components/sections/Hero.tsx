@@ -79,7 +79,7 @@ const Hero = memo(() => {
         </div>
 
         {/* Impact stats */}
-        <div role="list" style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center", marginBottom: 52, animation: "fadeUp 0.7s ease 0.7s both" }}>
+        <div role="list" className="stat-cards-row" style={{ marginBottom: 52, animation: "fadeUp 0.7s ease 0.7s both" }}>
           {heroData.statCards.map((card, i) => (
             <div className={`stat-card ${card.cssClass}`} role="listitem" title={card.title} key={i}>
               <div className="stat-block-icon" style={{ background: card.blockBg, boxShadow: card.blockShadow }} aria-hidden="true" />

@@ -5,6 +5,7 @@ const NAV_ICONS: Record<string, string> = {
   hero:        "🏠",
   about:       "📖",
   experiences: "⚔️",
+  trophies:    "🏆",
   projects:    "🗂️",
   contact:     "📬",
 };
