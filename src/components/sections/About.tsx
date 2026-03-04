@@ -154,7 +154,7 @@ const About = () => {
               Move mouse · Click to animate
             </p>
             {/* Trophy Cabinet CTA - WIP */}
-            {/* <div
+            <div
               style={{
                 textAlign: "center",
                 marginTop: 20 ,
@@ -168,7 +168,7 @@ const About = () => {
               >
                 View Trophy Cabinet
               </a>
-            </div> */}
+            </div>
           </div>
 
           {/* Player Info */}
