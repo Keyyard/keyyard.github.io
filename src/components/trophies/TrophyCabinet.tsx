@@ -162,7 +162,7 @@ function TrophyModal({
             "polygon(8px 0,calc(100% - 8px) 0,100% 8px,100% calc(100% - 8px),calc(100% - 8px) 100%,8px 100%,0 calc(100% - 8px),0 8px)",
         }}
       >
-          {/* 2D Trophy image panel */}
+        {/* 2D Trophy image panel */}
         <div
           style={{
             width: isNarrow ? "100%" : "42%",
