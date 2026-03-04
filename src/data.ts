@@ -677,9 +677,9 @@ const techStackData = [
 ];
 
 // ─── TROPHIES ─────────────────────────────────────────────────
-// Each trophy is a milestone displayed as a 2D icon on /trophies.
-// icon: emoji character shown as the 2D trophy image
-// image: optional path to a PNG trophy image in /public/assets/trophies/
+// Each trophy is a milestone displayed as a 2D image on /trophies.
+// image: path to the PNG trophy image in /public/assets/trophies/
+//        Replace these placeholder PNGs with final artwork as needed.
 // glowColor: hex color for the outline glow
 const trophiesData: Array<{
   id: string;
@@ -688,8 +688,7 @@ const trophiesData: Array<{
   description: string;
   date: string;
   shape: "gem" | "cup" | "star" | "sword" | "medal";
-  icon: string;
-  image?: string;
+  image: string;
   glowColor: string;
   link?: string;
   tags?: string[];
@@ -702,7 +701,7 @@ const trophiesData: Array<{
       "Developed the official Cut the Rope × Minecraft DLC in partnership with Mushco, Microsoft, Mojang, and ZeptoLab — available worldwide on the Minecraft Marketplace.",
     date: "2024 — 2025",
     shape: "gem",
-    icon: "💎",
+    image: "/assets/trophies/dlc-developer.png",
     glowColor: "#4ECDC4",
     link: "https://www.minecraft.net/en-us/marketplace/pdp/mush-co/cut-the-rope/b5c52ceb-8b81-4f97-9aae-f5fa668c0278",
     tags: ["Official DLC", "Microsoft", "Mojang", "ZeptoLab"],
@@ -715,7 +714,7 @@ const trophiesData: Array<{
       "Became an Official Microsoft Marketplace Partner through G2Crafted, establishing Keyyard Studio as a trusted brand in the Minecraft ecosystem.",
     date: "Aug 2021",
     shape: "cup",
-    icon: "🏆",
+    image: "/assets/trophies/ms-partner.png",
     glowColor: "#F5C542",
     link: "https://www.bedrockexplorer.com/@g2crafted",
     tags: ["Microsoft", "Official Partner", "Marketplace"],
@@ -728,7 +727,7 @@ const trophiesData: Array<{
       "Reached 5 million total downloads across all community add-on projects. Tree Capitator & Vein Miner (2M+) and Actual Guns MCBE (3M+) lead the count.",
     date: "2023",
     shape: "star",
-    icon: "⭐",
+    image: "/assets/trophies/5m-downloads.png",
     glowColor: "#9B59B6",
     tags: ["Community", "Downloads", "Open Source"],
   },
@@ -740,7 +739,7 @@ const trophiesData: Array<{
       "Collaborated with PrestonPlayz (31M+ subscribers) on official Minecraft Marketplace content via Fire Games — one of the biggest creator partnerships in my career.",
     date: "2024",
     shape: "sword",
-    icon: "⚔️",
+    image: "/assets/trophies/preston-collab.png",
     glowColor: "#E74C3C",
     link: "https://www.youtube.com/@PrestonPlayz",
     tags: ["Content Creator", "Fire Games", "31M Subscribers"],
@@ -753,7 +752,7 @@ const trophiesData: Array<{
       "Organization member and project lead at Bedrock OSS, contributing to the Bedrock Wiki and open-source tooling used by the entire Minecraft Bedrock dev community.",
     date: "Jun 2025",
     shape: "medal",
-    icon: "🎖️",
+    image: "/assets/trophies/bedrock-oss.png",
     glowColor: "#78B04A",
     link: "https://github.com/Bedrock-OSS/",
     tags: ["Open Source", "Community", "Wiki"],

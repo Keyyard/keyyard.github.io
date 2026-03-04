@@ -38,7 +38,7 @@ function TrophySlot({
         userSelect: "none",
       }}
     >
-      {/* 2D Trophy icon */}
+      {/* 2D Trophy image */}
       <div
         style={{
           width: "100%",
@@ -53,38 +53,21 @@ function TrophySlot({
           borderRadius: 2,
         }}
       >
-        {trophy.image ? (
-          <img
-            src={trophy.image}
-            alt={trophy.name}
-            style={{
-              width: 96,
-              height: 96,
-              objectFit: "contain",
-              imageRendering: "pixelated",
-              filter: hovered
-                ? `drop-shadow(0 0 12px ${trophy.glowColor}99)`
-                : "none",
-              transition: "filter 0.18s, transform 0.18s",
-              transform: hovered ? "scale(1.08)" : "scale(1)",
-            }}
-          />
-        ) : (
-          <span
-            style={{
-              fontSize: 72,
-              lineHeight: 1,
-              filter: hovered
-                ? `drop-shadow(0 0 14px ${trophy.glowColor}bb)`
-                : "none",
-              transition: "filter 0.18s, transform 0.18s",
-              transform: hovered ? "scale(1.1)" : "scale(1)",
-              display: "inline-block",
-            }}
-          >
-            {trophy.icon}
-          </span>
-        )}
+        <img
+          src={trophy.image}
+          alt={trophy.name}
+          style={{
+            width: 96,
+            height: 96,
+            objectFit: "contain",
+            imageRendering: "pixelated",
+            filter: hovered
+              ? `drop-shadow(0 0 12px ${trophy.glowColor}99)`
+              : "none",
+            transition: "filter 0.18s, transform 0.18s",
+            transform: hovered ? "scale(1.08)" : "scale(1)",
+          }}
+        />
       </div>
 
       {/* Divider */}
@@ -179,7 +162,7 @@ function TrophyModal({
             "polygon(8px 0,calc(100% - 8px) 0,100% 8px,100% calc(100% - 8px),calc(100% - 8px) 100%,8px 100%,0 calc(100% - 8px),0 8px)",
         }}
       >
-        {/* 2D Trophy display panel */}
+          {/* 2D Trophy image panel */}
         <div
           style={{
             width: isNarrow ? "100%" : "42%",
@@ -193,30 +176,17 @@ function TrophyModal({
             justifyContent: "center",
           }}
         >
-          {trophy.image ? (
-            <img
-              src={trophy.image}
-              alt={trophy.name}
-              style={{
-                width: isNarrow ? 120 : 160,
-                height: isNarrow ? 120 : 160,
-                objectFit: "contain",
-                imageRendering: "pixelated",
-                filter: `drop-shadow(0 0 24px ${trophy.glowColor}88)`,
-              }}
-            />
-          ) : (
-            <span
-              style={{
-                fontSize: isNarrow ? 96 : 120,
-                lineHeight: 1,
-                filter: `drop-shadow(0 0 28px ${trophy.glowColor}aa)`,
-                display: "inline-block",
-              }}
-            >
-              {trophy.icon}
-            </span>
-          )}
+          <img
+            src={trophy.image}
+            alt={trophy.name}
+            style={{
+              width: isNarrow ? 120 : 160,
+              height: isNarrow ? 120 : 160,
+              objectFit: "contain",
+              imageRendering: "pixelated",
+              filter: `drop-shadow(0 0 24px ${trophy.glowColor}88)`,
+            }}
+          />
         </div>
 
         {/* Info panel */}
