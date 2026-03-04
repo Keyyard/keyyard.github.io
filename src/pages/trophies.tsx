@@ -27,7 +27,7 @@ export default function TrophiesPage() {
     <>
       <Head>
         <title>Trophy Cabinet · Keyyard</title>
-        <meta name="description" content="Milestones, achievements, and history — Keyyard's Trophy Cabinet featuring 3D trophies for each career milestone." />
+        <meta name="description" content="Milestones, achievements, and history — Keyyard's Trophy Cabinet featuring 2D trophies for each career milestone." />
       </Head>
       <Bg />
       <Analytics />
