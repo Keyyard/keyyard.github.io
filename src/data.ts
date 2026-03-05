@@ -687,7 +687,6 @@ const trophiesData: Array<{
   subtitle: string;
   description: string;
   date: string;
-  shape: "gem" | "cup" | "star" | "sword" | "medal";
   image: string;
   glowColor: string;
   link?: string;
@@ -699,26 +698,22 @@ const trophiesData: Array<{
   //   subtitle: "Cut the Rope × Minecraft",
   //   description:
   //     "Developed the official Cut the Rope × Minecraft DLC in partnership with Mushco, Microsoft, Mojang, and ZeptoLab — available worldwide on the Minecraft Marketplace.",
-  //   date: "2024 — 2025",
-  //   shape: "gem",
   //   image: "/assets/trophies/dlc-developer.png",
   //   glowColor: "#4ECDC4",
   //   link: "https://www.minecraft.net/en-us/marketplace/pdp/mush-co/cut-the-rope/b5c52ceb-8b81-4f97-9aae-f5fa668c0278",
   //   tags: ["Official DLC", "Microsoft", "Mojang", "ZeptoLab"],
   // },
-  // {
-  //   id: "ms-partner",
-  //   name: "Microsoft Partner",
-  //   subtitle: "Official Marketplace Partner",
-  //   description:
-  //     "Became an Official Microsoft Marketplace Partner through G2Crafted, establishing Keyyard Studio as a trusted brand in the Minecraft ecosystem.",
-  //   date: "Aug 2021",
-  //   shape: "cup",
-  //   image: "/assets/trophies/ms-partner.png",
-  //   glowColor: "#F5C542",
-  //   link: "https://www.bedrockexplorer.com/@g2crafted",
-  //   tags: ["Microsoft", "Official Partner", "Marketplace"],
-  // },
+  {
+    id: "mc-partner",
+    name: "Microsoft Partner",
+    subtitle: "Official Marketplace Partner",
+    description: "I have been passionate about Minecraft since childhood. I remember the old days of port forwarding and leaving my iPad running all day so others could join my world. Time flies; my curiosity and passion eventually led me to create content for the game, starting with maps and texture packs created by modifying file systems via jailbreaking.\n\nIn 2018, when Add-ons were released, I was blown away by the possibilities. I started learning how to manipulate JSONs by copying and pasting components, changing stats, and feeling frustrated when things wouldn't compile. I want to give a shout-out to @solvedDev for helping me so much at the start; he explained data structures and how things were supposed to work. That mix of logical thinking and creativity got me hooked on making increasingly complex content.\n\nAfter gaining significant recognition in the community, I had the opportunity to join G2Crafted, an official Microsoft Partner studio. This launched my professional career in Minecraft development. Although the business side was tough and some content flopped on the marketplace, I am grateful for the chance to learn teamwork, client communication, and how to meet deadlines. It was a huge step up from community projects to official work, and it set the foundation for everything that followed.",
+    date: "Aug 2021",
+    image: "/assets/trophies/mc_partner.png",
+    glowColor: "#F5C542",
+    link: "https://www.bedrockexplorer.com/@g2crafted",
+    tags: ["Microsoft", "Official Partner", "Marketplace"],
+  },
   // {
   //   id: "5m-downloads",
   //   name: "5M Downloads",
@@ -749,9 +744,8 @@ const trophiesData: Array<{
     name: "Bedrock OSS",
     subtitle: "Open Source Contributor",
     description:
-      "Become Project Leader at Bedrock OSS by actively contributing to open-source projects and creating BedrockCLI",
+      "In late 2019, when I just came back to Minecraft development after a break, I'd found Bedrock Wiki & Bedrock OSS. The wiki had been a lifesaver for me make a comeback with up-to-date basic knowledge. This was the foundation of my professional career.\n\nI have always been looking up to people who contributed to the community and making various tools for other devs to work with more convenience. I have been contributing to Bedrock Wiki, Blockception's VSCode Extension, and some other packages in the ecosystem.\n\nBy 2025, I had the opportunity to officially promoted to a Project Lead in Bedrock OSS, leading the BedrockCLI - a powerful CLI tool to scaffold Minecraft Bedrock projects in seconds. A journey from a user to a contributor, and then to a small project leader in the community I admired the most.",
     date: "Jun 2025",
-    shape: "medal",
     image: "/assets/trophies/oss_trophy.png",
     glowColor: "#ffa3b6",
     link: "https://github.com/Bedrock-OSS/",

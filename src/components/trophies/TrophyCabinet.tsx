@@ -268,6 +268,7 @@ function TrophyModal({
               color: "var(--text-dim)",
               lineHeight: 1.75,
               margin: 0,
+              whiteSpace: "pre-wrap",
             }}
           >
             {trophy.description}
@@ -369,14 +370,14 @@ export default function TrophyCabinet() {
           href="/"
           style={{
             fontFamily: "var(--font-headings)",
-            fontSize: "0.4rem",
+            fontSize: "0.8rem",
             color: "var(--grass-bright, #78B04A)",
             textDecoration: "none",
             letterSpacing: "0.05em",
             flexShrink: 0,
           }}
         >
-          ← HOME
+          BACK
         </a>
 
         <div style={{ flex: 1, textAlign: "center" }}>
@@ -402,7 +403,7 @@ export default function TrophyCabinet() {
               margin: "4px 0 0",
             }}
           >
-            MILESTONES · ACHIEVEMENTS · HISTORY
+            Stories behind each milestone
           </p>
         </div>
 

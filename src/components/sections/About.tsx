@@ -153,7 +153,7 @@ const About = () => {
             >
               Move mouse · Click to animate
             </p>
-            {/* Trophy Cabinet CTA - WIP */}
+            {/* Trophy Cabinet */}
             <div
               style={{
                 textAlign: "center",
