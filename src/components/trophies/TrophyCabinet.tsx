@@ -210,7 +210,7 @@ function TrophyModal({
               background: "transparent",
               border: "none",
               color: "var(--text-muted, #7A6A55)",
-              fontSize: "0.7rem",
+              fontSize: "1.5rem",
               fontFamily: "var(--font-headings, monospace)",
               cursor: "pointer",
             }}
