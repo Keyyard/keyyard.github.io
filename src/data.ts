@@ -692,17 +692,17 @@ const trophiesData: Array<{
   link?: string;
   tags?: string[];
 }> = [
-  // {
-  //   id: "cut-the-rope-dlc",
-  //   name: "DLC Developer",
-  //   subtitle: "Cut the Rope × Minecraft",
-  //   description:
-  //     "Developed the official Cut the Rope × Minecraft DLC in partnership with Mushco, Microsoft, Mojang, and ZeptoLab — available worldwide on the Minecraft Marketplace.",
-  //   image: "/assets/trophies/dlc-developer.png",
-  //   glowColor: "#4ECDC4",
-  //   link: "https://www.minecraft.net/en-us/marketplace/pdp/mush-co/cut-the-rope/b5c52ceb-8b81-4f97-9aae-f5fa668c0278",
-  //   tags: ["Official DLC", "Microsoft", "Mojang", "ZeptoLab"],
-  // },
+  {
+    id: "cut-the-rope-dlc",
+    name: "DLC Developer",
+    subtitle: "Cut the Rope × Minecraft",
+    date: "Jul 2025",
+    description: "Long before I even knew what Minecraft was, I was obsessed with Cut the Rope. I remember constantly borrowing my parents' phone every chance I got, completely hooked by the tricky puzzles and cute graphics.\n\nAs the years passed and I transitioned from player to developer, I eventually moved on from those early gaming memories. However, life has a funny way of coming full circle. Recently, the most surreal thing happened: I found myself working on the official Om Nom x Minecraft DLC crossover.\n\nIf you had told my younger self, the kid who was struggling with cutting ropes to feed Om Nom that I would one day be developing the collaboration of this scale, I wouldn't have believed it. It’s an incredible honor to bridge two of the most iconic pillars of my childhood into one massive project.",
+    image: "/assets/trophies/omnom_trophy.png",
+    glowColor: "#42f45d",
+    link: "https://www.minecraft.net/en-us/marketplace/pdp/mush-co/cut-the-rope/b5c52ceb-8b81-4f97-9aae-f5fa668c0278",
+    tags: ["Official DLC", "Microsoft", "Mojang", "ZeptoLab", "Cut the Rope", "Minecraft", "Om Nom"],
+  },
   {
     id: "mc-partner",
     name: "Microsoft Partner",
@@ -712,7 +712,7 @@ const trophiesData: Array<{
     image: "/assets/trophies/mc_partner.png",
     glowColor: "#F5C542",
     link: "https://www.bedrockexplorer.com/@g2crafted",
-    tags: ["Microsoft", "Official Partner", "Marketplace"],
+    tags: ["Microsoft", "Official Partner", "Marketplace", "Minecraft"],
   },
   // {
   //   id: "5m-downloads",
@@ -749,7 +749,7 @@ const trophiesData: Array<{
     image: "/assets/trophies/oss_trophy.png",
     glowColor: "#ffa3b6",
     link: "https://github.com/Bedrock-OSS/",
-    tags: ["Community"],
+    tags: ["Community", "Minecraft", "Open Source", "Bedrock Wiki", "Bedrock CLI"],
   },
 ];
 
