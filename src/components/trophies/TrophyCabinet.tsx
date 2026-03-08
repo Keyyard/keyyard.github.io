@@ -392,7 +392,7 @@ export default function TrophyCabinet() {
                 "0 0 20px rgba(245,197,66,0.4), 0 2px 0 rgba(0,0,0,0.6)",
             }}
           >
-            🏆 TROPHY CABINET
+            TROPHY CABINET
           </h1>
           <p
             style={{
