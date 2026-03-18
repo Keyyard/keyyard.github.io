@@ -167,6 +167,15 @@ const experiences = [
       "Pioneered innovative custom mechanics that differentiated client projects from competitors in the marketplace.",
     ],
   },
+    {
+    title: "Content Publisher & Creator",
+    company_name: "Kayen Works",
+    company_url: "https://kayenworks.com/",
+    date: "2023 - Present",
+    details: [
+      "Partnered with Kayen Works to publish high-quality Minecraft content, expanding the reach of multiple creators and delivering engaging experiences to a wider audience.",
+    ],
+  },
   {
     title: "Senior Developer",
     company_name: "Fire Games | Official Minecraft Marketplace",
