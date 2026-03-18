@@ -266,6 +266,7 @@ const experienceTiers = [
   "gold", // G2crafted — first MS Partner
   "grass", // Giggle Block Studios
   "grass", // MELONBP
+  "gold", // Kayen Works
   "diamond", // Fire Games — Preston collab
   "grass", // OASIS
   "wood", // Bedrock OSS
