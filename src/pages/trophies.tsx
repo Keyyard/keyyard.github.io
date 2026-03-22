@@ -7,7 +7,6 @@ import Bg from "../components/layout/Background";
 const TrophyCabinet = dynamic(
   () => import("../components/trophies/TrophyCabinet"),
   {
-    ssr: false,
     loading: () => (
       <div
         style={{
@@ -38,11 +37,18 @@ export default function TrophiesPage() {
   return (
     <>
       <Head>
-        <title>Trophy Cabinet · Keyyard</title>
+        <title>Trophy Cabinet | Keyyard</title>
         <meta
           name="description"
-          content="Milestones, achievements, and history — Keyyard's Trophy Cabinet featuring 2D trophies for each career milestone."
+          content="Achievements, milestones, and recognition earned across Minecraft Bedrock development and the modding community. Microsoft Partner, DLC Developer, and Bedrock OSS Project Lead."
         />
+        <link rel="canonical" href="https://keyyard.xyz/trophies" />
+        <meta property="og:title" content="Trophy Cabinet | Keyyard" />
+        <meta property="og:description" content="Milestones, achievements, and career highlights from Keyyard — Minecraft Bedrock Developer." />
+        <meta property="og:url" content="https://keyyard.xyz/trophies" />
+        <meta property="og:image" content="https://keyyard.xyz/keyyard.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
       </Head>
       <Bg />
       <Analytics />

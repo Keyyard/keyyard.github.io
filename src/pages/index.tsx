@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import Head from "next/head";
 import { Analytics } from "@vercel/analytics/react";
 import toast, { Toaster } from "react-hot-toast";
 import {
@@ -28,14 +29,6 @@ export default function Home() {
   // Console easter egg
   useEffect(() => {
     console.log(
-      "%c\n" +
-      "  ██████╗  ██╗ ██╗ ██╗   ██╗ █████╗ ██████╗ ██████╗  \n" +
-      "  ██╔══██╗ ██║ ██║ ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗ \n" +
-      "  ██████╔╝ ██║ ██║  ╚████╔╝ ███████║██████╔╝██║  ██║ \n" +
-      "  ██╔═══╝  ██║ ██║   ╚██╔╝  ██╔══██║██╔══██╗██║  ██║ \n" +
-      "  ██║      ███████╗   ██║   ██║  ██║██║  ██║██████╔╝ \n" +
-      "  ╚═╝      ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝  \n" +
-      "\n" +
       "  ⛏  Welcome to my portfolio, Adventurer!  ⛏\n" +
       "  Try the Konami Code: ↑↑↓↓←→←→BA\n\n",
       "color:#A3D977; font-family:monospace; font-size:11px; background:#0D0D12; padding:8px;"
@@ -165,6 +158,14 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>Keyyard | Minecraft Bedrock Developer</title>
+        <meta
+          name="description"
+          content="Official Website of Keyyard, a Minecraft Bedrock Developer since 2018. Exploring high-quality mods, addons, and marketplace content like Cut the Rope × Minecraft DLC."
+        />
+        <link rel="canonical" href="https://keyyard.xyz/" />
+      </Head>
       <Bg />
       <Toaster />
       {/* <DiscoveryButton /> */}

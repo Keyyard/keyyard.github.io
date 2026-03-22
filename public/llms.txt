@@ -1,0 +1,39 @@
+# Keyyard
+
+> Minecraft Bedrock Developer and Microsoft/Mojang Partner with 8+ years of experience (since 2018), 5M+ addon downloads, and credits on the Cut the Rope x Minecraft DLC collaboration.
+
+## About
+
+Keyyard is an independent Minecraft Bedrock Edition developer known for creating widely-distributed addons and developer tooling. Keyyard holds official Microsoft/Mojang Partner status and has worked with studios including Mushco, Giggle Block Studios, MELONBP, Kayen Works, and contributed to Bedrock OSS. Started as a self-taught developer on an iPad in 2018, Keyyard progressed from modifying JSON files to creating professional marketplace content and leading open-source projects.
+
+## Projects
+
+- Tree Capitator: Minecraft Bedrock addon for tree-felling mechanics
+- Vein Miner Addon: Ore-vein mining automation for Bedrock Edition
+- Actual Guns MCBE: Firearms and ballistics addon for Minecraft Bedrock
+- One Block Extra: Skyblock-style survival addon for Bedrock Edition
+- Scary Myth Mobs: Custom mob addon for Bedrock Edition
+- Crossbow Expansion: Extended crossbow mechanics addon
+- Redstone Expansion: Enhanced redstone functionality addon
+- Create Minecraft Bedrock CLI: npm package (create-mc-bedrock) for scaffolding Bedrock addon projects
+
+## Developer Tooling
+
+Keyyard maintains Create Minecraft Bedrock, an open-source CLI tool available via npm as `create-mc-bedrock`. Also a contributor to the Blockception VSCode Extension and the Bedrock Wiki community documentation.
+
+## Credentials
+
+- Microsoft/Mojang Partner (active)
+- 5,000,000+ total addon downloads across MCPEDL, Modbay, and BedrockExplorer since 2018
+- Cut the Rope x Minecraft DLC contributor (named collaboration with ZeptoLab and Mojang, released July 2025)
+- Bedrock OSS Project Lead (BedrockCLI, promoted June 2025)
+- Active Minecraft Bedrock developer since 2018
+
+## Links
+
+- Portfolio: https://keyyard.xyz
+- GitHub: https://github.com/keyyard
+- YouTube: https://youtube.com/@keyyard
+- MCPEDL: https://mcpedl.com/user/keyyard
+- npm: https://www.npmjs.com/package/create-mc-bedrock
+- Bedrock OSS: https://github.com/Bedrock-OSS/

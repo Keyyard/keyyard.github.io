@@ -8,11 +8,6 @@ class WebDocument extends Document {
           <meta charSet="UTF-8" />
 
           {/* SEO Enhancements */}
-          <title>Keyyard | Minecraft Bedrock Developer</title>
-          <meta
-            name="description"
-            content="Official Website of Keyyard, a Minecraft Bedrock Developer since 2018. Exploring high-quality mods, addons, and marketplace content like Cut the Rope × Minecraft DLC."
-          />
           <meta
             name="keywords"
             content="Keyyard, Minecraft, Mods, Addons, Marketplace, Minecraft, Tree Capitator, Vein Miner, Actual Guns, MCPEDL, Modbay, PrestonPlayz, Official Minecraft Marketplace, Minecraft Developer, Portfolio, Game Design, Minecraft Bedrock"
@@ -21,26 +16,26 @@ class WebDocument extends Document {
 
           {/* Open Graph data */}
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="Keyyard Official Website" />
+          <meta property="og:title" content="Keyyard | Minecraft Bedrock Developer" />
           <meta
             property="og:description"
-            content="Official Website of Keyyard, portfolio showcasing Minecraft mods, maps, skins, and marketplace projects. Discover unique content to enhance your Minecraft experience."
+            content="Official Website of Keyyard, a Minecraft Bedrock Developer since 2018. Exploring high-quality mods, addons, and marketplace content like Cut the Rope × Minecraft DLC."
           />
-          <meta property="og:url" content="https://www.keyyard.xyz/" />
-          <meta property="og:site_name" content="Keyyard.xyz" />
-          <meta property="og:image" content="/keyyard.png" />
+          <meta property="og:url" content="https://keyyard.xyz/" />
+          <meta property="og:site_name" content="Keyyard" />
+          <meta property="og:image" content="https://keyyard.xyz/keyyard.png" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta property="og:image:alt" content="Keyyard — Minecraft Bedrock Developer" />
 
           {/* Twitter Card data */}
           <meta name="twitter:card" content="summary_large_image" />
-          <meta
-            name="twitter:title"
-            content="Keyyard Portfolio | Enhance Your Minecraft Experience"
-          />
+          <meta name="twitter:title" content="Keyyard | Minecraft Bedrock Developer" />
           <meta
             name="twitter:description"
-            content="Explore Keyyard's custom Minecraft creations for an enriched gaming experience."
+            content="Official Website of Keyyard, a Minecraft Bedrock Developer since 2018. Microsoft Partner, DLC Developer, and creator of Actual Guns MCBE."
           />
-          <meta name="twitter:image" content="/keyyard.png" />
+          <meta name="twitter:image" content="https://keyyard.xyz/keyyard.png" />
           <meta name="twitter:creator" content="@keyyard" />
 
           {/* Favicon */}
@@ -73,46 +68,69 @@ class WebDocument extends Document {
             dangerouslySetInnerHTML={{
               __html: JSON.stringify({
                 "@context": "https://schema.org",
-                "@type": "Person",
-                "name": "Keyyard",
-                "url": "https://www.keyyard.xyz",
-                "image": "https://www.keyyard.xyz/keyyard.png",
-                "sameAs": [
-                  "https://twitter.com/keyyard",
-                  "https://github.com/keyyard",
-                  "https://www.youtube.com/@keyyard",
-                  "https://mcpedl.com/user/keyyard/",
-                  "https://modbay.org/user/Keyyard/",
-                  "https://www.bedrockexplorer.com/@g2crafted",
-                  "https://www.npmjs.com/package/create-mc-bedrock"
-                ],
-                "jobTitle": "Minecraft Bedrock Developer & Fullstack Engineer",
-                "worksFor": [
+                "@graph": [
                   {
-                    "@type": "Organization",
-                    "name": "Mushco",
-                    "url": "https://www.mushco.games/"
+                    "@type": "WebSite",
+                    "@id": "https://keyyard.xyz/#website",
+                    "name": "Keyyard",
+                    "url": "https://keyyard.xyz"
                   },
                   {
-                    "@type": "Organization",
-                    "name": "Microsoft × Mojang (Partner)",
-                    "description": "Collaborated on official Minecraft DLC content."
+                    "@type": "ProfilePage",
+                    "@id": "https://keyyard.xyz/#profilepage",
+                    "url": "https://keyyard.xyz",
+                    "name": "Keyyard — Minecraft Bedrock Developer Portfolio",
+                    "isPartOf": { "@id": "https://keyyard.xyz/#website" },
+                    "mainEntity": { "@id": "https://keyyard.xyz/#person" }
+                  },
+                  {
+                    "@type": "Person",
+                    "@id": "https://keyyard.xyz/#person",
+                    "name": "Keyyard",
+                    "url": "https://keyyard.xyz",
+                    "image": {
+                      "@type": "ImageObject",
+                      "url": "https://keyyard.xyz/keyyard.png",
+                      "contentUrl": "https://keyyard.xyz/keyyard.png"
+                    },
+                    "jobTitle": "Minecraft Bedrock Developer & Fullstack Engineer",
+                    "description": "Minecraft Bedrock Developer since 2018, specializing in high-performance scripting, entity AI, and official marketplace content. Creator of Actual Guns MCBE, Tree Capitator, and collaborator on the Cut the Rope × Minecraft DLC.",
+                    "knowsAbout": [
+                      "Minecraft Bedrock Scripting",
+                      "Game Mechanics Design",
+                      "TypeScript",
+                      "Node.js",
+                      "CLI Tooling",
+                      "Entity AI Development"
+                    ],
+                    "knowsLanguage": ["English", "Indonesian"],
+                    "worksFor": [
+                      {
+                        "@type": "Organization",
+                        "name": "Mushco",
+                        "url": "https://www.mushco.games/"
+                      },
+                      {
+                        "@type": "Organization",
+                        "name": "Mojang Studios",
+                        "url": "https://www.minecraft.net",
+                        "description": "Official Minecraft DLC content partner."
+                      }
+                    ],
+                    "alumniOf": [
+                      { "@type": "Organization", "name": "Bedrock OSS" }
+                    ],
+                    "sameAs": [
+                      "https://twitter.com/keyyard",
+                      "https://github.com/keyyard",
+                      "https://www.youtube.com/@keyyard",
+                      "https://mcpedl.com/user/keyyard/",
+                      "https://modbay.org/user/Keyyard/",
+                      "https://www.bedrockexplorer.com/@g2crafted",
+                      "https://www.npmjs.com/package/create-mc-bedrock"
+                    ]
                   }
-                ],
-                "description": "Minecraft Bedrock Developer since 2018, specializing in high-performance scripting, entity AI, and official marketplace content. Creator of Actual Guns, Tree Capitator, and lead collaborator on the Cut the Rope × Minecraft DLC.",
-                "knowsAbout": [
-                  "Minecraft Bedrock Scripting",
-                  "Game Mechanics Design",
-                  "TypeScript & Node.js",
-                  "CLI Tooling",
-                  "Entity AI Development",
-                  "Cut the Rope × Minecraft DLC"
-                ],
-                "knowsLanguage": ["English", "Indonesian"],
-                "alumniOf": {
-                  "@type": "Organization",
-                  "name": "Bedrock OSS"
-                }
+                ]
               })
             }}
           />
