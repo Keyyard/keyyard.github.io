@@ -1,17 +1,17 @@
 import Head from "next/head";
-import { Cormorant_Garamond, DM_Sans } from "next/font/google";
+import { Fraunces, Lexend } from "next/font/google";
 
-const cormorant = Cormorant_Garamond({
+const fraunces = Fraunces({
   subsets: ["latin"],
   weight: ["300", "400", "500"],
   style: ["normal", "italic"],
-  variable: "--font-cormorant",
+  variable: "--font-fraunces",
 });
 
-const dmSans = DM_Sans({
+const lexend = Lexend({
   subsets: ["latin"],
   weight: ["300", "400", "500"],
-  variable: "--font-dm-sans",
+  variable: "--font-lexend",
 });
 
 /* ─── Design tokens ─────────────────────────────────────── */
@@ -67,7 +67,7 @@ export default function NoDoomscrollingPage() {
       </Head>
 
       {/* ── Root ───────────────────────────────────────────── */}
-      <div className={`root ${cormorant.variable} ${dmSans.variable}`}>
+      <div className={`root ${fraunces.variable} ${lexend.variable}`}>
 
         {/* ── HERO ────────────────────────────────────────── */}
         <section className="hero">
@@ -169,7 +169,7 @@ export default function NoDoomscrollingPage() {
         .root {
           background: ${C.bg};
           color: ${C.pearl};
-          font-family: 'DM Sans', sans-serif;
+          font-family: var(--font-lexend), sans-serif;
           min-height: 100vh;
           overflow-x: hidden;
         }
@@ -226,7 +226,7 @@ export default function NoDoomscrollingPage() {
 
         /* ── Headline ── */
         .headline {
-          font-family: 'Cormorant Garamond', serif;
+          font-family: var(--font-fraunces), serif;
           font-size: clamp(4rem, 13vw, 9.5rem);
           font-weight: 300;
           font-style: italic;
@@ -251,7 +251,7 @@ export default function NoDoomscrollingPage() {
 
         /* ── Coming soon ── */
         .coming-soon {
-          font-family: 'DM Sans', sans-serif;
+          font-family: var(--font-lexend), sans-serif;
           font-size: 0.68rem;
           font-weight: 500;
           letter-spacing: 0.22em;
@@ -299,7 +299,7 @@ export default function NoDoomscrollingPage() {
           border-bottom: 1px solid ${C.pearl08};
         }
         .feature-num {
-          font-family: 'Cormorant Garamond', serif;
+          font-family: var(--font-fraunces), serif;
           font-size: 0.8rem;
           font-weight: 400;
           letter-spacing: 0.1em;
@@ -308,7 +308,7 @@ export default function NoDoomscrollingPage() {
           display: block;
         }
         .feature-name {
-          font-family: 'Cormorant Garamond', serif;
+          font-family: var(--font-fraunces), serif;
           font-size: clamp(2rem, 5vw, 3.2rem);
           font-weight: 400;
           font-style: italic;
@@ -343,7 +343,7 @@ export default function NoDoomscrollingPage() {
           pointer-events: none;
         }
         .quote {
-          font-family: 'Cormorant Garamond', serif;
+          font-family: var(--font-fraunces), serif;
           font-size: clamp(1.6rem, 4.5vw, 3.2rem);
           font-weight: 300;
           font-style: italic;
@@ -364,7 +364,7 @@ export default function NoDoomscrollingPage() {
           gap: 18px;
         }
         .footer-wordmark {
-          font-family: 'Cormorant Garamond', serif;
+          font-family: var(--font-fraunces), serif;
           font-size: 1.15rem;
           font-weight: 300;
           font-style: italic;

@@ -1,18 +1,18 @@
 import Head from "next/head";
 import { ReactNode } from "react";
-import { Cormorant_Garamond, DM_Sans } from "next/font/google";
+import { Fraunces, Lexend } from "next/font/google";
 
-const cormorant = Cormorant_Garamond({
+const fraunces = Fraunces({
   subsets: ["latin"],
   weight: ["300", "400", "500"],
   style: ["normal", "italic"],
-  variable: "--font-cormorant",
+  variable: "--font-fraunces",
 });
 
-const dmSans = DM_Sans({
+const lexend = Lexend({
   subsets: ["latin"],
   weight: ["300", "400", "500"],
-  variable: "--font-dm-sans",
+  variable: "--font-lexend",
 });
 
 const EFFECTIVE_DATE = "March 24, 2026";
@@ -38,7 +38,7 @@ export default function PrivacyPolicy() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
-      <div className={`${cormorant.variable} ${dmSans.variable}`} style={{ background: C.bg, minHeight: "100vh", color: C.pearl, fontFamily: "'DM Sans', sans-serif", WebkitFontSmoothing: "antialiased" as any }}>
+      <div className={`${fraunces.variable} ${lexend.variable}`} style={{ background: C.bg, minHeight: "100vh", color: C.pearl, fontFamily: "'DM Sans', sans-serif", WebkitFontSmoothing: "antialiased" as any }}>
 
         {/* Back */}
         <div style={{ padding: "32px 40px" }}>
@@ -62,7 +62,7 @@ export default function PrivacyPolicy() {
         <main style={{ maxWidth: 680, margin: "0 auto", padding: "0 32px 120px" }}>
 
           <h1 style={{
-            fontFamily: "'Cormorant Garamond', serif",
+            fontFamily: "'fraunces Garamond', serif",
             fontSize: "clamp(2rem, 5vw, 3rem)",
             fontWeight: 300,
             fontStyle: "italic",
