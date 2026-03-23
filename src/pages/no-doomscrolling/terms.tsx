@@ -1,5 +1,19 @@
 import Head from "next/head";
 import { ReactNode } from "react";
+import { Cormorant_Garamond, DM_Sans } from "next/font/google";
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["300", "400", "500"],
+  style: ["normal", "italic"],
+  variable: "--font-cormorant",
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500"],
+  variable: "--font-dm-sans",
+});
 
 const EFFECTIVE_DATE = "March 24, 2026";
 const APP_NAME       = "No Doomscrolling";
@@ -23,15 +37,9 @@ export default function TermsAndConditions() {
         <meta name="description" content="Terms and conditions for No Doomscrolling iOS app." />
         <meta name="robots" content="noindex" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400&display=swap"
-          rel="stylesheet"
-        />
       </Head>
 
-      <div style={{ background: C.bg, minHeight: "100vh", color: C.pearl, fontFamily: "'DM Sans', sans-serif", WebkitFontSmoothing: "antialiased" as any }}>
+      <div className={`${cormorant.variable} ${dmSans.variable}`} style={{ background: C.bg, minHeight: "100vh", color: C.pearl, fontFamily: "'DM Sans', sans-serif", WebkitFontSmoothing: "antialiased" as any }}>
 
         {/* Back */}
         <div style={{ padding: "32px 40px" }}>

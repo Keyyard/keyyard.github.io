@@ -1,4 +1,18 @@
 import Head from "next/head";
+import { Cormorant_Garamond, DM_Sans } from "next/font/google";
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["300", "400", "500"],
+  style: ["normal", "italic"],
+  variable: "--font-cormorant",
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500"],
+  variable: "--font-dm-sans",
+});
 
 /* ─── Design tokens ─────────────────────────────────────── */
 const C = {
@@ -50,17 +64,10 @@ export default function NoDoomscrollingPage() {
         <meta property="og:description" content="Take back your time to create more." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://keyyard.xyz/no-doomscrolling" />
-        {/* Fonts */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
-          rel="stylesheet"
-        />
       </Head>
 
       {/* ── Root ───────────────────────────────────────────── */}
-      <div className="root">
+      <div className={`root ${cormorant.variable} ${dmSans.variable}`}>
 
         {/* ── HERO ────────────────────────────────────────── */}
         <section className="hero">
