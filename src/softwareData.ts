@@ -1,3 +1,19 @@
+// ─── iOS / CONSUMER APPS ────────────────────────────────────────
+export const iosApps = [
+  {
+    title: "Productivitism — Life RPG",
+    tagline: "Pixel RPG for Habits & Focus",
+    description:
+      "Turn your real-life goals into pixel-art characters. Build habits, crush quests, and focus deeper — all in one cozy 16-bit RPG. Your party is waiting.",
+    icon: "/assets/Projs/productivitism/icon.png",
+    banner: "/assets/Projs/productivitism/banner.png",
+    appStoreUrl:
+      "https://apps.apple.com/us/app/productivitism-life-rpg/id6761625990",
+    landingUrl: "https://productivitism.com",
+    platform: "iOS" as const,
+  },
+];
+
 // Software portfolio data — edit this file to update /software page
 
 export const softwareProjects = [

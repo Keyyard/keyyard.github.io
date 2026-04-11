@@ -15,6 +15,12 @@ const navs = [
     sectionId: "projects",
   },
   {
+    name: "Apps",
+    shortName: "Apps",
+    link: "/#apps",
+    sectionId: "apps",
+  },
+  {
     name: "Contact",
     shortName: "Contact",
     link: "/#contact",

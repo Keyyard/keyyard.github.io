@@ -479,7 +479,7 @@
   }
 
   /* ── Section styles ──────────────────────────────── */
-  .section { @apply min-h-[95vh]; }
+  .section { @apply min-h-[auto]; }
   .section-hero { @apply flex flex-col items-center; min-height: 100vh; }
 
   .section-title {

@@ -8,6 +8,7 @@ import {
   Experiences,
   MinecraftProjects,
   MinecraftCommunity,
+  IosApps,
   Contact,
 } from "../components/sections";
 import DiscoveryButton from "../components/DiscoveryButton";
@@ -174,6 +175,7 @@ export default function Home() {
       <About />
       <Experiences />
       <MinecraftProjects />
+                  <IosApps />
       <MinecraftCommunity />
       <Contact />
       <Navbar />

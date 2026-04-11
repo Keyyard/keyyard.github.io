@@ -200,7 +200,7 @@ const MinecraftProjects = memo(() => {
   const normal     = mcProjects.filter((p) => p.category === "normal");
 
   return (
-    <section id="projects" className="section" style={{ padding: "80px 0 60px" }}>
+    <section id="projects" className="section" style={{ padding: "40px 0 60px" }}>
       <h2 className="section-title" style={{ marginBottom: 4 }}>Minecraft Projects</h2>
       <p style={{ textAlign: "center", fontFamily: "var(--font-vt323)", fontSize: "1.05rem", color: "var(--text-muted)", letterSpacing: "0.12em", marginBottom: 48 }}>
         OFFICIAL MARKETPLACE · COMMUNITY ADDONS
