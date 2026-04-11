@@ -228,7 +228,7 @@ const IosApps = () => {
           marginBottom: 48,
         }}
       >
-        CONSUMER · IOS · INDIE
+        INDIE IOS APPS MADE WITH PASSION
       </p>
 
       <div style={{ maxWidth: 1040, margin: "0 auto", padding: "0 24px" }}>
