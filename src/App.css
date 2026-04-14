@@ -8,3 +8,15 @@ canvas {
   height: 100%;
   display: absolute ;
 }
+/* Screen-reader only — visually hidden but readable by search engines and assistive tech */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

@@ -10,16 +10,17 @@ class WebDocument extends Document {
           {/* SEO Enhancements */}
           <meta
             name="keywords"
-            content="Keyyard, Minecraft, Mods, Addons, Marketplace, Minecraft, Tree Capitator, Vein Miner, Actual Guns, MCPEDL, Modbay, PrestonPlayz, Official Minecraft Marketplace, Minecraft Developer, Portfolio, Game Design, Minecraft Bedrock"
+            content="Keyyard, Minecraft, Mods, Addons, Marketplace, Tree Capitator, Vein Miner, Actual Guns, MCPEDL, Modbay, PrestonPlayz, Official Minecraft Marketplace, Minecraft Developer, Portfolio, Game Design, Minecraft Bedrock"
           />
           <meta name="author" content="Keyyard" />
+          <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
 
           {/* Open Graph data */}
           <meta property="og:type" content="website" />
           <meta property="og:title" content="Keyyard | Minecraft Bedrock Developer" />
           <meta
             property="og:description"
-            content="Official Website of Keyyard, a Minecraft Bedrock Developer since 2018. Exploring high-quality mods, addons, and marketplace content like Cut the Rope × Minecraft DLC."
+            content="Microsoft Partner & Minecraft Bedrock Developer with 5M+ downloads. Creator of the Cut the Rope × Minecraft DLC, Actual Guns MCBE, and Productivitism — Life RPG on iOS."
           />
           <meta property="og:url" content="https://keyyard.xyz/" />
           <meta property="og:site_name" content="Keyyard" />
@@ -101,7 +102,10 @@ class WebDocument extends Document {
                       "TypeScript",
                       "Node.js",
                       "CLI Tooling",
-                      "Entity AI Development"
+                      "Entity AI Development",
+                      "iOS App Development",
+                      "Gamified Productivity",
+                      "Swift"
                     ],
                     "knowsLanguage": ["English", "Indonesian"],
                     "worksFor": [
@@ -109,12 +113,14 @@ class WebDocument extends Document {
                         "@type": "Organization",
                         "name": "Mushco",
                         "url": "https://www.mushco.games/"
-                      },
+                      }
+                    ],
+                    "sponsor": [
                       {
                         "@type": "Organization",
                         "name": "Mojang Studios",
                         "url": "https://www.minecraft.net",
-                        "description": "Official Minecraft DLC content partner."
+                        "description": "Official Minecraft Marketplace DLC content partner."
                       }
                     ],
                     "alumniOf": [

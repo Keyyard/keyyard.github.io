@@ -65,7 +65,10 @@ const Hero = memo(() => {
 
         {/* Pixel name */}
         <div style={{ textAlign: "center", marginBottom: 8 }}>
-          <h1 className="pixel-name" data-text={heroData.pixelName}>{heroData.pixelName}</h1>
+          <h1 className="pixel-name" data-text={heroData.pixelName}>
+            {heroData.pixelName}
+            <span className="sr-only"> — Minecraft Bedrock Developer, iOS Engineer &amp; Microsoft Marketplace Partner</span>
+          </h1>
         </div>
 
         {/* Role badge */}
