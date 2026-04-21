@@ -82,7 +82,7 @@ const heroData = {
     "block-dirt",
     "block-grass",
   ] as string[],
-  pixelName: "KEYYARD"  // display name kept; SEO H1 handled via aria-label in Hero.tsx,
+  pixelName: "KEYYARD", // display name kept; SEO H1 handled via aria-label in Hero.tsx
   roleBadge: "Minecraft Developer & Software Engineer",
   storyHook: `In 2018, I started modding Minecraft from scratch — no tutorials, just curiosity and a text editor.<br/>By 2024, <strong>I contributed to the official <span class="hl-diamond">Minecraft × Cut The Rope crossover DLC</span></strong>, and my addons had been downloaded <span class="hl-gold">5M+ times</span> across the world.`,
   statCards: [
