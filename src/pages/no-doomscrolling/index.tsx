@@ -97,6 +97,7 @@ export default function NoDoomscrollingPage() {
             href={APP_STORE_URL}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Download on the App Store (opens in new tab)"
             className="cta-app-store fade-4"
           >
             Download on the App Store
