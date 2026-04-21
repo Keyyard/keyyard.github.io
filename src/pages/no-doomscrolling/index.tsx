@@ -274,6 +274,12 @@ export default function NoDoomscrollingPage() {
           transform: translateY(-1px);
           opacity: 0.94;
         }
+        .cta-app-store:focus-visible {
+          outline: 2px solid ${C.pearl35};
+          outline-offset: 3px;
+          transform: translateY(-1px);
+          opacity: 0.94;
+        }
 
         /* ── Scroll line ── */
         .scroll-line {
