@@ -173,7 +173,7 @@ const experiences = [
       "Pioneered innovative custom mechanics that differentiated client projects from competitors in the marketplace.",
     ],
   },
-    {
+  {
     title: "Content Publisher & Creator",
     company_name: "Kayen Works",
     company_url: "https://kayenworks.com/",
@@ -713,17 +713,27 @@ const trophiesData: Array<{
     name: "DLC Developer",
     subtitle: "Cut the Rope × Minecraft",
     date: "Jul 2025",
-    description: "Long before I even knew what Minecraft was, I was obsessed with Cut the Rope. I remember constantly borrowing my parents' phone every chance I got, completely hooked by the tricky puzzles and cute graphics.\n\nAs the years passed and I transitioned from player to developer, I eventually moved on from those early gaming memories. However, life has a funny way of coming full circle. Recently, the most surreal thing happened: I found myself working on the official Om Nom x Minecraft DLC crossover.\n\nIf you had told my younger self, the kid who was struggling with cutting ropes to feed Om Nom that I would one day be developing the collaboration of this scale, I wouldn't have believed it. It’s an incredible honor to bridge two of the most iconic pillars of my childhood into one massive project.",
+    description:
+      "Long before I even knew what Minecraft was, I was obsessed with Cut the Rope. I remember constantly borrowing my parents' phone every chance I got, completely hooked by the tricky puzzles and cute graphics.\n\nAs the years passed and I transitioned from player to developer, I eventually moved on from those early gaming memories. However, life has a funny way of coming full circle. Recently, the most surreal thing happened: I found myself working on the official Om Nom x Minecraft DLC crossover.\n\nIf you had told my younger self, the kid who was struggling with cutting ropes to feed Om Nom that I would one day be developing the collaboration of this scale, I wouldn't have believed it. It’s an incredible honor to bridge two of the most iconic pillars of my childhood into one massive project.",
     image: "/assets/trophies/omnom_trophy.png",
     glowColor: "#42f45d",
     link: "https://www.minecraft.net/en-us/marketplace/pdp/mush-co/cut-the-rope/b5c52ceb-8b81-4f97-9aae-f5fa668c0278",
-    tags: ["Official DLC", "Microsoft", "Mojang", "ZeptoLab", "Cut the Rope", "Minecraft", "Om Nom"],
+    tags: [
+      "Official DLC",
+      "Microsoft",
+      "Mojang",
+      "ZeptoLab",
+      "Cut the Rope",
+      "Minecraft",
+      "Om Nom",
+    ],
   },
   {
     id: "mc-partner",
     name: "Microsoft Partner",
     subtitle: "Official Marketplace Partner",
-    description: "I have been passionate about Minecraft since childhood. I remember the old days of port forwarding and leaving my iPad running all day so others could join my world. Time flies; my curiosity and passion eventually led me to create content for the game, starting with maps and texture packs created by modifying file systems via jailbreaking.\n\nIn 2018, when Add-ons were released, I was blown away by the possibilities. I started learning how to manipulate JSONs by copying and pasting components, changing stats, and feeling frustrated when things wouldn't compile. I want to give a shout-out to @solvedDev for helping me so much at the start; he explained data structures and how things were supposed to work. That mix of logical thinking and creativity got me hooked on making increasingly complex content.\n\nAfter gaining significant recognition in the community, I had the opportunity to join G2Crafted, an official Microsoft Partner studio. This launched my professional career in Minecraft development. Although the business side was tough and some content flopped on the marketplace, I am grateful for the chance to learn teamwork, client communication, and how to meet deadlines. It was a huge step up from community projects to official work, and it set the foundation for everything that followed.",
+    description:
+      "I have been passionate about Minecraft since childhood. I remember the old days of port forwarding and leaving my iPad running all day so others could join my world. Time flies; my curiosity and passion eventually led me to create content for the game, starting with maps and texture packs created by modifying file systems via jailbreaking.\n\nIn 2018, when Add-ons were released, I was blown away by the possibilities. I started learning how to manipulate JSONs by copying and pasting components, changing stats, and feeling frustrated when things wouldn't compile. I want to give a shout-out to @solvedDev for helping me so much at the start; he explained data structures and how things were supposed to work. That mix of logical thinking and creativity got me hooked on making increasingly complex content.\n\nAfter gaining significant recognition in the community, I had the opportunity to join G2Crafted, an official Microsoft Partner studio. This launched my professional career in Minecraft development. Although the business side was tough and some content flopped on the marketplace, I am grateful for the chance to learn teamwork, client communication, and how to meet deadlines. It was a huge step up from community projects to official work, and it set the foundation for everything that followed.",
     date: "Aug 2021",
     image: "/assets/trophies/mc_partner.png",
     glowColor: "#F5C542",
@@ -765,7 +775,13 @@ const trophiesData: Array<{
     image: "/assets/trophies/oss_trophy.png",
     glowColor: "#ffa3b6",
     link: "https://github.com/Bedrock-OSS/",
-    tags: ["Community", "Minecraft", "Open Source", "Bedrock Wiki", "Bedrock CLI"],
+    tags: [
+      "Community",
+      "Minecraft",
+      "Open Source",
+      "Bedrock Wiki",
+      "Bedrock CLI",
+    ],
   },
 ];
 
