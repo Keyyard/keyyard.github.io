@@ -272,13 +272,13 @@ export default function NoDoomscrollingPage() {
         }
         .cta-app-store:hover {
           transform: translateY(-1px);
-          opacity: 0.94;
+          box-shadow: 0 0 0 1px ${C.pearl35}, 0 8px 22px ${C.pearl08};
         }
         .cta-app-store:focus-visible {
           outline: 2px solid ${C.pearl35};
           outline-offset: 3px;
           transform: translateY(-1px);
-          opacity: 0.94;
+          box-shadow: 0 0 0 1px ${C.pearl35}, 0 8px 22px ${C.pearl08};
         }
 
         /* ── Scroll line ── */
