@@ -53,12 +53,14 @@ const FEATURES = [
   },
 ];
 
+const APP_STORE_URL = "https://apps.apple.com/vn/app/nodoomscrolling/id6762450161";
+
 export default function NoDoomscrollingPage() {
   return (
     <>
       <Head>
         <title>No Doomscrolling — Take back your time to create more</title>
-        <meta name="description" content="An iOS app that blocks distracting apps, guides you through a 4-7-8 breathing ritual, and tracks your willpower over time. Coming soon." />
+        <meta name="description" content="An iOS app that blocks distracting apps, guides you through a 4-7-8 breathing ritual, and tracks your willpower over time." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta property="og:title" content="No Doomscrolling" />
         <meta property="og:description" content="Take back your time to create more." />
@@ -91,10 +93,14 @@ export default function NoDoomscrollingPage() {
             Take back your time<br />to create more.
           </p>
 
-          {/* Coming soon */}
-          <div className="coming-soon fade-4">
-            Coming Soon
-          </div>
+          <a
+            href={APP_STORE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cta-app-store fade-4"
+          >
+            Download on the App Store
+          </a>
 
           {/* Scroll line */}
           <div className="scroll-line fade-5" aria-hidden="true" />
@@ -249,8 +255,8 @@ export default function NoDoomscrollingPage() {
           opacity: 0;
         }
 
-        /* ── Coming soon ── */
-        .coming-soon {
+        /* ── App Store CTA ── */
+        .cta-app-store {
           font-family: var(--font-lexend), sans-serif;
           font-size: 0.68rem;
           font-weight: 500;
@@ -260,7 +266,13 @@ export default function NoDoomscrollingPage() {
           background: ${C.pearl};
           padding: 11px 28px;
           border-radius: 3px;
+          text-decoration: none;
+          transition: transform 0.2s ease, opacity 0.2s ease;
           opacity: 0;
+        }
+        .cta-app-store:hover {
+          transform: translateY(-1px);
+          opacity: 0.94;
         }
 
         /* ── Scroll line ── */
