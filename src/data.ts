@@ -84,7 +84,7 @@ const heroData = {
   ] as string[],
   pixelName: "KEYYARD", // display name kept; SEO H1 handled via aria-label in Hero.tsx
   roleBadge: "Minecraft Developer & Software Engineer",
-  storyHook: `In 2018, I started modding Minecraft from scratch — no tutorials, just curiosity and a text editor.<br/>By 2024, <strong>I contributed to the official <span class="hl-diamond">Minecraft × Cut The Rope crossover DLC</span></strong>, and my addons had been downloaded <span class="hl-gold">5M+ times</span> across the world.`,
+  storyHook: `In 2018, I started modding Minecraft from scratch - no tutorials, just curiosity and a text editor.<br/>By 2024, <strong>I contributed to the official <span class="hl-diamond">Minecraft × Cut The Rope crossover DLC</span></strong>, and worked with <a href="https://www.youtube.com/@PrestonYT" style="color: #d50b34" target="_blank" rel="noopener noreferrer">Preston - a multimillion-subscriber YouTuber</a> on official Minecraft Marketplace.`,
   statCards: [
     {
       cssClass: "gold",
@@ -143,8 +143,8 @@ const heroData = {
 // ─── EXPERIENCES ─────────────────────────────────────────────
 const experiences = [
   {
-    title: "Official Microsoft Partner",
-    company_name: "G2crafted | Official Minecraft Marketplace",
+    title: "Founder | Official Microsoft Partner",
+    company_name: "Keyyard Studio - G2crafted | Official Minecraft Marketplace",
     company_url: "https://www.bedrockexplorer.com/@g2crafted",
     date: "Aug 2021 - 2023",
     details: [
@@ -195,7 +195,7 @@ const experiences = [
     ],
   },
   {
-    title: "Development Infrastructure Specialist & Developer",
+    title: "Contract Developer",
     company_name: "OASIS | Official Minecraft Marketplace",
     company_url: "https://www.oasis-team.com/",
     date: "April 2025 - September 2025",
@@ -218,10 +218,10 @@ const experiences = [
     ],
   },
   {
-    title: "Developer",
+    title: "Contract Developer",
     company_name: "Mushco",
     company_url: "https://www.mushco.games/",
-    date: "July 2025 - Present",
+    date: "July 2025 - March 2026",
     details: [
       "Create and maintain high-quality Minecraft DLC* content that meets the highest standards of quality and performance.",
       "DLC*: Unlike typical Minecraft Marketplace contents, DLC contents are usually content that collaborate with other brands, games, movies — like Moana DLC, Sonic DLC.",
