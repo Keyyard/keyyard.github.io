@@ -627,11 +627,11 @@ const aboutPlayerInfo = [
 
 // ─── ABOUT — MINECRAFT SKILL BARS ────────────────────────────
 const mcSkillsData = [
-  { label: "Bedrock Entity Behavior", percent: 98 },
-  { label: "Bedrock Scripting API", percent: 99 },
-  { label: "Bedrock Items Functions", percent: 99 },
-  { label: "Bedrock Animation Manipulatation", percent: 93 },
-  { label: "Bedrock Blocks Features", percent: 78 },
+  { label: "Bedrock Entity Behavior", percent: 91 },
+  { label: "Bedrock Scripting API", percent: 92 },
+  { label: "Bedrock Items Functions", percent: 92 },
+  { label: "Bedrock Animation Manipulatation", percent: 90 },
+  { label: "Bedrock Blocks Features", percent: 52 },
 ];
 
 // ─── ABOUT — TECH STACK ──────────────────────────────────────
