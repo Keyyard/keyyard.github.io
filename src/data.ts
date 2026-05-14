@@ -84,7 +84,7 @@ const heroData = {
   ] as string[],
   pixelName: "KEYYARD", // display name kept; SEO H1 handled via aria-label in Hero.tsx
   roleBadge: "Minecraft Developer & Software Engineer",
-  storyHook: `In 2018, I started modding Minecraft from scratch - no tutorials, just curiosity and a text editor.<br/>By 2024, <strong>I contributed to the official <span class="hl-diamond">Minecraft × Cut The Rope crossover DLC</span></strong>, and worked with <a href="https://www.youtube.com/@PrestonYT" style="color: #d50b34" target="_blank" rel="noopener noreferrer">Preston - a multimillion-subscriber YouTuber</a> on official Minecraft Marketplace.`,
+  storyHook: `In 2018, I started modding Minecraft from scratch - no tutorials, just curiosity and a text editor.<br/>By 2024, <strong>I contributed to the official <span class="hl-diamond">Minecraft × Cut The Rope crossover DLC</span></strong>, and worked with <a href="https://www.youtube.com/@PrestonYT" style="color: #d50b34" target="_blank" rel="noopener noreferrer">Preston - a 31M subscribers YouTuber</a> on official Minecraft Marketplace.`,
   statCards: [
     {
       cssClass: "gold",
@@ -234,6 +234,15 @@ const experiences = [
     date: "January 2026 - Present",
     details: [
       "Working on entities, gameplay mechanics, and scripting systems to deliver engaging Minecraft experiences.",
+    ],
+  },
+  {
+    title: "Founder",
+    company_name: "Productivitism",
+    company_url: "https://productivitism.com/",
+    date: "Mar 2026 - Present",
+    details: [
+      "Building tools and content to help people maintain focus and productivity in the digital age.",
     ],
   },
 ];
@@ -795,6 +804,24 @@ const academicData: Array<{
 const aboutMeData = aboutPlayerInfo.map((text) => ({ icon: "", text }));
 
 const Projects = [
+  {
+    title: "No Doomscrolling",
+    short_info: "iOS App — Productivity & Wellness",
+    description:
+      "An iOS app that blocks distracting apps, guides you through a 4-7-8 breathing ritual, and tracks your willpower over time. Features Focus Mode, Timer Mode, Guard Mode, Breathe First, and Willpower Analytics to help you take back your time and create more intentionally.",
+    icon: "assets/Projs/nd/icon.png",
+    links: [
+      {
+        name: "App Store",
+        link: "https://apps.apple.com/vn/app/nodoomscrolling/id6762450161",
+      },
+      { name: "Website", link: "https://keyyard.xyz/no-doomscrolling" },
+    ],
+    imgs: [],
+    tags: ["iOS", "Productivity", "Wellness", "App", "React Native"],
+    status: "Live",
+    featured: true,
+  },
   {
     title: "Create Minecraft Bedrock CLI",
     short_info: "Node Module Package",
