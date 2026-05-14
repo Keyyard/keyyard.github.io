@@ -217,6 +217,15 @@ const experiences = [
       "Served as a Wiki Contributor, creating and editing content for the knowledge-sharing platform dedicated to Minecraft Bedrock Add-Ons.",
     ],
   },
+    {
+    title: "Founder",
+    company_name: "Bedrock CLI",
+    company_url: "https://bedrockcli.keyyard.xyz",
+    date: "June 2025 - Present",
+    details: [
+      "Created an open-source Minecraft Bedrock Compiler and a CLI tool that scaffolds Minecraft Bedrock add-on workspaces. The tool is widely used by developers to skip boilerplate and jump straight into scripting.",
+    ],
+  },
   {
     title: "Contract Developer",
     company_name: "Mushco",
@@ -285,8 +294,10 @@ const experienceTiers = [
   "diamond", // Fire Games — Preston collab
   "grass", // OASIS
   "wood", // Bedrock OSS
+  "wood", // Bedrock CLI
   "diamond", // Mushco — Cut the Rope DLC
   "grass", // Block Factory
+  "stone", // Productivitism
 ];
 
 const experienceLegend = [
