@@ -1,6 +1,17 @@
 // ─── iOS / CONSUMER APPS ────────────────────────────────────────
 export const iosApps = [
   {
+    title: "No Doomscrolling",
+    tagline: "Take Back Your Time",
+    description:
+      "Block distracting apps, complete a 4-7-8 breathing ritual before unlocking them, and track your willpower over time. Built for creators who refuse to let their attention be stolen.",
+    icon: "/assets/Projs/nd/icon.png",
+    appStoreUrl:
+      "https://apps.apple.com/vn/app/nodoomscrolling/id6762450161",
+    landingUrl: "https://keyyard.xyz/no-doomscrolling",
+    platform: "iOS" as const,
+  },
+  {
     title: "Productivitism — Life RPG",
     tagline: "Pixel RPG for Habits & Focus",
     description:
