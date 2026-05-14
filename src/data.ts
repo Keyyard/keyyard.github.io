@@ -228,7 +228,7 @@ const experiences = [
   },
   {
     title: "Contract Developer",
-    company_name: "Mushco",
+    company_name: "Mushco | Official Minecraft Marketplace",
     company_url: "https://www.mushco.games/",
     date: "July 2025 - March 2026",
     details: [
@@ -238,7 +238,7 @@ const experiences = [
   },
   {
     title: "Developer",
-    company_name: "Block Factory",
+    company_name: "Block Factory | Official Minecraft Marketplace",
     company_url: "https://blockfactory.studio/",
     date: "January 2026 - Present",
     details: [
