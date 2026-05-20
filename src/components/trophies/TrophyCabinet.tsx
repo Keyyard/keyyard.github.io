@@ -86,7 +86,7 @@ function TrophySlot({
       <div
         style={{
           fontFamily: "var(--font-headings, 'Press Start 2P', monospace)",
-          fontSize: "clamp(0.3rem, 0.85vw, 0.42rem)",
+          fontSize: "clamp(0.5rem, 1.2vw, 0.65rem)",
           color: hovered ? trophy.glowColor : "var(--text-dim, #B8A88A)",
           textAlign: "center",
           lineHeight: 1.7,
@@ -221,7 +221,7 @@ function TrophyModal({
           <div
             style={{
               fontFamily: "var(--font-headings)",
-              fontSize: "0.38rem",
+              fontSize: "0.55rem",
               color: "var(--gold, #F5C542)",
               letterSpacing: "0.1em",
               marginTop: 4,
@@ -232,9 +232,9 @@ function TrophyModal({
           <h2
             style={{
               fontFamily: "var(--font-headings)",
-              fontSize: "0.65rem",
+              fontSize: "0.9rem",
               color: trophy.glowColor,
-              lineHeight: 1.8,
+              lineHeight: 1.6,
               margin: 0,
             }}
           >
@@ -313,7 +313,7 @@ function TrophyModal({
               <div
                 style={{
                   fontFamily: "var(--font-headings)",
-                  fontSize: "0.38rem",
+                  fontSize: "0.55rem",
                   color: trophy.glowColor,
                   letterSpacing: "0.1em",
                   marginBottom: 10,
@@ -490,8 +490,8 @@ export default function TrophyCabinet() {
           style={{
             textAlign: "center",
             fontFamily: "var(--font-headings)",
-            fontSize: "0.33rem",
-            color: "rgba(255,255,255,0.18)",
+            fontSize: "0.5rem",
+            color: "rgba(255,255,255,0.25)",
             marginTop: 40,
             letterSpacing: "0.1em",
           }}
