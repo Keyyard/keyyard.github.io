@@ -215,7 +215,7 @@ function TrophyModal({
               cursor: "pointer",
             }}
           >
-            ✕
+            X
           </button>
 
           <div
@@ -305,6 +305,61 @@ function TrophyModal({
                   {tag}
                 </span>
               ))}
+            </div>
+          )}
+
+          {trophy.press && trophy.press.length > 0 && (
+            <div style={{ marginTop: 8 }}>
+              <div
+                style={{
+                  fontFamily: "var(--font-headings)",
+                  fontSize: "0.38rem",
+                  color: trophy.glowColor,
+                  letterSpacing: "0.1em",
+                  marginBottom: 10,
+                }}
+              >
+                FEATURED COVERAGE
+              </div>
+              <ul
+                style={{
+                  listStyle: "none",
+                  padding: 0,
+                  margin: 0,
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 6,
+                }}
+              >
+                {trophy.press.map((p) => (
+                  <li key={p.url} style={{ lineHeight: 1.5 }}>
+                    <a
+                      href={p.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        fontFamily: "var(--font-primary)",
+                        fontSize: "0.83rem",
+                        color: "var(--text-dim)",
+                        textDecoration: "none",
+                      }}
+                    >
+                      <span
+                        style={{
+                          color: trophy.glowColor,
+                          fontWeight: 600,
+                          marginRight: 8,
+                        }}
+                      >
+                        {p.name}
+                      </span>
+                      <span style={{ color: "var(--text-muted)" }}>
+                        {p.headline}
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           )}
         </div>

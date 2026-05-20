@@ -1,15 +1,6 @@
 import { useEffect, useState } from "react";
 import { navs } from "../../data";
 
-const NAV_ICONS: Record<string, string> = {
-  hero:        "🏠",
-  about:       "📖",
-  experiences: "⚔️",
-  trophies:    "🏆",
-  projects:    "🗂️",
-  contact:     "📬",
-};
-
 const Nav = () => {
   const [activeSection, setActiveSection] = useState("");
 
@@ -54,9 +45,6 @@ const Nav = () => {
               className={`hotbar-slot${isActive ? " hotbar-slot--active" : ""}`}
               title={nav.name}
             >
-              <span className="hotbar-slot-icon">
-                {NAV_ICONS[nav.sectionId] ?? "📌"}
-              </span>
               <span className="hotbar-slot-label">{nav.shortName}</span>
             </a>
           );

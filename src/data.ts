@@ -125,17 +125,17 @@ const heroData = {
     link: "#projects",
     label: "Featured Work",
     title: "Cut the Rope × Minecraft DLC",
-    description: `Shipped as an official DLC in partnership with <strong style="color:var(--diamond)">Mush Co., Microsoft, Mojang &amp; ZeptoLab</strong> — available on the Minecraft Marketplace worldwide.`,
+    description: `Shipped as an official DLC in partnership with <strong style="color:var(--diamond)">Mush Co., Microsoft, Mojang &amp; ZeptoLab</strong>. Available on the Minecraft Marketplace worldwide.`,
   },
   ctaButtons: [
-    { text: "⛏ View My Work", action: "projects", variant: "primary" },
-    { text: "✉ Contact Me", action: "contact", variant: "secondary" },
+    { text: "View My Work", action: "projects", variant: "primary" },
+    { text: "Contact Me", action: "contact", variant: "secondary" },
   ] as { text: string; action: string; variant: "primary" | "secondary" }[],
   xpPercent: _birthdayXP.xpPercent,
   xpBar: {
     label: `LVL ${_birthdayXP.age} · KEYYARD`,
     progressText: _birthdayXP.isBirthday
-      ? `★ HAPPY BIRTHDAY! LVL UP! ★`
+      ? `HAPPY BIRTHDAY! LVL UP!`
       : `${_birthdayXP.xpPercent}% to LVL ${_birthdayXP.nextLevel}`,
   },
 };
@@ -233,7 +233,7 @@ const experiences = [
     date: "July 2025 - March 2026",
     details: [
       "Create and maintain high-quality Minecraft DLC* content that meets the highest standards of quality and performance.",
-      "DLC*: Unlike typical Minecraft Marketplace contents, DLC contents are usually content that collaborate with other brands, games, movies — like Moana DLC, Sonic DLC.",
+      "DLC*: Unlike typical Minecraft Marketplace contents, DLC contents are usually content that collaborate with other brands, games, movies, like Moana DLC and Sonic DLC.",
     ],
   },
   {
@@ -287,15 +287,15 @@ const experienceNodeStyles: Record<string, { bg: string; shadow: string }> = {
 
 // Corresponds 1:1 with the experiences array above
 const experienceTiers = [
-  "gold", // G2crafted — first MS Partner
+  "gold", // G2crafted: first MS Partner
   "grass", // Giggle Block Studios
   "grass", // MELONBP
   "gold", // Kayen Works
-  "diamond", // Fire Games — Preston collab
+  "diamond", // Fire Games: Preston collab
   "grass", // OASIS
   "wood", // Bedrock OSS
   "wood", // Bedrock CLI
-  "diamond", // Mushco — Cut the Rope DLC
+  "diamond", // Mushco: Cut the Rope DLC
   "grass", // Block Factory
   "stone", // Productivitism
 ];
@@ -604,7 +604,7 @@ const mcCommunityProjects = [
   },
   {
     title: "Blockception's VSCode Extension",
-    short_info: "Contributed — VSCode Extension",
+    short_info: "Contributed: VSCode Extension",
     description:
       "A VS Code extension providing code completion, validations, diagnostics, formatters, and creation tools for Minecraft Bedrock development. One of the most-used tools in the Bedrock dev community.",
     icon: "https://blockceptionltd.gallerycdn.vsassets.io/extensions/blockceptionltd/blockceptionvscodeminecraftbedrockdevelopmentextension/8.0.39/1749586201427/Microsoft.VisualStudio.Services.Icons.Default",
@@ -623,7 +623,7 @@ const mcCommunityProjects = [
   },
   {
     title: "Bedrock Wiki",
-    short_info: "Contributed — Knowledge Base",
+    short_info: "Contributed: Knowledge Base",
     description:
       "The go-to knowledge-sharing platform for Minecraft Bedrock Add-On development. Contains documentation, tutorials, and community-driven guides. Contributed articles and technical documentation.",
     icon: "/assets/Projs/wiki/logo.webp",
@@ -636,16 +636,16 @@ const mcCommunityProjects = [
   },
 ];
 
-// ─── ABOUT — PLAYER INFO ─────────────────────────────────────
+// ─── ABOUT: PLAYER INFO ──────────────────────────────────────
 // Edit these paragraphs to change the About section story text
 const aboutPlayerInfo = [
-  "I'm a developer who builds from curiosity — not from tutorials. I started modding Minecraft in 2018 with nothing but a text editor in an iPad and the stubbornness to figure things out. That instinct to learn through building has defined everything since.",
-  "I'm drawn to systems that demand both precision and creativity, where I can use my logical thinking with creativity. Scripting a complex boss, designing physics-driven gameplay, or architecting a developer toolchain — I care deeply about the craft behind all of it.",
+  "I'm a developer who builds from curiosity, not from tutorials. I started modding Minecraft in 2018 with nothing but a text editor in an iPad and the stubbornness to figure things out. That instinct to learn through building has defined everything since.",
+  "I'm drawn to systems that demand both precision and creativity, where I can use my logical thinking with creativity. Scripting a complex boss, designing physics-driven gameplay, or architecting a developer toolchain: I care deeply about the craft behind all of it.",
   "Being multidisciplinary isn't a side effect for me, it's the point. I've spent most of my time learning and working across Bedrock scripting, software development, and various non-technical fields because I believe every domain sharpens your thinking in the others.",
-  "I do my best work on ambitious projects with talented people who care about making their dreams a reality. If you're building something that pushes limits — I want to be part of it.",
+  "I do my best work on ambitious projects with talented people who care about making their dreams a reality. If you're building something that pushes limits, I want to be part of it.",
 ];
 
-// ─── ABOUT — MINECRAFT SKILL BARS ────────────────────────────
+// ─── ABOUT: MINECRAFT SKILL BARS ─────────────────────────────
 const mcSkillsData = [
   { label: "Bedrock Entity Behavior", percent: 91 },
   { label: "Bedrock Scripting API", percent: 92 },
@@ -654,7 +654,7 @@ const mcSkillsData = [
   { label: "Bedrock Blocks Features", percent: 52 },
 ];
 
-// ─── ABOUT — TECH STACK ──────────────────────────────────────
+// ─── ABOUT: TECH STACK ───────────────────────────────────────
 const techStackData = [
   {
     title: "Programming Languages",
@@ -662,6 +662,7 @@ const techStackData = [
       { value: "TypeScript" },
       { value: "JavaScript" },
       { value: "Python" },
+      { value: "Swift" },
     ],
   },
   {
@@ -682,7 +683,7 @@ const techStackData = [
   },
   {
     title: "Mobile Development",
-    items: [{ value: "React Native" }, { value: "Expo" }, { value: "Lynx.JS" }],
+    items: [{ value: "React Native" }, { value: "Expo" }, { value: "Lynx.JS" }, { value: "Swift (iOS)" }],
   },
   {
     title: "Creative Tools",
@@ -727,6 +728,7 @@ const trophiesData: Array<{
   glowColor: string;
   link?: string;
   tags?: string[];
+  press?: { name: string; headline: string; url: string }[];
 }> = [
   {
     id: "cut-the-rope-dlc",
@@ -738,6 +740,38 @@ const trophiesData: Array<{
     glowColor: "#42f45d",
     link: "https://www.minecraft.net/en-us/marketplace/pdp/mush-co/cut-the-rope/b5c52ceb-8b81-4f97-9aae-f5fa668c0278",
     tags: ["Official DLC", "Microsoft", "Mojang", "ZeptoLab", "Cut the Rope", "Minecraft", "Om Nom"],
+    press: [
+      {
+        name: "GamesPress",
+        headline: "ZeptoLab announces the release of a Minecraft experience: the Cut the Rope add-on",
+        url: "https://www.gamespress.com/ZeptoLab-announces-the-release-of-a-Minecraft-experience-the-Cut-the-R",
+      },
+      {
+        name: "Pocket Gamer",
+        headline: "Cut the Rope x Minecraft add-on coverage",
+        url: "https://www.pocketgamer.com/minecraft/cut-the-rope-add-on/",
+      },
+      {
+        name: "GamingOnPhone",
+        headline: "Cut the Rope expands into Minecraft with a new add-on",
+        url: "https://gamingonphone.com/news/cut-the-rope-expands-into-minecraft-with-a-new-add-on-arriving-on-the-marketplace-this-december/",
+      },
+      {
+        name: "Static Multimedia",
+        headline: "ZeptoLab brings Om Nom to Minecraft with the Cut the Rope add-on",
+        url: "https://staticmultimedia.com/zeptolab-brings-om-nom-to-minecraft-with-the-cut-the-rope-add-on/",
+      },
+      {
+        name: "Total Licensing",
+        headline: "Om Nom expands into Minecraft Marketplace with Cut the Rope add-on",
+        url: "https://www.totallicensing.com/om-nom-expands-into-minecraft-marketplace-with-cut-the-rope-add-on/",
+      },
+      {
+        name: "Gamelade.vn",
+        headline: "Cut the Rope chính thức bước vào thế giới Minecraft",
+        url: "https://gamelade.vn/cut-the-rope-chinh-thuc-buoc-vao-the-gioi-minecraft/",
+      },
+    ],
   },
   {
     id: "mc-partner",
@@ -767,7 +801,7 @@ const trophiesData: Array<{
   //   name: "Preston Collab",
   //   subtitle: "31M Subscriber Partnership",
   //   description:
-  //     "Collaborated with PrestonPlayz (31M+ subscribers) on official Minecraft Marketplace content via Fire Games — one of the biggest creator partnerships in my career.",
+  //     "Collaborated with PrestonPlayz (31M+ subscribers) on official Minecraft Marketplace content via Fire Games, one of the biggest creator partnerships in my career.",
   //   date: "2024",
   //   shape: "sword",
   //   image: "/assets/trophies/preston-collab.png",
@@ -789,7 +823,7 @@ const trophiesData: Array<{
   },
 ];
 
-// ─── ABOUT — CREDENTIALS & AWARDS ────────────────────────────
+// ─── ABOUT: CREDENTIALS & AWARDS ─────────────────────────────
 // Update these with your real credentials. Each entry: icon, category, title, detail, date
 const academicData: Array<{
   icon: string;
@@ -797,132 +831,21 @@ const academicData: Array<{
   title: string;
   detail: string;
   date: string;
+  link?: string;
 }> = [
   {
-    icon: "🏆",
-    category: "Coming soon",
-    title: "Awards",
-    detail: "",
-    date: "",
+    icon: "",
+    category: "Published Research",
+    title: "Integrating Pixel Aesthetics & Behavioral Psychology in Productivitism",
+    detail:
+      "Faculty of IT, National Economics University · by Trịnh Minh Hiếu (Keyyard) · N=381 study",
+    date: "Mar 2026",
+    link: "https://fit.neu.edu.vn/post/tich-hop-giao-dien-tham-my-pixel-va-tam-ly-hoc-hanh-vi-trong-phat-trien-phan-mem-productivitism-nham-nang-cao-nang-suat-va-giam-qua-tai-nhan-thuc-cho-nguoi-dung",
   },
-  // { icon: "🌐", category: "Language",    title: "IELTS Academic",   detail: "Band —",   date: "—" },
-  // { icon: "🏆", category: "Award",       title: "Award Name",       detail: "Details",  date: "Year" },
-  // { icon: "📜", category: "Certificate", title: "Certificate Name", detail: "Issuer",   date: "Year" },
-  // { icon: "🎓", category: "Education",   title: "School / Degree",  detail: "Details",  date: "Year" },
-];
-
-// ─── LEGACY (kept for compatibility) ─────────────────────────
-const aboutMeData = aboutPlayerInfo.map((text) => ({ icon: "", text }));
-
-const Projects = [
-  {
-    title: "No Doomscrolling",
-    short_info: "iOS App — Productivity & Wellness",
-    description:
-      "An iOS app that blocks distracting apps, guides you through a 4-7-8 breathing ritual, and tracks your willpower over time. Features Focus Mode, Timer Mode, Guard Mode, Breathe First, and Willpower Analytics to help you take back your time and create more intentionally.",
-    icon: "assets/Projs/nd/icon.png",
-    links: [
-      {
-        name: "App Store",
-        link: "https://apps.apple.com/vn/app/nodoomscrolling/id6762450161",
-      },
-      { name: "Website", link: "https://keyyard.xyz/no-doomscrolling" },
-    ],
-    imgs: [],
-    tags: ["iOS", "Productivity", "Wellness", "App", "React Native"],
-    status: "Live",
-    featured: true,
-  },
-  {
-    title: "Create Minecraft Bedrock CLI",
-    short_info: "Node Module Package",
-    description:
-      "CLI tool to create Minecraft projects workspaces with structured folders and files. It includes Microsoft's Compiler",
-    icon: "assets/Projs/bedrockcli/icon.webp",
-    links: [
-      {
-        name: "Github",
-        link: "https://github.com/Keyyard/create-mc-bedrock-cli",
-      },
-      {
-        name: "NPM Package",
-        link: "https://www.npmjs.com/package/create-mc-bedrock",
-      },
-      { name: "Website", link: "https://bedrockcli.keyyard.xyz" },
-    ],
-    imgs: ["assets/Projs/bedrockcli/gif.gif"],
-    tags: ["Node.js", "CLI", "Minecraft", "Developer Tools", "Productivity"],
-    status: "Live",
-    featured: true,
-  },
-  {
-    title: "Blockception's Minecraft Bedrock Development",
-    short_info: "Contributed to VSCode Plugin",
-    description:
-      "An extension that provides code completion, validations, formatters, diagnostics, cheat-sheets, code-actions, creation of files, and development tools to help develop Minecraft Bedrock content.",
-    icon: "https://blockceptionltd.gallerycdn.vsassets.io/extensions/blockceptionltd/blockceptionvscodeminecraftbedrockdevelopmentextension/8.0.39/1749586201427/Microsoft.VisualStudio.Services.Icons.Default",
-    links: [
-      {
-        name: "Github",
-        link: "https://github.com/Blockception/VSCode-Bedrock-Development-Extension",
-      },
-      {
-        name: "VSCode Marketplace",
-        link: "https://marketplace.visualstudio.com/items/?itemName=BlockceptionLtd.blockceptionvscodeminecraftbedrockdevelopmentextension",
-      },
-    ],
-    imgs: ["/assets/Projs/blockception/overview.gif"],
-    tags: [
-      "TypeScript",
-      "VSCode",
-      "Minecraft",
-      "Developer Tools",
-      "Productivity",
-    ],
-    status: "Live",
-    featured: false,
-  },
-  {
-    title: "Bedrock Wiki",
-    short_info: "Contributed to Bedrock Wiki",
-    description:
-      "A knowledge-sharing website for Minecraft Bedrock Add-Ons, containing documentation, tutorials, and general how-to information.",
-    icon: "/assets/Projs/wiki/logo.webp",
-    links: [
-      { name: "Github", link: "https://github.com/Bedrock-OSS/bedrock-wiki" },
-      { name: "Wiki Website", link: "https://wiki.bedrock.dev/" },
-    ],
-    imgs: ["/assets/Projs/wiki/wiki.webp"],
-    tags: ["Documentation", "Minecraft", "Community", "Education"],
-    status: "Live",
-    featured: false,
-  },
-  {
-    title: "Today Notes",
-    short_info: "Progressive Web App Project",
-    description:
-      "Today Notes helps you manage your daily tasks effortlessly. Stay focused on what matters today, complete tasks efficiently, and boost your productivity.",
-    icon: "/assets/Projs/today/icon.webp",
-    links: [
-      { name: "Github", link: "https://github.com/Keyyard/today-notes" },
-      { name: "Product", link: "https://today-notes.keyyard.xyz" },
-    ],
-    imgs: ["assets/Projs/today/4.webp"],
-    tags: ["React", "PWA", "TypeScript", "Productivity"],
-    status: "Inactive",
-    featured: false,
-  },
-];
-
-const startYear = 2018;
-const currentYear = new Date().getFullYear();
-const yearDifference = currentYear - startYear + 1;
-
-const introductionText = [
-  "Hi, I'm Keyyard, a developer with a passion for turning creative visions into scalable digital experiences.",
-  `With ${yearDifference} years of expertise, I've delivered high-quality contents for big creators like Preston (30M+ subscribers), MrWoofless (1M+ subscribers), and many teams like Giggle Block Studios, FireGames, Mushco..`,
-  "I had the privilege of working as a programmer on the official Minecraft x Cut the Rope DLC, a collaboration between Mush Co. (Minecraft's Official Partner @ Microsoft, Mojang), and ZeptoLab (CutTheRope).",
-  "I specialize in Bedrock scripting, gameplay quality, and architecture, ensuring every project is optimized for performance and user engagement.",
+  // { icon: "", category: "Language",    title: "IELTS Academic",   detail: "Band -",   date: "-" },
+  // { icon: "", category: "Award",       title: "Award Name",       detail: "Details",  date: "Year" },
+  // { icon: "", category: "Certificate", title: "Certificate Name", detail: "Issuer",   date: "Year" },
+  // { icon: "", category: "Education",   title: "School / Degree",  detail: "Details",  date: "Year" },
 ];
 
 export {
@@ -932,14 +855,11 @@ export {
   experienceLegend,
   mcProjects,
   mcCommunityProjects,
-  Projects,
   navs,
   heroData,
-  aboutMeData,
   aboutPlayerInfo,
   mcSkillsData,
   techStackData,
   academicData,
   trophiesData,
-  introductionText,
 };

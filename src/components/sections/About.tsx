@@ -227,16 +227,18 @@ const About = () => {
                         : "none",
                   }}
                 >
-                  <span
-                    style={{
-                      fontSize: "1.4rem",
-                      lineHeight: 1,
-                      marginTop: 2,
-                      flexShrink: 0,
-                    }}
-                  >
-                    {item.icon}
-                  </span>
+                  {item.icon && (
+                    <span
+                      style={{
+                        fontSize: "1.4rem",
+                        lineHeight: 1,
+                        marginTop: 2,
+                        flexShrink: 0,
+                      }}
+                    >
+                      {item.icon}
+                    </span>
+                  )}
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <div
                       style={{
@@ -247,16 +249,35 @@ const About = () => {
                         marginBottom: 4,
                       }}
                     >
-                      <span
-                        style={{
-                          fontFamily: "var(--font-primary)",
-                          fontSize: "0.95rem",
-                          fontWeight: 600,
-                          color: "var(--text-main)",
-                        }}
-                      >
-                        {item.title}
-                      </span>
+                      {item.link ? (
+                        <a
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            fontFamily: "var(--font-primary)",
+                            fontSize: "0.95rem",
+                            fontWeight: 600,
+                            color: "var(--text-main)",
+                            textDecoration: "underline",
+                            textDecorationColor: "rgba(245,197,66,0.4)",
+                            textUnderlineOffset: "3px",
+                          }}
+                        >
+                          {item.title}
+                        </a>
+                      ) : (
+                        <span
+                          style={{
+                            fontFamily: "var(--font-primary)",
+                            fontSize: "0.95rem",
+                            fontWeight: 600,
+                            color: "var(--text-main)",
+                          }}
+                        >
+                          {item.title}
+                        </span>
+                      )}
                       <span
                         className="mc-tag"
                         style={{

@@ -30,12 +30,12 @@ export default function Home() {
   // Console easter egg
   useEffect(() => {
     console.log(
-      "  ⛏  Welcome to my portfolio, Adventurer!  ⛏\n" +
+      "  Welcome to my portfolio, Adventurer!\n" +
       "  Try the Konami Code: ↑↑↓↓←→←→BA\n\n",
       "color:#A3D977; font-family:monospace; font-size:11px; background:#0D0D12; padding:8px;"
     );
     console.log(
-      "%c  🟩 Minecraft Bedrock Dev since 2018 | keyyard.xyz",
+      "%c  Minecraft Bedrock Dev since 2018 | keyyard.xyz",
       "color:#78B04A; font-family:monospace; font-size:12px;"
     );
   }, []);
@@ -62,7 +62,6 @@ export default function Home() {
                   clipPath: "polygon(8px 0%,calc(100% - 8px) 0%,100% 8px,100% calc(100% - 8px),calc(100% - 8px) 100%,8px 100%,0% calc(100% - 8px),0% 8px)",
                   maxWidth: 340,
                 }}>
-                  <span style={{ fontSize: 28 }}>🏆</span>
                   <div>
                     <div style={{ fontFamily: "'Press Start 2P', monospace", fontSize: "0.42rem", color: "#F5C542", letterSpacing: "0.5px", marginBottom: 5 }}>
                       ACHIEVEMENT UNLOCKED
@@ -93,7 +92,7 @@ export default function Home() {
     if (localStorage.getItem(key)) return;
     localStorage.setItem(key, "1");
     const age = now.getFullYear() - 2004;
-    const tweetText = encodeURIComponent(`Happy Birthday @keyyard! 🎂🎉 You leveled up to LVL ${age}!`);
+    const tweetText = encodeURIComponent(`Happy Birthday @keyyard! You leveled up to LVL ${age}!`);
     const twitterUrl = `https://twitter.com/intent/tweet?text=${tweetText}`;
     const igUrl = "https://www.instagram.com/keyyard/";
     const timer = setTimeout(() => {
@@ -114,9 +113,8 @@ export default function Home() {
             <button
               onClick={() => toast.dismiss(t.id)}
               style={{ position: "absolute", top: 8, right: 10, background: "transparent", color: "#7A6A55", fontSize: "0.65rem", fontFamily: "'Press Start 2P',monospace", cursor: "pointer", padding: 0, border: "none" }}
-            >✕</button>
+            >X</button>
             <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-              <span style={{ fontSize: 34 }}>🎂</span>
               <div>
                 <div style={{ fontFamily: "'Press Start 2P',monospace", fontSize: "0.38rem", color: "#4ECDC4", letterSpacing: "0.5px", marginBottom: 4 }}>
                   ACHIEVEMENT GET!
@@ -147,7 +145,7 @@ export default function Home() {
                 color: "#E1306C",
                 textDecoration: "none",
                 clipPath: "polygon(2px 0,calc(100% - 2px) 0,100% 2px,100% calc(100% - 2px),calc(100% - 2px) 100%,2px 100%,0 calc(100% - 2px),0 2px)",
-              }}>📸 Instagram</a>
+              }}>Instagram</a>
             </div>
           </div>
         ),
