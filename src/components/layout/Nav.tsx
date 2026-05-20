@@ -1,6 +1,100 @@
 import { useEffect, useState } from "react";
 import { navs } from "../../data";
 
+const NAV_PATTERNS: Record<string, string[]> = {
+  hero: [
+    "...##...",
+    "..####..",
+    ".######.",
+    "########",
+    "#.####.#",
+    "#.#..#.#",
+    "#.#..#.#",
+    "########",
+  ],
+  about: [
+    ".######.",
+    "########",
+    "##....##",
+    "##.##.##",
+    "##....##",
+    "##.##.##",
+    "########",
+    ".######.",
+  ],
+  experiences: [
+    ".######.",
+    "########",
+    "########",
+    "....##..",
+    "...##...",
+    "..##....",
+    ".##.....",
+    "##......",
+  ],
+  projects: [
+    "..####..",
+    ".######.",
+    "##.##.##",
+    "#.####.#",
+    "#.####.#",
+    "##.##.##",
+    ".######.",
+    "..####..",
+  ],
+  apps: [
+    ".###.###",
+    ".###.###",
+    ".###.###",
+    "........",
+    ".###.###",
+    ".###.###",
+    ".###.###",
+    "........",
+  ],
+  contact: [
+    "########",
+    "#......#",
+    "#.#..#.#",
+    "#..##..#",
+    "#......#",
+    "#......#",
+    "#......#",
+    "########",
+  ],
+};
+
+const FALLBACK_PATTERN = [
+  "########",
+  "#......#",
+  "#......#",
+  "#..##..#",
+  "#..##..#",
+  "#......#",
+  "#......#",
+  "########",
+];
+
+function PixelIcon({ pattern }: { pattern: string[] }) {
+  return (
+    <svg
+      viewBox="0 0 8 8"
+      width="20"
+      height="20"
+      style={{ shapeRendering: "crispEdges", display: "block" }}
+      aria-hidden="true"
+    >
+      {pattern.flatMap((row, y) =>
+        row.split("").map((c, x) =>
+          c === "#" ? (
+            <rect key={`${x}-${y}`} x={x} y={y} width="1" height="1" fill="currentColor" />
+          ) : null,
+        ),
+      )}
+    </svg>
+  );
+}
+
 const Nav = () => {
   const [activeSection, setActiveSection] = useState("");
 
@@ -45,6 +139,9 @@ const Nav = () => {
               className={`hotbar-slot${isActive ? " hotbar-slot--active" : ""}`}
               title={nav.name}
             >
+              <span className="hotbar-slot-icon">
+                <PixelIcon pattern={NAV_PATTERNS[nav.sectionId] ?? FALLBACK_PATTERN} />
+              </span>
               <span className="hotbar-slot-label">{nav.shortName}</span>
             </a>
           );

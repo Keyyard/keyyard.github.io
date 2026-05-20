@@ -720,7 +720,9 @@
     border-color: var(--gold);
     box-shadow: 0 0 8px rgba(245,197,66,0.25), inset 0 0 4px rgba(245,197,66,0.08);
   }
-  .hotbar-slot-icon  { font-size: 20px; line-height: 1; }
+  .hotbar-slot-icon  { display: flex; align-items: center; justify-content: center; color: var(--text-muted); }
+  .hotbar-slot:hover .hotbar-slot-icon { color: var(--text-main); }
+  .hotbar-slot--active .hotbar-slot-icon { color: var(--gold); }
   .hotbar-slot-label {
     font-family: var(--font-headings);
     font-size: 5.5px;

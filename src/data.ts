@@ -84,7 +84,7 @@ const heroData = {
   ] as string[],
   pixelName: "KEYYARD", // display name kept; SEO H1 handled via aria-label in Hero.tsx
   roleBadge: "Minecraft Developer & Software Engineer",
-  storyHook: `In 2018, I started modding Minecraft from scratch - no tutorials, just curiosity and a text editor.<br/>By 2024, <strong>I contributed to the official <span class="hl-diamond">Minecraft × Cut The Rope crossover DLC</span></strong>, and worked with <a href="https://www.youtube.com/@PrestonYT" style="color: #d50b34" target="_blank" rel="noopener noreferrer">Preston - a 31M subscribers YouTuber</a> on official Minecraft Marketplace.`,
+  storyHook: `In 2018, I started modding Minecraft from scratch - no tutorials, just curiosity and a text editor.<br/>By 2024, <strong>I contributed to the official <span class="hl-diamond">Microsoft's Minecraft × Cut The Rope crossover DLC</span></strong>, and worked with <a href="https://www.youtube.com/@PrestonYT" style="color: #d50b34" target="_blank" rel="noopener noreferrer">Preston - a 31M subscribers YouTuber</a> on official Minecraft Marketplace.`,
   statCards: [
     {
       cssClass: "gold",
