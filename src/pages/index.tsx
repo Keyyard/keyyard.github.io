@@ -63,10 +63,10 @@ export default function Home() {
                   maxWidth: 340,
                 }}>
                   <div>
-                    <div style={{ fontFamily: "'Press Start 2P', monospace", fontSize: "0.42rem", color: "#F5C542", letterSpacing: "0.5px", marginBottom: 5 }}>
+                    <div style={{ fontFamily: "'Jersey10', monospace", fontSize: "0.42rem", color: "#F5C542", letterSpacing: "0.5px", marginBottom: 5 }}>
                       ACHIEVEMENT UNLOCKED
                     </div>
-                    <div style={{ fontFamily: "'Press Start 2P', monospace", fontSize: "0.55rem", color: "#F0EAD6" }}>
+                    <div style={{ fontFamily: "'Jersey10', monospace", fontSize: "0.55rem", color: "#F0EAD6" }}>
                       Full Stack Crafter
                     </div>
                   </div>
@@ -112,14 +112,14 @@ export default function Home() {
           }}>
             <button
               onClick={() => toast.dismiss(t.id)}
-              style={{ position: "absolute", top: 8, right: 10, background: "transparent", color: "#7A6A55", fontSize: "0.65rem", fontFamily: "'Press Start 2P',monospace", cursor: "pointer", padding: 0, border: "none" }}
+              style={{ position: "absolute", top: 8, right: 10, background: "transparent", color: "#7A6A55", fontSize: "0.65rem", fontFamily: "'Jersey10',monospace", cursor: "pointer", padding: 0, border: "none" }}
             >X</button>
             <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
               <div>
-                <div style={{ fontFamily: "'Press Start 2P',monospace", fontSize: "0.38rem", color: "#4ECDC4", letterSpacing: "0.5px", marginBottom: 4 }}>
+                <div style={{ fontFamily: "'Jersey10',monospace", fontSize: "0.38rem", color: "#4ECDC4", letterSpacing: "0.5px", marginBottom: 4 }}>
                   ACHIEVEMENT GET!
                 </div>
-                <div style={{ fontFamily: "'Press Start 2P',monospace", fontSize: "0.6rem", color: "#F0EAD6" }}>
+                <div style={{ fontFamily: "'Jersey10',monospace", fontSize: "0.6rem", color: "#F0EAD6" }}>
                   Happy Birthday!
                 </div>
                 <div style={{ fontFamily: "VT323,monospace", fontSize: "1rem", color: "#A3D977", marginTop: 3 }}>
@@ -129,7 +129,7 @@ export default function Home() {
             </div>
             <div style={{ display: "flex", gap: 8 }}>
               <a href={twitterUrl} target="_blank" rel="noopener noreferrer" style={{
-                fontFamily: "'Press Start 2P',monospace", fontSize: "0.38rem",
+                fontFamily: "'Jersey10',monospace", fontSize: "0.38rem",
                 padding: "7px 10px",
                 background: "rgba(29,161,242,0.12)",
                 border: "1px solid rgba(29,161,242,0.5)",
@@ -138,7 +138,7 @@ export default function Home() {
                 clipPath: "polygon(2px 0,calc(100% - 2px) 0,100% 2px,100% calc(100% - 2px),calc(100% - 2px) 100%,2px 100%,0 calc(100% - 2px),0 2px)",
               }}>𝕏 Tweet Wishes</a>
               <a href={igUrl} target="_blank" rel="noopener noreferrer" style={{
-                fontFamily: "'Press Start 2P',monospace", fontSize: "0.38rem",
+                fontFamily: "'Jersey10',monospace", fontSize: "0.38rem",
                 padding: "7px 10px",
                 background: "rgba(225,48,108,0.12)",
                 border: "1px solid rgba(225,48,108,0.5)",

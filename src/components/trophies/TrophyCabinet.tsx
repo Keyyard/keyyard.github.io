@@ -85,7 +85,7 @@ function TrophySlot({
       {/* Name badge */}
       <div
         style={{
-          fontFamily: "var(--font-headings, 'Press Start 2P', monospace)",
+          fontFamily: "var(--font-headings, 'Jersey10', monospace)",
           fontSize: "clamp(0.5rem, 1.2vw, 0.65rem)",
           color: hovered ? trophy.glowColor : "var(--text-dim, #B8A88A)",
           textAlign: "center",

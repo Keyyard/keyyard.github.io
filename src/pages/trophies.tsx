@@ -19,7 +19,7 @@ const TrophyCabinet = dynamic(
       >
         <div
           style={{
-            fontFamily: "'Press Start 2P', monospace",
+            fontFamily: "'Jersey10', monospace",
             fontSize: "0.55rem",
             color: "#78B04A",
             letterSpacing: "0.1em",

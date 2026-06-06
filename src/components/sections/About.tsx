@@ -3,7 +3,7 @@ import { useRef } from "react";
 import dynamic from "next/dynamic";
 import {
   aboutPlayerInfo,
-  mcSkillsData,
+  skillClasses,
   techStackData,
   academicData,
 } from "../../data";
@@ -57,10 +57,14 @@ function SkillBar({
   label,
   percent,
   delay = 0,
+  color = "var(--grass-glow)",
+  fill = "linear-gradient(90deg, var(--grass), var(--grass-glow))",
 }: {
   label: string;
   percent: number;
   delay?: number;
+  color?: string;
+  fill?: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-40px" });
@@ -73,12 +77,13 @@ function SkillBar({
           justifyContent: "space-between",
           alignItems: "center",
           marginBottom: 5,
+          gap: 8,
         }}
       >
         <span
           style={{
             fontFamily: "var(--font-primary)",
-            fontSize: "0.92rem",
+            fontSize: "0.82rem",
             color: "var(--text-dim)",
           }}
         >
@@ -88,7 +93,8 @@ function SkillBar({
           style={{
             fontFamily: "var(--font-headings)",
             fontSize: "0.62rem",
-            color: "var(--grass-glow)",
+            color,
+            flexShrink: 0,
           }}
         >
           {percent}%
@@ -97,6 +103,7 @@ function SkillBar({
       <div className="skill-bar-track">
         <motion.div
           className="skill-bar-fill"
+          style={{ background: fill, boxShadow: `0 0 6px ${color}` }}
           initial={{ width: 0 }}
           animate={inView ? { width: `${percent}%` } : { width: 0 }}
           transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1], delay }}
@@ -191,26 +198,213 @@ const About = () => {
           </div>
         </div>
 
-        {/* Minecraft Skill Stats */}
-        <div className="card" style={{ marginBottom: 24 }}>
-          <McLabel color="var(--grass-glow)" mb={24}>
-            MINECRAFT SKILL STATS
-          </McLabel>
-          <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-            {mcSkillsData?.map((skill, i) => (
-              <SkillBar
-                key={skill.label}
-                label={skill.label}
-                percent={skill.percent}
-                delay={i * 0.12}
-              />
-            ))}
-          </div>
+        {/* Skill Classes — multi-class character sheet */}
+        <McLabel color="var(--gold)" mb={20}>
+          SKILL CLASSES
+        </McLabel>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            gap: 24,
+            marginBottom: 24,
+            alignItems: "stretch",
+          }}
+        >
+          {skillClasses?.map((cls) => (
+            <div
+              key={cls.name}
+              className="card"
+              style={{ display: "flex", flexDirection: "column" }}
+            >
+              {/* Class header: name + LVL badge */}
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  gap: 8,
+                  marginBottom: 20,
+                }}
+              >
+                <span
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.4em",
+                    fontFamily: "var(--font-headings)",
+                    fontSize: "0.8rem",
+                    color: cls.color,
+                    letterSpacing: "0.06em",
+                    lineHeight: 1.2,
+                  }}
+                >
+                  <span aria-hidden="true">▶</span>
+                  {cls.name}
+                </span>
+                {cls.level != null && (
+                  <span
+                    style={{
+                      fontFamily: "var(--font-headings)",
+                      fontSize: "0.58rem",
+                      color: cls.color,
+                      border: `1px solid ${cls.color}`,
+                      padding: "3px 6px",
+                      lineHeight: 1,
+                      flexShrink: 0,
+                      opacity: 0.9,
+                    }}
+                  >
+                    LVL {cls.level}
+                  </span>
+                )}
+              </div>
+
+              {/* Body: mastery bars OR capability proof */}
+              <div style={{ display: "flex", flexDirection: "column", flex: 1 }}>
+                {cls.skills ? (
+                  <div
+                    style={{ display: "flex", flexDirection: "column", gap: 16 }}
+                  >
+                    {cls.skills.map((skill, i) => (
+                      <SkillBar
+                        key={skill.label}
+                        label={skill.label}
+                        percent={skill.percent}
+                        delay={i * 0.08}
+                        color={cls.color}
+                        fill={cls.fill}
+                      />
+                    ))}
+                  </div>
+                ) : (
+                  <>
+                    {cls.tagline && (
+                      <p
+                        style={{
+                          fontSize: "0.92rem",
+                          lineHeight: 1.6,
+                          color: "var(--text-dim)",
+                          margin: "0 0 16px",
+                        }}
+                      >
+                        {cls.tagline}
+                      </p>
+                    )}
+                    {cls.projects && (
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: 12,
+                          marginBottom: 18,
+                        }}
+                      >
+                        {cls.projects.map((p) => {
+                          const external = p.href.startsWith("http");
+                          return (
+                            <a
+                              key={p.name}
+                              href={p.href}
+                              target={external ? "_blank" : undefined}
+                              rel={external ? "noopener noreferrer" : undefined}
+                              style={{
+                                display: "flex",
+                                flexDirection: "column",
+                                gap: 2,
+                                textDecoration: "none",
+                              }}
+                            >
+                              <span
+                                style={{
+                                  display: "flex",
+                                  alignItems: "center",
+                                  gap: 6,
+                                  fontFamily: "var(--font-primary)",
+                                  fontWeight: 700,
+                                  fontSize: "0.9rem",
+                                  color: cls.color,
+                                }}
+                              >
+                                {p.name}
+                                <span
+                                  style={{ fontSize: "0.6rem", opacity: 0.8 }}
+                                  aria-hidden="true"
+                                >
+                                  {external ? "↗" : "↓"}
+                                </span>
+                              </span>
+                              <span
+                                style={{
+                                  fontSize: "0.78rem",
+                                  color: "var(--text-muted)",
+                                  lineHeight: 1.4,
+                                }}
+                              >
+                                {p.note}
+                              </span>
+                            </a>
+                          );
+                        })}
+                      </div>
+                    )}
+                    {cls.tags && (
+                      <div
+                        style={{ display: "flex", flexWrap: "wrap", gap: 8 }}
+                      >
+                        {cls.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="mc-tag"
+                            style={{ color: cls.color }}
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </>
+                )}
+              </div>
+
+              {/* Footer: jump link or badge */}
+              {cls.footer &&
+                (cls.footer.href ? (
+                  <a
+                    href={cls.footer.href}
+                    style={{
+                      marginTop: 18,
+                      fontFamily: "var(--font-vt323)",
+                      fontSize: "1rem",
+                      color: cls.color,
+                      letterSpacing: "0.06em",
+                      textDecoration: "none",
+                      opacity: 0.85,
+                    }}
+                  >
+                    {cls.footer.label}
+                  </a>
+                ) : (
+                  <span
+                    style={{
+                      marginTop: 18,
+                      fontFamily: "var(--font-vt323)",
+                      fontSize: "1rem",
+                      color: cls.color,
+                      letterSpacing: "0.06em",
+                      opacity: 0.85,
+                    }}
+                  >
+                    {cls.footer.label}
+                  </span>
+                ))}
+            </div>
+          ))}
         </div>
 
         {/* Credentials & Awards */}
         {academicData?.length > 0 && (
-          <div className="card" style={{ marginBottom: 24 }}>
+          <div id="credentials" className="card" style={{ marginBottom: 24 }}>
             <McLabel color="var(--gold)">CREDENTIALS & AWARDS</McLabel>
             <div style={{ display: "flex", flexDirection: "column" }}>
               {academicData?.map((item, i) => (

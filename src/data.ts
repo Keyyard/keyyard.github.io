@@ -645,13 +645,84 @@ const aboutPlayerInfo = [
   "I do my best work on ambitious projects with talented people who care about making their dreams a reality. If you're building something that pushes limits, I want to be part of it.",
 ];
 
-// ─── ABOUT: MINECRAFT SKILL BARS ─────────────────────────────
-const mcSkillsData = [
-  { label: "Bedrock Entity Behavior", percent: 91 },
-  { label: "Bedrock Scripting API", percent: 92 },
-  { label: "Bedrock Items Functions", percent: 92 },
-  { label: "Bedrock Animation Manipulatation", percent: 90 },
-  { label: "Bedrock Blocks Features", percent: 52 },
+// ─── ABOUT: SKILL CLASSES (multi-class character sheet) ──────
+// Two card kinds, on purpose:
+//  • "mastery"  → Minecraft: skill bars + LVL (the home turf, real self-estimate)
+//  • "proof"    → App Dev / Research: capability shown by what's shipped, no numbers.
+//                 tagline + tags + a pointer to the section that holds the real evidence.
+// Edit any tag to match exactly what you'd stand behind.
+const skillClasses: Array<{
+  name: string;
+  color: string; // accent: header, badge, bars/tags
+  // mastery cards:
+  level?: number;
+  fill?: string; // bar fill gradient
+  skills?: { label: string; percent: number }[];
+  // proof cards:
+  tagline?: string;
+  projects?: { name: string; note: string; href: string }[];
+  tags?: string[];
+  footer?: { label: string; href?: string };
+}> = [
+  {
+    name: "Minecraft Developer",
+    level: 99,
+    color: "var(--grass-glow)",
+    fill: "linear-gradient(90deg, var(--grass), var(--grass-glow))",
+    skills: [
+      { label: "Bedrock Entity Behavior", percent: 91 },
+      { label: "Bedrock Scripting API", percent: 92 },
+      { label: "Bedrock Items Functions", percent: 92 },
+      { label: "Bedrock Animation", percent: 90 },
+      { label: "Bedrock Blocks Features", percent: 77 },
+    ],
+    footer: { label: "▾ See projects", href: "#projects" },
+  },
+  {
+    name: "Software Engineer",
+    color: "var(--diamond)",
+    tagline: "Tools, apps & products.",
+    projects: [
+      {
+        name: "Bedrock CLI",
+        note: "Open-source dev tool, used by Bedrock devs",
+        href: "https://bedrockcli.keyyard.xyz",
+      },
+      {
+        name: "Blockception VSCode Extension",
+        note: "Contributor · Bedrock dev tooling for VS Code",
+        href: "https://marketplace.visualstudio.com/items/?itemName=BlockceptionLtd.blockceptionvscodeminecraftbedrockdevelopmentextension",
+      },
+      {
+        name: "Productivitism",
+        note: "Productivity app & studio I founded",
+        href: "https://productivitism.com/",
+      },
+      {
+        name: "Indie iOS Apps",
+        note: "2 live on the App Store",
+        href: "#apps",
+      },
+    ],
+  },
+  {
+    name: "Researcher",
+    color: "var(--gold)",
+    tagline: "Behavioral psychology, applied to product.",
+    projects: [
+      {
+        name: "Embedding Behavioral Psychology in App Design",
+        note: "Int'l conference proceedings · pp. 4441–4449",
+        href: "https://khoahoc.neu.edu.vn/Resources/Docs/SubDomain/khoahoc/h%E1%BB%99i%20th%E1%BA%A3o/qu%C3%B4c%20t%E1%BA%BF/KhonKaen_9.5.2019/2026/Part3_(session%209%20-%20session%2011).pdf",
+      },
+      {
+        name: "Pixel Aesthetics and Behavioral Psychology in App Development",
+        note: "NEU Faculty of IT · N=381 user study",
+        href: "https://fit.neu.edu.vn/post/tich-hop-giao-dien-tham-my-pixel-va-tam-ly-hoc-hanh-vi-trong-phat-trien-phan-mem-productivitism-nham-nang-cao-nang-suat-va-giam-qua-tai-nhan-thuc-cho-nguoi-dung",
+      },
+    ],
+    tags: ["Behavioral Psychology", "Product Design", "User Studies"],
+  },
 ];
 
 // ─── ABOUT: TECH STACK ───────────────────────────────────────
@@ -669,16 +740,15 @@ const techStackData = [
     title: "Frontend Development",
     items: [
       { label: "Frameworks", value: "React, Next.js" },
-      { label: "Styling", value: "TailwindCSS, Bootstrap" },
-      { label: "Core", value: "HTML5, CSS3, Vanilla JavaScript" },
+      { label: "Styling", value: "TailwindCSS" },
     ],
   },
   {
     title: "Backend & Database",
     items: [
-      { label: "APIs Frameworks", value: "FastAPI, Flask, Next.js" },
+      { label: "API Frameworks", value: "FastAPI, Flask, Next.js" },
       { label: "Database", value: "PostgreSQL, SQLite, Prisma ORM, Supabase" },
-      { label: "Authentication", value: "OAuth, JWT, Clerk, Supabase" },
+      { label: "Authentication", value: "OAuth, JWT, Clerk" },
     ],
   },
   {
@@ -700,15 +770,6 @@ const techStackData = [
         label: "Video Editing",
         value: "DaVinci Resolve, CapCut",
       },
-    ],
-  },
-  {
-    title: "Development Tools & Workflow",
-    items: [
-      { value: "Git & GitHub" },
-      { value: "VS Code Extensions" },
-      { value: "CLI Development" },
-      { value: "npm / Package Management" },
     ],
   },
 ];
@@ -836,9 +897,19 @@ const academicData: Array<{
   {
     icon: "",
     category: "Published Research",
+    title:
+      "Productivitism: Embedding Behavioral Psychology into Productivity App Design",
+    detail:
+      "Proc. 22nd International Conference on Socio-Economic & Environmental Issues in Development · ISBN 978-604-79-5848-1 · pp. 4441–4449",
+    date: "2026",
+    link: "https://khoahoc.neu.edu.vn/Resources/Docs/SubDomain/khoahoc/h%E1%BB%99i%20th%E1%BA%A3o/qu%C3%B4c%20t%E1%BA%BF/KhonKaen_9.5.2019/2026/Part3_(session%209%20-%20session%2011).pdf",
+  },
+  {
+    icon: "",
+    category: "Published Research",
     title: "Integrating Pixel Aesthetics & Behavioral Psychology in Productivitism",
     detail:
-      "Faculty of IT, National Economics University · by Trịnh Minh Hiếu (Keyyard) · N=381 study",
+      "Faculty of IT, National Economics University · by Trịnh Minh Hiếu (Keyyard)",
     date: "Mar 2026",
     link: "https://fit.neu.edu.vn/post/tich-hop-giao-dien-tham-my-pixel-va-tam-ly-hoc-hanh-vi-trong-phat-trien-phan-mem-productivitism-nham-nang-cao-nang-suat-va-giam-qua-tai-nhan-thuc-cho-nguoi-dung",
   },
@@ -858,7 +929,7 @@ export {
   navs,
   heroData,
   aboutPlayerInfo,
-  mcSkillsData,
+  skillClasses,
   techStackData,
   academicData,
   trophiesData,

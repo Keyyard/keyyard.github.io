@@ -2,11 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Self-hosted Inter fallback */
+/* Self-hosted fonts (matching productivitism-landing) */
+@font-face {
+  font-family: 'Jersey10';
+  src: url('/assets/fonts/Jersey10-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  /* Jersey10 caps fill ~54% of the em vs Press Start 2P's 100%, so the
+     existing heading font-sizes render ~half-height. Scale up to restore
+     near cap-height parity. Tune this single value if headings feel off. */
+  size-adjust: 180%;
+}
+
+@font-face {
+  font-family: 'VT323';
+  src: url('/assets/fonts/VT323-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+
 @font-face {
   font-family: 'Inter';
-  src: url('/assets/fonts/Inter.ttf') format('truetype');
-  font-weight: 400 700;
+  src: url('/assets/fonts/Inter-Variable.ttf') format('truetype');
+  font-weight: 100 900;
   font-display: swap;
 }
 
@@ -33,10 +51,10 @@
   --text-muted:   #7A6A55;
 
   /* Mapped vars for Tailwind / legacy classes */
-  --font-primary:   'Outfit', 'Inter', sans-serif;
-  --font-headings:  'Press Start 2P', monospace;
+  --font-primary:   'Inter', system-ui, -apple-system, sans-serif;
+  --font-headings:  'Jersey10', 'VT323', monospace;
   --font-vt323:     'VT323', monospace;
-  --font-accent:    'Outfit', 'Inter', sans-serif;
+  --font-accent:    'Inter', system-ui, sans-serif;
 
   --color-background:   var(--obsidian);
   --color-surface:      var(--coal);
@@ -484,7 +502,7 @@
 
   .section-title {
     font-family: var(--font-headings);
-    font-size: clamp(0.85rem, 2vw, 1.1rem);
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
     color: var(--text-main);
     text-align: center;
     padding-top: 1rem;
