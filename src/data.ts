@@ -333,8 +333,40 @@ const mcProjects = [
       "/assets/mcProjs/ctr/CTR_MarketingScreenshot_4.webp",
     ],
   },
-  {
+    {
     category: "highlight" as const,
+    title: "Holiday Helpers",
+    short_info: "Official Minecraft Marketplace Project",
+    description:
+      "Celebrate the holiday cheer with Holiday Helpers! Summon mini Santa, receive presents every Minecraft day, and discover festive blocks & items!",
+    links: [
+      {
+        name: "Minecraft Marketplace",
+        link: "https://www.minecraft.net/en-us/marketplace/pdp/mush-co/holiday-helpers/f97721c3-fc7d-40ad-918b-43d2aae1bb46",
+      }
+    ],
+    imgs: [
+      "/assets/mcProjs/hh/hh.jpg",
+    ],
+  },
+      {
+    category: "highlight" as const,
+    title: "BlockPack",
+    short_info: "Official Minecraft Marketplace Project",
+    description:
+      "BlockPack Add-on adds +1000 CRAFTABLE & 50 unique FUNCTIONAL new blocks",
+    links: [
+      {
+        name: "Minecraft Marketplace",
+        link: "https://www.minecraft.net/en-us/marketplace/pdp/block-factory/block-pack-add--on/8970dbd7-a3e1-4fc9-b74a-05e6acc6830f",
+      }
+    ],
+    imgs: [
+      "/assets/mcProjs/bp/bp.jpg",
+    ],
+  },
+  {
+    category: "normal" as const,
     title: "Tree Capitator and Vein Miner Addon",
     short_info: "Community Project",
     description:
@@ -353,7 +385,7 @@ const mcProjects = [
     imgs: ["/assets/mcProjs/tc.webp", "/assets/mcProjs/tc/maxresdefault.webp"],
   },
   {
-    category: "highlight" as const,
+    category: "normal" as const,
     title: "Actual Guns MCBE",
     short_info: "Community Project",
     description:

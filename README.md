@@ -16,12 +16,6 @@ Welcome to the **Keyyard Portfolio** project! This is my personal portfolio webs
 
 Check out the Official Website - Portfolio at: [https://keyyard.xyz](https://keyyard.xyz).
 
-![Keyyard Official Website Screenshot1](public/img1.png)
-![Keyyard Official Website Screenshot2](public/img2.png)
-![Keyyard Official Website Screenshot3](public/img3.png)
-![Keyyard Official Website Screenshot4](public/img4.png)
-![Keyyard Official Website Screenshot5](public/img5.png)
-
 ## About the Project
 
 This portfolio showcases my journey as a developer specializing in **Minecraft Add-on Development**, **Web Development**, and **Native Development**. It features interactive 3D elements, smooth animations, and a modern design to deliver an engaging user experience. The portfolio also highlights my technical skills, projects, and collaborations with notable clients like **PrestonPlayz** and other Official Minecraft Marketplace projects.
@@ -33,7 +27,7 @@ This portfolio showcases my journey as a developer specializing in **Minecraft A
 - **Responsive Design**: Optimized for desktop, tablet, and mobile devices.
 - **Email Integration**: Contact form powered by `EmailJS` for seamless communication.
 - **Project Showcase**: Detailed project displays with links, images, and descriptions.
-- **Modern UI/UX**: Clean, intuitive design using `Tailwind CSS`.
+- **Trophy Closet**: Personal self-validation trophies for milestones
 
 ## Tech Stack
 
