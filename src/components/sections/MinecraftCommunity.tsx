@@ -1,21 +1,11 @@
 import { Suspense, lazy, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { mcCommunityProjects } from "../../data";
+import { linkStyle } from "../../utils/linkStyle";
 
 const SafeImage = lazy(() => import("../ui/SafeImage"));
 
 type Project = (typeof mcCommunityProjects)[number];
-
-const LINK_COLORS: Record<string, { bg: string; color: string }> = {
-  "Github":            { bg: "#3D2E55", color: "#E2D4F0" },
-  "NPM Package":       { bg: "#5C1A1A", color: "#F5A0A0" },
-  "Website":           { bg: "#0D2A3D", color: "#7DD8F8" },
-  "VSCode Marketplace":{ bg: "#0C2640", color: "#4EA7E8" },
-  "Wiki Website":      { bg: "#1A2D0D", color: "#A3D977" },
-};
-function linkStyle(name: string) {
-  return LINK_COLORS[name] ?? { bg: "#252528", color: "#B8A88A" };
-}
 
 function CommunityCard({ proj, index }: { proj: Project; index: number }) {
   const ref = useRef<HTMLDivElement>(null);

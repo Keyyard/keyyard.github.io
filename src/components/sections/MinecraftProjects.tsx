@@ -1,21 +1,12 @@
 import { useState, Suspense, lazy, useRef, memo } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { mcProjects } from "../../data";
+import { linkStyle } from "../../utils/linkStyle";
 
 const SafeImage = lazy(() => import("../ui/SafeImage"));
 const SafeCarousel = lazy(() => import("../ui/SafeCarousel"));
 
 type Project = (typeof mcProjects)[number];
-
-const LINK_COLORS: Record<string, { bg: string; color: string }> = {
-  "Github":                { bg: "#3D2E55",  color: "#E2D4F0" },
-  "MCPEDL":                { bg: "#1E3D1E",  color: "#A3D977" },
-  "CurseForge":            { bg: "#6B3520",  color: "#F5B89A" },
-  "Minecraft Marketplace": { bg: "#0D2E22",  color: "#4ECDC4" },
-};
-function linkStyle(name: string) {
-  return LINK_COLORS[name] ?? { bg: "#252528", color: "#B8A88A" };
-}
 
 function TypeBadge({ short_info }: { short_info: string }) {
   const isMarket = short_info.toLowerCase().includes("marketplace");

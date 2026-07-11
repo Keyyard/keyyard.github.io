@@ -2,7 +2,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, memo } from "react";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { experiences, experienceNodeStyles, experienceTiers, experienceLegend } from "../../data";
+import {
+  experiences,
+  experienceNodeStyles,
+  experienceLegend,
+  type ExperienceTier,
+} from "../../data";
 
 function ExperienceNode({
   exp,
@@ -10,7 +15,7 @@ function ExperienceNode({
   index,
 }: {
   exp: (typeof experiences)[number];
-  tier: string;
+  tier: ExperienceTier;
   index: number;
 }) {
   const [open, setOpen] = useState(false);
@@ -137,7 +142,7 @@ const Experiences = memo(() => {
           <ExperienceNode
             key={`${exp.company_name}-${i}`}
             exp={exp}
-            tier={experienceTiers[i] ?? "stone"}
+            tier={exp.tier}
             index={i}
           />
         ))}

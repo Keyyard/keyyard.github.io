@@ -1,20 +1,11 @@
 import { Suspense, lazy } from "react";
 import Head from "next/head";
 import { motion } from "framer-motion";
-import { softwareProjects, softwarePageMeta } from "../softwareData";
+import { softwareProjects, softwarePageMeta } from "../data";
+import { linkStyle } from "../utils/linkStyle";
 import Bg from "../components/layout/Background";
 
 const SafeImage = lazy(() => import("../components/ui/SafeImage"));
-
-const LINK_COLORS: Record<string, { bg: string; color: string }> = {
-  "GitHub":    { bg: "#3D2E55", color: "#E2D4F0" },
-  "Live App":  { bg: "#0D2A3D", color: "#7DD8F8" },
-  "Product":   { bg: "#0D2A3D", color: "#7DD8F8" },
-  "NPM":       { bg: "#5C1A1A", color: "#F5A0A0" },
-};
-function linkStyle(name: string) {
-  return LINK_COLORS[name] ?? { bg: "#252528", color: "#B8A88A" };
-}
 
 export default function SoftwarePage() {
   return (

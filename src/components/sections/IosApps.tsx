@@ -1,6 +1,6 @@
 import { Suspense, lazy, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { iosApps } from "../../softwareData";
+import { iosApps } from "../../data";
 
 const SafeImage = lazy(() => import("../ui/SafeImage"));
 
