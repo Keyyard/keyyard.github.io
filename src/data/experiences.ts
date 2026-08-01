@@ -120,7 +120,7 @@ export const experiences: Experience[] = [
     title: "Developer",
     company_name: "Block Factory | Official Minecraft Marketplace",
     company_url: "https://blockfactory.studio/",
-    date: "January 2026 - Present",
+    date: "January 2026 - July 2026",
     tier: "grass",
     details: [
       "Working on entities, gameplay mechanics, and scripting systems to deliver engaging Minecraft experiences.",
@@ -134,6 +134,26 @@ export const experiences: Experience[] = [
     tier: "stone",
     details: [
       "Building tools and content to help people maintain focus and productivity in the digital age.",
+    ],
+  },
+  {
+    title: "Middle Developer",
+    company_name: "Lumina Studio | Official Minecraft Marketplace",
+    company_url: "",
+    date: "August 2026 - Present",
+    tier: "grass",
+    details: [
+      "Working on entities, gameplay mechanics, and scripting systems to deliver engaging Minecraft experiences.",
+    ],
+  },
+  {
+    title: "Founder",
+    company_name: "Keyyard | Official Minecraft Marketplace",
+    company_url: "https://keyyard.xyz",
+    date: "August 2026 - Present",
+    tier: "gold",
+    details: [
+      "Official Minecraft Partner via Publisher Waypoint Studios",
     ],
   },
 ];
