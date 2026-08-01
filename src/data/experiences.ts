@@ -15,7 +15,7 @@ export interface Experience {
 export const experiences: Experience[] = [
   {
     title: "Founder | Official Microsoft Partner",
-    company_name: "Keyyard Studio - G2crafted | Official Minecraft Marketplace",
+    company_name: "Keyyard Studio - G2crafted | Official Minecraft Partner",
     company_url: "https://www.bedrockexplorer.com/@g2crafted",
     date: "Aug 2021 - 2023",
     tier: "gold", // first MS Partner
@@ -27,7 +27,7 @@ export const experiences: Experience[] = [
   },
   {
     title: "Contract Developer",
-    company_name: "Giggle Block Studios Ltd | Official Minecraft Marketplace",
+    company_name: "Giggle Block Studios Ltd | Official Minecraft Partner",
     company_url: "https://www.youtube.com/@GiggleBlockStudios",
     date: "Apr 2022 - Jan 2023",
     tier: "grass",
@@ -38,7 +38,7 @@ export const experiences: Experience[] = [
   },
   {
     title: "Contract Developer",
-    company_name: "MELONBP | Official Minecraft Marketplace",
+    company_name: "MELONBP | Official Minecraft Partner",
     company_url: "https://www.melonbp.com/",
     date: "Mar 2023 - Jul 2024",
     tier: "grass",
@@ -59,7 +59,7 @@ export const experiences: Experience[] = [
   },
   {
     title: "Senior Developer",
-    company_name: "Fire Games | Official Minecraft Marketplace",
+    company_name: "Fire Games | Official Minecraft Partner",
     company_url: "https://www.bedrockexplorer.com/@firegames",
     date: "Jul 2024 - February 2025",
     tier: "diamond", // Preston collab
@@ -72,7 +72,7 @@ export const experiences: Experience[] = [
   },
   {
     title: "Contract Developer",
-    company_name: "OASIS | Official Minecraft Marketplace",
+    company_name: "OASIS | Official Minecraft Partner",
     company_url: "https://www.oasis-team.com/",
     date: "April 2025 - September 2025",
     tier: "grass",
@@ -107,7 +107,7 @@ export const experiences: Experience[] = [
   },
   {
     title: "Contract Developer",
-    company_name: "Mushco | Official Minecraft Marketplace",
+    company_name: "Mushco | Official Minecraft Partner",
     company_url: "https://www.mushco.games/",
     date: "July 2025 - March 2026",
     tier: "diamond", // Cut the Rope DLC
@@ -118,7 +118,7 @@ export const experiences: Experience[] = [
   },
   {
     title: "Developer",
-    company_name: "Block Factory | Official Minecraft Marketplace",
+    company_name: "Block Factory | Official Minecraft Partner",
     company_url: "https://blockfactory.studio/",
     date: "January 2026 - July 2026",
     tier: "grass",
@@ -138,7 +138,7 @@ export const experiences: Experience[] = [
   },
   {
     title: "Middle Developer",
-    company_name: "Lumina Studio | Official Minecraft Marketplace",
+    company_name: "Lumina Studio | Official Minecraft Partner",
     company_url: "",
     date: "August 2026 - Present",
     tier: "grass",
@@ -147,8 +147,8 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    title: "Founder",
-    company_name: "Keyyard | Official Minecraft Marketplace",
+    title: "Founder | Official Microsoft Partner",
+    company_name: "Keyyard - Waypoint Studios | Official Minecraft Partner",
     company_url: "https://keyyard.xyz",
     date: "August 2026 - Present",
     tier: "gold",

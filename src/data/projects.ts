@@ -5,6 +5,29 @@
 export const mcProjects = [
   {
     category: "featured" as const,
+    title: "Bosses' Rise",
+    short_info: "Official Minecraft Marketplace Add-On",
+    description:
+      "Souls-like boss combat brought to Minecraft Bedrock. Features 7 epic bosses with unique AI behaviors, custom animations, weapons and armors, procedurally generated structures and dungeons, and a fight system with a roll mechanic. Official port of the Bosses' Rise Mod, developed with Block Factory.",
+    links: [
+      {
+        name: "Minecraft Marketplace",
+        link: "https://www.minecraft.net/en-us/marketplace/pdp/block-factory/bosses-rise-add--on/d4e0c8e8-fce1-4828-94f0-764b5431e5a5",
+      }
+    ],
+    imgs: [
+      "/assets/mcProjs/br/BossesRise_Thumbnail_0.webp",
+      "/assets/mcProjs/br/BossesRise_Screenshot_0.webp",
+      "/assets/mcProjs/br/BossesRise_Screenshot_1.webp",
+      "/assets/mcProjs/br/BossesRise_Screenshot_2.webp",
+      "/assets/mcProjs/br/BossesRise_Screenshot_3.webp",
+      "/assets/mcProjs/br/BossesRise_Screenshot_4.webp",
+      "/assets/mcProjs/br/BossesRise_Screenshot_5.webp",
+      "/assets/mcProjs/br/BossesRise_Screenshot_6.webp",
+    ],
+  },
+  {
+    category: "featured" as const,
     title: "Cut the Rope x Minecraft DLC",
     short_info: "Official Minecraft Marketplace DLC",
     description:
