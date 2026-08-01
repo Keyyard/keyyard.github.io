@@ -24,7 +24,7 @@ export const heroData = {
     "block-grass",
   ] as string[],
   pixelName: "KEYYARD", // display name kept; SEO H1 handled via aria-label in Hero.tsx
-  roleBadge: "Minecraft Developer & Software Engineer",
+  roleBadge: "Official Minecraft Partner & Developer",
   storyHook: `In 2018, I started modding Minecraft from scratch - no tutorials, just curiosity and a text editor.<br/>By 2026, <strong>I contributed to over 20 official Microsoft Partners projects, including the official <span class="hl-diamond">Minecraft × Cut The Rope crossover DLC</span></strong>. I worked with <a href="https://www.youtube.com/@PrestonYT" style="color: #d50b34" target="_blank" rel="noopener noreferrer">Preston - a 31M subscribers YouTuber</a> on a Minecraft Marketplace content as well.`,
   statCards: [
     {
@@ -32,7 +32,7 @@ export const heroData = {
       blockBg: "var(--gold)",
       blockShadow:
         "inset -2px -2px 0 rgba(0,0,0,0.4), inset 2px 2px 0 rgba(255,255,255,0.3)",
-      num: "5M+",
+      num: "10M+",
       label: "Downloads",
       title: "Total downloads across all projects",
     },
