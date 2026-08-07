@@ -8,6 +8,7 @@ export {
   experiences,
   experienceNodeStyles,
   experienceLegend,
+  isCurrentRole,
   type Experience,
   type ExperienceTier,
 } from "./experiences";

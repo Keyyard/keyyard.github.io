@@ -14,7 +14,7 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
-    title: "Founder | Official Microsoft Partner",
+    title: "Founder",
     company_name: "Keyyard Studio - G2crafted | Official Minecraft Partner",
     company_url: "https://www.bedrockexplorer.com/@g2crafted",
     date: "Aug 2021 - 2023",
@@ -147,7 +147,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    title: "Founder | Official Microsoft Partner",
+    title: "Founder",
     company_name: "Keyyard - Waypoint Studios | Official Minecraft Partner",
     company_url: "https://keyyard.xyz",
     date: "August 2026 - Present",
@@ -157,6 +157,11 @@ export const experiences: Experience[] = [
     ],
   },
 ];
+
+// A role is "current" when its date range has no end date, i.e. it ends in
+// "Present". Single source of truth for both the CURRENT badge and the filter.
+export const isCurrentRole = (exp: Experience): boolean =>
+  exp.date.toLowerCase().includes("present");
 
 // Experience timeline visual data
 export const experienceNodeStyles: Record<

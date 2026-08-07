@@ -6,8 +6,11 @@ import {
   experiences,
   experienceNodeStyles,
   experienceLegend,
+  isCurrentRole,
   type ExperienceTier,
 } from "../../data";
+
+type ExperienceFilter = "all" | "current";
 
 function ExperienceNode({
   exp,
@@ -23,7 +26,7 @@ function ExperienceNode({
   const inView = useInView(ref, { once: true, margin: "-40px" });
   const node = experienceNodeStyles[tier] ?? experienceNodeStyles.stone;
 
-  const isPresentJob = exp.date.toLowerCase().includes("present");
+  const isPresentJob = isCurrentRole(exp);
 
   return (
     <motion.div
@@ -111,13 +114,76 @@ function ExperienceNode({
   );
 }
 
+function FilterTab({
+  active,
+  count,
+  label,
+  onClick,
+}: {
+  active: boolean;
+  count: number;
+  label: string;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-pressed={active}
+      style={{
+        fontFamily: "var(--font-headings)",
+        fontSize: "0.52rem",
+        letterSpacing: "0.05em",
+        padding: "10px 16px",
+        border: "none",
+        cursor: "pointer",
+        display: "inline-flex",
+        alignItems: "center",
+        gap: 8,
+        transition: "background 0.15s, color 0.15s, box-shadow 0.15s",
+        clipPath:
+          "polygon(0 4px,4px 0,calc(100% - 4px) 0,100% 4px,100% calc(100% - 4px),calc(100% - 4px) 100%,4px 100%,0 calc(100% - 4px))",
+        background: active ? "var(--grass)" : "rgba(255,255,255,0.05)",
+        color: active ? "#fff" : "var(--text-dim)",
+        boxShadow: active
+          ? "0 3px 0 var(--dirt-dark)"
+          : "0 3px 0 rgba(0,0,0,0.4), inset 0 0 0 2px rgba(255,255,255,0.1)",
+      }}
+    >
+      {label}
+      <span style={{ opacity: 0.7 }}>{count}</span>
+    </button>
+  );
+}
+
+const currentExperiences = experiences.filter(isCurrentRole);
+
 const Experiences = memo(() => {
+  const [filter, setFilter] = useState<ExperienceFilter>("all");
+  const shown = filter === "current" ? currentExperiences : experiences;
+
   return (
     <section id="experiences" className="section" style={{ padding: "80px 0 60px" }}>
       <h2 className="section-title" style={{ marginBottom: 8 }}>Career Journey</h2>
-      <p style={{ textAlign: "center", fontFamily: "var(--font-vt323)", fontSize: "1.1rem", color: "var(--text-muted)", letterSpacing: "0.1em", marginBottom: 48 }}>
+      <p style={{ textAlign: "center", fontFamily: "var(--font-vt323)", fontSize: "1.1rem", color: "var(--text-muted)", letterSpacing: "0.1em", marginBottom: 24 }}>
         Click any entry to expand details
       </p>
+
+      {/* All / current-only filter */}
+      <div style={{ display: "flex", justifyContent: "center", gap: 10, marginBottom: 32, flexWrap: "wrap" }}>
+        <FilterTab
+          label="ALL ROLES"
+          count={experiences.length}
+          active={filter === "all"}
+          onClick={() => setFilter("all")}
+        />
+        <FilterTab
+          label="● CURRENT"
+          count={currentExperiences.length}
+          active={filter === "current"}
+          onClick={() => setFilter("current")}
+        />
+      </div>
 
       {/* Timeline legend */}
       <div style={{ display: "flex", justifyContent: "center", gap: 16, marginBottom: 40, flexWrap: "wrap" }}>
@@ -138,9 +204,9 @@ const Experiences = memo(() => {
       </div>
 
       <div className="mc-timeline">
-        {experiences.map((exp, i) => (
+        {shown.map((exp, i) => (
           <ExperienceNode
-            key={`${exp.company_name}-${i}`}
+            key={`${exp.company_name}-${exp.date}`}
             exp={exp}
             tier={exp.tier}
             index={i}
