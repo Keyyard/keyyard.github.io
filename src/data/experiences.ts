@@ -138,7 +138,7 @@ export const experiences: Experience[] = [
   },
   {
     title: "Middle Developer",
-    company_name: "Lumina Studio | Official Minecraft Partner",
+    company_name: "Lumina Studios | Official Minecraft Partner",
     company_url: "",
     date: "August 2026 - Present",
     tier: "grass",
@@ -154,6 +154,17 @@ export const experiences: Experience[] = [
     tier: "gold",
     details: [
       "Official Minecraft Partner via Publisher Waypoint Studios",
+    ],
+  },
+
+  {
+    title: "Developer",
+    company_name: "Starfish Studios | Official Minecraft Partner",
+    company_url: "https://starfish-studios.com/en",
+    date: "August 2026 - Present",
+    tier: "grass",
+    details: [
+      "Starfish Studios is an official Minecraft Partner who developps Disney's Crossover DLCs like Moana 2 and SpongeBob DLCs. I work on entities, gameplay mechanics, and scripting systems to deliver engaging Minecraft experiences here.",
     ],
   },
 ];
