@@ -148,12 +148,12 @@ export const experiences: Experience[] = [
   },
   {
     title: "Founder",
-    company_name: "Keyyard - Waypoint Studios | Official Minecraft Partner",
+    company_name: "Keyyard - Waypoint Studios | Official Publisher Partner",
     company_url: "https://keyyard.xyz",
     date: "August 2026 - Present",
     tier: "gold",
     details: [
-      "Official Minecraft Partner via Publisher Waypoint Studios",
+      "Publishing Minecraft content through Waypoint Studios, an Official Minecraft Partner.",
     ],
   },
 

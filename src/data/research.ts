@@ -34,8 +34,8 @@ export const researchPapers: ResearchPaper[] = [
     cardName: "Pixel Aesthetics and Behavioral Psychology in App Development",
     category: "Published Research",
     detail:
-      "Faculty of IT, National Economics University · by Trịnh Minh Hiếu (Keyyard)",
-    cardNote: "NEU Faculty of IT · N=381 user study",
+      "3rd place · Faculty of IT, National Economics University · by Trịnh Minh Hiếu (Keyyard)",
+    cardNote: "3rd place · NEU Faculty of IT · N=381 user study",
     date: "Mar 2026",
     link: "https://fit.neu.edu.vn/post/tich-hop-giao-dien-tham-my-pixel-va-tam-ly-hoc-hanh-vi-trong-phat-trien-phan-mem-productivitism-nham-nang-cao-nang-suat-va-giam-qua-tai-nhan-thuc-cho-nguoi-dung",
   },
